@@ -37,7 +37,8 @@ const Home = () => {
                     {" "}
                     whole
                   </span>
-                  <span title="WORLD"> 🌎</span>
+      
+                  <span title="WORLD">🌎</span>
                   <span className="text-orange-700 font-bold md:text-xll ">
                     {" "}
                     !
@@ -52,7 +53,7 @@ const Home = () => {
             </div>
             {/* RIGHT */}
             <div className="lg:col-span-6 mt-1 pt-10 mb-0 pb-10">
-              <div className="text-center" title="Turn on the clock and watch!">
+              <div className="text-center">
                 <Clock />
                 {/*<img src={home_banner} title="" alt="" />*/}
               </div>

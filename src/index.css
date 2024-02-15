@@ -44,3 +44,34 @@ body {
 .slick-slide > div {
     margin: 0 10px 10px 10px;
 }
+
+
+/* Estilo para el tooltip */
+*[title] {
+    position: relative;
+    display: inline-block;
+}
+
+*[title]::after {
+    content: attr(title);
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(138, 9, 127);
+    color: white;
+    text-align: center;
+    font-size: small;
+    padding: 3px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 100;
+    top: -40px;
+    left: 0%;
+    
+    transform: translateX(-10%);
+    cursor: help;
+    white-space: nowrap;
+}
+
+*[title]:hover::after {
+    visibility: visible;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import home_banner from "../../assets/Image/home-banner.png";
-import home_banner2 from "../../assets/Image/home-banner-hover.png";
+//import home_banner2 from "../../assets/Image/home-banner-hover.png";
 import { NumberData, BtnData } from "./AboutData";
 
 const About = () => {
@@ -79,24 +79,23 @@ const About = () => {
                 </span>
                 .
                 <br />
-                <br />
                 And here I am, re-writing the code of my present and future 💜
               </p>
-              <div className="grid grid-cols-12 pt-5">
+              <div className="grid grid-cols-12 pt-3">
                 {NumberData.map((e, key) => {
                   return (
                     <div className="col-span-6 sm:col-span-4" key={key}>
-                      <h5 className="text-[26px] text-fuchsia-600 font-semibold">
+                      <h5 className="text-[26px] text-fuchsia-600 font-semibold" title={e.Title}>
                         {e.Number}
                       </h5>
-                      <span className="text-slate-700/90">{e.Detail}</span>
+                      <span className="text-slate-700/90">{" "} {e.Detail}</span>
                     </div>
                   );
                 })}
               </div>
               {BtnData.map((e, key) => {
                 return (
-                  <div className="pt-6" key={key}>
+                  <div className="pt-4" key={key}>
                     <a href="#Contact" className="btn btn-theme mr-4">
                       {e.btn1}
                     </a>

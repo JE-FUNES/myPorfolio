@@ -98,7 +98,7 @@ const Contact = () => {
                     class="w-full border"
                     src={contact_bg}
                     title="This is me..."
-                    alt="This is me..."
+                    alt="Me"
                   />
                 </div>
                 <ul>
@@ -130,7 +130,6 @@ const Contact = () => {
             <h6
               className="text-[32px] font-semibold text-purple-50 text-center hover:text-yellow-500 hover:font-bold cursor-pointer"
               onClick={handleCalendar}
-              title="Google Meet in my Google Calendar"
             >
               SCHEDULE A MEETING
             </h6>
