@@ -5,15 +5,15 @@ import { SkillsData } from './SkillsData'
 const Skills = () => {
     return (
         <React.Fragment>
-            <section className="py-24 !pb-0" id="Skills">
+            <section className="mt-5 py-24 !pb-0" id="Skills">
                 <div className="container">
-                    <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1">
+                    <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-end">
                         <div className="lg:col-span-6 lg:pl-9">
-                            <div className="lg:pb-16 md:pb-10 pb-8">
+                            <div className="lg:pb-16 md:pb-10 pb-8 text-right">
                                 <h3>My Skills</h3>
                             </div>
                             <div>
-                                <div className="grid gap-4 grid-cols-12">
+                                <div className="grid gap-4 grid-cols-12 ">
                                     {
                                         SkillsData.map((e, index) => {
                                             return (
@@ -31,7 +31,7 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:col-span-6 text-center pt-[40px] md:pt-0">
+                        <div className="lg:col-span-6 text-center pt-[40px] -mb-10 md:pt-0">
                             <img className="mx-[auto]" src={skills} title="" alt="" />
                         </div>
                     </div>

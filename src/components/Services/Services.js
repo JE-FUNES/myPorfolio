@@ -11,7 +11,7 @@ const Services = () => {
             <section className="py-24 bg-bg-effect-1 bg-cover bg-no-repeat" id="Services">
                 <div className="container">
                     <div className="grid lg:pb-16 md:pb-10 pb-8">
-                        <div className="lg:col-span-6 text-center">
+                        <div className="lg:col-span-6 text-center pt-10">
                             <h3>My Services</h3>
                         </div>
                     </div>

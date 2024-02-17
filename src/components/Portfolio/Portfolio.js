@@ -24,18 +24,18 @@ const Portfolio = () => {
                                 return (
                                     <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16">
                                         <div className={`lg:px-10 md:px-5 ${index % 2 === 0 ? '' : 'lg:order-2'}`}>
-                                            <div className="border-2 border-slate-900 hover:shadow-black transition-all duration-300 ease-in">
+                                            <div className="border-2 border-slate-900 hover:shadowFuchsia transition-all duration-300 ease-in">
                                                 <img src={e.img} alt="" className='bg-no-repeat bg-cover' />
                                             </div>
                                         </div>
                                         <div className={`flex flex-col justify-center lg:px-10 md:px-5 ${index % 2 === 0 ? '' : 'order-1'}`}>
                                             <h6 className="mb-[18px]">
-                                                <span className="inline-block px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-orange-100">{e.list}</span>
+                                                <span className="inline-block px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">{e.list}</span>
                                             </h6>
                                             <h4 className="mb-4 text-2xl font-semibold md:mb-6 md:text-[32px]">{e.Heding}</h4>
                                             <p className='mb-6 text-slate-700/90'>{e.Detail}</p>
                                             <div>
-                                                <button onClick={() => setIsVisible(!isVisible)} className="btn btn-theme">{e.btn}</button>
+                                                <button onClick={() => setIsVisible(!isVisible)} className="btn btn-theme2">{e.btn}</button>
                                                 {isVisible && <Project onClose={closeComponent} />}
                                             </div>
                                         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import home_banner from "../../assets/Image/home-banner.png";
+import home_banner from "../../assets/AnimatedGifs/animated-about.gif";
 //import home_banner2 from "../../assets/Image/home-banner-hover.png";
 import { NumberData, BtnData } from "./AboutData";
 
@@ -9,12 +9,13 @@ const About = () => {
     <React.Fragment>
       {/*----- Start About -----*/}
       <section className="py-20" id="About">
-        <div className="container">
+        <div className="container my-20 py-10">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center">
             <div className="lg:col-span-6 text-center mb-12 lg:mb-0">
               <img
                 src={home_banner}
                 alt="This is me"
+                title="Animated gif"
                 className="bg-no-repeat bg-cover"
               />
             </div>
@@ -81,7 +82,7 @@ const About = () => {
                 <br />
                 And here I am, re-writing the code of my present and future 💜
               </p>
-              <div className="grid grid-cols-12 pt-3">
+              <div className="grid grid-cols-16 pt-3">
                 {NumberData.map((e, key) => {
                   return (
                     <div className="col-span-6 sm:col-span-4" key={key}>
@@ -96,7 +97,7 @@ const About = () => {
               {BtnData.map((e, key) => {
                 return (
                   <div className="pt-4" key={key}>
-                    <a href="#Contact" className="btn btn-theme mr-4">
+                    <a href="#Contact" className="btn btn-theme2 mr-4">
                       {e.btn1}
                     </a>
                     <a href="#Portfolio" className="btn btn-dark">

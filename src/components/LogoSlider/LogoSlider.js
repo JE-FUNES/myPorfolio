@@ -8,40 +8,40 @@ const LogoSlider = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToShow: 14,
+        slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         arrows: false,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToShow: 8,
+                    slidesToScroll: 3
                 }
             },
             {
                 breakpoint: 640,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToShow: 7,
+                    slidesToScroll: 4
                 }
             }
         ]
     };
     return (
         <React.Fragment>
-            <div className="bg-slate-900 py-8">
+            <div className="bg-purple-950 py-8">
                 <div className="container">
                     <div>
                         <Slider {...settings}>
                             {
                                 LogoSliderData.map((e, key) => {
                                     return (
-                                        <div className="p-3 !flex justify-center w-full">
-                                            <img src={e.img} alt="" />
+                                        <div className="p-0 !flex justify-center w-full">
+                                            <img src={e.img} alt="" className='h-12 w-auto'/>
                                         </div>
                                     )
                                 })
