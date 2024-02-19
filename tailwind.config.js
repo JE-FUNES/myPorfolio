@@ -26,8 +26,14 @@ module.exports = {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',
         'gray': '5px 5px 0px 0px rgba(15, 23, 42, 1)',
         'yellow': '5px 5px 0px 0px rgba(202, 138, 4, 1)',
+        'shadowFuchsia': '5px 5px 0px 0px #ec4899',
+      },
+      colors: {
 
+        verdeFluo:{
 
+          500: '#39ff14',
+        } 
       }
     },
     plugins: [],

@@ -15,6 +15,44 @@ const Home = () => {
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center ">
             {/* LEFT */}
             <div className="lg:col-span-6">
+                <h4 className=" text-verdeFluo-500 text-lg uppercase md:text-base tracking-[2px] font-bold mb-1 md:mb-1">
+                website in development
+                </h4>
+                <h6 className="text-sm md:text-base tracking-[2px] text-verdeFluo-500 mb-1 md:mb-1">
+                last update 02/19/2024
+                </h6>
+                <h5 className="text-verdeFluo-500 underline text-lg font-bold">Nexts steps:</h5>
+                <div className="grid lg:grid-cols-2 gap-4 mb-20">
+  <div>
+    <ol className="text-verdeFluo-500 text-sm">
+      <li>Form configuration,</li>
+      <li>Portfolio links and videos,</li>
+      <li>Responsive design,</li>
+      <li>Multi-language options,</li>
+      <li>Dark mode option,</li>
+      <li>Font size option,</li>
+      <li>Mobile version,</li>
+      <li>Background JS Animation,</li>
+      <li>Coursor animation,</li>
+      <li>SEO,</li>
+    </ol>
+  </div>
+  <div>
+    <ol className="text-verdeFluo-500 text-sm">
+      <li>Google Analytics,</li>
+      <li>Search bar,</li>
+      <li>Filters,</li>
+      <li>Chat bot,</li>
+      <li>CSS list of effects,</li>
+      <li>CSS list of colors,</li>
+      <li>Simple Login</li>
+      <li>Favorites CRUD</li>
+      <li>more content...</li>
+    </ol>
+  </div>
+</div>
+
+                
               <div className="text-center lg:text-start mb-14 lg:mb-0">
                 <h6 className="uppercase text-sm md:text-base tracking-[2px] font-semibold text-white mb-5 md:mb-8">
                   👋 Hi!, My name is{" "}

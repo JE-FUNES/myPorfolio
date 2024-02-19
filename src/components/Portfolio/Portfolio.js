@@ -24,7 +24,7 @@ const Portfolio = () => {
                                 return (
                                     <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16">
                                         <div className={`lg:px-10 md:px-5 ${index % 2 === 0 ? '' : 'lg:order-2'}`}>
-                                            <div className="border-2 border-slate-900 hover:shadowFuchsia transition-all duration-300 ease-in">
+                                            <div className="border-2 border-slate-900 hover:shadow-shadowFuchsia transition-all duration-300 ease-in">
                                                 <img src={e.img} alt="" className='bg-no-repeat bg-cover' />
                                             </div>
                                         </div>
