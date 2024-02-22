@@ -13,7 +13,9 @@ const Footer = () => {
                                 {
                                     FooterData.map((e, key) => {
                                         return (
-                                            <a href={e.link} target='blank' className="text-white text-opacity-90 hover:text-pink-500 mr-5 text-base cursor-pointer" title={e.name}>{e.icon}</a>
+                                            <div key={e.key}>
+                                            <a href={e.link} target='blank' className="text-white text-opacity-90 hover:text-pink-500 mr-5 text-base cursor-pointer" title={e.name}>{e.icon} </a>
+                                            </div>
                                         )
                                     })
                                 }

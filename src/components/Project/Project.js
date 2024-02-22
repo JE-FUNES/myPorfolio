@@ -18,7 +18,7 @@ const Project = ({ onClose }) => {
                                     {
                                         ProjectImg.map((e, key) => {
                                             return (
-                                                <div className="col-span-1">
+                                                <div className="col-span-1" key={key} >
                                                     <img className="border" src={e.img} alt="" />
                                                 </div>
                                             )

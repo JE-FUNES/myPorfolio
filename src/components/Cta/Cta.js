@@ -4,7 +4,7 @@ const Cta = () => {
     return (
         <React.Fragment>
             {/*----- Start Cta -----*/}
-            <section className="mt-10 mb-5 py-10 bg-slate-900" id='Cta'>
+            <section className="mt-0 mb-5 py-6 bg-purple-950" id='Cta'>
                 <div className="container">
                     <div className="grid grid-cols-12 gap-5 items-center">
                         <div className="col-span-12 lg:col-span-8 md:col-span-7 text-center md:text-left">

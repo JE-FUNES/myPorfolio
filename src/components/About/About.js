@@ -8,7 +8,7 @@ const About = () => {
   return (
     <React.Fragment>
       {/*----- Start About -----*/}
-      <section className="py-20" id="About">
+      <section className="py-20 bg-bg-effect-3 bg-cover bg-no-repeat" id="About">
         <div className="container my-20 py-10">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center">
             <div className="lg:col-span-6 text-center mb-12 lg:mb-0">
@@ -20,7 +20,7 @@ const About = () => {
               />
             </div>
 
-            <div className="lg:col-span-6 lg:pl-12">
+            <div className="lg:col-span-6 lg:pl-12 mt-1">
               <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
                 I'm a Front-end Developer
                 <span className="text-purple-900"> & </span>
@@ -85,7 +85,7 @@ const About = () => {
               <div className="grid grid-cols-16 pt-3">
                 {NumberData.map((e, key) => {
                   return (
-                    <div className="col-span-6 sm:col-span-4" key={key}>
+                    <div className="col-span-6 sm:col-span-4" key={e.key}>
                       <h5 className="text-[26px] text-fuchsia-600 font-semibold" title={e.Title}>
                         {e.Number}
                       </h5>

@@ -3,12 +3,14 @@ export const NumberData = [
     {
         Number: calculateYearsDesigning(),
         Detail: "Years designing",
-        Title: "Data changes every 1st of January"
+        Title: "Data changes every 1st of January",
+        key: "yearsDesigning"
     },
     {
         Number: calculateHoursOfCode(),
         Detail: "Hours of Code",
-        Title: "Data changes every 8 hours of code"
+        Title: "Data changes every 8 hours of code",
+        key: "hoursOfCode"
     },
     {/*{
         Number: "285+",

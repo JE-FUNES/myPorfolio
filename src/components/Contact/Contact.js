@@ -3,6 +3,10 @@ import contact_bg from "../../assets/Image/contact-bg.png";
 import { ContactData } from "./ContactData";
 
 const Contact = () => {
+
+
+
+
   const handleCalendar = () => {
     // Especifica el tamaño y otras opciones del pop-up
     const width = 800;
@@ -38,7 +42,7 @@ const Contact = () => {
                 <p className="text-lg mb-4 text-purple-900 hover:text-pink-500">
                   I would love to hear from you.
                 </p>
-                <form>
+                <form id="react_contact_form" >
                   <div className="grid grid-cols-12 gap-3">
                     <div className="col-span-12 md:col-span-6">
                       <div>
@@ -46,6 +50,7 @@ const Contact = () => {
                           First name
                         </label>
                         <input
+                          id="name"
                           name="Name"
                           placeholder="Name *"
                           className="py-3 px-3 text-base w-full border border-black font-normal outline-none"
@@ -59,6 +64,7 @@ const Contact = () => {
                           Your Email
                         </label>
                         <input
+                        id="email"
                           name="Email"
                           placeholder="Email *"
                           className="py-3 px-3 text-base w-full border border-black font-normal outline-none"
@@ -73,6 +79,7 @@ const Contact = () => {
                           Your message
                         </label>
                         <textarea
+                        id="message"
                           name="message"
                           placeholder="Your message *"
                           rows="4"
@@ -82,7 +89,7 @@ const Contact = () => {
                     </div>
                     <div className="col-span-12 mt-5">
                       <div>
-                        <button className="btn btn-yellow" type="button">
+                        <button className="btn btn-yellow" type="submit">
                           Send Message
                         </button>
                       </div>
@@ -93,11 +100,11 @@ const Contact = () => {
             </div>
             {/* End Contact form */}
             {/* Start Contact */}
-            <div class="col-span-12 lg:col-span-6 flex">
-              <div class="lg:max-w-[410px] w-full lg:ml-auto pt-[50px] lg:pt-0">
-                <div class="pb-10">
+            <div className="col-span-12 lg:col-span-6 flex">
+              <div className="lg:max-w-[410px] w-full lg:ml-auto pt-[50px] lg:pt-0">
+                <div className="pb-10">
                   <img
-                    class="w-full border"
+                    className="w-full border"
                     src={contact_bg}
                     title="This is me..."
                     alt="Me"
@@ -106,13 +113,14 @@ const Contact = () => {
                 <ul>
                   {ContactData.map((e, key) => {
                     return (
-                      <li className="relative flex mb-6 border">
+                      <li className="relative flex mb-6 border" key={e.key}>
                         <div
                           className={`inline-flex items-center justify-center text-2xl h-14 w-14 ${e.Bg_color}`}
+                          
                         >
                           {e.icon}
                         </div>
-                        <div class="flex-1 pl-4">
+                        <div className="flex-1 pl-4">
                           <h5 className="mt-1 mb-1 text-sm font-normal uppercase tracking-wider text-slate-300">
                             {e.name}
                           </h5>

@@ -10,6 +10,7 @@ import project_8 from '../../assets/Image/project-8.jpg'
 export const PortfolioData = [
     {
         img: project_11,
+        key: "project_11",
         list: "WEB DEVELOPMENT",
         Heding: "U.S.A. Courier Web Software",
         Detail:
@@ -18,6 +19,7 @@ export const PortfolioData = [
     },
     {
         img: project_1,
+        key: "project_1",
         list: "LANDING PAGES DESIGN",
         Heding: "Medellín Wordpress Designs",
         Detail:
@@ -26,6 +28,7 @@ export const PortfolioData = [
     },
     {
         img: project_3,
+        key: "project_3",
         list: "WEB DEVELOPMENT",
         Heding: "Bogotá Events Website ",
         Detail:
@@ -34,37 +37,41 @@ export const PortfolioData = [
     },
     {
         img: project_2,
+        key: "project_2",
         list: "WEB DEVELOPMENT",
-        Heding: "Videogames Website",
+        Heding: "Vkeyeogames Website",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
-            "I designed and developed a website for a videogames imaginary company, for practice in the Henry bootcamp. The website was developed with React.js. It is a website with a lot of functionalities, such as catalog, details, contact form, admin panel, login, and more.",
+        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
+            "I designed and developed a website for a vkeyeogames imaginary company, for practice in the Henry bootcamp. The website was developed with React.js. It is a website with a lot of functionalities, such as catalog, details, contact form, admin panel, login, and more.",
         btn: "View Project",
     },
     {
         img: project_4,
+        key: "project_4",
         list: "WEB DEVELOPMENT",
         Heding: "Rick & Morty Website",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
+        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
             "I designed and developed a website for practice in the Henry bootcamp. The website was developed with React.js. It is a website with a lot of functionalities, such as catalog, details, favourites, contact form, login, and more.",
         btn: "View Project",
     },
     {
         img: project_7,
+        key: "project_7",
         list: "EFFECT DEVELOPMENT",
         Heding: "Clock Animation JS+HTML+CSS",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
+        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
             "I adjusted the code, personalized and change de original design and colors. The project was developed with JS, HTML, and CSS.",
         btn: "View Project",
     },
     {
         img: project_8,
+        key: "project_8",
         list: "FUNCTIONALITY DEVELOPMENT",
         Heding: "Calculator JS+HTML+CSS",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
+        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
             "I developed a calculator for an existing e-commerce website. The project was developed with JS, HTML, and CSS and implemented in Tienda Nube.",
         btn: "View Project",
     },
