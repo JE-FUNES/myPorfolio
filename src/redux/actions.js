@@ -10,7 +10,7 @@ import axios from "axios";
 // Formulario de Contacto ( createContact controller, createContactHandler)
 
 export const submitContactForm = (formData) => {
-  const url = "http://localhost:3001/submit/contact";
+  const url = "https://my-portfolio-server-gamma-ruby.vercel.app/submit/contact";
 
   return async function (dispatch) {
     try {
@@ -32,7 +32,7 @@ export const submitContactForm = (formData) => {
 // get contacts se comunicará con http:localhost:3001/submit/contact para traer toda la información de los contactos
 
 export const getContacts = () => {
-  const url = "http://localhost:3001/submit/contact";
+  const url = "https://my-portfolio-server-gamma-ruby.vercel.app/submit/contact";
   return async function (dispatch) {
     try {
       const contacts = await axios.get(url);
@@ -49,7 +49,7 @@ export const getContacts = () => {
 // delete contacts se comunicará con http:localhost:3001/submit/contact para borrar un contacto por su id
 
 export const deleteContacts = (id) => {
-  const url = `http://localhost:3001/submit/contact/${id}`;
+  const url = `https://my-portfolio-server-gamma-ruby.vercel.app/submit/contact/${id}`;
   return async function (dispatch) {
     try {
       await axios.delete(url);
