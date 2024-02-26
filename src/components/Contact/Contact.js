@@ -19,6 +19,7 @@ const Contact = () => {
     reason: "",
   });
 
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name === "likedPage") {
@@ -92,7 +93,7 @@ const Contact = () => {
             <div className="col-span-12 lg:col-span-6 ">
               <div className="p-10 mb-10 bg-white">
                 <h6 className="text-[32px] font-semibold text-purple-900 mb-1">
-                  Get in touch
+                This form doesn't work yet
                 </h6>
                 <p className="text-lg mb-4 text-purple-900 hover:text-pink-500">
                   I would love to hear from you.
