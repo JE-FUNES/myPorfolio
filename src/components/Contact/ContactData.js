@@ -23,7 +23,7 @@ export const ContactData = [
         name: "PHONE",
         contact: "+54 9 351 2737 199",
         key: "phone",
-        link: {handleCall}
+        link: handleCall
     },
     {
         Bg_color: "bg-[#c084fc]",
@@ -31,7 +31,7 @@ export const ContactData = [
         name: "MAIL",
         contact: "juliafunesaragon@gmail.com",
         key: "mail",
-        link: {handlesendEmail}
+        link: handlesendEmail
     },
    
 
