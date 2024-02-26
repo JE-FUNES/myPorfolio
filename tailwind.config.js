@@ -28,7 +28,24 @@ module.exports = {
         'yellow': '5px 5px 0px 0px rgba(202, 138, 4, 1)',
 
 
-      }
+      },
+      colors: {
+        verdeFluo: {
+          500: "#00ff7f",
+        },
+        slate: {
+          900: "#0f172a",
+        },
+        white: {
+          DEFAULT: "#ffffff",
+        },
+        verdeFluo: {
+          500: "#00ff7f",
+        },
+        fuchsia: {
+          300: "#ff00ff",
+        },
+      },
     },
     plugins: [],
   },
