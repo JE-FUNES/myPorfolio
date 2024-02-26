@@ -23,6 +23,7 @@ export const ContactData = [
         name: "PHONE",
         contact: "+54 9 351 2737 199",
         key: "phone",
+        hoverTitle: "Call me",
         link: handleCall
     },
     {
@@ -31,6 +32,7 @@ export const ContactData = [
         name: "MAIL",
         contact: "juliafunesaragon@gmail.com",
         key: "mail",
+        hoverTitle: "Send me an email",
         link: handlesendEmail
     },
    
