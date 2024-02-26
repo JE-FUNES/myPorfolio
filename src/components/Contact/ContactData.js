@@ -8,10 +8,10 @@ const handlesendEmail = () => {
     // en mobile, phone debería ser un link para llamar
 
     const handleCall = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 900) {
           window.open("tel:+5493512737199");
         } else {
-          return;
+          alert("You can only call from a mobile device, thanks!");
         }
     };
 
