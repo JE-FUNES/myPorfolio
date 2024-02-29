@@ -27,7 +27,7 @@ export const ServicesData = [
         Logo: <FiTriangle />,
         Heding: "SEO Marketing & Positioning",
         Detail:
-            "The pages comply with Google standards, favoring natural positioning in the top positions of searches. + Google Analytics + Google Search Console.",
+            "The pages comply with Google standards, favoring natural positioning in the top positions of searches. Google Analytics, Google Search Console, Google Tag Manager.",
     },
     {
         Bg_color: "bg-[#f472b6]",
