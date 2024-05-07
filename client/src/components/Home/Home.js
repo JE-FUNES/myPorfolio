@@ -19,7 +19,7 @@ const Home = () => {
                 website in development
                 </h4>
                 <h6 className="text-sm md:text-base tracking-[2px] text-verdeFluo-500 mb-3 md:mb-1">
-                (last update 22/02/2024)
+                (last update 07/05/2024)
                 </h6>
                 
                 <div className="grid lg:grid-cols-3 gap-4 mb-20">
@@ -33,8 +33,9 @@ const Home = () => {
       <li>Graphic Designs (photos, backgr. & gifs) ✔</li>
       <li>Complete Copywritte ✔</li>
     </ol>
-    <h5 className="text-white underline text-lg font-bold mb-2 mt-5">Steps{" "} <span className="text-sm font-normal">(in progress):</span></h5>
+    <h5 className="text-white underline text-lg font-bold mb-2 mt-5">Steps{" "} <span className="text-sm font-normal text-fuchsia-500">(in progress):</span></h5>
     <ol className="text-white text-sm">
+    <li className="text-fuchsia-500 font-bold">Portfolio links and videos ▫▫▫</li>
       <li>Form configuration ▫▫▫</li>
       <li>Data base configuraton ▫▫▫ </li>
     </ol>
@@ -47,7 +48,7 @@ const Home = () => {
   <h5 className="text-fuchsia-300 underline text-lg font-bold mb-2"> Next Steps:</h5>
   <ol className="text-fuchsia-300 text-sm">
 
-<li>◻ Portfolio links and videos,</li>
+
 <li>◻ Responsive design,</li>
 <li>◻ Multi-language options,</li>
 <li>◻ Dark mode option,</li>
