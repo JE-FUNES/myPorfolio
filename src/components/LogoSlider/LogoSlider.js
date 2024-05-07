@@ -33,7 +33,7 @@ const LogoSlider = () => {
     };
     return (
         <React.Fragment>
-            <div className="bg-purple-950 py-6">
+            <div className="bg-purple-950 py-3 -mt-1">
                 <div className="container">
                     <div>
                         <Slider {...settings}>
@@ -41,7 +41,7 @@ const LogoSlider = () => {
                                 LogoSliderData.map((e, key) => {
                                     return (
                                         <div className="p-0 !flex justify-center w-full" key={e.key} >
-                                            <img src={e.img} alt="" className='h-12 w-auto'  />
+                                            <img src={e.img} alt="" className='h-10 w-auto'  />
                                         </div>
                                     )
                                 })

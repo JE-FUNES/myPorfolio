@@ -7,13 +7,6 @@ import project_7 from '../../assets/Image/project-7.jpg'
 import project_8 from '../../assets/Image/project-8.jpg'
 import project_5 from '../../assets/Image/landingPage.jpg'
 
-const insertVideo = () => {
-    return (
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vkr1_01egnU?si=PioZvQzMX8vAVIX-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    )
-};
-
 
 //---- Start Projects Data -----
 export const PortfolioData = [
@@ -102,7 +95,7 @@ export const PortfolioData = [
         videoUrl: "https://www.youtube.com/embed/6ijuyxgBk7o?si=66fM-2AXf0btETTa",
         Type: "Web development.",
         Detail2: "I have done this project alone, without a team, both front end and back end. This project was chosen in 1st place in the competition held at the bootcamp, being the most voted for by classmates.",
-        Languages: " Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
+        Languages: "Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
         Country: "Argentina",
         URL: "no url",
         Finished: "Finished"
@@ -111,37 +104,36 @@ export const PortfolioData = [
         img: project_7,
         key: "project_7",
         list: "EFFECT DEVELOPMENT",
-        Heding: "Clock Animation JS+HTML+CSS",
+        Heding: "Clock Animation",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
-            "I adjusted the code, personalized and change de original design and colors. The project was developed with JS, HTML, and CSS.",
+        "Beautiful design that I found in the cloud, and I have customized it to my liking, using JavaScript, CSS and Html.",
         btn: "View Project",
         //Project Detail
-        imgDetail: insertVideo,
-        Type: "Web development.",
-        Detail2: "This web software, under development, is for use by multiple Couriers and logistics companies in general. My task, as a front end developer, is to manage the process step by step, with functionalities that save and collect the necessary information from the database, or from Google Maps (for example), allow creating shipping orders, user types , print forms, send emails, etc.",
-        Languages: "Java Script, React JS, Redux, Tailwind CSS, GraphQl, Git, AWS S3, Corel Draw, Figma, Kan Board",
-        Country: "U.S.A.",
-        URL: "private.",
-        Finished: "in course."
+        videoUrl: "https://youtube.com/embed/xkQjUKjL0Pc?si=-tINBmSqLuXulWu0",
+        Type: "Effect Development",
+        Detail2: "The original code has time + day of the week. I have modified it to replace the calendar date with my initials (BOSS, Julia Esther Funes Aragón). In addition, I have adapted the tones and shadows. If you like it, I can adapt it for your project.",
+        Languages: "Java Script, CSS, HTML",
+        Country: "Argentina",
+        URL: "Go to the beginning (Home) to see another color",
+        Finished: "Finished"
     },
     {
         img: project_8,
         key: "project_8",
         list: "FUNCTIONALITY DEVELOPMENT",
-        Heding: "Calculator JS+HTML+CSS",
+        Heding: "Square meter calculator for ecommerce",
         Detail:
-        // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
-            "I developed a calculator for an existing e-commerce website. The project was developed with JS, HTML, and CSS and implemented in Tienda Nube.",
+            "I developed a calculator for an existing e-commerce website. The code was implemented in Tienda Nube.",
         btn: "View Project",
         //Project Detail
-        imgDetail: insertVideo,
-        Type: "Web development.",
-        Detail2: "This web software, under development, is for use by multiple Couriers and logistics companies in general. My task, as a front end developer, is to manage the process step by step, with functionalities that save and collect the necessary information from the database, or from Google Maps (for example), allow creating shipping orders, user types , print forms, send emails, etc.",
-        Languages: "Java Script, React JS, Redux, Tailwind CSS, GraphQl, Git, AWS S3, Corel Draw, Figma, Kan Board",
-        Country: "U.S.A.",
+        imgDetail: "",
+        videoUrl: "https://youtube.com/embed/KN8pnRz3p3U?si=Lrp7N--haW6_MK3G",
+        Type: "Functionality Development",
+        Detail2: "If you sell products that must be calculated in m2, ask me to insert this code in your online store.",
+        Languages: "Java Script, CSS, HTML",
+        Country: "Argentina",
         URL: "private.",
-        Finished: "in course."
+        Finished: "Finished"
     },
 ];
 
