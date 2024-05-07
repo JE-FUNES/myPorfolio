@@ -11,7 +11,7 @@ export const ProjectData = [
         Detail2:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         Type: "Website",
-        Langages: "PHP, HTML, CSS, JS",
+        Languages: "PHP, HTML, CSS, JS",
         Platform: "WordPress",
         Country: "USA",
         URL: "www.example.com",
