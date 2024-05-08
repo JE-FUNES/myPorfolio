@@ -1,3 +1,4 @@
+
 import React, {useEffect} from "react";
 import { getContacts, deleteContacts } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,6 +30,7 @@ const ContactList = () => {
 
     return (
         <div>
+            {/*
         <div 
              style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2>Contacts to reply</h2>
@@ -59,7 +61,7 @@ const ContactList = () => {
             ))} 
             </tbody>
         </table>
-        
+        */}
         </div>
     );
 

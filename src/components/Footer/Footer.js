@@ -30,7 +30,7 @@ const Footer = () => {
                         </div>
                         <div className="col-span-12 md:col-span-6 text-center md:text-right">
                             <p className="m-0 text-white text-opacity-75">© 2024 J.E.F.A. web - copyright all right reserved</p>
-                            <button onClick={handleContactList} className="text-white text-opacity-75 hover:text-pink-500 cursor-pointer">Contact List</button>
+                            
                         </div>
                     </div>
                 </div>
