@@ -33,7 +33,7 @@ const LogoSlider = () => {
     };
     return (
         <React.Fragment>
-            <div className="bg-purple-950 py-3 -mt-1">
+            <div className="bg-purple-950 pt-4 pb-2">
                 <div className="container">
                     <div>
                         <Slider {...settings}>

@@ -1,6 +1,7 @@
 import React from 'react'
 //import { ProjectData, ProjectImg } from './ProjectData'
 import { RiCloseFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
 
 
 const Project = ({ project, onClose }) => {
@@ -52,12 +53,31 @@ const Project = ({ project, onClose }) => {
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Country}</span>
                                     </li>
                                     <li className="flex py-1">
+                                        <span className="w-[15%] font-semibold mr-1">Period:</span>
+                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.Period}</span>
+                                    </li>
+                                    <li className="flex py-1">
                                         <span className="w-[15%] font-semibold mr-1">Status:</span>
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Finished}</span>
                                     </li>
                                     <li className="flex py-3 border-t mt-1">
                                         <span className="w-[15%] font-semibold mr-1">URL:</span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.URL}</span>
+                                        <span className="w-[85%] text-slate-700/90 ml-1">
+                                        <a href={project.URL} target='blank'>
+                                        {project.URL}
+
+                                        </a>
+                                        </span>
+                                    </li>
+                                    <li className="flex py-3 border-t border-b mt-1">
+                                        <div className="w-[15%] font-semibold mr-1">
+                                            <FaGithub /> </div>
+                                        <span className="w-[85%] text-slate-700/90 ml-1">
+                                        <a href={project.GitHub} target='blank'>
+                                        {project.GitHub}
+
+                                        </a>
+                                        </span>
                                     </li>
                                 </ul>
                             </div>

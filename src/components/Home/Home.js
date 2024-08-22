@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //import home_banner from '../../assets/Image/home-banner.png'
 import { TypeAnimation } from "react-type-animation";
 import Clock from "../Clock/Clock";
+import { Lucide } from "../../utils/index.js";
 
 const Home = () => {
 
@@ -28,7 +29,7 @@ const Home = () => {
                 website in development
               </h4>
               <h6 className="text-sm md:text-base tracking-[2px] text-verdeFluo-500 mb-3 md:mb-1">
-                (last update 07/05/2024)
+                (last update 22/08/2024)
               </h6>
               {/* Al hacer click en see details se mostrará el próximo div*/}
               {!showDetails && (
@@ -45,8 +46,7 @@ const Home = () => {
                   </h5>
                   <ol className="text-white text-sm">
                     
-                    <li>Form configuration ▫▫▫</li>
-                    <li>Data base configuraton ▫▫▫ </li>
+                    <li>Responsive design,</li>
                   </ol>
                 </div>
                 <div className="mt-5">
@@ -55,25 +55,24 @@ const Home = () => {
                     Next Steps:
                   </h5>
                   <ol className="text-fuchsia-300 text-sm">
-                    <li>◻ Responsive design,</li>
-                    <li>◻ Multi-language options,</li>
+                    <li>◻ Contact Form configuration,</li>
+                    <li>◻ Data base configuraton, </li>
+                    <li>◻ WordPress Forum,</li>
                     <li>◻ Dark mode option,</li>
-                    <li>◻ Font size option,</li>
-                    <li>◻ Mobile version,</li>
+                    <li>◻ Multi-language options,</li>
                     <li>◻ Background JS Animation,</li>
                     <li>◻ Coursor animation,</li>
-                    <li>◻ SEO,</li>
+                    
                   </ol>
                 </div>
                 <div>
                   <ol className="text-fuchsia-300 text-sm mt-14">
-                    <li>◻ Google Analytics,</li>
+                   
                     <li>◻ Search bar,</li>
-                    <li>◻ Filters,</li>
-                    <li>◻ Chat bot,</li>
-                    <li>◻ CSS list of effects,</li>
+                    <li>◻ Chat bot or AI,</li>
                     <li>◻ Simple Login</li>
                     <li>◻ Favorites CRUD</li>
+                    <li>◻ Mobile version,</li>
                     <li>◻ more content...</li>
                   </ol>
                 </div>
@@ -109,25 +108,30 @@ const Home = () => {
                 </h1>
                 <p className="text-base text-slate-100 md:text-xl mb-2 md:mb-4">
                   ...from Córdoba, Argentina, to the
-                  <span className="text-purple-500 font-bold md:text-xl ">
+                  <span className="font-semibold md:text-xl ">
                     {" "}
                     whole{" "}
                   </span>
                   <span title="WORLD">🌎</span>
-                  <span className="text-purple-500 font-bold md:text-xll ">
+                  <span className="font-bold md:text-xll ">
                     {" "}
                     !
                   </span>
                 </p>
-                <div className="pt-3">
-                  <a href="#About" className="btn btn-theme">
+
+                                
+                <div className="flex justify-start items-center mt-20 pt-3">
+                  <a href="#About">
+                  <div className="btn btn-yellow font-bold rounded-full flex justify-center items-center animate-pulse cursor-pointer ">
+                  <Lucide icon="ArrowDown" className="mr-2" />
                     Let's Start
+                  </div>
                   </a>
                 </div>
               </div>
             </div>
             {/* RIGHT */}
-            <div className="lg:col-span-6 mt-1 pt-20 mb-0 pb-0">
+            <div className="lg:col-span-6 mt-1 pt-16 mb-0 pb-0">
               <div className="text-center">
                 <Clock />
               </div>

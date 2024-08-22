@@ -1,4 +1,4 @@
-import { FaHtml5, FaAws, FaGitlab, FaDatabase, FaCreditCard, FaPaintbrush } from "react-icons/fa6";
+import { FaHtml5, FaAws, FaGitlab, FaDatabase, FaCreditCard, FaPaintbrush, FaWordpress } from "react-icons/fa6";
 import { FaCss3, FaReact, FaJsSquare, FaAd, FaPaypal } from "react-icons/fa";
 import { IoLogoAndroid } from "react-icons/io";
 
@@ -12,19 +12,19 @@ export const SkillsData = [
     {
         Bg_color: "bg-[#a855f7]",
         Logo: <FaHtml5 />,
-        Heding: "HTML",
+        Heding: "HTML & CSS",
         key: "HTML",
     },
     {
         Bg_color: "bg-[#fae8ff]",
-        Logo: <FaCss3 />,
-        Heding: "CSS",
-        key: "CSS",
+        Logo: <FaWordpress />,
+        Heding: "Wordpress & PHP",
+        key: "WORDPRESS",
     },
     {
         Bg_color: "bg-[#c084fc]",
         Logo: <FaReact />,
-        Heding: "React JS",
+        Heding: "React JS & Redux",
         key: "ReactJS",
     },
    
@@ -67,7 +67,7 @@ export const SkillsData = [
     {
         Bg_color: "bg-[#d946ef]",
         Logo: <FaAd />,
-        Heding: "Marketing Digital",
+        Heding: "Digital Marketing & S.E.O.",
         key: "MarketingDigital",
     },
     {

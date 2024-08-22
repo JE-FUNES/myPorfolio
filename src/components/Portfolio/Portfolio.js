@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { PortfolioData } from './PortfolioData'
 import Project from '../Project/Project';
+import { Lucide } from "../../utils/index.js";
 
 const Portfolio = () => {
     //const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ const Portfolio = () => {
     return (
         <React.Fragment>
             {/*----- Start Projects -----*/}
-            <section className="py-24 bg-purple-50" id="Portfolio">
+            <section className="pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
                 <div className="container">
                     <div className="grid lg:pb-16 md:pb-10 pb-8">
                         <div className="lg:col-span-6 text-center">
@@ -45,6 +46,14 @@ const Portfolio = () => {
                             })
                         }
                     </div>
+                    <div className="flex justify-end items-center mt-2">
+                <a href="#Contact">
+                  <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+                    <Lucide icon="ArrowDown" className="mr-2" />
+                    Go on
+                  </div>
+                </a>
+              </div>
                 </div>
             </section>
             {/*----- End Projects -----*/}

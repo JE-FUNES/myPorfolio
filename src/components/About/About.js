@@ -3,12 +3,13 @@ import { TypeAnimation } from "react-type-animation";
 import home_banner from "../../assets/AnimatedGifs/animated-about.gif";
 //import home_banner2 from "../../assets/Image/home-banner-hover.png";
 import { NumberData, BtnData } from "./AboutData";
+import { Lucide } from "../../utils/index.js";
 
 const About = () => {
   return (
     <React.Fragment>
       {/*----- Start About -----*/}
-      <section className="py-20 bg-bg-effect-3 bg-cover bg-no-repeat" id="About">
+      <section className="py-20 bg-white bg-bg-effect-3 bg-cover bg-no-repeat" id="About">
         <div className="container my-20 py-10">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center">
             <div className="lg:col-span-6 text-center mb-12 lg:mb-0">
@@ -108,6 +109,16 @@ const About = () => {
               })}
             </div>
           </div>
+        <div className="pt-10 flex justify-end items-center">
+          <a href="#Services">
+
+          <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer ">
+                  
+                    <Lucide icon="ArrowDown" className="mr-2" />
+                    Go on 
+                  </div>
+          </a>
+                </div>
         </div>
       </section>
       {/*----- End About -----*/}

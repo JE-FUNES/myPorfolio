@@ -8,7 +8,7 @@ import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import LogoSlider from './components/LogoSlider/LogoSlider'
-import Cta from './components/Cta/Cta'
+//import Cta from './components/Cta/Cta'
 import ContactList from './components/Contact/ContactList'
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
       <About />
       <Services />
       <Skills />
-      <Cta />
+      
       <Portfolio />
       <Contact />
       <ContactList />

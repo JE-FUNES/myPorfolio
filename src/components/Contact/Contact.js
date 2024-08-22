@@ -82,7 +82,7 @@ const Contact = () => {
     <React.Fragment>
       {/*----- Start Contact -----*/}
       <section
-        className="pt-24 pb-20 -mt-24 bg-slate-900 bg-bg-effect-2 bg-no-repeat bg-cover bg-bottom"
+        className="pt-24 pb-20 bg-slate-900 bg-bg-effect-2 bg-no-repeat bg-cover bg-bottom h-full"
         id="Contact"
       >
         <h3 className="text-slate-100 flex justify-center">CONTACT ME</h3>

@@ -19,8 +19,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'bg-effect-1': "url('/src/assets/Image/bg-effect-1.png')",
-        'bg-effect-2': "url('/src/assets/Image/bg-effect-2.png')",
+        'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
+        'bg-effect-2': "url('/src/assets/Image/bg-effect-2.webp')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',

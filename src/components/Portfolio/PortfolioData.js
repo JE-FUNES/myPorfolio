@@ -1,22 +1,45 @@
-import project_1 from '../../assets/Image/project-1.jpg'
-import project_11 from '../../assets/Image/project-11.jpg'
-import project_2 from '../../assets/Image/project-2.jpg'
-import project_3 from '../../assets/Image/project-3.jpg'
-import project_4 from '../../assets/Image/project-4.jpg'
-import project_7 from '../../assets/Image/project-7.jpg'
-import project_8 from '../../assets/Image/project-8.jpg'
-import project_5 from '../../assets/Image/landingPage.jpg'
+import project_1 from '../../assets/Image/project-1.webp';
+import project_11 from '../../assets/Image/project-11.webp';
+import project_2 from '../../assets/Image/project-2.webp';
+import project_3 from '../../assets/Image/project-3.webp';
+import project_4 from '../../assets/Image/project-4.webp';
+import project_7 from '../../assets/Image/project-7.webp';
+import project_8 from '../../assets/Image/project-8.webp';
+import project_5 from '../../assets/Image/landingPage.webp';
+import project_6 from '../../assets/Image/upnomada.webp';
+import project_9 from '../../assets/AnimatedGifs/upnomada.gif';
+
 
 
 //---- Start Projects Data -----
 export const PortfolioData = [
     {
+        img: project_6,
+        key: "project_8",
+        list: "WEB DEVELOPMENT",
+        Heding: "Website for Flight Offers",
+        Detail:
+        "I designed and developed a website for a mexican company (Upnomada). It was developed with React.js. The site has 3 sections: one for visitants, one for subscribers and one for administrators.",
+        btn: "View Project",
+        //Project Detail
+        imgDetail: project_9,
+        videoUrl: "",
+        Type: "Web development.",
+        Detail2: "I developed all frontend needs of this project. User registry (with email verification), pay subscription (Stripe integration) and login (including access through Google account). Fligths Offers page, with ordering and different types of filters, the details of the offers, the Itineraries section, User Profile and all about admin section, since creation of the offers to managing users.",
+        Languages: "Java Script, React JS, Redux, Tailwind CSS, Git, Corel Draw.",
+        Country: "México",
+        URL: "https://upnomada.com/",
+        GitHub: "https://github.com/JE-FUNES/Upnomada",
+        Period: "From March to August 2024",
+        Finished: "Finished"
+    },
+    {
         img: project_11,
-        key: "project_11",
+        key: "project_7",
         list: "WEB DEVELOPMENT",
         Heding: "U.S.A. Courier Web Software",
         Detail:
-        "I´m actually designing and developing a website for U.S.A. courier companies, which is a private project for Ascar Software. The website is being developed with React.js. It will be a website with a lot of functionalities, such as tracking, payments, login of multiple kinds of users, and more. The website is still in development.",
+        "I designed and developed a website for U.S.A. courier companies, which is a private project for Ascar Software. The website was developed with React.js. It will be a website with a lot of functionalities, such as tracking, payments, login of multiple kinds of users, and more. The project was stoped on May ´24",
         btn: "View a little bit of the Project",
         //Project Detail
         imgDetail: "",
@@ -25,13 +48,15 @@ export const PortfolioData = [
         Detail2: "This web software, under development, is for use by multiple Couriers and logistics companies in general. My task, as a front end developer, is to manage the process step by step, with functionalities that save and collect the necessary information from the database, or from Google Maps (for example), allow creating shipping orders, user types , print forms, send emails, etc.",
         Languages: "Java Script, React JS, Redux, Tailwind CSS, GraphQl, Git, AWS S3, Corel Draw, Figma, Kan Board",
         Country: "U.S.A.",
-        URL: "private.",
-        Finished: "in course."
+        URL: "http://ascar-portal-client.s3-website.us-east-2.amazonaws.com/",
+        GitHub: "https://github.com/JE-FUNES/Ascar-public",
+        Period: "From December 2023 to May 2024",
+        Finished: "Finished"
     },
     {
         img: project_1,
-        key: "project_1",
-        list: "LANDING PAGES DESIGN",
+        key: "project_6",
+        list: "WEB DESIGN & DEVELOP",
         Heding: "Medellín Wordpress Designs",
         Detail:
             "I design landing pages for a Marketing Agency Startup, Agencia Promarketing. I design and develop services for small customers, specializing in creating stylish, modern websites, web services, authomatic emails, and payment gateways.",
@@ -39,33 +64,37 @@ export const PortfolioData = [
         //Project Detail
         imgDetail: project_5,
         Type: "Landing Pages Design",
-        Detail2: "I created 3 landing pages for the Pro Market Agency, for 3 different marketing campaigns. Each one had to have an aesthetic according to its corresponding website or style on its social network. The aesthetic was different on mobile devices than on larger screens.",
+        Detail2: "I created 3 sites, based on Wordpress, for the Pro Market Agency, for 3 different clients.",
         Languages: "Wordpress, PHP, Java Script, Corel Draw, Notion, Google Drive",
         Country: "Colombia",
-        URL: "       https://respiralavida.com/evento-sabiduria-en-accion/ | https://conexion-angelical.com/workshop-rituales/ | https://elclub.co/mindset-workshop/",
-        Finished: "finished"
+        URL: "       https://respiralavida.com/ | https://conexion-angelical.com | https://elclub.co",
+        GitHub: "https://github.com/JE-FUNES/elClub.co-JulianaCalle | https://github.com/JE-FUNES/ValeriaLandeo-30Nov",
+        Period: "From October 2023 to January 2023",
+        Finished: "Finished"
     },
     {
         img: project_3,
-        key: "project_3",
+        key: "project_5",
         list: "WEB DEVELOPMENT",
         Heding: "Bogotá Events Website ",
         Detail:
             "I designed and developed a website for a Bogotá events company, Grupo 3 creativo, Proyecto mi Butaca. The website was developed with React.js. It is a website with a lot of functionalities, such as seats reservation, payments, login, and more.",
         btn: "View Project",
         //Project Detail
-        imgDetail: "project_3",
+        imgDetail: project_3,
         videoUrl:"https://www.youtube.com/embed/21o1_15-LQA?si=weeGMGiHkPtMDD8M",
         Type: "Web development.",
         Detail2: "As part of the front end development team of this project, I have participated in the creation of the user registry, their login and access through Google account, the details of the events, the registration and selection of seats, purchase of tickets, payment, etc",
         Languages: "Java Script, React JS, Redux, Tailwind CSS, GitHub, Corel Draw, Figma, Trello",
         Country: "Colombia",
         URL: "https://www.mibutaca2023.vercel.app",
+        GitHub: "https://github.com/JE-FUNES/MiButaca-publico",
+        Period: "From October to November 2023",
         Finished: "Finished"
     },
     {
         img: project_2,
-        key: "project_2",
+        key: "project_4",
         list: "WEB DEVELOPMENT",
         Heding: "Videogames Website",
         Detail:
@@ -79,11 +108,13 @@ export const PortfolioData = [
         Languages: "Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
         Country: "Argentina",
         URL: "no url",
+        GitHub: "https://github.com/JE-FUNES/PI-VideoGames",
+        Period: "October 2023",
         Finished: "Finished"
     },
     {
         img: project_4,
-        key: "project_4",
+        key: "project_3",
         list: "WEB DEVELOPMENT",
         Heding: "Rick & Morty Website",
         Detail:
@@ -98,11 +129,13 @@ export const PortfolioData = [
         Languages: "Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
         Country: "Argentina",
         URL: "no url",
+        GitHub: "https://github.com/JE-FUNES/RickandMorty",
+        Period: "October 2023",
         Finished: "Finished"
     },
     {
         img: project_7,
-        key: "project_7",
+        key: "project_2",
         list: "EFFECT DEVELOPMENT",
         Heding: "Clock Animation",
         Detail:
@@ -115,11 +148,13 @@ export const PortfolioData = [
         Languages: "Java Script, CSS, HTML",
         Country: "Argentina",
         URL: "Go to the beginning (Home) to see another color",
+        GitHub: "https://github.com/JE-FUNES/Reloj-Retro-Neon-ReactJS",
+        Period: "November 2023",
         Finished: "Finished"
     },
     {
         img: project_8,
-        key: "project_8",
+        key: "project_1",
         list: "FUNCTIONALITY DEVELOPMENT",
         Heding: "Square meter calculator for ecommerce",
         Detail:
@@ -133,6 +168,8 @@ export const PortfolioData = [
         Languages: "Java Script, CSS, HTML",
         Country: "Argentina",
         URL: "private.",
+        GitHub: "https://github.com/JE-FUNES/Calculador-m2-html-compatible-con-E-commerce",
+        Period: "November 2023",
         Finished: "Finished"
     },
 ];
