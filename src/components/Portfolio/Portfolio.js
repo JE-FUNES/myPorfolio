@@ -38,7 +38,7 @@ const Portfolio = () => {
                                         </div>
                                         <div className={`flex flex-col justify-center lg:px-10 md:px-5 ${index % 2 === 0 ? '' : 'order-1'}`}>
                                             <h6 className="mb-[18px]">
-                                                <span className="inline-block px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">{project.list}</span>
+                                                <span className="inline-block sm:mt-2 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">{project.list}</span>
                                             </h6>
                                             <h4 className="mb-4 text-2xl font-semibold md:mb-6 md:text-[32px]">{project.Heding}</h4>
                                             <p className='mb-6 text-slate-700/90'>{project.Detail}</p>

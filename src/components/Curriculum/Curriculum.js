@@ -1,13 +1,21 @@
 import React from "react";
 import { Lucide } from "../../utils/index.js";
+import { useSelector } from "react-redux";
 
 const Curriculum = () => {
+  const language = useSelector((state) => state.language);
   return (
     <React.Fragment>
       {/*----- Start Curriculum -----*/}
       <section className="pt-10 pb-2 bg-white" id="Curriculum">
         <div className="container my-20 py-10">
-          <iframe src="/CV_JULIA_FUNES-Frontend_Developer-english.pdf"
+          <iframe src=
+          {language === "en" ?
+            "/CV_JULIA_FUNES-Frontend_Developer-english.pdf" :
+            "/CV_JULIA_FUNES-Desarrollo_Frontend-spanish.pdf"
+          }
+           
+
                   style={{ width: '100%', height: '70vh' }}
                   frameBorder="0"
                 />
@@ -16,7 +24,9 @@ const Curriculum = () => {
             <a href="#Contact">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer ">
                 <Lucide icon="ArrowDown" className="mr-2" />
-                Go on
+                {language === "en" ?
+                    "Go on" : "Sigamos" 
+                    }
               </div>
             </a>
           </div>

@@ -12,7 +12,7 @@ const Project = ({ project, onClose }) => {
         <React.Fragment>
             <div className="fixed md:overflow-hidden overflow-scroll inset-0 bg-black/80 z-[99999]">
                 <div className="flex items-center justify-center min-h-screen px-2">
-                    <div className="w-[80%] m-auto p-7 bg-white relative">
+                    <div className="sm:w-full lg:w-[80%] m-auto p-7 bg-white relative">
                         <button type="button" onClick={onClose} className="absolute right-1.5 top-2.5 md:right-5 md:top-5 text-2xl" >
                             <RiCloseFill />
                         </button>
@@ -20,9 +20,9 @@ const Project = ({ project, onClose }) => {
                             <div className="col-span-12 md:col-span-7 mb-10 md:mb-0">
                                 <div className="grid grid-cols-2 gap-2">
                                         {project.videoUrl ? (
-                                    <div className="col-span-1 my-1">
+                                    <div className="col-span-1 my-1 sm:w-full sm:ml-5 md:ml-20">
                                            <iframe
-                                           width="850"
+                                           width="auto"
                                            height="450"
                                            src={project.videoUrl}
                                            title="YouTube video player"
