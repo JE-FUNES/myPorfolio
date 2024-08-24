@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { ContactData } from "./ContactData";
+import { ContactData, EspContactData } from "./ContactData";
 import { submitContactForm } from "../../redux/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import contact_bg from "../../assets/Image/contact-bg.png";
 
 
 const Contact = () => {
+  const language = useSelector((state) => state.language);
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
 
@@ -82,16 +83,20 @@ const Contact = () => {
     <React.Fragment>
       {/*----- Start Contact -----*/}
       <section
-        className="pt-24 pb-20 bg-slate-900 bg-bg-effect-2 bg-no-repeat bg-cover bg-bottom h-full"
+        className="lg:pt-24 lg:pb-20 bg-slate-900 bg-bg-effect-2 bg-no-repeat bg-cover lg:bg-bottom h-full w-screen"
         id="Contact"
       >
-        <h3 className="text-slate-100 flex justify-center">CONTACT ME</h3>
-        <div className="container pt-24 pb-24  mt-1 justify-center">
+        <h3 className="text-slate-100 flex justify-center">
+          {language === "en" ?
+          "CONTACT ME" : "CONTACTO"
+          }
+          </h3>
+        <div className="container lg:pt-24 lg:pb-24  mt-1 justify-center">
           <div className="grid grid-cols-12">
             {/* Start Contact form  */}
             <div className="col-span-12 lg:col-span-6 ">
-              <div className="lg:max-w-[410px] w-full lg:ml-auto pt-[50px] lg:pt-0">
-                <div className="pb-10">
+              <div className="lg:max-w-[410px] w-full lg:ml-auto pt-0">
+                <div className="lg:pb-10">
                   <img
                     className="w-full border"
                     src={contact_bg}
@@ -107,7 +112,9 @@ const Contact = () => {
             <div className="col-span-12 lg:col-span-6 flex">
               <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[50px] lg:pt-0">
               <ul>
-                  {ContactData.map((e, key) => {
+
+                  {language === "en" ?
+                  ContactData.map((e, key) => {
                     return (
                       <li className="relative flex mb-6 border" key={e.key}>
                         <div
@@ -117,14 +124,14 @@ const Contact = () => {
                         </div>
                         <div className="flex-1 pl-4">
                           <h5
-                            className="mx-2 my-3 text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
+                            className="mx-2 my-3 sm:text-xs md:text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
                             title={e.hoverTitle}
                             onClick={e.link}
                           >
                             {e.name}
                           </h5>
                           <p
-                            className="mx-2 my-3 font-medium md:text-xl text-lg text-white max-w-[250px] cursor-pointer"
+                            className="mx-2 my-3 font-medium sm:text-sm md:text-xl text-white max-w-[250px] cursor-pointer"
                             title={e.hoverTitle}
                             onClick={e.link}
                           >
@@ -133,14 +140,45 @@ const Contact = () => {
                         </div>
                       </li>
                     );
-                  })}
+                  })
+                :
+                EspContactData.map((e, key) => {
+                  return (
+                    <li className="relative flex mb-6 border" key={e.key}>
+                      <div
+                        className={`inline-flex items-center justify-center text-2xl h-14 w-14 ${e.Bg_color}`}
+                      >
+                        {e.icon}
+                      </div>
+                      <div className="flex-1 pl-4">
+                        <h5
+                          className="mx-2 my-3 sm:text-xs md:text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
+                          title={e.hoverTitle}
+                          onClick={e.link}
+                        >
+                          {e.name}
+                        </h5>
+                        <p
+                          className="mx-2 my-3 font-medium md:text-xl sm:text-sm text-white max-w-[250px] cursor-pointer"
+                          title={e.hoverTitle}
+                          onClick={e.link}
+                        >
+                          {e.contact}
+                        </p>
+                      </div>
+                    </li>
+                  );
+                })
+                }
                 </ul>
                 <div className="border px-5 py-11 justify-items-center align-center">
                   <h6
                     className="text-[32px] font-semibold text-purple-50 text-center hover:text-yellow-500 hover:font-bold cursor-pointer"
                     onClick={handleCalendar}
                   >
-                    SCHEDULE A MEETING
+                    {language === "en" ?
+                    "SCHEDULE A MEETING" : "AGENDA UNA CITA"
+                    }
                   </h6>
                 </div>
                   

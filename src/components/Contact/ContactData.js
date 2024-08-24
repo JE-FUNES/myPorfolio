@@ -1,4 +1,5 @@
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
 //---- Start Contact Data -----
 
 const handlesendEmail = () => {
@@ -36,5 +37,26 @@ export const ContactData = [
         link: handlesendEmail
     },
    
+]
 
+export const EspContactData = [
+    {
+        Bg_color: "bg-[#e9d5ff]",
+        icon: <FaPhoneAlt/>,
+        name: "CEL.",
+        contact: "+54 9 351 2737 199",
+        key: "phone",
+        hoverTitle: "Llamame",
+        link: handleCall
+    },
+    {
+        Bg_color: "bg-[#c084fc]",
+        icon: <FaEnvelope/>,
+        name: "MAIL",
+        contact: "juliafunesaragon@gmail.com",
+        key: "mail",
+        hoverTitle: "Enviame un email",
+        link: handlesendEmail
+    },
+   
 ]
