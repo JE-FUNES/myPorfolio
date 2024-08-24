@@ -1,4 +1,5 @@
 //---- Start Number Data -----
+//---- Start Number Data -----
 export const NumberData = [
     {
         Number: calculateYearsDesigning(),
@@ -11,18 +12,34 @@ export const NumberData = [
         Detail: "Hours of Code",
         Title: "Data changes every 8 hours of code",
         key: "hoursOfCode"
-    },
-    {/*{
-        Number: "285+",
-        Detail: "Projet Completed",
-    },*/}
-    
+    },   
 ]
-//---- Start Number Data -----
+
+export const EspNumberData = [
+    {
+        Number: calculateYearsDesigning(),
+        Detail: "Años diseñando",
+        Title: "Los datos se actualizan cada 1ero. de Enero",
+        key: "yearsDesigning"
+    },
+    {
+        Number: calculateHoursOfCode(),
+        Detail: "Horas de código",
+        Title: "Los datos se actualizan cada 8hs. de código",
+        key: "hoursOfCode"
+    },   
+]
 //---- Start Btn Data -----
 export const BtnData = [
     {
         btn1: "Contact Me",
+        btn2: "Portfolio",
+    },
+]
+
+export const EspBtnData = [
+    {
+        btn1: "Contactame",
         btn2: "Portfolio",
     },
 ]
