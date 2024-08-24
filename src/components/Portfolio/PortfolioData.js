@@ -16,7 +16,7 @@ export const PortfolioData = [
     {
         img: project_6,
         key: "project_8",
-        list: "WEB DEVELOPMENT",
+        list: "WEB DESIGN & DEVELOP",
         Heding: "Website for Flight Offers",
         Detail:
         "I designed and developed a comprehensive website for Upnomada, a Mexican company, using React.js. The site includes three distinct sections: one for visitors, one for subscribers, and one for administrators.",
@@ -59,23 +59,23 @@ export const PortfolioData = [
         list: "WEB DESIGN & DEVELOP",
         Heding: "Medellín Wordpress Designs",
         Detail:
-            "I designed landing pages for Agencia Promarketing, a marketing agency startup. I focused on developing stylish, modern websites and web services for small businesses, including automated emails and payment gateways. ",
+            "I designed different web pages for clients of the Pro Market Agency, a digital marketing startup from Colombia. I focused on developing sleek, modern websites and web services for small businesses, including automated emails and payment gateways. ",
         btn: "View some Projects",
         //Project Detail
         imgDetail: project_5,
-        Type: "Landing Pages Design",
+        Type: "Web development.",
         Detail2: "During my time there, I built three WordPress-based sites for different clients, tailoring each to their unique needs.",
         Languages: "Wordpress, PHP, Java Script, Corel Draw, Notion, Google Drive",
         Country: "Colombia",
         URL: "       https://respiralavida.com/ | https://conexion-angelical.com | https://elclub.co",
         GitHub: "https://github.com/JE-FUNES/elClub.co-JulianaCalle | https://github.com/JE-FUNES/ValeriaLandeo-30Nov",
-        Period: "From October 2023 to January 2023",
+        Period: "From October 2023 to January 2024",
         Finished: "Finished"
     },
     {
         img: project_3,
         key: "project_5",
-        list: "WEB DEVELOPMENT",
+        list: "WEB DESIGN & DEVELOP",
         Heding: "Bogotá Events Website ",
         Detail:
             "I designed and developed a website for a Bogotá events company, Grupo 3 creativo, Proyecto mi Butaca. The website was developed with React.js. It is a website with a lot of functionalities, such as seats reservation, payments, login, and more.",
@@ -95,7 +95,7 @@ export const PortfolioData = [
     {
         img: project_2,
         key: "project_4",
-        list: "WEB DEVELOPMENT",
+        list: "WEB DESIGN & DEVELOP",
         Heding: "Videogames Website",
         Detail:
             "I designed and developed a website for a videogames company, for practice in the Henry bootcamp. It is a website with a lot of functionalities, such as catalog, details, contact form, admin panel, login, and more.",
@@ -115,7 +115,7 @@ export const PortfolioData = [
     {
         img: project_4,
         key: "project_3",
-        list: "WEB DEVELOPMENT",
+        list: "WEB DESIGN & DEVELOP",
         Heding: "Rick & Morty Website",
         Detail:
         // en ingles: Diseñe  y desarrollé un sitio web como práctica en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalkeyades, como catálogo, detalles, formulario de contacto, panel administrador, login y más.
@@ -174,3 +174,163 @@ export const PortfolioData = [
     },
 ];
 
+export const EspPortfolioData = [
+    {
+        img: project_6,
+        key: "project_8",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Sitio con Ofertas de Vuelos",
+        Detail:
+        "Diseñé y desarrollé un sitio web integral para Upnomada, empresa mexicana, utilizando React.js. El sitio incluye tres secciones distintas: una para visitantes, otra para suscriptores y otra para administradores.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        imgDetail: project_9,
+        videoUrl: "",
+        Type: "Desarrollo Web",
+        Detail2: "En este proyecto, manejé todas las tareas de desarrollo frontend. Las características clave incluyen un sistema de registro de usuarios con verificación por correo electrónico, pagos de suscripción a través de la integración de Stripe y un sistema de inicio de sesión que admite el acceso a la cuenta de Google. También desarrollé la página de ofertas de vuelos, que incluye opciones de clasificación y filtrado, así como detalles de las ofertas. Además, creé la sección de Itinerarios, la administración de perfiles de usuario y toda la sección de administración, que incluye la creación de ofertas y la administración de usuarios.",
+        Languages: "Java Script, React JS, Redux, Tailwind CSS, Git, Corel Draw.",
+        Country: "México",
+        URL: "https://upnomada.com/",
+        GitHub: "https://github.com/JE-FUNES/Upnomada",
+        Period: "Desde Marzo hasta Agosto 2024",
+        Finished: "Terminado"
+    },
+    {
+        img: project_11,
+        key: "project_7",
+        list: "DESARROLLO WEB",
+        Heding: "Software Web para Couriers de U.S.A.",
+        Detail:
+        "Diseñé y desarrollé un sitio web para empresas de logística de Estados Unidos como parte de un proyecto privado para Ascar Software. El sitio web, creado con React.js, incluye una variedad de funciones como seguimiento, pagos e inicio de sesión multiusuario.",
+        btn: "Mira un poquito del Proyecto aquí",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/Vkr1_01egnU?si=PioZvQzMX8vAVIX-",
+        Type: "Desarrollo Web",
+        Detail2: "Mi rol como desarrolladora front-end implicó gestionar el proyecto paso a paso, implementar funcionalidades para manejar y recuperar datos de bases de datos o API externas como Google Maps, permitiendo la creación de órdenes de envío, gestión de usuarios, impresión de formularios y notificaciones por correo electrónico. El proyecto se detuvo en Mayo de 2024.",
+        Languages: "Java Script, React JS, Redux, Tailwind CSS, GraphQl, Git, AWS S3, Corel Draw, Figma, Kan Board",
+        Country: "U.S.A.",
+        URL: "http://ascar-portal-client.s3-website.us-east-2.amazonaws.com/",
+        GitHub: "https://github.com/JE-FUNES/Ascar-public",
+        Period: "De Diciembre 2023 a Mayo 2024",
+        Finished: "Terminado"
+    },
+    {
+        img: project_1,
+        key: "project_6",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Páginas Web con WordPress",
+        Detail:
+            "Diseñé diferentes páginas web para clientes de la Agencia Pro Market, una startup de marketing digital de Colombia. Me concentré en desarrollar sitios web y servicios web elegantes y modernos para pequeñas empresas, incluidos correos electrónicos automatizados y pasarelas de pago. ",
+        btn: "Ver los Proyectos",
+        //Project Detail
+        imgDetail: project_5,
+        Type: "Desarrollo Web",
+        Detail2: "Durante mi estancia allí, creé tres sitios basados ​​en WordPress para diferentes clientes, adaptando cada uno a sus necesidades únicas.",
+        Languages: "Wordpress, PHP, Java Script, Corel Draw, Notion, Google Drive",
+        Country: "Colombia",
+        URL: "       https://respiralavida.com/ | https://conexion-angelical.com | https://elclub.co",
+        GitHub: "https://github.com/JE-FUNES/elClub.co-JulianaCalle | https://github.com/JE-FUNES/ValeriaLandeo-30Nov",
+        Period: "De Octubre 2023 a Enero 2024",
+        Finished: "Terminado"
+    },
+    {
+        img: project_3,
+        key: "project_5",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Tienda online de Eventos y Fiestas",
+        Detail:
+            "Diseñé y desarrollé un sitio web para una empresa de eventos de Bogotá, Grupo 3 creativo, Proyecto mi Butaca. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como reserva de asientos, pagos, inicio de sesión y más.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        imgDetail: project_3,
+        videoUrl:"https://www.youtube.com/embed/21o1_15-LQA?si=weeGMGiHkPtMDD8M",
+        Type: "Desarrollo Web",
+        Detail2: "Como parte del equipo de desarrollo front end de este proyecto, he participado en la creación del registro de usuarios, su login y acceso a través de cuenta de Google, el detalle de los eventos, el registro y selección de asientos, compra de entradas, pago, etc.",
+        Languages: "Java Script, React JS, Redux, Tailwind CSS, GitHub, Corel Draw, Figma, Trello",
+        Country: "Colombia",
+        URL: "https://www.mibutaca2023.vercel.app",
+        GitHub: "https://github.com/JE-FUNES/MiButaca-publico",
+        Period: "De Octubre a Noviembre 2023",
+        Finished: "Terminado"
+    },
+    {
+        img: project_2,
+        key: "project_4",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Sitio Web de Video Juegos",
+        Detail:
+            "Diseñé y desarrollé un sitio web para una empresa de videojuegos, para practicar en el bootcamp de Henry. Es un sitio web con muchas funcionalidades, como catálogo, detalles, formulario de contacto, panel de administración, inicio de sesión y más.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/gIKcj3LtzNI?si=GeBI18tB480AjjcC",
+        Type: "Desarrollo Web",
+        Detail2: "Este proyecto lo he desarrollado sola, sin equipo de apoyo, ni front end ni back end. Por este proyecto he sido reconocida y elogiada, tanto por profesores y autoridades del bootcamp, como por compañeros de estudio.",
+        Languages: "Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
+        Country: "Argentina",
+        URL: "no url",
+        GitHub: "https://github.com/JE-FUNES/PI-VideoGames",
+        Period: "Octubre 2023",
+        Finished: "Terminado"
+    },
+    {
+        img: project_4,
+        key: "project_3",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Rick & Morty",
+        Detail:
+            "Diseñé y desarrollé un sitio web para practicar en el bootcamp de Henry. El sitio web fue desarrollado con React.js. Es un sitio web con muchas funcionalidades, como catálogo, detalles, favoritos, formulario de contacto, inicio de sesión y más.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/6ijuyxgBk7o?si=66fM-2AXf0btETTa",
+        Type: "Desarrollo Web",
+        Detail2: "Este proyecto lo he hecho solo, sin equipo, ni front end ni back end. Este proyecto resultó elegido en 1er lugar en el concurso realizado en el bootcamp, siendo el más votado por los compañeros.",
+        Languages: "Java Script, React JS, Redux, CSS, Node Js, Express, Sequelize, GitHub, Corel Draw, Gif Animator",
+        Country: "Argentina",
+        URL: "no url",
+        GitHub: "https://github.com/JE-FUNES/RickandMorty",
+        Period: "Octubre 2023",
+        Finished: "Terminado"
+    },
+    {
+        img: project_7,
+        key: "project_2",
+        list: "DESARROLLO DE EFECTO",
+        Heding: "Reloj Retro Animado",
+        Detail:
+        "Precioso diseño que encontré en la nube, y lo he personalizado a mi gusto, usando JavaScript, CSS y Html.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        videoUrl: "https://youtube.com/embed/xkQjUKjL0Pc?si=-tINBmSqLuXulWu0",
+        Type: "Desarrollo de Efecto",
+        Detail2: "El código original tiene hora + día de la semana. Lo he modificado para sustituir la fecha del calendario por mis iniciales (JEFA, Julia Esther Funes Aragón). Además, he adaptado los tonos y sombras. Si te gusta puedo adaptarlo para tu proyecto.",
+        Languages: "Java Script, CSS, HTML",
+        Country: "Argentina",
+        URL: "Puedes verlo en otro color en el INICIO de esta web.",
+        GitHub: "https://github.com/JE-FUNES/Reloj-Retro-Neon-ReactJS",
+        Period: "Noviembre 2023",
+        Finished: "Terminado"
+    },
+    {
+        img: project_8,
+        key: "project_1",
+        list: "DESARROLLO DE FUNCIONALIDAD",
+        Heding: "Calculador de metros cuadrados",
+        Detail:
+            "Desarrollé una calculadora para un sitio web de comercio electrónico existente. El código fue implementado en Tienda Nube.",
+        btn: "Ver Proyecto",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://youtube.com/embed/KN8pnRz3p3U?si=Lrp7N--haW6_MK3G",
+        Type: "Desarrollo de Funcionalidad",
+        Detail2: "Si vendes productos que deben calcularse en m2, pídeme que inserte este código en tu tienda online.",
+        Languages: "Java Script, CSS, HTML",
+        Country: "Argentina",
+        URL: "privada.",
+        GitHub: "https://github.com/JE-FUNES/Calculador-m2-html-compatible-con-E-commerce",
+        Period: "Noviembre 2023",
+        Finished: "Terminado"
+    },
+];

@@ -2,9 +2,12 @@ import React from 'react'
 //import { ProjectData, ProjectImg } from './ProjectData'
 import { RiCloseFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 
 const Project = ({ project, onClose }) => {
+    const language = useSelector((state) => state.language);
+
     return (
         <React.Fragment>
             <div className="fixed md:overflow-hidden overflow-scroll inset-0 bg-black/80 z-[99999]">
@@ -40,24 +43,44 @@ const Project = ({ project, onClose }) => {
                                 <p className="mb-3 text-slate-700/90 text-sm">{project.Detail2}</p>
                                 <ul className="pt-2 list-none">
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-1">Type:</span>
+                                        <span className="w-[15%] font-semibold mr-1">
+                                            {language === "en" ?
+                                            "Type:" : "Tipo:"
+                                            }
+                                            </span>
                                         <span className="w-[85%]text-slate-700/90 ml-1">{project.Type}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-1">Tools:</span>
+                                        <span className="w-[15%] font-semibold mr-1">
+                                            {language === "en" ?
+                                            "Tools:" : "Tecnolog.:"
+                                            }
+                                            </span>
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Languages}</span>
                                     </li>
 
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-1">Country:</span>
+                                        <span className="w-[15%] font-semibold mr-1">
+                                            {language === "en" ?
+                                            "Country:" : "País:"
+                                            }
+                                            </span>
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Country}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-1">Period:</span>
+                                        <span className="w-[15%] font-semibold mr-1">
+                                            {language === "en" ?
+                                            "Period:" : "Fecha:"
+                                            }
+                                            </span>
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Period}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-1">Status:</span>
+                                        <span className="w-[15%] font-semibold mr-1">
+                                            {language === "en" ?
+                                            "Status:" : "Estado:"
+                                            }
+                                            </span>
                                         <span className="w-[85%] text-slate-700/90 ml-1">{project.Finished}</span>
                                     </li>
                                     <li className="flex py-3 border-t mt-1">
