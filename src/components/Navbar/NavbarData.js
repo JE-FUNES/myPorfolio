@@ -13,11 +13,11 @@ export const NavbarData = [
 //---- Inicio NavBarData en español -----
 export const EspNavbarData = [
     { name: "Inicio", link: "Home" },
-    { name: "Acerca de", link: "About"},
+    { name: "Sobre mí", link: "About"},
     { name: "Servicios", link: "Services" },
     { name: "Habilidades", link: "Skills" },
     { name: "Proyectos", link: "Portfolio" },
-    { name: "Curriculum V.", link: "Curriculum"},
-    { name: "Contactame", link: "Contact" },
+    { name: "Curriculum", link: "Curriculum"},
+    { name: "Contacto", link: "Contact" },
 ]
 //----- End Navbar Data -----
