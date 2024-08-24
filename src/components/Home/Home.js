@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-//import home_banner from '../../assets/Image/home-banner.png'
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import Clock from "../Clock/Clock";
 import { Lucide } from "../../utils/index.js";
