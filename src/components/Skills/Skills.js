@@ -17,7 +17,7 @@ const Skills = () => {
                 <div className="grid gap-4 grid-cols-12 bg-slate-900 ">
                   {SkillsData.map((e, index) => {
                     return (
-                      <div className="col-span-6 hover:shadow-black transition-all duration-300 ease-in bg-black">
+                      <div className="col-span-6 hover:shadow-black transition-all duration-300 ease-in bg-black" key={index} >
                         <div
                           className={`flex items-center border-2 border-slate-900 p-4 ${e.Bg_color}`}
                           key={e.key}

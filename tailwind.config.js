@@ -1,21 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{php,html,js,jsx,ts,tsx,vue}",
+    "./resources/**/*.{php,html,js,jsx,ts,tsx,vue}",
+    "./node_modules/@left4code/tw-starter/**/*.js",
+    // ".//*.html",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       primary: ["Sora", "sans-serif"],
     },
     container: {
       center: true,
-      padding: "1rem",
+      padding: "0.5rem",
     },
     screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1230px",
+      sm: "360px",
+      md: "820px",
+      lg: "1230px",
+      xl: "1440px",
     },
     extend: {
       backgroundImage: {
@@ -30,6 +36,7 @@ module.exports = {
 
       },
       colors: {
+
         verdeFluo: {
           500: "#00ff7f",
         },
@@ -45,6 +52,8 @@ module.exports = {
         fuchsia: {
           300: "#ff00ff",
         },
+        
+        
       },
     },
     plugins: [],

@@ -18,7 +18,7 @@ const Services = () => {
                         {
                             ServicesData.map((e, index) => {
                                 return (
-                                    <div className="lg:col-span-6 hover:shadow-black transition-all duration-300 ease-in">
+                                    <div key={index} className="lg:col-span-6 hover:shadow-black transition-all duration-300 ease-in">
                                         <div className={`flex border-2 border-slate-900 p-5 ${e.Bg_color}`} >
                                             <div className="flex justify-center items-center h-[70px] w-[70px] border-2 text-[32px] bg-white border-slate-900" key={e.key}>
                                                 {e.Logo}

@@ -2,7 +2,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import home_banner from "../../assets/AnimatedGifs/animated-about.gif";
 //import home_banner2 from "../../assets/Image/home-banner-hover.png";
-import { NumberData, BtnData } from "./AboutData";
+import { NumberData, BtnData } from "./AboutData.js";
 import { Lucide } from "../../utils/index.js";
 
 const About = () => {
@@ -86,7 +86,7 @@ const About = () => {
               <div className="grid grid-cols-16 pt-3">
                 {NumberData.map((e, key) => {
                   return (
-                    <div className="col-span-6 sm:col-span-4" key={key}>
+                    <div className="col-span-6 sm:col-span-4" key={e.key}>
                       <h5 className="text-[26px] text-fuchsia-600 font-semibold" title={e.Title}>
                         {e.Number}
                       </h5>

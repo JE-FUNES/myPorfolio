@@ -24,7 +24,7 @@ const Portfolio = () => {
                         {
                             PortfolioData.map((project, index) => {
                                 return (
-                                    <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16">
+                                    <div key={index} className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16">
                                         <div className={`lg:px-10 md:px-5 ${index % 2 === 0 ? '' : 'lg:order-2'}`}>
                                             <div className="border-2 border-slate-900 hover:shadow-shadowFuchsia transition-all duration-300 ease-in"  key={project.key}>
                                                 <img src={project.img} alt="" className='bg-no-repeat bg-cover' />
@@ -47,7 +47,7 @@ const Portfolio = () => {
                         }
                     </div>
                     <div className="flex justify-end items-center mt-2">
-                <a href="#Contact">
+                <a href="#Curriculum">
                   <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                     <Lucide icon="ArrowDown" className="mr-2" />
                     Go on

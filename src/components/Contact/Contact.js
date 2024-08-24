@@ -118,14 +118,14 @@ const Contact = () => {
                         <div className="flex-1 pl-4">
                           <h5
                             className="mx-2 my-3 text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
-                            Title={e.hoverTitle}
+                            title={e.hoverTitle}
                             onClick={e.link}
                           >
                             {e.name}
                           </h5>
                           <p
                             className="mx-2 my-3 font-medium md:text-xl text-lg text-white max-w-[250px] cursor-pointer"
-                            Title={e.hoverTitle}
+                            title={e.hoverTitle}
                             onClick={e.link}
                           >
                             {e.contact}

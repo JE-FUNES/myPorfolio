@@ -60,7 +60,8 @@ function Clock() {
 
   return (
     <>
-    <div id="clockTailwind" style={{height: "750px", marginTop: "-62px", marginBottom: "-65px"}} >
+    <div id="clockTailwind" className="sm:-mt-[200px] md:-mt-[100px] sm:-mb-[200px] md:mb-10 lg:-mt-[70px] z-0 "
+    style={{height: "750px"}} >
       <svg id="noise-svg">
         <filter id="noiseFilter">
           <feTurbulence

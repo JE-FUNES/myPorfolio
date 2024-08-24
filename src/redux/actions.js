@@ -2,6 +2,7 @@ import {
   SUBMIT_CONTACT_FORM,
   GET_CONTACTS,
   DELETE_CONTACTS,
+  CHOOSE_LANGUAGE,
 } from "./actionTypes.js";
 
 import axios from "axios";
@@ -60,5 +61,14 @@ export const deleteContacts = (id) => {
       console.log(error);
       alert("The contact could not be deleted");
     }
+  };
+};
+
+// choose languaje
+
+export const chooseLanguage = (language) => {
+  return {
+    type: CHOOSE_LANGUAGE,
+    payload: language,
   };
 };

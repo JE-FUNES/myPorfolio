@@ -3,14 +3,10 @@ import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Clock from "../Clock/Clock";
 import { Lucide } from "../../utils/index.js";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-
-  const [showDetails, setShowDetails] = useState(false);
-  
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
+  const language = useSelector((state) => state.language);
 
   return (
     <React.Fragment>
@@ -22,118 +18,63 @@ const Home = () => {
         <div className="container relative z-[1]">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center mt-10">
             {/* LEFT */}
-            <div className="lg:col-span-6">
-              <div className={`${!showDetails ? "top-0 -mt-20 mb-20" : ""}`}>
-
-              <h4 className=" text-white text-lg uppercase md:text-base tracking-[2px] font-bold mb-1 md:mb-1">
-                website in development
-              </h4>
-              <h6 className="text-sm md:text-base tracking-[2px] text-verdeFluo-500 mb-3 md:mb-1">
-                (last update 22/08/2024)
-              </h6>
-              {/* Al hacer click en see details se mostrará el próximo div*/}
-              {!showDetails && (
-              <h5 className="text-orange-500 text-sm cursor-pointer" onClick={toggleDetails}>
-                👁‍🗨 see the details of what will be implemented next
-              </h5>
-              )}
-              {/* Este div se mostrará al hacer click en see details*/}
-              <div className={`grid lg:grid-cols-3 gap-4 mb-20 ${showDetails ? 'block' : 'hidden'}`}>
-                <div>
-                  <h5 className="text-white underline text-lg font-bold mb-2 mt-5">
-                    Steps{" "}
-                    <span className="text-sm font-normal">(in progress):</span>
-                  </h5>
-                  <ol className="text-white text-sm">
-                    
-                    <li>Responsive design,</li>
-                  </ol>
-                </div>
-                <div className="mt-5">
-                  <h5 className="text-fuchsia-300 underline text-lg font-bold mb-2">
-                    {" "}
-                    Next Steps:
-                  </h5>
-                  <ol className="text-fuchsia-300 text-sm">
-                    <li>◻ Contact Form configuration,</li>
-                    <li>◻ Data base configuraton, </li>
-                    <li>◻ WordPress Forum,</li>
-                    <li>◻ Dark mode option,</li>
-                    <li>◻ Multi-language options,</li>
-                    <li>◻ Background JS Animation,</li>
-                    <li>◻ Coursor animation,</li>
-                    
-                  </ol>
-                </div>
-                <div>
-                  <ol className="text-fuchsia-300 text-sm mt-14">
-                   
-                    <li>◻ Search bar,</li>
-                    <li>◻ Chat bot or AI,</li>
-                    <li>◻ Simple Login</li>
-                    <li>◻ Favorites CRUD</li>
-                    <li>◻ Mobile version,</li>
-                    <li>◻ more content...</li>
-                  </ol>
-                </div>
-              </div>
-              
-                {/* Este close permitirá volver invisible nuevamente el div */}
-                {showDetails && (
-                  <>
-                <h5 className="text-orange-500 cursor-pointer -mt-20 mb-1" onClick={toggleDetails}>
-                ❌close details
-              </h5>
-              <hr className="text-white mb-7" />
-                </>
-                )}
-
-                </div>
-              <div className="text-center lg:text-start mb-14 lg:mb-0">
-              className={`${!showDetails ? "top-0 -mt-20 mb-20" : ""}`}
-                <h6 className={`${!showDetails ? "mt-10" : ""} "uppercase text-sm md:text-base tracking-[2px] font-semibold text-white mb-5 md:mb-8"`}>
-                  👋 Hi!, My name is{" "}
+            <div className="lg:col-span-6 z-50">
+              <div className="text-center lg:text-start mb-14 lg:mb-0 z-50 xl:ml-20 ">
+                <h6 className="mt-12 text-white font-bold text-xl">
+                  {language === "en"
+                    ? "👋 Hi!, My name is "
+                    : "👋 Hola!, Mi nombre es "}
                   <span className="text-purple-500 font-bold text-xl">
                     Julia
                   </span>
                 </h6>
-                <h1 className="font-semibold text-white text-[40px] md:text-7xl leading-[1] mb-6 md:mb-9">
-                  I'm a
-                  <TypeAnimation
-                    className="text-fuchsia-500"
-                    sequence={[" Developer", 3000, " Designer", 3000]}
-                    speed={5}
-                    repeat={Infinity}
-                  />
-                </h1>
+                <div className="flex item-center mt-2">
+                  <h2 className="font-semibold text-white text-[40px] md:text-7xl leading-[1] mb-6 md:mb-9 sm:ml-5">
+                    {language === "en" ? "I'm a " : "Soy "}
+                  </h2>
+                  <h1 className="font-semibold text-white text-[40px] md:text-7xl leading-[1] mb-6 md:mb-9 ml-2">
+                    {language === "en" ? (
+                      <TypeAnimation
+                        className="text-fuchsia-500"
+                        sequence={[" Developer", 3000, " Designer", 3000]}
+                        speed={5}
+                        repeat={Infinity}
+                      />
+                    ) : (
+                      <TypeAnimation
+                        className="text-fuchsia-500"
+                        sequence={[" Programadora", 3000, " Diseñadora", 3000]}
+                        speed={5}
+                        repeat={Infinity}
+                      />
+                    )}
+                  </h1>
+                </div>
+
                 <p className="text-base text-slate-100 md:text-xl mb-2 md:mb-4">
-                  ...from Córdoba, Argentina, to the
+                  {language === "en"
+                    ? "...from Córdoba, Argentina, to the "
+                    : "desde Córdoba, Argentina, para el "}
                   <span className="font-semibold md:text-xl ">
-                    {" "}
-                    whole{" "}
+                    {language === "en" ? "whole" : "mundo "}
                   </span>
                   <span title="WORLD">🌎</span>
-                  <span className="font-bold md:text-xll ">
-                    {" "}
-                    !
-                  </span>
+                  <span className="font-bold md:text-xll "> !</span>
                 </p>
-
-                                
-                <div className="flex justify-start items-center mt-20 pt-3">
-                  <a href="#About">
-                  <div className="btn btn-yellow font-bold rounded-full flex justify-center items-center animate-pulse cursor-pointer ">
-                  <Lucide icon="ArrowDown" className="mr-2" />
-                    Let's Start
-                  </div>
-                  </a>
-                </div>
               </div>
             </div>
             {/* RIGHT */}
-            <div className="lg:col-span-6 mt-1 pt-16 mb-0 pb-0">
+            <div className="lg:col-span-6 mt-1 lg:pt-16 mb-0 pb-10">
               <div className="text-center">
                 <Clock />
+              </div>
+              <div className="flex justify-end items-center sm:mt-10 pt-3 sm:mr-5 sm:border-t-2 xl:border-t-0 sm:border-purple-500">
+                <a href="#About">
+                  <div className="btn btn-yellow font-bold rounded-full flex justify-center items-center animate-pulse cursor-pointer sm:mt-3 md:mt-5">
+                    <Lucide icon="ArrowDown" className="mr-2" />
+                    {language === "en" ? "Let's Start" : "Comencemos"}
+                  </div>
+                </a>
               </div>
             </div>
           </div>

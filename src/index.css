@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -38,6 +39,7 @@ body {
     .btn-yellow {
         @apply bg-yellow-500 hover:bg-purple-900 text-purple-900 shadow-yellow hover:shadow-yellow-500 hover:text-white;
     }
+    
 }
 
 
@@ -84,3 +86,4 @@ body {
 .shadowFuchsia {
     box-shadow: 0 0 10px 0 #ff00ff;
 }
+
