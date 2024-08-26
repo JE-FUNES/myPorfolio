@@ -43,49 +43,49 @@ const Project = ({ project, onClose }) => {
                                 <p className="mb-3 text-slate-700/90 text-sm">{project.Detail2}</p>
                                 <ul className="pt-2 list-none">
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-2">
+                                        <span className="w-[20%] font-semibold mr-2">
                                             {language === "en" ?
                                             "Type:" : "Tipo:"
                                             }
                                             </span>
-                                        <span className="w-[85%]text-slate-700/90 ml-1">{project.Type}</span>
+                                        <span className="w-[80%]text-slate-700/90 ml-1">{project.Type}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-2">
+                                        <span className="w-[20%] font-semibold mr-2">
                                             {language === "en" ?
                                             "Tools:" : "Tecnolog.:"
                                             }
                                             </span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.Languages}</span>
+                                        <span className="w-[80%] text-slate-700/90 ml-1">{project.Languages}</span>
                                     </li>
 
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-2">
+                                        <span className="w-[20%] font-semibold mr-2">
                                             {language === "en" ?
                                             "Country:" : "País:"
                                             }
                                             </span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.Country}</span>
+                                        <span className="w-[80%] text-slate-700/90 ml-1">{project.Country}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-2">
+                                        <span className="w-[20%] font-semibold mr-2">
                                             {language === "en" ?
                                             "Period:" : "Fecha:"
                                             }
                                             </span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.Period}</span>
+                                        <span className="w-[80%] text-slate-700/90 ml-1">{project.Period}</span>
                                     </li>
                                     <li className="flex py-1">
-                                        <span className="w-[15%] font-semibold mr-2">
+                                        <span className="w-[20%] font-semibold mr-2">
                                             {language === "en" ?
                                             "Status:" : "Estado:"
                                             }
                                             </span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">{project.Finished}</span>
+                                        <span className="w-[80%] text-slate-700/90 ml-1">{project.Finished}</span>
                                     </li>
                                     <li className="flex py-3 border-t mt-1">
-                                        <span className="w-[15%] font-semibold mr-2">URL:</span>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">
+                                        <span className="w-[20%] font-semibold mr-2">URL:</span>
+                                        <span className="w-[80%] text-slate-700/90 ml-1">
                                         <a href={project.URL} target='blank'>
                                         {project.URL}
 
@@ -93,9 +93,9 @@ const Project = ({ project, onClose }) => {
                                         </span>
                                     </li>
                                     <li className="flex py-3 border-t border-b mt-1">
-                                        <div className="w-[15%] font-semibold mr-2">
+                                        <div className="w-[20%] font-semibold mr-2">
                                             <FaGithub /> </div>
-                                        <span className="w-[85%] text-slate-700/90 ml-1">
+                                        <span className="w-[80%] text-slate-700/90 ml-1">
                                         <a href={project.GitHub} target='blank'>
                                         {project.GitHub}
 
