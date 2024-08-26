@@ -10,7 +10,7 @@ const Project = ({ project, onClose }) => {
 
     return (
         <React.Fragment>
-            <div className="fixed md:overflow-hidden overflow-scroll inset-0 bg-black/80 z-[99999]">
+            <div className="fixed overflow-scroll inset-0 bg-black/80 z-[99999]">
                 <div className="flex items-center justify-center min-h-screen px-2">
                     <div className="sm:w-full lg:w-[80%] m-auto p-7 bg-white relative">
                         <button type="button" onClick={onClose} className="absolute right-1.5 top-2.5 md:right-5 md:top-5 text-2xl" >
