@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   contacts: [],
-  language: "en",
+  language: "es",
 };
 
 export default function rootReducer(state = initialState, action) {

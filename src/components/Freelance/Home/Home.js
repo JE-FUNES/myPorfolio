@@ -1,16 +1,16 @@
 import React from "react";
-import Clock from "../Clock/Clock";
-import { Lucide } from "../../utils/index.js";
+import Clock from "../../Clock/Clock";
+import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import Init from "./Init.js";
+import { Link } from "react-scroll";
 
-const Home = () => {
+
+const HomeFree = () => {
   const language = useSelector((state) => state.language);
-
-
+  
   return (
     <>
-    <Init />
+    
     <React.Fragment>
       {/*----- Start Home -----*/}
       <section
@@ -30,17 +30,30 @@ const Home = () => {
                 </h6>
                 <div className="flex item-center mt-2">
                   <h2 className="font-semibold text-white text-[40px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 ml-5">
-                    {language === "en" ? "I'm a Senior Graphic Designer, and a Junior Forintend Developer." : "Soy Diseñadora Gráfica Senior, y Desarrolladora Frontend Junior. "}
+                    {language === "en" ? "Your website: fast, efficient, and at the best price!" : "Tu sitio web: rápido, eficiente, y al mejor precio! "}
                   </h2>
                   
                 </div>
 
                 <p className="text-base text-slate-100 md:text-xl mb-2 md:mb-4 ml-5 italic">
                   {language === "en"
-                    ? "I am seeking a Frontend Developer position where my skills and experience can be applied, appreciated, and valued."
-                    : "Estoy en busca de una oportunidad laboral como Desarrolladora Frontend, donde pueda aplicar mis conocimientos y habilidades, y donde estas sean apreciadas y valoradas.  "}
+                    ? "Design and Development of both Institutional and Commercial Websites. Contact me for more information."
+                    : "Diseño y Desarrollo de Sitios Web tanto Institucionales como Comerciales. Contactame para más Información."}
                   
                 </p>
+                <div className="flex justify-center mt-2">
+                          <Link to="Contact">
+                          <button
+                            className="inline-block py-1 px-5 uppercase tracking-wider text-sm rounded-[30px] bg-purple-400 hover:bg-black hover:animate-pulse shadow-lg shadow-purple-900 font-bold text-white"
+                            
+                            >
+                            {language === "en"
+                              ? "Contact me"
+                              : "Contactame"}
+                          </button>
+                              </Link>
+                          
+                        </div>
               </div>
             </div>
             {/* RIGHT */}
@@ -66,4 +79,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeFree;

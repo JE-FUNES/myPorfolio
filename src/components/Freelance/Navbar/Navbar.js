@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import logo from "../../assets/Image/logo-jefa.png";
+import logo from "../../../assets/Image/logo-jefa.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
 import { FaWhatsapp } from "react-icons/fa";
-import LanguagesSwitcher from "../Switchers/Languages";
+import LanguagesSwitcher from "../../Switchers/Languages";
 import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const NavbarFree = () => {
   const [open, setOpen] = useState(false);
   const language = useSelector((state) => state.language);
 
@@ -147,4 +147,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarFree;
