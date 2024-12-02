@@ -1,6 +1,7 @@
 import React from 'react'
 import { FooterData } from './FooterData'
 import { useNavigate } from 'react-router-dom'
+import logo from"../../../assets/Image/firmaEmail.png"
 
 const FooterFree = () => {
 
@@ -29,7 +30,14 @@ const FooterFree = () => {
                             </div>
                         </div>
                         <div className="col-span-12 md:col-span-6 text-center md:text-right">
-                            <p className="m-0 text-white text-opacity-75">© 2024 Portfolio Desarrollo Web J.E.F.A. : Julia Esther Funes Aragón</p>
+                            
+                                <img 
+                                src={logo} 
+                                alt="Julia Esther Funes Aragón"
+                                title="Web Developer"
+                                className="lg:px-2 sm:max-w-[120px] lg:max-w-[180px] xl:ml-5 xl:max-w-[250px]"
+                                />
+                                 
                             
                         </div>
                     </div>
