@@ -36,7 +36,7 @@ const Calculadora = () => {
   };
 
   return (
-    <div className="mt-5 border-2 border-white mx-5 p-5">
+    <div className="mt-5 border-2 border-white mx-5 p-5 bg-black">
       <div>
         <h2 className="text-white text-3xl font-bold ml-3 my-4 flex justify-center">
           Calculadora de M²
@@ -82,7 +82,7 @@ const Calculadora = () => {
       {/* Botón y resultados */}
       <div className="flex flex-col items-center mt-10">
         <button
-          className="bg-orange-300 rounded-md w-40 h-12 font-semibold"
+          className="bg-red-500 text-white rounded-md w-40 h-12 font-semibold"
           onClick={calcular}
         >
           Calcular
@@ -93,7 +93,7 @@ const Calculadora = () => {
         >
           {resultado}
         </div>
-        <h5 id="carrito" className="cart text-white mt-2 text-lg">
+        <h5 id="carrito" className="cart text-white mt-2 text-base">
           {mensajeCarrito}
         </h5>
       </div>
