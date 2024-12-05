@@ -19,7 +19,8 @@ import FooterFree from "./components/Freelance/Footer/Footer";
 import LogoSlider from "./components/LogoSlider/LogoSlider";
 import LogoSliderFree from "./components/Freelance/LogoSlider/LogoSlider";
 import Curriculum from "./components/Curriculum/Curriculum";
-import CurriculumFree from "./components/Freelance/Curriculum/Curriculum"
+import CurriculumFree from "./components/Freelance/Curriculum/Curriculum";
+import Calculadora from "./components/Calculadora/Calculadora"
 //import Cta from './components/Cta/Cta';
 //import ContactList from './components/Contact/ContactList';
 
@@ -42,6 +43,11 @@ const App = () => {
             <Footer />
           </React.Fragment>
         }
+      />
+      <Route
+      path="/calculadora-de-metros-cuadrados"
+      element={<Calculadora />
+      }
       />
       <Route
       path="/diseño_tu_pagina_web"
