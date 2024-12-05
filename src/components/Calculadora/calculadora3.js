@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     var calcularButton = document.getElementById("calcularButton");
 
-    console.log("Evento calcular disparado");
+    console.log("Evento externo disparado");
 
     function calcular() {
         // Obtén los valores de los inputs y asegúrate de que son números
