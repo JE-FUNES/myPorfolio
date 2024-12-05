@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Metros Cuadrados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        .calculator label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora de M²</h2>
+        <label for="alto">Alto (m):</label>
+        <input type="number" id="alto" min="0" step="0.01" placeholder="Ingresa el alto">
+        <label for="ancho">Ancho (m):</label>
+        <input type="number" id="ancho" min="0" step="0.01" placeholder="Ingresa el ancho">
+        <button id="calcularButton">Calcular</button>
+        <div id="resultado" class="result">Total metros cuadrados: 0</div>
+        <h5 id="carrito" class="cart"></h5>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var calcularButton = document.getElementById("calcularButton");
+
+            function calcular() {
+                var alto = parseFloat(document.getElementById("alto").value.replace(",", ".")) || 0;
+                var ancho = parseFloat(document.getElementById("ancho").value.replace(",", ".")) || 0;
+
+                if (alto <= 0 || ancho <= 0) {
+                    alert("Por favor, ingresa valores válidos para el alto y el ancho.");
+                    return;
+                }
+
+                var metrosCuadrados = Math.ceil(alto * ancho);
+                if (metrosCuadrados < 2) {
+                    metrosCuadrados = 2;
+                }
+
+                var valorTotal = metrosCuadrados * 8500;
+                document.getElementById("resultado").innerHTML = "Metros cuadrados: " + metrosCuadrados;
+                document.getElementById("carrito").innerHTML = 
+                    "Cambia la cantidad a " + metrosCuadrados + " unidades para ver el valor de lo que necesitas.";
+            }
+
+            calcularButton.addEventListener("click", calcular);
+            calcularButton.addEventListener("touchstart", calcular);
+        });
+    </script>
+</body>
+</html>
