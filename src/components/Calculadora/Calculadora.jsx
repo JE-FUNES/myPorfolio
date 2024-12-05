@@ -4,7 +4,7 @@ const Calculadora = () => {
   // Estados para las entradas y resultados
   const [alto, setAlto] = useState("");
   const [ancho, setAncho] = useState("");
-  const [resultado, setResultado] = useState("Total metros cuadrados: 0");
+  const [resultado, setResultado] = useState("Total M² : 0");
   const [mensajeCarrito, setMensajeCarrito] = useState("");
 
   const calcular = () => {
@@ -36,7 +36,7 @@ const Calculadora = () => {
   };
 
   return (
-    <div className="my-5 border-2 border-white mx-5 p-5">
+    <div className="mt-5 border-2 border-white mx-5 p-5">
       <div>
         <h2 className="text-white text-3xl font-bold ml-3 my-4 flex justify-center">
           Calculadora de M²
@@ -46,7 +46,7 @@ const Calculadora = () => {
       {/* Contenedor de Alto */}
       <div className="flex flex-col w-full">
         <div className="flex items-center justify-between w-full mb-5">
-          <label htmlFor="alto" className="ml-3 font-semibold text-white">
+          <label htmlFor="alto" className="ml-1 font-semibold text-white">
             Alto (m):
           </label>
           <input
@@ -63,7 +63,7 @@ const Calculadora = () => {
   
         {/* Contenedor de Ancho */}
         <div className="flex items-center justify-between w-full">
-          <label htmlFor="ancho" className="ml-3 font-semibold text-white">
+          <label htmlFor="ancho" className="ml-1 font-semibold text-white">
             Ancho (m):
           </label>
           <input
