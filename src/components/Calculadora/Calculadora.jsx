@@ -36,59 +36,70 @@ const Calculadora = () => {
   };
 
   return (
-    <div className="mt-20 border-2 border-white justify-start ml-5 p-5">
-      <h2 className="text-white text-3xl font-bold ml-3 my-4">Calculadora de M²</h2>
-      <div className="">
-
-      <label htmlFor="alto" className="ml-3 mr-2 font-semibold text-white">
-        Alto (m):
-      </label>
-      <input
-        type="number"
-        id="alto"
-        min="0"
-        step="0.01"
-        className="h-10 pl-2"
-        placeholder="Ingresa el alto"
-        value={alto}
-        onChange={(e) => setAlto(e.target.value)}
-        />
-      <br />
-      <label htmlFor="ancho" className="ml-3 mt-5 mr-2 font-semibold text-white">
-        Ancho (m):
-      </label>
-      <input
-        type="number"
-        id="ancho"
-        min="0"
-        step="0.01"
-        className="h-10 pl-2 mt-5"
-        placeholder="Ingresa el ancho"
-        value={ancho}
-        onChange={(e) => setAncho(e.target.value)}
-        />
-      <br />
-      <button
-        className="mt-10 ml-3 bg-orange-300 rounded-md w-40 font-semibold"
-        
-        onClick={calcular}
-        >
-        Calcular
-      </button>
-          </div>
-      <div
-        id="resultado"
-        
-        className="result font-bold ml-3 mt-10 text-2xl text-red-500"
-        
-      >
-        {resultado}
+    <div className="my-5 border-2 border-white mx-5 p-5">
+      <div>
+        <h2 className="text-white text-3xl font-bold ml-3 my-4 flex justify-center">
+          Calculadora de M²
+        </h2>
       </div>
-      <h5 id="carrito" className="cart text-white ml-3 text-lg">
-        {mensajeCarrito}
-      </h5>
+  
+      {/* Contenedor de Alto */}
+      <div className="flex flex-col w-full">
+        <div className="flex items-center justify-between w-full mb-5">
+          <label htmlFor="alto" className="ml-3 font-semibold text-white">
+            Alto (m):
+          </label>
+          <input
+            type="number"
+            id="alto"
+            min="0"
+            step="0.01"
+            className="h-10 pl-2 w-3/4 rounded-md"
+            placeholder="Ingresa el alto"
+            value={alto}
+            onChange={(e) => setAlto(e.target.value)}
+          />
+        </div>
+  
+        {/* Contenedor de Ancho */}
+        <div className="flex items-center justify-between w-full">
+          <label htmlFor="ancho" className="ml-3 font-semibold text-white">
+            Ancho (m):
+          </label>
+          <input
+            type="number"
+            id="ancho"
+            min="0"
+            step="0.01"
+            className="h-10 pl-2 w-3/4 rounded-md"
+            placeholder="Ingresa el ancho"
+            value={ancho}
+            onChange={(e) => setAncho(e.target.value)}
+          />
+        </div>
+      </div>
+  
+      {/* Botón y resultados */}
+      <div className="flex flex-col items-center mt-10">
+        <button
+          className="bg-orange-300 rounded-md w-40 h-12 font-semibold"
+          onClick={calcular}
+        >
+          Calcular
+        </button>
+        <div
+          id="resultado"
+          className="result font-bold mt-5 text-2xl text-red-500"
+        >
+          {resultado}
+        </div>
+        <h5 id="carrito" className="cart text-white mt-2 text-lg">
+          {mensajeCarrito}
+        </h5>
+      </div>
     </div>
   );
+  
 };
 
 export default Calculadora;
