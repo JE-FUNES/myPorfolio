@@ -54,7 +54,7 @@ const Calculadora = () => {
             id="alto"
             min="0"
             step="0.01"
-            className="h-10 pl-2 w-3/4 rounded-md"
+            className="h-10 pl-2 w-1/2 rounded-md"
             placeholder="Ingresa el alto"
             value={alto}
             onChange={(e) => setAlto(e.target.value)}
@@ -71,7 +71,7 @@ const Calculadora = () => {
             id="ancho"
             min="0"
             step="0.01"
-            className="h-10 pl-2 w-3/4 rounded-md"
+            className="h-10 pl-2 w-1/2 rounded-md"
             placeholder="Ingresa el ancho"
             value={ancho}
             onChange={(e) => setAncho(e.target.value)}
