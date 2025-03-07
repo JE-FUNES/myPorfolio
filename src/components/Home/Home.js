@@ -3,6 +3,7 @@ import Clock from "../Clock/Clock";
 import { Lucide } from "../../utils/index.js";
 import { useSelector } from "react-redux";
 import Init from "./Init.js";
+import AnimatedCursor from "react-animated-cursor";
 
 const Home = () => {
   const language = useSelector((state) => state.language);
@@ -13,6 +14,27 @@ const Home = () => {
     <Init />
     <React.Fragment>
       {/*----- Start Home -----*/}
+      <AnimatedCursor
+      innerSize={20}
+      outerSize={15}
+      color='255, 33, 242'
+      outerAlpha={0.8}
+      innerScale={0.7}
+      outerScale={5}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+    />
       <section
         className="py-30 lg:pt-[30px] lg:pb-[10px] bg-black relative overflow-hidden"
         id="Home"
