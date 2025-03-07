@@ -1,39 +1,52 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import NavbarFree from "./components/Freelance/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import HomeFree from "./components/Freelance/Home/Home";
-import About from "./components/About/About";
-import AboutFree from "./components/Freelance/About/About";
-import Services from "./components/Services/Services";
-import ServicesFree from "./components/Freelance/Services/Services";
-import Skills from "./components/Skills/Skills";
-import SkillsFree from "./components/Freelance/Skills/Skills";
-import Portfolio from "./components/Portfolio/Portfolio";
-import PortfolioFree from "./components/Freelance/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
-import ContactFree from "./components/Freelance/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import FooterFree from "./components/Freelance/Footer/Footer";
-import LogoSlider from "./components/LogoSlider/LogoSlider";
-import LogoSliderFree from "./components/Freelance/LogoSlider/LogoSlider";
-import Curriculum from "./components/Curriculum/Curriculum";
-import CurriculumFree from "./components/Freelance/Curriculum/Curriculum";
+import Navbar from "./components/Recruiters/Navbar/Navbar";
+import NavbarFree from "./components/Freelance/NavbarFree/Navbar";
+import NavbarAgc from "./components/Agencies/NavbarAgc/Navbar";
+import Home from "./components/Recruiters/Home/Home";
+import HomeFree from "./components/Freelance/HomeFree/Home";
+import HomeAgc from "./components/Agencies/HomeAgc/Home";
+import About from "./components/Recruiters/About/About";
+import AboutFree from "./components/Freelance/AboutFree/About";
+import AboutAgc from "./components/Agencies/AboutAgc/About";
+import Services from "./components/Recruiters/Services/Services";
+import ServicesFree from "./components/Freelance/ServicesFree/Services";
+import ServicesAgc from "./components/Agencies/ServicesAgc/Services";
+import Skills from "./components/Recruiters/Skills/Skills";
+import SkillsFree from "./components/Freelance/SkillsFree/Skills";
+import SkillsAgc from "./components/Agencies/SkillsAgc/Skills";
+import Portfolio from "./components/Recruiters/Portfolio/Portfolio";
+import PortfolioFree from "./components/Freelance/PortfolioFree/Portfolio";
+import PortfolioAgc from "./components/Agencies/PortfolioAgc/Portfolio";
+import Contact from "./components/Recruiters/Contact/Contact";
+import ContactFree from "./components/Freelance/ContactFree/Contact";
+import ContactAgc from "./components/Agencies/ContactAgc/Contact";
+import Footer from "./components/Recruiters/Footer/Footer";
+import FooterFree from "./components/Freelance/FooterFree/Footer";
+import FooterAgc from "./components/Agencies/FooterAgc/Footer";
+//import LogoSlider from "./components/Recruiters/LogoSlider/LogoSlider";
+import LogoSliderFree from "./components/Freelance/LogoSliderFree/LogoSlider";
+import LogoSliderAgc from "./components/Agencies/LogoSliderAgc/LogoSlider";
+import Curriculum from "./components/Recruiters/Curriculum/Curriculum";
+import CurriculumFree from "./components/Freelance/CurriculumFree/Curriculum";
+import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 import Calculadora from "./components/Calculadora/Calculadora";
+import Init from "./components/Recruiters/Home/Init"
 //import Cta from './components/Cta/Cta';
 //import ContactList from './components/Contact/ContactList';
 
 const App = () => {
   return (
     <Routes>
+      
       <Route
+      //RECRUITERS
         path="/"
         element={
           <React.Fragment>
             <Navbar />
             <Home />
-            <LogoSlider />
+            
             <About />
             <Services />
             <Skills />
@@ -50,7 +63,8 @@ const App = () => {
       }
       />
       <Route
-      path="/diseño_tu_pagina_web"
+      //EMPRESAS Y PROFESIONALES
+      path="/paginas_y_sitios_web_para_empresas_y_profesionales"
       element={
         <React.Fragment>
           <NavbarFree />
@@ -63,6 +77,24 @@ const App = () => {
           <CurriculumFree />
           <ContactFree />
           <FooterFree />
+        </React.Fragment>
+      }
+      />
+        <Route
+        //AGENCIAS DE MARKETING
+      path="/diseno_y_desarrollo_web_para_agencias_de_marketing"
+      element={
+        <React.Fragment>
+          <NavbarAgc />
+          <HomeAgc />
+          <LogoSliderAgc />
+          <AboutAgc />
+          <ServicesAgc />
+          <SkillsAgc />
+          <PortfolioAgc />
+          <CurriculumAgc />
+          <ContactAgc />
+          <FooterAgc />
         </React.Fragment>
       }
       />

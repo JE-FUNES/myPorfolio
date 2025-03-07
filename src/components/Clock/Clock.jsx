@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowUp, FaPlus } from "react-icons/fa";
 import "./Clock.css";
+import { useSelector } from "react-redux";
 
 function Clock() {
+  const language = useSelector((state) => state.language);
   const [displayStr, setDisplayStr] = useState("");
   const [showDivEffect, setShowDivEffect] = useState(true);
 
@@ -60,7 +62,7 @@ function Clock() {
 
   return (
     <>
-    <div id="clockTailwind" className="sm:-mt-[200px] md:-mt-[100px] sm:-mb-[200px] md:mb-10 lg:-mt-[70px] z-0 "
+    <div id="clockTailwind" className="sm:-mt-[200px] md:-mt-[100px] sm:-mb-[200px] md:mb-8 lg:-mt-[60px] z-0 "
     style={{height: "750px"}} >
       <svg id="noise-svg">
         <filter id="noiseFilter">
@@ -227,23 +229,26 @@ function Clock() {
         
       </div>
     </div>
-    <div className="flex flex-nowrap mt-5 mb-5 items-center justify-center">
-        {showDivEffect ? ( // Renderiza el texto del reloj si showClockEffect es verdadero
-          <>
-            <span className="text-purple-500 text-2xl">CLOCK EFFECT: </span>
-            <FaArrowUp className="w-5 h-5 mx-2 text-fuchsia-300" />
-            <span className="text-fuchsia-500 font-bold">Press Button</span>
-          </>
-        ) : ( // Renderiza el nuevo contenido si showClockEffect es falso
-          <div className="flex flex-nowrap mt-0 mb-5 items-center justify-center">
+    <div className="flex flex-nowrap -mt-32 z-50 mb-3 items-center justify-center">
+       
+
+
+<FaArrowUp className="w-5 h-5 mx-2 text-fuchsia-300" />
+            <span className="text-fuchsia-500 font-bold z-50">
+            {language === "en" 
+                    ? "Press Button" 
+                    : "Presiona el Botón"}
+              </span>
+            </div>
+          <div className="flex flex-nowrap mb-0 items-center justify-center">
             <span className="text-fuchsia-500 text-2xl">HTML</span>
             <FaPlus className="w-5 h-5 mx-2 text-fuchsia-300" />
             <span className="text-white text-2xl">JAVA SCRIPT</span>
             <FaPlus className="w-5 h-5 mx-2 text-fuchsia-300" />
             <span className="text-fuchsia-500 text-2xl">CSS</span>
-          </div>
-        )}
-      </div>
+          </div>          
+       
+      
     </>
   );
 }

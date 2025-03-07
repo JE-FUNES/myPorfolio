@@ -29,11 +29,17 @@ module.exports = {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.8 },
         },
+        bounceSlow: {
+          "0%, 100%": { transform: "translateY(0%)", animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)" },
+          "50%": { transform: "translateY(-10%)", animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)" },
+        },
       },
       animation: {
         "pulse-delay-1s": "pulseSlow 2s infinite 1s", // Duración 2s, infinito, retraso 1s
         "pulse-delay-2s": "pulseSlow 2s infinite 2s", // Retraso de 2s
         "pulse-delay-3s": "pulseSlow 2s infinite 3s", // Retraso de 2s
+        "bounce-slow": "bounceSlow 2s infinite",
+        "bounce-slower": "bounceSlow 3s infinite",
       },
       backgroundImage: {
         'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
