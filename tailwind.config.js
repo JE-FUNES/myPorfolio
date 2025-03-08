@@ -44,6 +44,7 @@ module.exports = {
       backgroundImage: {
         'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
         'bg-effect-2': "url('/src/assets/Image/bg-effect-2.webp')",
+        'bg-banner': "url('/src/assets/Image/project-banner-1.png')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',

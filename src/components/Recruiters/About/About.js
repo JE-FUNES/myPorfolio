@@ -27,7 +27,7 @@ const About = () => {
 >
 </div>
 
-            <div className="lg:col-span-6 lg:pl-12 my-3">
+            <div className="lg:col-span-6 lg:pl-12 my-2">
               <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
                 {language === "en"
                   ? "Frontend Web Developer"
@@ -59,56 +59,75 @@ const About = () => {
               <p className="text-base md:text-md">
                 {" "}
                 {language === "en" 
-                ? "🎨 My passion for " : "🎨 Con una sólida formación en "}
-                <span className="bg-fuchsia-100">
-                  {language === "en" ? "creating" : "diseño gráfico"}
+                ? "🎨 With a solid background in " : "🎨 Con una sólida formación en "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "graphic design" : "diseño gráfico"}
                 </span>{" "}
                 {language === "en"
-                  ? "led me to train in graphic arts, and for more than 20 years I have dedicated myself to it with great pleasure."
+                  ? ", I specialize in the creation and development of "
                   : ", me especializo en la creación y desarrollo de "}
-                <span className="bg-fuchsia-100">
-                {language === "en" ? "📚My " : "sitios web."}
+                <span className="bg-fuchsia-100 font-semibold">
+                {language === "en" ? "web sites." : "sitios web."}
                 </span>
                 
                 <br />
                 <br />
-                {language === "en" ? "🗣My " : "⭐ A lo largo de mi carrera, he integrado mis conocimientos en diseño gráfico con habilidades en desarrollo web, lo que me permite ofrecer "}
-                <span className="bg-fuchsia-100">
+                {language === "en" ? "⭐ Throughout my career, I have integrated my knowledge in graphic design with skills in web development, allowing me to offer " 
+                : "⭐ A lo largo de mi carrera, he integrado mis conocimientos en diseño gráfico con habilidades en desarrollo web, lo que me permite ofrecer "}
+                <span className="bg-fuchsia-100 font-semibold">
                   {language === "en"
-                    ? "outgoing personality "
+                    ? "visually attractive and functional solutions."
                     : "soluciones visualmente atractivas y funcionales."}
                 </span>
                 <br />
                 <br />
                 {language === "en"
-                  ? "and my vocation for customer service allowed me to turn my company into one of the most popular in the country in its field, and my leadership capacity was key to building the work team that accompanied that transformation."
-                  : "💼 Mi portafolio incluye proyectos que abarcan desde la conceptualización visual hasta la implementación de sitios web responsivos y dinámicos."}
-                <br />
-                <br />
-                {language === "en"
-                  ? "🚀In one of these restarts that life imposed on me, I discovered that I am also "
-                  : "🚀 Aunque mi experiencia en diseño gráfico es muy amplia, mi enfoque actual está en el "}
-                <span className="bg-fuchsia-100">
-                  {language === "en" ? "curious" : " desarrollo web,"}
+                  ? "💼 My portfolio includes projects ranging from visual conceptualization to implementation of"
+                  : "💼 Mi portafolio incluye proyectos que abarcan desde la conceptualización visual hasta la implementación de "}
+<span className="bg-fuchsia-100 font-semibold">
+                  {language === "en"
+                    ? "responsive and dynamic websites."
+                    : "sitios web responsivos y dinámicos."}
                 </span>
+
+                <br />
                 <br />
                 {language === "en"
-                  ? ", and this led me to decide to train in web programming, face that challenge and have the joy of finding a "
-                  : "utilizando tecnologías como JavaScript, React JS, HTML, CSS, Redux, GraphQl y más."}
+                  ? "🚀 Although my experience in graphic design is very broad, my current focus is on the "
+                  : "🚀 Aunque mi experiencia en diseño gráfico es muy amplia, mi enfoque actual está en el "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "web development" : "desarrollo web"}
+                </span>
+                
+                {language === "en"
+                  ? ", for which I use technologies such as "
+                  : ", para el cual utilizo tecnologías como "}
+
+<span className="bg-fuchsia-100">
+JavaScript, React JS, HTML, CSS, Tailwind CSS, MUI material, Wordpress, Redux, GraphQl, REST API, Node.js, Express, Morgan, Docker, AWS, Webpack / Vite, Figma, Git, Scrum
+                </span>
+                {language === "en"
+                  ? ", among others."
+                  : ", entre otras."}
                 
                 <br />
                 <br />
                 {language === "en"
-                  ? "And here I am, re-writing the code of my present and future 💜"
-                  : "✨ Me caracterizo por ser adaptable y "}
-                  <span className="bg-fuchsia-100">
-                  {language === "en" ? "curious" : "comprometida con la excelencia"}
+                  ? "✨ I am characterized by being very organized, adaptable and "
+                  : "✨ Me caracterizo por ser muy organizada, adaptable y "}
+                  <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "committed to excellence" : "comprometida con la excelencia"}
                 </span>
                 {language === "en"
-                  ? "And here I am, re-writing the code of my present and future 💜"
-                  : ", siempre dispuesta a asumir nuevos desafíos y contribuir al éxito de los proyectos en los que participo."}
+                  ? ", always willing to take on new challenges, continue learning and contribute to the success of the projects in which I participate."
+                  : ", siempre dispuesta a asumir nuevos desafíos, continuar aprendiendo y contribuir al éxito de los proyectos en los que participo. "}
+                  <br />
+                  <br />
+                  {language === "en"
+                  ? "As of today..."
+                  : "Al día de hoy, llevo..."}
               </p>
-              <div className="grid grid-cols-16 pt-5">
+              <div className="grid grid-cols-16">
                 {language === "en"
                   ? NumberData.map((e, key) => {
                       return (
@@ -137,6 +156,7 @@ const About = () => {
                       );
                     })}
               </div>
+              {/* 
               {language === "en"
                 ? BtnData.map((e, key) => {
                     return (
@@ -162,11 +182,12 @@ const About = () => {
                       </div>
                     );
                   })}
+                  */}
             </div>
           </div>
-          <div className="pt-10 flex justify-end items-center">
-            <a href="#Services">
-              <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer ">
+          <div className="pt-5 flex justify-end items-center">
+            <a href="#Skills">
+              <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />
                 {language === "en" ? "Go on" : "Sigamos"}
               </div>

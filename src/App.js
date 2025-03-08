@@ -9,7 +9,7 @@ import HomeAgc from "./components/Agencies/HomeAgc/Home";
 import About from "./components/Recruiters/About/About";
 import AboutFree from "./components/Freelance/AboutFree/About";
 import AboutAgc from "./components/Agencies/AboutAgc/About";
-import Services from "./components/Recruiters/Services/Services";
+//import Services from "./components/Recruiters/Services/Services";
 import ServicesFree from "./components/Freelance/ServicesFree/Services";
 import ServicesAgc from "./components/Agencies/ServicesAgc/Services";
 import Skills from "./components/Recruiters/Skills/Skills";
@@ -48,7 +48,7 @@ const App = () => {
             <Home />
             
             <About />
-            <Services />
+            
             <Skills />
             <Portfolio />
             <Curriculum />

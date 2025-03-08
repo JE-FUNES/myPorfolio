@@ -91,6 +91,16 @@ const Contact = () => {
           "CONTACT ME" : "CONTACTO"
           }
           </h3>
+          <h4 className="text-slate-100 flex justify-center text-lg italic mt-10">
+            {language === "en" ?
+            "I'm ready to take on new challenges and contribute my skills." :
+            "Lista para sumarme a nuevos desafíos y contribuir con mis habilidades."}
+          </h4>
+          <h4 className="text-slate-100 flex justify-center font-bold text-lg mt-1">
+            {language === "en" ?
+            "Shall we schedule an interview?" :
+            "¿Agendamos una entrevista?"}
+          </h4>
         <div className="container lg:pt-24 lg:pb-24  mt-1 justify-center">
           <div className="grid grid-cols-12">
             {/* Start Contact form  */}
@@ -173,11 +183,11 @@ const Contact = () => {
                 </ul>
                 <div className="border px-5 py-11 justify-items-center align-center">
                   <h6
-                    className="text-[32px] font-semibold text-purple-50 text-center hover:text-yellow-500 hover:font-bold cursor-pointer"
+                    className="text-[28px] font-semibold text-purple-50 text-center hover:text-yellow-500 cursor-pointer animate-pulse"
                     onClick={handleCalendar}
                   >
                     {language === "en" ?
-                    "SCHEDULE A MEETING" : "AGENDA UNA CITA"
+                    "SCHEDULE AN INTERVIEW" : "AGENDA UNA ENTREVISTA"
                     }
                   </h6>
                 </div>
