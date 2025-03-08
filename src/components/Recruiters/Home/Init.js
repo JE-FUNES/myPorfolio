@@ -70,7 +70,7 @@ const Init = () => {
                 <div className="w-full md:w-1/2 flex items-stretch">
                   <div className="w-full flex items-center px-3 lg:px-20 bg-black pb-5">
                     <div className="text-start mb-1 z-50">
-                      <h6 className="mt-5 text-white font-bold text-2xl">
+                      <h6 className="mt-5 text-white font-bold text-xl lg:text-2xl">
                         {language === "en"
                           ? "👋 Hi!, My name is "
                           : "👋 Hola!, Mi nombre es "}
@@ -167,8 +167,8 @@ const Init = () => {
                       ></div>
 
                       {/* Segunda Columna - Botones */}
-                      <div className="flex flex-col items-begin space-y-3 my-20 -ml-5 pr-5">
-                        <p className="font-semibold text-purple-900 md:text-lg mb-5">
+                      <div className="flex flex-col items-begin space-y-3 my-20 lg:-ml-5 pr-5">
+                        <p className="font-semibold text-purple-900 md:text-lg lg:mb-5">
                           {language === "en"
                             ? "Choose the best solution for your needs:"
                             : "Elige la mejor solución según tus necesidades:"}
@@ -176,13 +176,13 @@ const Init = () => {
                         {/* Botón Agencias Marketing" */}
                         <div className="flex justify-center">
                           <button
-                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-lg w-2/3 rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
+                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
                             onClick={handleAgencies}
                           >
                             <div className="flex items-center justify-center">
                               <Lucide
                                 icon="Chrome"
-                                className="text-white/50 min-w-20 min-h-20 max-w-30 max-h-30 font-bold"
+                                className="hidden md:block text-white/50 w-10 h-10 lg:min-w-20 lg:min-h-20 lg:max-w-30 lg:max-h-30 font-bold"
                               />
                               {language === "en"
                                 ? "MARKETING AGENCIES"
@@ -190,7 +190,7 @@ const Init = () => {
                             </div>
                           </button>
                         </div>
-                        <p className="text-slate-900 md:text-sm text-center px-12">
+                        <p className="text-slate-900 md:text-sm text-center lg:px-12">
                           {language === "en"
                             ? "Custom web solutions for digital marketing, SEO, paid advertising, and content strategy."
                             : "Soluciones web personalizadas para marketing digital, SEO, publicidad paga y estrategia de contenido."}
@@ -198,13 +198,13 @@ const Init = () => {
                         {/* Botón PARTICULARES" */}
                         <div className="flex justify-center mt-4">
                           <button
-                            className="animate-pulse-delay-2s p-2 uppercase tracking-wider  text-white text-md rounded-[30px]  w-2/3 bg-fuchsia-700 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
+                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg w-auto lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
                             onClick={handleFreelance}
                           >
                             <div className="flex items-center justify-center">
                               <Lucide
                                 icon="User"
-                                className="text-white/50 min-w-20 min-h-20 max-w-30 max-h-30 font-bold"
+                                className="hidden md:block text-white/50 w-10 h-10 lg:min-w-20 lg:min-h-20 lg:max-w-30 lg:max-h-30 font-bold"
                               />
                               {language === "en"
                                 ? "BUSINESSES & PROFESSIONALS"
@@ -212,20 +212,20 @@ const Init = () => {
                             </div>
                           </button>
                         </div>
-                        <p className="text-slate-900 md:text-sm text-center px-12">
+                        <p className="text-slate-900 md:text-sm text-center lg:px-12">
                           {language === "en"
                             ? "Web design, updates, and custom features for your business or personal brand."
                             : "Diseño web, actualizaciones y funcionalidades personalizadas para tu negocio o marca personal."}
                         </p>
                         <div className="flex justify-center mt-4">
                           <button
-                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider text-md text-white rounded-[30px]  w-2/3 bg-fuchsia-500 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
+                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
                             onClick={handleRecruiters}
                           >
                             <div className="flex items-center justify-center">
                               <Lucide
                                 icon="Search"
-                                className="text-white/50 min-w-20 min-h-20 max-w-30 max-h-30 font-bold"
+                                className="hidden md:block text-white/50 w-10 h-10 lg:min-w-20 lg:min-h-20 lg:max-w-30 lg:max-h-30 font-bold"
                               />
                               {language === "en"
                                 ? "IT RECRUITERS"
@@ -234,7 +234,7 @@ const Init = () => {
                           </button>
                         </div>{" "}
                         {/* Botón RECRUITERS" */}
-                        <p className="text-slate-900 md:text-sm text-center px-12">
+                        <p className="text-slate-900 md:text-sm text-center lg:px-12">
                           {language === "en"
                             ? "Frontend Developer & Web Designer ready to join your team."
                             : "Desarrollador Frontend & Diseñador Web disponible para tu equipo."}
