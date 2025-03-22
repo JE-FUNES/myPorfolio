@@ -56,7 +56,7 @@ const Project = ({ project, onClose }) => {
                                         {project.videoUrl ? (
                                     <div className="col-span-1 my-1 w-full sm:ml-5 md:ml-20">
                                            <iframe
-          className={`w-full ${isLargeScreen ? "w-[700px] h-[450px]" : "w-[280px] h-auto aspect-video"}`}
+          className={`w-full ${isLargeScreen ? "w-[700px] h-[450px]" : "w-[400px] h-auto aspect-video"}`}
           src={project.videoUrl}
           title="YouTube video player"
           frameBorder="0"
