@@ -72,8 +72,8 @@ const About = () => {
                 
                 <br />
                 <br />
-                {language === "en" ? "⭐ Throughout my career, I have integrated my knowledge in graphic design with skills in web development, allowing me to offer " 
-                : "⭐ A lo largo de mi carrera, he integrado mis conocimientos en diseño gráfico con habilidades en desarrollo web, lo que me permite ofrecer "}
+                {language === "en" ? "⭐ Throughout my career, I've learned new and different skills, allowing me to offer " 
+                : "⭐ A lo largo de mi carrera, he aprendido nuevas y diferentes habilidades, lo que me permite ofrecer "}
                 <span className="bg-fuchsia-100 font-semibold">
                   {language === "en"
                     ? "visually attractive and functional solutions."
