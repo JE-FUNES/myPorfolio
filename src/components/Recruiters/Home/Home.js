@@ -50,7 +50,7 @@ const Home = () => {
         />
         )}
         <section
-          className="py-30 lg:pt-[30px] lg:pb-[10px] bg-black relative overflow-hidden"
+          className="py-30 lg:pt-[30px] sm:pb-[10px] bg-black relative overflow-hidden"
           id="Home"
         >
           <div className="container relative z-[1]">
@@ -95,7 +95,7 @@ const Home = () => {
                 <div className="text-center">
                   <Clock />
                 </div>
-                <div className="flex justify-end items-center mt-0 sm:-mt-1 lg:mt-7 pt-3 sm:mr-5 lg:mr-0 sm:border-t-2 xl:border-t-0 sm:border-purple-500">
+                <div className="flex justify-end items-center mt-0 sm:mt-2 lg:mt-7 pt-3 sm:mr-5 lg:mr-0 sm:border-t-2 xl:border-t-0 sm:border-purple-500">
                   <a href="#About">
                     <div className="btn btn-yellow font-bold rounded-full flex justify-center items-center animate-pulse cursor-pointer mb-0">
                       <Lucide icon="ArrowDown" className="mr-2" />
