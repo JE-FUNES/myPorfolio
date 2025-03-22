@@ -46,9 +46,7 @@ const App = () => {
           <React.Fragment>
             <Navbar />
             <Home />
-            
             <About />
-            
             <Skills />
             <Portfolio />
             <Curriculum />

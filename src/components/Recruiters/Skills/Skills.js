@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import skills1 from "../../../assets/Image/yo-skills-1.png";
 import skills2 from "../../../assets/Image/yo-skills-2.png";
 import { SkillsData, EspSkillsData } from "./SkillsData";
+import SkillModal from "./SkillModal.js";
 import { Lucide } from "../../../utils/index";
 import { useSelector } from "react-redux";
 import LogoSlider from "../LogoSlider/LogoSlider";
@@ -9,6 +10,7 @@ import LogoSlider from "../LogoSlider/LogoSlider";
 const Skills = () => {
   const language = useSelector((state) => state.language);
 
+  const [selectedSkill, setSelectedSkill] = useState(null);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
 
   useEffect(() => {
@@ -19,6 +21,11 @@ const Skills = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  
+    const closeComponent = () => {
+      setSelectedSkill(null);
+    };
 
   return (
     <React.Fragment>
@@ -32,39 +39,41 @@ const Skills = () => {
               <div className="bg-slate-900 pb-10">
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-4 bg-slate-900 auto-rows-fr lg:auto-rows-auto">
                   {language === "en"
-                    ? SkillsData.map((e, index) => (
+                    ? SkillsData.map((skill, index) => (
                         <div
                           className="hover:shadow-black transition-all duration-300 ease-in flex flex-col h-full lg:h-auto lg:col-span-6"
                           key={index}
                         >
-                          {/* El fondo solo se ajusta en móviles */}
+                         
                           <div
-                            className={`flex items-center hover:bg-fuchsia-600 border-2 border-slate-900 p-4 h-full lg:h-auto ${e.Bg_color}`}
-                            key={e.key}
+                            className={`flex items-center hover:bg-fuchsia-600 border-2 border-slate-900 p-4 h-full lg:h-auto ${skill.Bg_color}`}
+                            key={skill.key}
+                            onClick={() => setSelectedSkill(skill)}
                           >
                             <div className="flex justify-center items-center h-[50px] w-[50px] border-2 text-3xl border-slate-900">
-                              {e.Logo}
+                              {skill.Logo}
                             </div>
                             <h6 className="pl-4 text-base font-semibold">
-                              {e.Heding}
+                              {skill.Heding}
                             </h6>
                           </div>
                         </div>
                       ))
-                    : EspSkillsData.map((e, index) => (
+                    : EspSkillsData.map((skill, index) => (
                         <div
                           className="hover:shadow-black transition-all duration-300 ease-in flex flex-col h-full lg:h-auto lg:col-span-6"
                           key={index}
                         >
                           <div
-                            className={`flex items-center hover:bg-fuchsia-600 border-2 border-slate-900 p-4 h-full lg:h-auto ${e.Bg_color}`}
-                            key={e.key}
+                            className={`flex items-center hover:bg-fuchsia-600 border-2 border-slate-900 p-4 h-full lg:h-auto ${skill.Bg_color}`}
+                            key={skill.key}
+                            onClick={() => setSelectedSkill(skill)}
                           >
                             <div className="flex justify-center items-center h-[50px] w-[50px] border-2 text-3xl border-slate-900">
-                              {e.Logo}
+                              {skill.Logo}
                             </div>
                             <h6 className="pl-4 text-base font-semibold">
-                              {e.Heding}
+                              {skill.Heding}
                             </h6>
                           </div>
                         </div>
@@ -96,6 +105,10 @@ const Skills = () => {
         </div>
         <LogoSlider />
       </section>
+       {/*----- End Skills -----*/}
+       {selectedSkill && (
+        <SkillModal skill={selectedSkill} onClose={closeComponent} />
+      )}
     </React.Fragment>
   );
 };

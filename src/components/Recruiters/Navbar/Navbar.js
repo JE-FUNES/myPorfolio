@@ -36,8 +36,8 @@ const Navbar = () => {
                         />
                         <p className="text-purple-800/70 pl-4 pt-1 -mb-2 sm:text-xs lg:text-sm">
                           {language === "en"
-                            ? "You are in the IT Recruiters section."
-                            : "Estás en la sección Reclutadores IT"}
+                            ? 'You are in "IT Recruiters" | Choose again'
+                            : 'Estás en "Reclutadores IT" | Volver a elegir'}
                         </p>
                       </div>
                     </a>
@@ -99,7 +99,8 @@ const Navbar = () => {
               {/* Mobile screen */}
               <div className={`lg:hidden ${open ? "" : "hidden"}`}>
                 <div className="mt-4">
-                  <LanguagesSwitcher />
+                  <LanguagesSwitcher 
+                  />
                 </div>
                 <div className="pt-5 ml-5">
                   <ul>
