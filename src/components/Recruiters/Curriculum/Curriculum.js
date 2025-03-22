@@ -7,8 +7,11 @@ const Curriculum = () => {
   return (
     <React.Fragment>
       {/*----- Start Curriculum -----*/}
-      <section className="pt-10 pb-2 bg-white" id="Curriculum">
-        <div className="container my-20 py-10">
+      <section className="pt-5 pb-2 bg-white" id="Curriculum">
+        <div className="container sm:my-5 lg:my-20 py-10">
+        <div className="lg:pb-16 mt-5 md:pb-10 pb-8 text-center text-black">
+                <h3>Currículum Vitae</h3>
+              </div>
           <iframe src=
           {language === "en" ?
             "/CV_JULIA_FUNES-Frontend_Developer-english.pdf" :

@@ -17,7 +17,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       {/*----- Start Projects -----*/}
-      <section className="sm:pt-18 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
+      <section className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
         <div className="container">
           <div className="grid lg:pb-16 md:pb-10 pb-8 mt-10">
             <div className="lg:col-span-6 text-center">
@@ -137,7 +137,7 @@ const Portfolio = () => {
               </div>
             </a>
           </div>
-            <div className="w-full h-auto -mt-10">
+            <div className="w-full h-auto sm:mt-0 lg:-mt-10">
                 <img src={language === "en"
                     ? projectBanner2
                     : projectBanner
