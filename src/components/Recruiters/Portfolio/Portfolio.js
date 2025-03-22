@@ -141,7 +141,7 @@ const Portfolio = () => {
                 <img src={language === "en"
                     ? projectBanner2
                     : projectBanner
-                } />
+                } alt="bottomBanner" />
             </div>
         </div>
       </section>

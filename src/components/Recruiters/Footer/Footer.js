@@ -1,14 +1,16 @@
 import React from 'react'
 import { FooterData } from './FooterData'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
-    const handleContactList = () => {
+    /*const handleContactList = () => {
         navigate("/contactList");
-      };
+      };*/
+
+
     return (
         <React.Fragment>
             {/*----- Start Footer -----*/}

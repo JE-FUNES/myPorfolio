@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 📌 Portfolio Personal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el repositorio de mi portfolio personal, un sitio web diseñado para presentar mis habilidades como Desarrolladora Web y Diseñadora Gráfica.
 
-## Available Scripts
+## 🌐 Sobre el Proyecto
 
-In the project directory, you can run:
+Este portfolio está estructurado en tres secciones principales, cada una enfocada en un público específico:
 
-### `npm start`
+#### ✔ Agencias de Marketing 🏢
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### ✔ Clientes Particulares (Empresas y Comercios) 🛍️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### ✔ Reclutadores y Empresas de Tecnología 👨‍💻
 
-### `npm test`
+Cada sección está diseñada para ofrecer información relevante y adaptada a las necesidades de cada audiencia, destacando mis habilidades y experiencia en desarrollo web y diseño gráfico.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Tecnologías Utilizadas
 
-### `npm run build`
+El proyecto ha sido desarrollado utilizando las siguientes tecnologías y herramientas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+◻ Frontend: React.js (Create React App)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+◻ Estilos: Tailwind CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+◻ Gestión de Estado: Redux
 
-### `npm run eject`
+◻ Animaciones: Framer Motion, React Type Animation, Gif Animator
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+◻ Manipulación de Cursores: react-animated-cursor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+◻ Enrutamiento: React Router DOM
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+◻ Optimización de Imágenes: Formato WebP
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Estructura del Proyecto
 
-## Learn More
+### ⚡ Instalación y Ejecución
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Si deseas ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1️⃣ Clonar el Repositorio
 
-### Code Splitting
+2️⃣ Instalar Dependencias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3️⃣ Ejecutar en Modo Desarrollo
 
-### Analyzing the Bundle Size
+Accede en tu navegador a http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4️⃣ Construir para Producción
 
-### Making a Progressive Web App
+Genera los archivos optimizados en la carpeta build/.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🎨 Capturas de Pantalla
 
-### Advanced Configuration
+![alt captura1](image-1.png) ![alt captura2](image-3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![alt captura3](image-4.png) ![alt captura4](image-5.png)
 
-### Deployment
+![alt captura5](image-6.png) ![alt captura6](image-7.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![alt capturasMob](image-8.png)
 
-### `npm run build` fails to minify
+## 📬 Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si tienes alguna consulta o deseas colaborar, puedes contactarme en:
+
+💌 Email: juliafunesaragon@gmail.com
+
+⚡ LinkedIn: https://linkedin.com/in/je-funes
+
+🚀 URL del Portafolio: https://jefa-web.com.ar
+
+
+✨ ¡Gracias por visitar mi portfolio! 😊
