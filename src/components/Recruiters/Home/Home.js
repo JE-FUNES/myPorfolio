@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../../Clock/Clock.jsx";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
@@ -7,6 +7,16 @@ import AnimatedCursor from "react-animated-cursor";
 
 const Home = () => {
   const language = useSelector((state) => state.language);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
   return (
     <>
@@ -16,6 +26,7 @@ const Home = () => {
 
       <React.Fragment>
         {/*----- Start Home -----*/}
+        {isLargeScreen && (
         <AnimatedCursor
           innerSize={20}
           outerSize={15}
@@ -37,6 +48,7 @@ const Home = () => {
             ".link",
           ]}
         />
+        )}
         <section
           className="py-30 lg:pt-[30px] lg:pb-[10px] bg-black relative overflow-hidden"
           id="Home"
