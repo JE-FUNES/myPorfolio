@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TypeAnimation } from "react-type-animation";
@@ -12,6 +12,16 @@ const Init = () => {
   const language = useSelector((state) => state.language);
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   
 
   const handleOnClose = () => {
@@ -42,6 +52,7 @@ const Init = () => {
         className="fixed overflow-scroll inset-0 bg-purple-950/90 z-[99999]"
         id="Wellcome"
         >
+          {isLargeScreen && (
           <AnimatedCursor
       innerSize={20}
       outerSize={15}
@@ -63,6 +74,7 @@ const Init = () => {
         '.link'
       ]}
     />
+          )}
           <div className="flex items-center justify-center min-h-screen px-2">
             <div className="sm:w-full lg:w-[90%] m-auto p-5 relative">
               <div className="flex flex-col md:flex-row gap-4">
