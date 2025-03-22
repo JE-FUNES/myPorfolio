@@ -17,7 +17,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       {/*----- Start Projects -----*/}
-      <section className="pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
+      <section className="sm:pt-18 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
         <div className="container">
           <div className="grid lg:pb-16 md:pb-10 pb-8 mt-10">
             <div className="lg:col-span-6 text-center">
@@ -40,7 +40,7 @@ const Portfolio = () => {
                         }`}
                       >
                         <div
-                          className="border-2 border-slate-900 hover:shadow-shadowFuchsia transition-all duration-300 ease-in"
+                          className="border-2 border-slate-900 hover:shadow-shadowFuchsia transition-all duration-300 ease-in sm:mb-5 lg:mb-0"
                           key={project.key}
                         >
                           <img
@@ -55,8 +55,8 @@ const Portfolio = () => {
                           index % 2 === 0 ? "" : "order-1"
                         }`}
                       >
-                        <h6 className="mb-[18px]">
-                          <span className="inline-block sm:mt-2 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">
+                        <h6 className="mb-[18px] ">
+                          <span className="inline-block sm:mt-5 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">
                             {project.list}
                           </span>
                         </h6>
