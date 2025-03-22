@@ -55,23 +55,24 @@ const Project = ({ project, onClose }) => {
             </button>
             <div className="grid grid-cols-12">
               <div className="col-span-12 md:col-span-7 mb-10 md:mb-0">
-                <div className="grid grid-cols-2 gap-2">
+                <div id="images-container" className="grid grid-cols-2 gap-2">
                   {project.videoUrl ? (
-                    <div className="col-span-1 my-1 w-full sm:ml-1 lg:ml-10 ">
-                      <iframe
-                        className={`w-full ${
-                          isLargeScreen
-                            ? "w-[700px] h-[450px]"
-                            : "w-[280px] h-auto aspect-video"
-                        }`}
-                        src={project.videoUrl}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+                    <div className="col-span-1 my-1 w-full sm:ml-1 lg:ml-10">
+                    <iframe
+                      className={`max-w-full ${
+                        isLargeScreen
+                          ? "w-[700px] h-[450px]"
+                          : "w-[90%] max-w-[280px] h-auto aspect-video"
+                      }`}
+                      src={project.videoUrl}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  
                   ) : (
                     <div className="col-span-2 my-1">
                       <img
