@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 //import { ProjectData, ProjectImg } from './ProjectData'
 import { RiCloseFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
@@ -8,10 +8,21 @@ import AnimatedCursor from "react-animated-cursor";
 
 const Project = ({ project, onClose }) => {
     const language = useSelector((state) => state.language);
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+      
+        useEffect(() => {
+          const handleResize = () => {
+            setIsLargeScreen(window.innerWidth >= 820);
+          };
+      
+          window.addEventListener("resize", handleResize);
+          return () => window.removeEventListener("resize", handleResize);
+        }, []);
 
     return (
         <React.Fragment>
             <div className="fixed overflow-scroll inset-0 bg-black/80 z-[99999]">
+            {isLargeScreen && (
             <AnimatedCursor
           innerSize={20}
           outerSize={15}
@@ -33,6 +44,7 @@ const Project = ({ project, onClose }) => {
             ".link",
           ]}
         />
+            )}
                 <div className="flex items-center justify-center min-h-screen px-2">
                     <div className="sm:w-full lg:w-[80%] m-auto p-7 bg-white relative">
                         <button type="button" onClick={onClose} className="absolute right-1.5 top-2.5 md:right-5 md:top-5 text-2xl" >
@@ -44,15 +56,14 @@ const Project = ({ project, onClose }) => {
                                         {project.videoUrl ? (
                                     <div className="col-span-1 my-1 w-full sm:ml-5 md:ml-20">
                                            <iframe
-                                           width="700"
-                                           height="450"
-                                           src={project.videoUrl}
-                                           title="YouTube video player"
-                                           frameborder="0"
-                                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                           referrerpolicy="strict-origin-when-cross-origin"
-                                           allowFullScreen
-                                       ></iframe></div>
+          className={`w-full ${isLargeScreen ? "w-[700px] h-[450px]" : "w-[280px] h-auto aspect-video"}`}
+          src={project.videoUrl}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe></div>
                                    ) : ( 
                                     <div className="col-span-2 my-1">
                                        <img className="border w-[100%]" src={project.imgDetail} alt="" />
@@ -106,14 +117,14 @@ const Project = ({ project, onClose }) => {
                                         <span className="w-[80%] text-slate-700/90 ml-1">{project.Finished}</span>
                                     </li>
                                     <li className="flex py-3 border-t mt-1">
-                                        <span className="w-[20%] font-semibold mr-2">URL:</span>
-                                        <span className="w-[80%] text-slate-700/90 ml-1">
-                                        <a href={project.URL} target='blank'>
-                                        {project.URL}
+  <span className="w-[20%] font-semibold mr-2">URL:</span>
+  <span className="w-[80%] text-slate-700/90 ml-1 break-words whitespace-normal">
+    <a href={project.URL} target="_blank" className="break-words">
+      {project.URL}
+    </a>
+  </span>
+</li>
 
-                                        </a>
-                                        </span>
-                                    </li>
                                     <li className="flex py-3 border-t border-b mt-1">
                                         <div className="w-[20%] font-semibold mr-2">
                                             <FaGithub /> </div>
