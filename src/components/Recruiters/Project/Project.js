@@ -54,7 +54,7 @@ const Project = ({ project, onClose }) => {
                             <div className="col-span-12 md:col-span-7 mb-10 md:mb-0">
                                 <div className="grid grid-cols-2 gap-2">
                                         {project.videoUrl ? (
-                                    <div className="col-span-1 my-1 w-full sm:ml-5 md:ml-20">
+                                    <div className="col-span-1 my-1 w-full sm:ml-5 md:ml-20 items-center">
                                            <iframe
           className={`w-full ${isLargeScreen ? "w-[700px] h-[450px]" : "w-[400px] h-auto aspect-video"}`}
           src={project.videoUrl}
