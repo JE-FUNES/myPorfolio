@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ContactData, EspContactData } from "./ContactData";
 import { submitContactForm } from "../../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,17 @@ import contact_bg from "../../../assets/Image/contact-bg.png";
 
 const Contact = () => {
   const language = useSelector((state) => state.language);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
 
@@ -83,7 +94,9 @@ const Contact = () => {
     <React.Fragment>
       {/*----- Start Contact -----*/}
       <section
-        className="lg:pt-24 lg:pb-20 bg-slate-900 bg-bg-effect-2 bg-no-repeat bg-cover lg:bg-bottom h-full w-screen"
+        className={`sm:pt-10 lg:pt-24 lg:pb-20 bg-slate-900 h-full w-screen bg-no-repeat bg-cover lg:bg-bottom ${
+          isLargeScreen ? "bg-bg-effect-2" : ""
+        }`}
         id="Contact"
       >
         <h3 className="text-slate-100 flex justify-center">
@@ -91,19 +104,20 @@ const Contact = () => {
           "CONTACT ME" : "CONTACTO"
           }
           </h3>
-          <h4 className="text-slate-100 flex justify-center text-lg italic mt-10">
+          <h4 className="text-slate-100 flex justify-center text-lg italic mt-10 sm:ml-4 lg:ml-0">
             {language === "en" ?
             "I'm ready to take on new challenges and contribute my skills." :
             "Lista para sumarme a nuevos desafíos y contribuir con mis habilidades."}
           </h4>
-          <h4 className="text-slate-100 flex justify-center font-bold text-lg mt-1">
+          <h4 className="text-slate-100 flex justify-center font-bold text-lg sm:mt-4 lg:mt-1">
             {language === "en" ?
             "Shall we schedule an interview?" :
             "¿Agendamos una entrevista?"}
           </h4>
         <div className="container lg:pt-24 lg:pb-24  mt-1 justify-center">
           <div className="grid grid-cols-12">
-            {/* Start Contact form  */}
+            {/* start Image  */}
+            
             <div className="col-span-12 lg:col-span-6 ">
               <div className="lg:max-w-[410px] w-full lg:ml-auto pt-0">
                 <div className="lg:pb-10">
@@ -117,7 +131,7 @@ const Contact = () => {
                 
               </div>
             </div>
-            {/* End Contact form */}
+            {/* End Image */}
             {/* Start Contact */}
             <div className="col-span-12 lg:col-span-6 flex">
               <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[50px] lg:pt-0">
