@@ -32,7 +32,7 @@ const Navbar = () => {
                         title="Web Developer"
                         className="lg:px-2 sm:max-w-[120px] lg:max-w-[150px] xl:ml-5 xl:max-w-[200px]"
                       />
-                      <p className="text-purple-800/70 pl-4 pt-1 -mb-2">
+                      <p className="text-purple-800/70 pl-4 pt-1 -mb-2 sm:text-xs lg:text-sm">
                       {language === "en" 
                     ? "You are in the IT Recruiters section." 
                     : "Estás en la sección Reclutadores IT"}
