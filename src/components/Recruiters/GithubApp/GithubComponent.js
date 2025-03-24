@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Lucide } from "../../../utils/index.js";
 import { FaGithub } from "react-icons/fa";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
+import GITHUB_TOKEN from "./Auth.js";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const GitHubComponent = () => {
@@ -18,7 +18,7 @@ const GitHubComponent = () => {
     setLoading(true);
     fetch(`https://api.github.com/repos/JE-FUNES/myPorfolio/contents/${path}`, {
       headers: {
-        Authorization: "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",
+        Authorization: `token ${GITHUB_TOKEN}`,
       },
     })
       .then((res) => res.json())
