@@ -23,7 +23,12 @@ const GitHubComponent = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setFiles(data);
+        if (Array.isArray(data)) {
+          setFiles(data);
+        } else {
+          console.error("Error al obtener archivos:", data);
+          setFiles([]); // Asegura que `files` siempre sea un array
+        }
         setCode(null); // Limpiar código al cambiar de carpeta
       })
       .catch((err) => console.error("Error:", err))
