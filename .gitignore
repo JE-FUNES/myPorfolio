@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #Github token
-src/components/Recruiters/GithubApp/Auth.JS
+src/components/Recruiters/GithubApp/Auth.js
