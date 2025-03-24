@@ -6,6 +6,7 @@ import SkillModal from "./SkillModal.js";
 import { Lucide } from "../../../utils/index";
 import { useSelector } from "react-redux";
 import LogoSlider from "../LogoSlider/LogoSlider";
+import { motion } from "motion/react";
 
 const Skills = () => {
   const language = useSelector((state) => state.language);
@@ -32,7 +33,13 @@ const Skills = () => {
       <section className="mt-10 pt-28 pb-10 bg-slate-900" id="Skills">
         <div className="container bg-slate-900">
           <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-end bg-slate-900">
-            <div className="lg:col-span-6 lg:pl-9 bg-slate-900">
+            <motion.div 
+            className="lg:col-span-6 lg:pl-9 bg-slate-900"
+              initial={{ opacity: 0, y: 100 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: false }} 
+  transition={{ duration: 3, ease: "easeOut" }} 
+  >
               <div className="lg:pb-16 sm:mt-5 lg:mt-10 md:pb-10 pb-8 sm:text-center lg:text-right text-white bg-slate-900">
                 <h3>{language === "en" ? "IT Skills" : "Habilidades IT"}</h3>
               </div>
@@ -80,7 +87,7 @@ const Skills = () => {
                       ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
             {isLargeScreen && (
             <div
               className="sm:col-span-4 lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"

@@ -4,19 +4,20 @@ import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import Init from "./Init.js";
 import AnimatedCursor from "react-animated-cursor";
+import { motion } from "motion/react";
 
 const Home = () => {
   const language = useSelector((state) => state.language);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsLargeScreen(window.innerWidth >= 820);
-      };
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -27,27 +28,27 @@ const Home = () => {
       <React.Fragment>
         {/*----- Start Home -----*/}
         {isLargeScreen && (
-        <AnimatedCursor
-          innerSize={20}
-          outerSize={15}
-          color="255, 33, 242"
-          outerAlpha={0.5}
-          innerScale={0.7}
-          outerScale={5}
-          clickables={[
-            "a",
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            "label[for]",
-            "select",
-            "textarea",
-            "button",
-            ".link",
-          ]}
-        />
+          <AnimatedCursor
+            innerSize={20}
+            outerSize={15}
+            color="255, 33, 242"
+            outerAlpha={0.5}
+            innerScale={0.7}
+            outerScale={5}
+            clickables={[
+              "a",
+              'input[type="text"]',
+              'input[type="email"]',
+              'input[type="number"]',
+              'input[type="submit"]',
+              'input[type="image"]',
+              "label[for]",
+              "select",
+              "textarea",
+              "button",
+              ".link",
+            ]}
+          />
         )}
         <section
           className="py-30 lg:pt-[30px] sm:pb-[10px] bg-black relative overflow-hidden"
@@ -66,11 +67,19 @@ const Home = () => {
                     </h1>
                   </div>
 
+<motion.div
+  
+  initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
+  whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
+  viewport={{ once: false }} // La animación ocurre solo una vez
+  transition={{ duration: 2, ease: "easeOut" }} // La animación dura 1s con una salida suave
+>
+
                   <div className="flex item-center mt-2 ml-0">
                     <Lucide
                       icon="Pencil"
                       className="mr-2 text-white/80 w-10 h-10"
-                    />
+                      />
                     <h2 className="font-semibold text-white/80 text-[27px] sm:text-lg md:text-xl lg:text-2xl leading-[1] mb-4 ml-5">
                       {language === "en"
                         ? "I create visually striking and technically optimized digital experiences."
@@ -81,13 +90,14 @@ const Home = () => {
                     <Lucide
                       icon="Search"
                       className="mr-2 text-purple-100/60 w-8 h-8"
-                    />
+                      />
                     <p className="text-base text-purple-100/60 md:text-xl mb-2 md:mb-4 ml-5 italic">
                       {language === "en"
                         ? "If you're looking for someone who blends creativity and code, I’m the right person for the job."
                         : "Si buscas a alguien que combine creatividad y código, soy la persona indicada. "}
                     </p>
                   </div>
+                        </motion.div>
                 </div>
               </div>
               {/* RIGHT */}
@@ -106,7 +116,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-         
         </section>
         {/*----- End Home -----*/}
       </React.Fragment>

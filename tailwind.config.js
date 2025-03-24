@@ -25,6 +25,10 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
         pulseSlow: {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.8 },
@@ -40,11 +44,13 @@ module.exports = {
         "pulse-delay-3s": "pulseSlow 2s infinite 3s", // Retraso de 2s
         "bounce-slow": "bounceSlow 2s infinite",
         "bounce-slower": "bounceSlow 3s infinite",
+        "fadeIn": 'fadeIn 1.5s ease-out forwards',
       },
       backgroundImage: {
         'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
         'bg-effect-2': "url('/src/assets/Image/bg-effect-2.webp')",
         'bg-banner': "url('/src/assets/Image/project-banner-1.png')",
+        'bg-video': "url('/src/assets/videos/videoCode.mp4')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',
