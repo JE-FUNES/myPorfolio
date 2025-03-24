@@ -31,7 +31,8 @@ import Curriculum from "./components/Recruiters/Curriculum/Curriculum";
 import CurriculumFree from "./components/Freelance/CurriculumFree/Curriculum";
 import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 import Calculadora from "./components/Calculadora/Calculadora";
-import Init from "./components/Recruiters/Home/Init"
+import GithubComponent from "./components/Recruiters/GithubApp/GithubComponent";
+
 //import Cta from './components/Cta/Cta';
 //import ContactList from './components/Contact/ContactList';
 
@@ -51,6 +52,7 @@ const App = () => {
             <Portfolio />
             <Curriculum />
             <Contact />
+            <GithubComponent />
             <Footer />
           </React.Fragment>
         }

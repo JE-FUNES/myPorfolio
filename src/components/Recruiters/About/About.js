@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 //import home_banner from "../../../assets/AnimatedGifs/animated-about.gif";
 import imageColor from "../../../assets/Image/arte-about.png";
@@ -10,7 +10,6 @@ import { motion } from "motion/react";
 
 const About = () => {
   const language = useSelector((state) => state.language);
-
 
   return (
     <React.Fragment>
@@ -32,13 +31,13 @@ const About = () => {
               }
             ></div>
 
-<motion.div
-  className="lg:col-span-6 lg:pl-12 my-2"
-  initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
-  whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
-  viewport={{ once: false }} // La animación ocurre solo una vez
-  transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
->
+            <motion.div
+              className="lg:col-span-6 lg:pl-12 my-2"
+              initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
+              whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
+              viewport={{ once: false }} // La animación ocurre solo una vez
+              transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
+            >
               <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
                 {language === "en"
                   ? "Frontend Web Developer"
