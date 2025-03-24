@@ -34,10 +34,19 @@ const Navbar = () => {
                           title="Web Developer"
                           className="lg:px-2 sm:max-w-[120px] lg:max-w-[150px] xl:ml-5 xl:max-w-[200px]"
                         />
-                        <p className="text-purple-800/70 pl-4 pt-1 -mb-2 sm:text-xs lg:text-sm">
+                        <p className="text-purple-800/70 pl-4 pt-1 -mb-2 text-xs">
                           {language === "en"
-                            ? 'You are in "IT Recruiters" | Choose again'
-                            : 'Estás en "Reclutadores IT" | Volver a elegir'}
+                            ? 'You are in "IT Recruiters"'
+                            : 'Estás en "Reclutadores IT"'}
+                            <span title=
+                            {language === "en"
+                              ? 'go to Presentation'
+                              : 'Ir a la Presentación'}
+                            className="bg-purple-900/50 text-white rounded-full ml-1 px-2 hover:bg-purple-900">
+                            {language === "en"
+                            ? 'Choose again'
+                            : 'Volver a elegir'}
+                            </span>
                         </p>
                       </div>
                     </a>

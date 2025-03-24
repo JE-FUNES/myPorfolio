@@ -42,7 +42,9 @@ body {
     .btn-yellow {
         @apply bg-yellow-500 hover:bg-purple-900 text-purple-900 shadow-yellow hover:shadow-yellow-500 hover:text-white;
     }
-    
+    .btn-white {
+        @apply bg-slate-200 p-1 hover:bg-purple-900 text-purple-900 shadow-yellow hover:shadow-yellow-500 hover:text-white;
+    }
 }
 
 

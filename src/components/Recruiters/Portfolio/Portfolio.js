@@ -17,7 +17,10 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       {/*----- Start Projects -----*/}
-      <section className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50" id="Portfolio">
+      <section
+        className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50"
+        id="Portfolio"
+      >
         <div className="container">
           <div className="grid lg:pb-16 md:pb-10 pb-8 mt-10">
             <div className="lg:col-span-6 text-center">
@@ -129,20 +132,30 @@ const Portfolio = () => {
                   );
                 })}
           </div>
-          <div className="flex justify-end items-center mt-2">
-            <a href="#Curriculum">
-              <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
-                <Lucide icon="ArrowDown" className="mr-2" />
-                {language === "en" ? "Go on" : "Sigamos"}
-              </div>
-            </a>
-          </div>
-            <div className="w-full h-auto sm:mt-0 lg:-mt-10">
-                <img src={language === "en"
-                    ? projectBanner2
-                    : projectBanner
-                } alt="bottomBanner" />
-            </div>
+          <div className="relative w-full h-auto sm:mt-0 lg:-mt-8">
+  {/* Imagen */}
+  <img
+    src={language === "en" ? projectBanner2 : projectBanner}
+    alt="bottomBanner"
+    className="w-full h-auto"
+  />
+
+  {/* Contenedor de los enlaces en la esquina superior derecha */}
+  <div className="absolute top-3 right-3 flex space-x-2 z-10">
+    <a href="#Curriculum">
+      <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+        <Lucide icon="ArrowDown" className="mr-2" />
+        {language === "en" ? "Go on" : "Sigamos"}
+      </div>
+    </a>
+    <a href="#Skills">
+      <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+        <Lucide icon="ArrowUp" />
+      </div>
+    </a>
+  </div>
+</div>
+
         </div>
       </section>
       {/*----- End Projects -----*/}

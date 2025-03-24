@@ -204,6 +204,11 @@ const About = () => {
                 {language === "en" ? "Go on" : "Sigamos"}
               </div>
             </a>
+            <a href="#Wellcome">
+              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                <Lucide icon="ArrowUp" />
+              </div>
+            </a>
           </div>
         </div>
       </section>

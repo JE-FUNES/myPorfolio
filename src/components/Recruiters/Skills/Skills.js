@@ -23,23 +23,22 @@ const Skills = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  
-    const closeComponent = () => {
-      setSelectedSkill(null);
-    };
+  const closeComponent = () => {
+    setSelectedSkill(null);
+  };
 
   return (
     <React.Fragment>
       <section className="mt-10 pt-28 pb-10 bg-slate-900" id="Skills">
         <div className="container bg-slate-900">
           <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-end bg-slate-900">
-            <motion.div 
-            className="lg:col-span-6 lg:pl-9 bg-slate-900"
-              initial={{ opacity: 0, y: 100 }} 
-  whileInView={{ opacity: 1, y: 0 }} 
-  viewport={{ once: false }} 
-  transition={{ duration: 3, ease: "easeOut" }} 
-  >
+            <motion.div
+              className="lg:col-span-6 lg:pl-9 bg-slate-900"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 3, ease: "easeOut" }}
+            >
               <div className="lg:pb-16 sm:mt-5 lg:mt-10 md:pb-10 pb-8 sm:text-center lg:text-right text-white bg-slate-900">
                 <h3>{language === "en" ? "IT Skills" : "Habilidades IT"}</h3>
               </div>
@@ -51,7 +50,6 @@ const Skills = () => {
                           className="hover:shadow-black transition-all duration-300 ease-in flex flex-col h-full lg:h-auto lg:col-span-6"
                           key={index}
                         >
-                         
                           <div
                             className={`flex items-center hover:bg-fuchsia-600 border-2 border-slate-900 p-4 h-full lg:h-auto ${skill.Bg_color}`}
                             key={skill.key}
@@ -89,16 +87,16 @@ const Skills = () => {
               </div>
             </motion.div>
             {isLargeScreen && (
-            <div
-              className="sm:col-span-4 lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-              style={{ backgroundImage: `url(${skills1})`, height: "100%" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundImage = `url(${skills2})`)
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundImage = `url(${skills1})`)
-              }
-            ></div>
+              <div
+                className="sm:col-span-4 lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
+                style={{ backgroundImage: `url(${skills1})`, height: "100%" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundImage = `url(${skills2})`)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundImage = `url(${skills1})`)
+                }
+              ></div>
             )}
           </div>
           <div className="flex justify-end items-center lg:-mt-10 mb-5">
@@ -108,12 +106,17 @@ const Skills = () => {
                 {language === "en" ? "Go on" : "Sigamos"}
               </div>
             </a>
+            <a href="#About">
+              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-4">
+                <Lucide icon="ArrowUp" />
+              </div>
+            </a>
           </div>
         </div>
         <LogoSlider />
       </section>
-       {/*----- End Skills -----*/}
-       {selectedSkill && (
+      {/*----- End Skills -----*/}
+      {selectedSkill && (
         <SkillModal skill={selectedSkill} onClose={closeComponent} />
       )}
     </React.Fragment>

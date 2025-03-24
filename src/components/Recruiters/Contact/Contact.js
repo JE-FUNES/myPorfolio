@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ContactData, EspContactData } from "./ContactData";
 //import { submitContactForm } from "../../../redux/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 //import { useNavigate } from "react-router-dom";
 import contact_bg from "../../../assets/Image/contact-bg.png";
 import { motion } from "motion/react";
+import { Lucide } from "../../../utils/index.js";
 
 const Contact = () => {
   const language = useSelector((state) => state.language);
@@ -94,7 +95,7 @@ const Contact = () => {
     <React.Fragment>
       {/*----- Start Contact -----*/}
       <section
-        className={`sm:pt-20 lg:pt-24 lg:pb-20 bg-slate-900 lg:h-full w-screen bg-no-repeat bg-cover lg:bg-bottom ${
+        className={`sm:pt-20 lg:pt-24 lg:pb-10 bg-slate-900 lg:h-full w-screen bg-no-repeat bg-cover lg:bg-bottom ${
           isLargeScreen ? "bg-bg-effect-2" : ""
         }`}
         id="Contact"
@@ -130,13 +131,12 @@ const Contact = () => {
             </div>
             {/* End Image */}
             {/* Start Contact */}
-            <motion.div 
-            className="col-span-12 lg:col-span-6 flex"
-            initial={{ opacity: 0, y: 100 }} 
-  whileInView={{ opacity: 1, y: 0 }} 
-  viewport={{ once: false }}
-  transition={{ duration: 2, ease: "easeOut" }}
-            
+            <motion.div
+              className="col-span-12 lg:col-span-6 flex"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 2, ease: "easeOut" }}
             >
               <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[50px] lg:pt-0">
                 <ul>
@@ -210,6 +210,15 @@ const Contact = () => {
             </motion.div>
             {/* End Contact */}
           </div>
+          {/* Botones debajo alineados a la derecha */}
+                        <div className="relative flex justify-end space-x-2 bottom-0">
+                          
+                          <a href="#Curriculum">
+                            <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                              <Lucide icon="ArrowUp" />
+                            </div>
+                          </a>
+                        </div>
         </div>
       </section>
       {/*----- End Contact -----*/}
