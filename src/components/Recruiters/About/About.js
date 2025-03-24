@@ -11,8 +11,6 @@ import { motion } from "motion/react";
 const About = () => {
   const language = useSelector((state) => state.language);
 
-  const [isAboutvisible, setIsAboutVisible] = useState (false);
-
 
   return (
     <React.Fragment>

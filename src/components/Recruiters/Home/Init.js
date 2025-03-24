@@ -7,6 +7,8 @@ import { Lucide } from "../../../utils/index.js";
 import image from "../../../assets/Image/init-imagen.png";
 import foto from "../../../assets/Image/init-foto.png";
 import AnimatedCursor from "react-animated-cursor";
+import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Init = () => {
   const language = useSelector((state) => state.language);
@@ -157,9 +159,44 @@ const Init = () => {
                 {/* Begin Second Column */}
                 <div className="w-full md:w-1/2 flex items-center justify-center min-h-full bg-white">
                   <div className="w-full px-0 pt-0 pb-10">
-                    {/* Switch de idiomas alineado a la derecha */}
-                    <div className="flex justify-end my-5 mr-5">
+                    
+                    
+                    
+                    {/* Botón whatsapp y Switch de idiomas alineado a la derecha */}
+                    <div className="flex justify-end my-5 mr-3">
                       <LanguagesSwitcher />
+                    <a
+                          href={"https://wa.me/+5493512737199"}
+                          target="blank"
+                          className="btn btn-whapp  shadow-md shadow-black ml-4"
+                          title="Whatsapp"
+                        >
+                      <FaWhatsapp className="inline-block w-6 h-6 px-0 my-1" />
+                      </a>
+                      <a
+                          href={"https://www.instagram.com/jefa.web"}
+                          target="blank"
+                          className="text-purple-900 ml-2 mt-2"
+                          title="Instagram"
+                        >
+                      <FaInstagram className="inline-block w-5 h-5" />
+                      </a>
+                      <a
+                          href={"https://www.linkedin.com/in/je-funes/"}
+                          target="blank"
+                          className="text-purple-900 ml-1 mt-2"
+                          title="Linkedin"
+                        >
+                      <FaLinkedin className="inline-block w-5 h-5" />
+                      </a>
+                      <a
+                          href={"https://www.github.com/JE-FUNES"}
+                          target="blank"
+                          className="text-purple-900 ml-1 mt-2"
+                          title="Github"
+                        >
+                      <FaGithub className="inline-block w-5 h-5" />
+                      </a>
                     </div>
 
                     {/* Contenedor de dos columnas internas */}
