@@ -44,7 +44,7 @@ const Curriculum = () => {
               />
               {/* Botones debajo alineados a la derecha */}
               <div className="flex justify-end space-x-2 mt-4">
-                <a href="#Contact">
+                <a href="#Github">
                   <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
                     <Lucide icon="ArrowDown" />
                     {language === "en" ? "Go on" : "Sigamos"}

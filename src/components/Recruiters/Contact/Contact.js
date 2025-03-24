@@ -213,7 +213,7 @@ const Contact = () => {
           {/* Botones debajo alineados a la derecha */}
                         <div className="relative flex justify-end space-x-2 bottom-0">
                           
-                          <a href="#Curriculum">
+                          <a href="#Github">
                             <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
                               <Lucide icon="ArrowUp" />
                             </div>

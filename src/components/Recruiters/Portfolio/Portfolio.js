@@ -141,7 +141,7 @@ const Portfolio = () => {
   />
 
   {/* Contenedor de los enlaces en la esquina superior derecha */}
-  <div className="absolute top-3 right-3 flex space-x-2 z-10">
+  <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
     <a href="#Curriculum">
       <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
         <Lucide icon="ArrowDown" className="mr-2" />

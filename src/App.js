@@ -51,8 +51,8 @@ const App = () => {
             <Skills />
             <Portfolio />
             <Curriculum />
-            <Contact />
             <GithubComponent />
+            <Contact />
             <Footer />
           </React.Fragment>
         }
