@@ -1,6 +1,6 @@
 
 import React, {useEffect} from "react";
-import { getContacts, deleteContacts } from "../../redux/actions";
+import { getContacts, deleteContacts } from "../../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 

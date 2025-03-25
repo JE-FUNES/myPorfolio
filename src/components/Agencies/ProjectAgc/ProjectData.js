@@ -1,7 +1,7 @@
-import project_1 from '../../../assets/Image/project-1.webp'
-import project_2 from '../../../assets/Image/project-2.webp'
-import project_3 from '../../../assets/Image/project-3.webp'
-import project_4 from '../../../assets/Image/project-4.webp'
+import project_1 from '../../assets/Image/project-1.webp'
+import project_2 from '../../assets/Image/project-2.webp'
+import project_3 from '../../assets/Image/project-3.webp'
+import project_4 from '../../assets/Image/project-4.webp'
 
 export const ProjectData = [
     {

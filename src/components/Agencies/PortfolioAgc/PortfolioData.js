@@ -8,11 +8,53 @@ import project_8 from '../../../assets/Image/project-8.webp';
 import project_5 from '../../../assets/Image/landingPage.webp';
 import project_6 from '../../../assets/Image/upnomada.webp';
 import project_9 from '../../../assets/AnimatedGifs/upnomada.gif';
+import interatos from "../../../assets/Image/interatos.png";
+import boostup from "../../../assets/Image/boostup.png";
 
 
 
 //---- Start Projects Data -----
 export const PortfolioData = [
+    {
+        img: interatos,
+        key: "project_20",
+        list: "WEB DESIGN & DEVELOP",
+        Heding: "Website for Internet Services",
+        Detail:
+        "Through the Marketing Agency BoostUp, I designed and developed a comprehensive website for the company Interatos, hosted on the Wix platform.",
+        btn: "See ongoing project",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://youtu.be/JpTxg-H00d4",
+        Type: "Web development.",
+        Detail2: "",
+        Languages: "PHP for Wix, JavaScript for scripts",
+        Country: "Argentina",
+        URL: "https://boostupmdigital.wixstudio.com/atos",
+        GitHub: "",
+        Period: "Febrary 2025",
+        Finished: "Not Finished yet"
+    },
+    {
+        img: boostup,
+        key: "project_21",
+        list: "COPYWRITING & WEB DESIGN",
+        Heding: "Website for Digital Marketing Services",
+        Detail:
+        "Optimization of the existing site: titles and wording, image weight, SEO, responsive design, incorporation of new missing pages. Site hosted on the Wix platform.",
+        btn: "See ongoing project",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/Xlh3HWxlvb8?si=j_y7ClvHB2VTlr-_",
+        Type: "Web Design",
+        Detail2: "",
+        Languages: "JavaScript for scripts",
+        Country: "Argentine",
+        URL: "https://www.boostup-marketingdigital.com/",
+        GitHub: "",
+        Period: "since Diciembre 2024",
+        Finished: "Not finished yet."
+    },
     {
         img: project_6,
         key: "project_8",
@@ -175,6 +217,46 @@ export const PortfolioData = [
 ];
 
 export const EspPortfolioData = [
+    {
+        img: interatos,
+        key: "project_20",
+        list: "DISEÑO Y DESARROLLO WEB",
+        Heding: "Sitio Web para Servicios de Internet",
+        Detail:
+        "A través de la Agencia de Marketing BoostUp, diseñé y desarrollé un sitio web integral para la empresa Interatos, alojado en la plataforma Wix.",
+        btn: "Ver Proyecto en curso",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/JpTxg-H00d4?si=EAozTsuVOQpp8DP-",
+        Type: "Desarrollo Web",
+        Detail2: "",
+        Languages: "PHP for Wix, JavaScript for scripts",
+        Country: "Argentina",
+        URL: "https://boostupmdigital.wixstudio.com/atos",
+        GitHub: "",
+        Period: "Febrero 2025",
+        Finished: "No finalizado aún."
+    },
+    {
+        img: boostup,
+        key: "project_21",
+        list: "DISEÑO WEB y COPYWRITING",
+        Heding: "Sitio Web para Servicios de Marketing Digital",
+        Detail:
+        "Optimización del sitio existente: títulos y redacciones, peso de las imágenes, SEO, diseño responsivo, incorporación de nuevas páginas que faltaban. Sitio alojado en la plataforma Wix.",
+        btn: "Ver Proyecto en curso",
+        //Project Detail
+        imgDetail: "",
+        videoUrl: "https://www.youtube.com/embed/Xlh3HWxlvb8?si=j_y7ClvHB2VTlr-_",
+        Type: "Desarrollo Web",
+        Detail2: "",
+        Languages: "JavaScript for scripts",
+        Country: "Argentina",
+        URL: "https://www.boostup-marketingdigital.com/",
+        GitHub: "",
+        Period: "desde Diciembre 2024",
+        Finished: "No finalizado aún."
+    },
     {
         img: project_6,
         key: "project_8",

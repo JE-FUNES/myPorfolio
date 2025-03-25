@@ -51,6 +51,7 @@ module.exports = {
         'bg-effect-2': "url('/src/assets/Image/bg-effect-2.webp')",
         'bg-banner': "url('/src/assets/Image/project-banner-1.png')",
         'bg-video': "url('/src/assets/videos/videoCode.mp4')",
+        'bg-mkn': "url('/src/assets/Image/mkn-dgt.png')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',

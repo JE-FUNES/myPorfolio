@@ -1,112 +1,144 @@
-import React from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import home_banner from "../../../assets/AnimatedGifs/animated-about.gif";
+//import home_banner from "../../../assets/AnimatedGifs/animated-about.gif";
+import imageColor from "../../../assets/Image/arte-about.png";
+import imageByN from "../../../assets/Image/arte-about2.png";
 import { NumberData, EspNumberData, BtnData, EspBtnData } from "./AboutData";
-import { Lucide } from "../../../utils/index";
+import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
+import { motion } from "motion/react";
 
-const AboutFree = () => {
+const About = () => {
   const language = useSelector((state) => state.language);
 
   return (
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className="lg:py-20 bg-white bg-bg-effect-3 bg-cover bg-no-repeat"
+        className=" bg-white bg-bg-effect-3 bg-cover bg-no-repeat pt-20"
         id="About"
       >
-        <div className="container my-20 py-10">
+        <div className="container py-20 min-h-screen">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center">
-            <div className="lg:col-span-6 text-center mb-12 lg:mb-0">
-              <img
-                src={home_banner}
-                alt="This is me"
-                title="Animated gif"
-                className="bg-no-repeat bg-cover"
-              />
-            </div>
+            <div
+              className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
+              style={{ backgroundImage: `url(${imageColor})`, height: "100%" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundImage = `url(${imageByN})`)
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundImage = `url(${imageColor})`)
+              }
+            ></div>
 
-            <div className="lg:col-span-6 lg:pl-12 mt-1">
+            <motion.div
+              className="lg:col-span-6 lg:pl-12 my-2"
+              initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
+              whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
+              viewport={{ once: false }} // La animación ocurre solo una vez
+              transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
+            >
               <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
                 {language === "en"
-                  ? "I'm a Front-end Developer"
-                  : "Soy Desarrolladora de Front-end"}
-                <span className="text-purple-900"> & </span>
-                <br />
-                {language === "en"
-                  ? "a Graphic Designer."
-                  : "Diseñadora Gráfica."}
+                  ? "Frontend Web Developer"
+                  : "Desarrolladora Web Frontend"}
               </h3>
-              <p className="text-base md:text-lg">
-                {language === "en" ? "I´m a" : "Soy"}
+              <p className="text-base md:text-xl">
                 <TypeAnimation
+                  key={language}
                   className="text-purple-900"
-                  sequence={[
-                    " SENIOR Graphic Designer...🦾",
-                    3000,
-                    " JUNIOR Front-end Developer...👣",
-                    3000,
-                  ]}
+                  sequence={
+                    language === "en"
+                      ? [
+                          "I don't just develop websites,",
+                          100,
+                          "I create digital experiences!",
+                          5000,
+                        ]
+                      : [
+                          "No solo desarrollo sitios web, ",
+                          100,
+                          "¡Creo experiencias digitales!",
+                          5000,
+                        ]
+                  }
                   speed={10}
-                  repeat={Infinity}
+                  repeat={1}
                 />
               </p>
-              {/*<p className="text-base md:text-lg">
-                I'm a SENIOR{" "}
-                <span className="text-purple-600"> Graphic Designer </span>& a
-                JUNIOR
-                <span className="text-fuchsia-600"> Front-end Developer </span>.
-  </p>*/}
+
               <br />
               <p className="text-base md:text-md">
                 {" "}
-                {language === "en" ? "🎨 My passion for " : "🎨 Mi pasión por "}
-                <span className="bg-fuchsia-100">
-                  {language === "en" ? "creating" : "crear"}
+                {language === "en"
+                  ? "🎨 With a solid background in "
+                  : "🎨 Con una sólida formación en "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "graphic design" : "diseño gráfico"}
                 </span>{" "}
                 {language === "en"
-                  ? "led me to train in graphic arts, and for more than 20 years I have dedicated myself to it with great pleasure."
-                  : "me llevó a formarme en artes gráficas, y desde hace más de 20 años me dedico a ello con mucho placer."}
+                  ? ", I specialize in the creation and development of "
+                  : ", me especializo en la creación y desarrollo de "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "web sites." : "sitios web."}
+                </span>
                 <br />
-                {language === "en" ? "📚My " : "📚Mi "}
-                <span className="bg-fuchsia-100">
+                <br />
+                {language === "en"
+                  ? "⭐ Throughout my career, I've learned new and different skills, allowing me to offer "
+                  : "⭐ A lo largo de mi carrera, he aprendido nuevas y diferentes habilidades, lo que me permite ofrecer "}
+                <span className="bg-fuchsia-100 font-semibold">
                   {language === "en"
-                    ? "ability to adapt "
-                    : "habilidad para adaptarme "}
+                    ? "visually attractive and functional solutions."
+                    : "soluciones visualmente atractivas y funcionales."}
                 </span>
-                {language === "en"
-                  ? "led me to train in new technological and digital marketing areas to stay up to date and take my brand to an excellent position on platforms such as Google, Facebook and Instagram."
-                  : "me llevó a capacitarme en nuevas áreas tecnológicas y de marketing digital para mantenerme actualizada y llevar mi marca a una excelente posición en plataformas como Google, Facebook e Instagram."}
                 <br />
-                {language === "en" ? "🗣My " : "🗣Mi "}
-                <span className="bg-fuchsia-100">
+                <br />
+                {language === "en"
+                  ? "💼 My portfolio includes projects ranging from visual conceptualization to implementation of"
+                  : "💼 Mi portafolio incluye proyectos que abarcan desde la conceptualización visual hasta la implementación de "}
+                <span className="bg-fuchsia-100 font-semibold">
                   {language === "en"
-                    ? "outgoing personality "
-                    : "personalidad extrovertida "}
+                    ? "responsive and dynamic websites."
+                    : "sitios web responsivos y dinámicos."}
                 </span>
-                {language === "en"
-                  ? "and my vocation for customer service allowed me to turn my company into one of the most popular in the country in its field, and my leadership capacity was key to building the work team that accompanied that transformation."
-                  : "y mi vocación por la atención al cliente me permitió convertir mi empresa en una de las más populares del país en su ramo, y mi capacidad de liderazgo fue clave para armar el equipo de trabajo que acompañó esa transformación."}
+                <br />
                 <br />
                 {language === "en"
-                  ? "🚀In one of these restarts that life imposed on me, I discovered that I am also "
-                  : "En uno de esos reinicios que me impuso la vida, descubrí que también soy "}
-                <span className="bg-fuchsia-100">
-                  {language === "en" ? "curious" : "curiosa "}
+                  ? "🚀 Although my experience in graphic design is very broad, my current focus is on the "
+                  : "🚀 Aunque mi experiencia en diseño gráfico es muy amplia, mi enfoque actual está en el "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en" ? "web development" : "desarrollo web"}
                 </span>
                 {language === "en"
-                  ? ", and this led me to decide to train in web programming, face that challenge and have the joy of finding a "
-                  : "y esto me llevó a decidir formarme en programación web, enfrentar ese desafío y tener la alegría de encontrar una "}
+                  ? ", for which I use technologies such as "
+                  : ", para el cual utilizo tecnologías como "}
                 <span className="bg-fuchsia-100">
-                  {language === "en" ? "new passion" : "nueva pasión"}
+                  JavaScript, React JS, HTML, CSS, Tailwind CSS, MUI material,
+                  Wordpress, Redux, GraphQl, REST API, Node.js, Express, Morgan,
+                  Docker, AWS, Webpack / Vite, Figma, Git, Scrum
                 </span>
-                .
+                {language === "en" ? ", among others." : ", entre otras."}
+                <br />
                 <br />
                 {language === "en"
-                  ? "And here I am, re-writing the code of my present and future 💜"
-                  : "Y aquí estoy, re escribiendo el código de mi presente y futuro 💜"}
+                  ? "✨ I am characterized by being very organized, adaptable and "
+                  : "✨ Me caracterizo por ser muy organizada, adaptable y "}
+                <span className="bg-fuchsia-100 font-semibold">
+                  {language === "en"
+                    ? "committed to excellence"
+                    : "comprometida con la excelencia"}
+                </span>
+                {language === "en"
+                  ? ", always willing to take on new challenges, continue learning and contribute to the success of the projects in which I participate."
+                  : ", siempre dispuesta a asumir nuevos desafíos, continuar aprendiendo y contribuir al éxito de los proyectos en los que participo. "}
+                <br />
+                <br />
+                {language === "en"
+                  ? "As of today..."
+                  : "Al día de hoy, llevo..."}
               </p>
-              <div className="grid grid-cols-16 pt-3">
+              <div className="grid grid-cols-16">
                 {language === "en"
                   ? NumberData.map((e, key) => {
                       return (
@@ -135,6 +167,7 @@ const AboutFree = () => {
                       );
                     })}
               </div>
+              {/* 
               {language === "en"
                 ? BtnData.map((e, key) => {
                     return (
@@ -160,13 +193,19 @@ const AboutFree = () => {
                       </div>
                     );
                   })}
-            </div>
+                  */}
+            </motion.div>
           </div>
-          <div className="pt-10 flex justify-end items-center">
-            <a href="#Services">
-              <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer ">
+          <div className="pt-5 flex justify-end items-center">
+            <a href="#Skills">
+              <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />
                 {language === "en" ? "Go on" : "Sigamos"}
+              </div>
+            </a>
+            <a href="#Wellcome">
+              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                <Lucide icon="ArrowUp" />
               </div>
             </a>
           </div>
@@ -177,4 +216,4 @@ const AboutFree = () => {
   );
 };
 
-export default AboutFree;
+export default About;

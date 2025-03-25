@@ -3,7 +3,7 @@ import { ServicesData, EspServicesData } from './ServicesData'
 import {Lucide} from "../../../utils/index.js"
 import { useSelector } from "react-redux";
 
-const ServicesFree = () => {
+const Services = () => {
     const language = useSelector((state) => state.language);
     return (
         <React.Fragment>
@@ -74,4 +74,4 @@ const ServicesFree = () => {
     )
 }
 
-export default ServicesFree
+export default Services

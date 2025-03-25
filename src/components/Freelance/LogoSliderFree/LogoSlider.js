@@ -4,14 +4,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const LogoSliderFree = () => {
+const LogoSlider = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 14,
-        slidesToScroll: 2,
+        slidesToShow: 10,
+        slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         pauseOnHover: true,
         arrows: false,
         responsive: [
@@ -40,8 +40,8 @@ const LogoSliderFree = () => {
                             {
                                 LogoSliderData.map((e, key) => {
                                     return (
-                                        <div className="p-0 !flex justify-center w-full" key={e.key} >
-                                            <img src={e.img} alt="" className='h-10 w-auto'  />
+                                        <div className="p-0 !flex justify-center w-full" key={key} >
+                                            <img src={e.img} className='h-10 w-auto' title={e.alt} />
                                         </div>
                                     )
                                 })
@@ -54,4 +54,4 @@ const LogoSliderFree = () => {
     )
 }
 
-export default LogoSliderFree
+export default LogoSlider

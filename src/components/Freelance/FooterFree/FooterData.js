@@ -36,7 +36,7 @@ export const FooterData = [
         icon: <FaTiktok />,
         key: "tiktok",
         name: "TikTok",
-        link: "https://www.tiktok.com/@jefaweb/"
+        link: "https://www.tiktok.com/jefaweb/"
     },
     {
         icon: <FaTwitter />,

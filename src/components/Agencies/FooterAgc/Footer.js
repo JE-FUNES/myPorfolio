@@ -1,15 +1,16 @@
 import React from 'react'
 import { FooterData } from './FooterData'
-import { useNavigate } from 'react-router-dom'
-import logo from"../../../assets/Image/firmaEmail.png"
+//import { useNavigate } from 'react-router-dom'
 
-const FooterAgc = () => {
+const Footer = () => {
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
-    const handleContactList = () => {
+    /*const handleContactList = () => {
         navigate("/contactList");
-      };
+      };*/
+
+
     return (
         <React.Fragment>
             {/*----- Start Footer -----*/}
@@ -30,14 +31,7 @@ const FooterAgc = () => {
                             </div>
                         </div>
                         <div className="col-span-12 md:col-span-6 text-center md:text-right">
-                            
-                                <img 
-                                src={logo} 
-                                alt="Julia Esther Funes Aragón"
-                                title="Web Developer"
-                                className="lg:px-2 sm:max-w-[120px] lg:max-w-[180px] xl:ml-5 xl:max-w-[250px]"
-                                />
-                                 
+                            <p className="m-0 text-white text-opacity-75">© 2023 Portfolio Desarrolladora Web J.E.F.A.</p>
                             
                         </div>
                     </div>
@@ -48,4 +42,4 @@ const FooterAgc = () => {
     )
 }
 
-export default FooterAgc
+export default Footer
