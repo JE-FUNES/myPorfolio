@@ -127,12 +127,12 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className={`absolute w-[50%] max-w-[480px] sm:mt-11 lg:mt-28 lg:ml-5 aspect-square rounded-full  shadow-lg transition-all duration-300 
-                    ${
-                      isLit
-                        ? "shadow-[0_0_120px_29px_rgba(0,255,255,0.8)]"
-                        : "shadow-[0_0_120px_29px_rgba(0,255,255,0.1)]"
-                    }`}
+            className="absolute w-[50%] max-w-[480px] sm:mt-11 lg:mt-28 lg:ml-5 aspect-square rounded-full  shadow-lg transition-all duration-300"
+            style={{
+              boxShadow: isLit
+                ? "0 0 120px 30px rgba(0, 255, 255, 0.8)" // Sombra intensa cuando se activa
+                : "0 0 10px 10px rgba(0, 255, 255, 0.5)", // Sombra más tenue cuando está apagado
+            }}
           >
             {/* Marco */}
             <div className="absolute w-full h-full rounded-full border-[5px] border-gray-300/50"></div>
@@ -147,36 +147,35 @@ const PoquetClock = () => {
               {/* Centro */}
               <div className="absolute sm:w-3 lg:w-5 sm:h-3 sm:ml-2 lg:ml-0 lg:h-5 bg-gray-200 rounded-full border border-gray-700"></div>
             </div>
-          {/* Indicación botón */}
-          <div className="absolute w-50 h-10 flex items-center text-xl font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
-            {/* Botón para iluminar */}
-            <button
-              className="relative sm:bottom-0 lg:bottom-56 sm:left-3 sm:ml-16 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
-              style={
-                isLit
-                  ? { backgroundImage: `url(${botonAzul})` }
-                  : { backgroundImage: `url(${botonRojo})` }
-              }
-              onClick={() => setIsLit(!isLit)}
-            >
-              {isLit ? (
-                <Lucide
-                  icon="Sun"
-                  className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white hover:text-black"
-                />
-              ) : (
-                <Lucide
-                  icon="Moon"
-                  className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white"
-                />
-              )}
-            </button>
-            <h2 className="text-white animate-bounce sm:mt-28 lg:mt-0 lg:mb-44 sm:-ml-20 lg:-ml-28 text-center ">
-              {language === "en" ? "Press Button" : "Presiona el Botón"}
-            </h2>
+            {/* Indicación botón */}
+            <div className="absolute w-50 h-10 flex items-center text-xl font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
+              {/* Botón para iluminar */}
+              <button
+                className="relative sm:bottom-0 lg:bottom-56 sm:left-3 sm:ml-16 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
+                style={
+                  isLit
+                    ? { backgroundImage: `url(${botonAzul})` }
+                    : { backgroundImage: `url(${botonRojo})` }
+                }
+                onClick={() => setIsLit(!isLit)}
+              >
+                {isLit ? (
+                  <Lucide
+                    icon="Sun"
+                    className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white hover:text-black"
+                  />
+                ) : (
+                  <Lucide
+                    icon="Moon"
+                    className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white"
+                  />
+                )}
+              </button>
+              <h2 className="text-white animate-bounce sm:mt-28 lg:mt-0 lg:mb-44 sm:-ml-20 lg:-ml-28 text-center ">
+                {language === "en" ? "Press Button" : "Presiona el Botón"}
+              </h2>
+            </div>
           </div>
-          </div>
-
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
         <div className="relative sm:-top-20 lg:bottom-0 lg:mb-20 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
