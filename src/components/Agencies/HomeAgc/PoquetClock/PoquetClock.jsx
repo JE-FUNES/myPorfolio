@@ -90,7 +90,7 @@ const PoquetClock = () => {
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-5 lg:top-10 sm:mt-5 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/50 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
+            className="absolute sm:top-10 lg:top-10 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/50 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
@@ -150,14 +150,10 @@ const PoquetClock = () => {
           </div>
 
           {/* Indicación botón */}
-          <div className="absolute w-50 h-10 flex items-center text-xl font-bold px-2 rounded-lg bottom-40 ">
-            <h2 className="text-white animate-bounce">
-              {language === "en" ? "Press Button" : "Presiona el Botón"}
-            </h2>
-          </div>
+          <div className="absolute w-50 h-10 flex items-center text-xl font-bold px-2 rounded-lg sm:bottom-28 sm:mb-28 sm:left-48 ">
           {/* Botón para iluminar */}
           <button
-            className="absolute sm:bottom-56 lg:bottom-52 sm:ml-2 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
+            className="relative sm:bottom-52 lg:bottom-56 sm:left-8 sm:ml-28 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
             style={
               isLit
                 ? { backgroundImage: `url(${botonAzul})` }
@@ -168,15 +164,19 @@ const PoquetClock = () => {
             {isLit ? (
               <Lucide
                 icon="Sun"
-                className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white hover:text-black"
+                className="lg:w-10 lg:h-10 sm:w-8 sm:h-8 text-white hover:text-black"
               />
             ) : (
               <Lucide
                 icon="Moon"
-                className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white"
+                className="lg:w-10 lg:h-10 sm:w-8 sm:h-8 text-white"
               />
             )}
           </button>
+            <h2 className="text-white animate-bounce sm:-mt-36 sm:-ml-20 sm:text-2xl">
+              {language === "en" ? "Press Button" : "Presiona el Botón"}
+            </h2>
+          </div>
         </div>
           {/* Contenedor de los enlaces en la esquina superior derecha */}
                     <div className="relative sm:-top-8 lg:bottom-0 lg:mb-20 w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
