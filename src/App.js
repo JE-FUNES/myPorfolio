@@ -87,15 +87,14 @@ const App = () => {
       path="/diseno_y_desarrollo_web_para_agencias_de_marketing"
       element={
         <React.Fragment>
-          <NavbarAgc />
           <PoquetClock />
           <ServicesAgc />
           <AboutAgc />
-          <SkillsAgc />
           <PortfolioAgc />
           <CurriculumAgc />
           <ContactAgc />
-          <FooterAgc />
+          
+          <NavbarAgc />
         </React.Fragment>
       }
       />

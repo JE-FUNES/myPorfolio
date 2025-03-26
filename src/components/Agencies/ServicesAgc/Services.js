@@ -13,11 +13,11 @@ const Services = () => {
     <React.Fragment>
       {/*----- Start Services -----*/}
       <section
-        className="sm:py-10 lg:py-20 bg-bg-mkn bg-cover bg-no-repeat bg-slate-700"
+        className="sm:py-10 lg:py-20 bg-bg-mkn bg-center bg-no-repeat bg-contain  bg-slate-700/80"
         id="Services"
       >
         <div className="container">
-          <div className="grid lg:pb-20 lg:pt-10 md:pb-10 pb-8">
+          <div className="grid lg:pb-20 lg:pt-5 md:pb-10 pb-8">
             <motion.div
               className="lg:grid lg:grid-cols-10 lg:gap-1 lg:col-span-10 flex flex-nowrap items-center justify-center p-3 bg-black/50"
               initial={{ opacity: 0, y: 100 }}
@@ -123,12 +123,14 @@ const Services = () => {
                 </h2>
               </div>
               <div className="w-full mt-10 flex flex-col items-center justify-center">
-              <div className="flex items-start mt-12 mb-3">
-                <h1 className="text-white text-5xl font-semibold">
-                  {language === "en" ? "I OFFER YOU MY SERVICES" : "TE OFREZCO MIS SERVICIOS"}
+                <div className="flex items-start mt-12 mb-3">
+                  <h1 className="text-white text-5xl font-semibold">
+                    {language === "en"
+                      ? "I OFFER YOU MY SERVICES"
+                      : "TE OFREZCO MIS SERVICIOS"}
                   </h1>
-                  </div>
-                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="grid lg:grid-cols-12 md:grid-cols-2 gap-5 grid-cols-1 items-center -mt-5">

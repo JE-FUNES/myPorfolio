@@ -84,7 +84,7 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="pt-10" id="Home">
+      <section className="py-10 mb-12" id="Home">
         <div
           className="relative flex items-center justify-center h-screen w-full bg-no-repeat bg-center bg-contain"
           style={
@@ -96,7 +96,7 @@ const PoquetClock = () => {
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-10 lg:top-10 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/50 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
+            className="absolute sm:top-10 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/60 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
@@ -177,14 +177,14 @@ const PoquetClock = () => {
                   />
                 )}
               </button>
-              <h2 className="text-white animate-bounce sm:mt-28 lg:mt-0 lg:mb-44 sm:-ml-20 lg:-ml-28 text-center ">
+              <h2 className="text-white animate-bounce sm:mt-28 lg:-mt-10 lg:mb-72 sm:-ml-20 lg:-ml-24 text-center ">
                 {language === "en" ? "Press Button" : "Presiona el Botón"}
               </h2>
             </div>
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-20 lg:bottom-12 lg:mb-28 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-20 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
               <Lucide icon="ArrowDown" className="mr-2" />

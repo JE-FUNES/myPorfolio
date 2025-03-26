@@ -2,13 +2,14 @@ import { MdComputer } from "react-icons/md";
 import { FiTriangle } from "react-icons/fi";
 import { BsColumns, BsDistributeVertical, BsGlobe2 } from "react-icons/bs";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
-
+import { FaHtml5, FaAws, FaGitlab, FaDatabase, FaCreditCard, FaPaintbrush, FaWordpress, FaSellsy } from "react-icons/fa6";
+import { FaCss3, FaReact, FaJsSquare, FaAd } from "react-icons/fa";
 //---- Start Services Data -----
 export const ServicesData = [
     {
         Bg_color: "bg-[#f8fafc]",
         key: "webdesign",
-        Logo: <HiOutlineDevicePhoneMobile />,
+        Logo: <FaWordpress />,
         Heding: "Web Design",
         Detail:
             "Design of Web and Landing Pages tailored to your Needs and Budget. Responsive design for all devices. Single page or multi-page design.",
@@ -16,15 +17,15 @@ export const ServicesData = [
     {
         Bg_color: "bg-[#fef2f2]",
         key: "development",
-        Logo: <MdComputer />,
-        Heding: "Development",
+        Logo: <FaJsSquare />,
+        Heding: "Web Development",
         Detail:
             "Development of Web Pages and Landing pages that comply with the required actions. JavaScript, React, HTML5, CSS3, etc.",
     },
     {
         Bg_color: "bg-[#f7fee7]", 
         key: "seo",
-        Logo: <FiTriangle />,
+        Logo: <FaAd />,
         Heding: "SEO, Marketing & Positioning",
         Detail:
             "The pages comply with Google standards, favoring natural positioning. Google Analytics, Search Console, Tag Manager.",
@@ -32,7 +33,7 @@ export const ServicesData = [
     {
         Bg_color: "bg-[#ecfeff]",
         key: "hosting",
-        Logo: <BsColumns />,
+        Logo: <FaDatabase />,
         Heding: "Domain registration & Hosting",
         Detail:
             "If you don't have them, I take care of the hiring and start-up. If you already have them, I take care of the migration and start-up.",
@@ -40,7 +41,7 @@ export const ServicesData = [
     {
         Bg_color: "bg-[#ecfeff]",
         key: "security",
-        Logo: <BsDistributeVertical />,
+        Logo: <FaSellsy />,
         Heding: "Security",
         Detail:
             "Security protocols for your website: SSL certificates, through which Google will know that your site is secure, so it will appear in searches.",
@@ -58,24 +59,24 @@ export const ServicesData = [
 export const EspServicesData = [
     {
         Bg_color: "bg-[#f8fafc]",
-        key: "ebdesign",
-        Logo: <HiOutlineDevicePhoneMobile />,
+        key: "webdesign",
+        Logo: <FaWordpress />,
         Heding: "Diseño Web",
         Detail:
-            "Diseño de Páginas Web y Landing Pages adaptadas a tus Necesidades y Presupuesto. Diseño responsivo para todos los dispositivos.",
+            "Diseño de Sitios Web y Landing Pages adaptadas a tus Necesidades y Presupuesto. Diseño responsivo para todos los dispositivos.",
     },
     {
         Bg_color: "bg-[#fef2f2]",
         key: "development",
-        Logo: <MdComputer />,
-        Heding: "Desarrollo",
+        Logo: <FaJsSquare />,
+        Heding: "Desarrollo Web",
         Detail:
             "Desarrollo de Páginas Web y Landing Pages que cumplan con las acciones y funciones requeridas. JavaScript, React, HTML5, CSS3, etc.",
     },
     {
         Bg_color: "bg-[#f7fee7]", 
         key: "seo",
-        Logo: <FiTriangle />,
+        Logo: <FaAd />,
         Heding: "SEO, Marketing & Posicionamiento",
         Detail:
             "Las páginas cumplen con los estándares de Google, favoreciendo el posicionamiento natural. Google Analytics, Search Console, Tag Manager.",
@@ -83,7 +84,7 @@ export const EspServicesData = [
     {
         Bg_color: "bg-[#ecfeff]",
         key: "hosting",
-        Logo: <BsColumns />,
+        Logo: <FaDatabase />,
         Heding: "Registro de Dominio & Hosting",
         Detail:
             "Si no los tienes, me encargo de la contratación y puesta en marcha. Si ya los tienes, yo me encargo de la migración y ajustes.",

@@ -1,11 +1,11 @@
+import { FaHouse } from "react-icons/fa6";
+
 //---- Start Nvabar Data -----
 export const NavbarData = [
-    //{ name: "Wellcome", link: "Wellcome" },
-    { name: "Home", link: "Home" },
+    { name: <FaHouse />, link: "Home" },
     { name: "Services", link: "Services" },
-    { name: "About Me", link: "About"},
-    { name: "My Skills", link: "Skills" },
     { name: "My Projects", link: "Portfolio" },
+    { name: "About Me", link: "About"},
     { name: "Curriculum", link: "Curriculum"},
     { name: "Contact me", link: "Contact" },
 ]
@@ -14,11 +14,10 @@ export const NavbarData = [
 //---- Inicio NavBarData en español -----
 export const EspNavbarData = [
     //{ name: "Bienvenido", link: "Wellcome" },
-    { name: "Inicio", link: "Home" },
+    { name: <FaHouse />, link: "Home" },
     { name: "Servicios", link: "Services" },
-    { name: "Sobre mí", link: "About"},
-    { name: "Habilidades", link: "Skills" },
     { name: "Proyectos", link: "Portfolio" },
+    { name: "Sobre mí", link: "About"},
     { name: "Curriculum", link: "Curriculum"},
     { name: "Contacto", link: "Contact" },
 ]

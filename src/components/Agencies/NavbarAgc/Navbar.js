@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../../assets/Image/logo-jefa.png";
+import logo from "../../../assets/Logs/logo-jefa-transp-rojo-fondo-negro.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
@@ -19,9 +19,9 @@ const Navbar = () => {
     <>
       <React.Fragment>
         {/*----- Start Navbar -----*/}
-        <header>
-          <nav className="fixed top-0 w-full z-40 bg-white">
-            <div className="container sm:py-3 xl:py-5">
+        <footer className="bg-black border-t border-white border-opacity-10 py-2  w-full fixed bottom-0 z-40">
+          <nav className="">
+            <div className="container py-1">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
@@ -32,22 +32,9 @@ const Navbar = () => {
                           src={logo}
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 sm:max-w-[120px] lg:max-w-[150px] xl:ml-5 xl:max-w-[200px]"
+                          className="lg:px-2 max-w-[120px] xl:ml-5 xl:max-w-[170px]"
                         />
-                        <p className="text-red-500/80 pl-4 pt-1 -mb-2 text-xs">
-                          {language === "en"
-                            ? 'You are in "Mkt Agencies"'
-                            : 'Estás en "Agencias de Mkt"'}
-                            <span title=
-                            {language === "en"
-                              ? 'go to Presentation'
-                              : 'Ir a la Presentación'}
-                            className="bg-red-500/80 text-white rounded-full ml-1 px-2 hover:bg-red-900">
-                            {language === "en"
-                            ? 'Choose again'
-                            : 'Volver a elegir'}
-                            </span>
-                        </p>
+                        
                       </div>
                     </a>
                   </div>
@@ -62,7 +49,23 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
-                    <ul className="list-none flex space-x-3 items-end right-0 w-full cursor-pointer">
+                    <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
+                      <li key="section">
+                      <p className="text-red-500/80 p-2 text-sm mr-2 border-2 border-red-500/50 bg-slate-800 rounded-full">
+                          {language === "en"
+                            ? 'You are in "Mkt Agencies"'
+                            : 'Estás en "Agencias de Mkt"'}
+                            <span title=
+                            {language === "en"
+                              ? 'go to Presentation'
+                              : 'Ir a la Presentación'}
+                            className="bg-red-500/50 text-slate-100 rounded-full ml-1 px-2 hover:bg-red-900">
+                            {language === "en"
+                            ? 'Choose again'
+                            : 'Volver a elegir'}
+                            </span>
+                        </p>
+                      </li>
                       {language === "en"
                         ? NavbarData.map((e, key) => (
                             <li key={key}>
@@ -70,7 +73,7 @@ const Navbar = () => {
                                 to={e.link}
                                 smooth={true}
                                 duration={500}
-                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-9 tracking-[2px] hover:text-red-500"
+                                className="inline-block px-1.5 lg:text-sm xl:text-base mb-1 font-medium uppercase leading-9 tracking-[2px] text-slate-100 hover:text-red-500"
                               >
                                 {e.name}
                               </Link>
@@ -82,7 +85,7 @@ const Navbar = () => {
                                 to={e.link}
                                 smooth={true}
                                 duration={500}
-                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-9 tracking-[2px] hover:text-red-500"
+                                className="inline-block px-1.5 lg:text-sm xl:text-base mb-1 font-medium uppercase leading-9 tracking-[2px] text-slate-100 hover:text-red-500"
                               >
                                 {e.name}
                               </Link>
@@ -92,7 +95,7 @@ const Navbar = () => {
                         <a
                           href={"https://wa.me/+5493512737199"}
                           target="blank"
-                          className="btn btn-whapp  shadow-md shadow-black"
+                          className="btn btn-whapp border-2 border-black shadow-md shadow-white"
                           title="Whatsapp"
                         >
                           <FaWhatsapp className="inline-block w-6 h-6 px-0 my-1" />
@@ -121,7 +124,7 @@ const Navbar = () => {
                               smooth={true}
                               duration={500}
                               onClick={closeMenu}
-                              className="inline-block px-1.5 text-base font-medium uppercase leading-9 tracking-[2px] hover:text-orange-600"
+                              className="inline-block px-1.5 text-base font-medium uppercase leading-9 tracking-[2px] text-slate-100 hover:text-orange-600"
                             >
                               {e.name}
                             </Link>
@@ -134,7 +137,7 @@ const Navbar = () => {
                               smooth={true}
                               duration={500}
                               onClick={closeMenu}
-                              className="inline-block px-1.5 text-base font-medium uppercase leading-9 tracking-[2px] hover:text-orange-600"
+                              className="inline-block px-1.5 text-base font-medium uppercase leading-9 tracking-[2px] text-slate-100 hover:text-orange-600"
                             >
                               {e.name}
                             </Link>
@@ -154,7 +157,7 @@ const Navbar = () => {
               </div>
             </div>
           </nav>
-        </header>
+        </footer>
         {/*----- End Navbar -----*/}
       </React.Fragment>
     </>

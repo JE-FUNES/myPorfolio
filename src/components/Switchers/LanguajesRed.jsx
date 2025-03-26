@@ -16,10 +16,10 @@ const LanguagesSwitcher = () => {
       };
 
     return (
-        <div className="rounded-full p-2 shadow-md shadow-black sm:max-w-[170px] lg:w-auto">
+        <div className="rounded-full px-2 py-1 shadow-md sm:max-w-[170px] lg:w-auto border-2 border-black shadow-white bg-slate-100">
         <div className="flex items-center justify-center">
             
-            <img src={spain} className="w-8 h-auto mr-2"  title="Español"/>
+            <img src={spain} className="w-8 h-8 mr-2 rounded-full"  title="Español"/>
         <Switch 
         checked={language === 'en'}
         onChange={handleToggle}
@@ -35,7 +35,7 @@ const LanguagesSwitcher = () => {
         height={22}
         width={48}
         />
-        <img src={american} className="w-8 h-auto ml-2"  title="English"/>
+        <img src={american} className="w-8 h-8 ml-2 rounded-full"  title="English"/>
         </div>
         </div>
 
