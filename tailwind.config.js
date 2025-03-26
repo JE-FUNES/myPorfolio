@@ -24,7 +24,14 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
+      textShadow: {
+        white: "2px 2px 10px rgba(255, 255, 255, 0.8)"
+      },
       keyframes: {
+      spin360: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" }
+      },
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 }
@@ -45,6 +52,7 @@ module.exports = {
         "bounce-slow": "bounceSlow 2s infinite",
         "bounce-slower": "bounceSlow 3s infinite",
         "fadeIn": 'fadeIn 1.5s ease-out forwards',
+        "spin360": "spin360 2s linear infinite 1s"
       },
       backgroundImage: {
         'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
@@ -81,6 +89,14 @@ module.exports = {
         
       },
     },
-    plugins: [],
+    plugins: [
+      function ({ addUtilities }) {
+        addUtilities({
+          ".text-shadow-white": {
+            textShadow: "2px 2px 10px rgba(255, 255, 255, 0.8)"
+          }
+        });
+      }
+    ],
   },
 };

@@ -25,6 +25,12 @@ const PoquetClock = () => {
   }, []);
 
   useEffect(() => {
+    // Precargar imagen
+    const img = new Image();
+    img.src = backgroundNoche;
+  }, []);
+
+  useEffect(() => {
     const actualizarReloj = () => {
       const ahora = new Date();
       const horas = ahora.getHours() % 12;
@@ -178,7 +184,7 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-20 lg:bottom-0 lg:mb-20 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-20 lg:bottom-12 lg:mb-28 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
               <Lucide icon="ArrowDown" className="mr-2" />
