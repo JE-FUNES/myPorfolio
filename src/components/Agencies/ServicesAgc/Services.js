@@ -2,22 +2,65 @@ import React, { useState, useEffect } from "react";
 import { ServicesData, EspServicesData } from "./ServicesData";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // Asegúrate de importar desde framer-motion
 import TypingEffect from "react-typing-effect";
 
 const Services = () => {
   const language = useSelector((state) => state.language);
   const text = language === "en" ? "D E V E L O P E R " : "DESARROLLADOR ";
 
+  // Estados de visibilidad por cada elemento
+  const [visible, setVisible] = useState({
+    segundo5: false,
+    segundo7: false,
+    segundo9: false,
+    segundo10: false,
+    segundo12: false,
+  });
+  
+  const [isInView, setIsInView] = useState(false);
+  
+  useEffect(() => {
+    const section = document.getElementById("Services");
+    if (!section) return;
+  
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.5 } // Se activa cuando el 50% de la sección está visible
+    );
+  
+    observer.observe(section);
+    
+    return () => observer.disconnect();
+  }, []);
+  
+  useEffect(() => {
+    if (!isInView) return;
+  
+    const timers = [
+      setTimeout(() => setVisible((prev) => ({ ...prev, segundo5: true })), 2000),
+      setTimeout(() => setVisible((prev) => ({ ...prev, segundo7: true })), 4000),
+      setTimeout(() => setVisible((prev) => ({ ...prev, segundo9: true })), 6000),
+      setTimeout(() => setVisible((prev) => ({ ...prev, segundo10: true })), 8000),
+      setTimeout(() => setVisible((prev) => ({ ...prev, segundo12: true })), 8000),
+    ];
+  
+    return () => timers.forEach(clearTimeout);
+  }, [isInView]); // Solo se activa cuando isInView cambia a true
+
   return (
     <React.Fragment>
       {/*----- Start Services -----*/}
       <section
-        className="sm:py-10 lg:py-20 bg-bg-mkn bg-center bg-no-repeat bg-contain  bg-slate-700/80"
+        className="sm:py-10 lg:py-20 bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
         id="Services"
       >
         <div className="container">
-          <div className="grid lg:pb-20 lg:pt-5 md:pb-10 pb-8">
+          <div className="lg:pb-20 lg:pt-5 md:pb-10 pb-8">
             <motion.div
               className="lg:grid lg:grid-cols-10 lg:gap-1 lg:col-span-10 flex flex-nowrap items-center justify-center p-3 bg-black/50"
               initial={{ opacity: 0, y: 100 }}
@@ -72,122 +115,98 @@ const Services = () => {
                 </h3>
               </div>
             </motion.div>
-            <div className="w-full mt-4 pl-10 flex flex-col items-start justify-start text-white">
-              <div className="flex items-start mt-6 mb-3">
-                <Lucide
-                  icon="Target"
-                  className="w-4 h-4 mr-2 mt-1 text-red-500"
-                />
-                <h2 className="text-white text-xl">
-                  {language === "en" ? "Let's build a " : "Construyamos una "}
-                  <span className="font-semibold">
+
+            {/* Elementos que aparecen progresivamente */}
+            <div className="w-full mt-4 pl-10 flex flex-col items-start text-white">
+              {visible.segundo5 && (
+                <motion.div
+                  id="segundo5"
+                  className="flex items-start mt-6 mb-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
+                  <h2 className="text-xl">
+                    {language === "en" ? "Let's build a " : "Construyamos una "}
+                    <span className="font-semibold">
+                      {language === "en"
+                        ? "trustworthy partnership."
+                        : "alianza confiable."}
+                    </span>
+                  </h2>
+                </motion.div>
+              )}
+
+              {visible.segundo7 && (
+                <motion.div
+                  id="segundo7"
+                  className="flex items-start"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
+                  <h2 className="text-xl font-semibold bg-red-500/50">
                     {language === "en"
-                      ? "trustworthy partnership."
-                      : "alianza confiable."}
-                  </span>
-                  <span>
-                    {language === "en"
-                      ? " Solid development in "
-                      : " Desarrollo sólido en "}
-                  </span>
-                  <span className="font-semibold">
-                    {language === "en"
-                      ? "WordPress, Wix and JavaScript"
-                      : "WordPress, Wix y JavaScript"}
-                  </span>
-                  <span>{language === "en" ? ", boundless " : ", "}</span>
-                  <span className="font-semibold">
-                    {language === "en" ? "creativity" : "creatividad"}
-                  </span>
-                  <span>
-                    {language === "en"
-                      ? ", and a commitment to "
-                      : " sin límites y "}
-                  </span>
-                  <span className="font-semibold">
-                    {language === "en"
-                      ? "on-time delivery."
-                      : "compromiso con los tiempos de entrega."}
-                  </span>
-                </h2>
-              </div>
-              <div className="flex items-start">
-                <Lucide
-                  icon="Target"
-                  className="w-4 h-4 mr-2 mt-1 text-red-500"
-                />
-                <h2 className="text-white text-xl font-semibold bg-red-500/50">
-                  {language === "en"
-                    ? "Let code be a solution, not an obstacle."
-                    : "Que el código sea una solución, no un obstáculo."}
-                </h2>
-              </div>
-              <div className="w-full mt-10 flex flex-col items-center justify-center">
-                <div className="flex items-start mt-12 mb-3">
+                      ? "Let code be a solution, not an obstacle."
+                      : "Que el código sea una solución, no un obstáculo."}
+                  </h2>
+                </motion.div>
+              )}
+
+              {visible.segundo9 && (
+                <motion.div
+                  id="segundo9"
+                  className="w-full mt-10 flex flex-col items-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
                   <h1 className="text-white text-5xl font-semibold">
                     {language === "en"
                       ? "I OFFER YOU MY SERVICES"
                       : "TE OFREZCO MIS SERVICIOS"}
                   </h1>
-                </div>
-              </div>
+                </motion.div>
+              )}
             </div>
-          </div>
-          <div className="grid lg:grid-cols-12 md:grid-cols-2 gap-5 grid-cols-1 items-center -mt-5">
-            {language === "en"
-              ? ServicesData.map((e, index) => {
-                  return (
+
+            {/* Servicios que aparecen en el segundo 10 */}
+            {visible.segundo10 && (
+              <div
+              id="segundo10"
+              className="grid lg:grid-cols-2 md:grid-cols-2 gap-5 w-full mt-8"
+            >
+              {(language === "en" ? ServicesData : EspServicesData).map((e, index) => (
+                <div
+                  key={index}
+                  className="hover:shadow-black transition-all duration-300 ease-in"
+                >
+                  <div
+                    className={`flex border-2 border-slate-900 p-5 ${e.Bg_color} animate-fadeIn`}
+                  >
                     <div
-                      key={index}
-                      className="lg:col-span-6 hover:shadow-black transition-all duration-300 ease-in"
+                      className="flex justify-center items-center h-[70px] w-[70px] border-2 text-[32px] border-slate-900"
+                      key={e.key}
                     >
-                      <div
-                        className={`flex border-2 border-slate-900 p-5 ${e.Bg_color} animate-fadeIn`}
-                      >
-                        <div
-                          className="flex justify-center items-center h-[70px] w-[70px] border-2 text-[32px]  border-slate-900"
-                          key={e.key}
-                        >
-                          {e.Logo}
-                        </div>
-                        <div className="flex-1 pl-5">
-                          <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg ">
-                            {e.Heding}
-                          </h5>
-                          <p className="text-black  text-lg">{e.Detail}</p>
-                        </div>
-                      </div>
+                      {e.Logo}
                     </div>
-                  );
-                })
-              : EspServicesData.map((e, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="lg:col-span-6 hover:shadow-black transition-all duration-300 ease-in"
-                    >
-                      <div
-                        className={`flex border-2 border-slate-900 p-5 ${e.Bg_color} animate-fadeIn`}
-                      >
-                        <div
-                          className="flex justify-center items-center h-[70px] w-[70px] border-2 text-[32px] border-slate-900"
-                          key={e.key}
-                        >
-                          {e.Logo}
-                        </div>
-                        <div className="flex-1 pl-5">
-                          <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg ">
-                            {e.Heding}
-                          </h5>
-                          <p className="text-black text-lg">{e.Detail}</p>
-                        </div>
-                      </div>
+                    <div className="flex-1 pl-5">
+                      <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg">
+                        {e.Heding}
+                      </h5>
+                      <p className="text-black text-lg">{e.Detail}</p>
                     </div>
-                  );
-                })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            )}
           </div>
           {/* Contenedor de los enlaces en la esquina superior derecha */}
-          <div className="sm:-top-8 lg:top-6 lg:mt-10 flex justify-end space-x-2 z-10">
+          {visible.segundo12 && (
+          <div id="segundo12" className="sm:-top-8 lg:top-6 lg:mt-10 flex justify-end space-x-2 z-10">
             <a href="#Portfolio">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
                 <Lucide icon="ArrowDown" className="mr-2" />
@@ -200,6 +219,7 @@ const Services = () => {
               </div>
             </a>
           </div>
+          )}
         </div>
       </section>
       {/*----- End Services -----*/}

@@ -126,7 +126,7 @@ const PoquetClock = () => {
                         3000,
                       ]
                 }
-                speed={5}
+                speed={90}
                 repeat={Infinity}
               />
             </h1>
