@@ -89,8 +89,8 @@ const App = () => {
         <React.Fragment>
           <PoquetClock />
           <ServicesAgc />
-          <AboutAgc />
           <PortfolioAgc />
+          <AboutAgc />
           <CurriculumAgc />
           <ContactAgc />
           

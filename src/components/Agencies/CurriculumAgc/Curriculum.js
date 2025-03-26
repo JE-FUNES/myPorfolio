@@ -21,13 +21,13 @@ const Curriculum = () => {
             <source src="/videos/videoCode2.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-white/50"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-slate-800/80"></div>
 
           {/* Contenedor principal */}
-          <div className="container sm:my-5 lg:my-20 py-10 relative z-10">
+          <div className="container sm:my-5 lg:my-20 pt-0 pb-10 relative z-10">
             {/* Título */}
-            <div className="lg:pb-16 sm:mt-5 lg:mt-0 md:pb-10 pb-8 text-center">
-              <h3 className="font-semibold text-black">Currículum Vitae</h3>
+            <div className="lg:pb-16 sm:mt-5 lg:-mt-2 md:pb-10 pb-8 text-center">
+              <h3 className="font-semibold text-white animate-fadeIn">Currículum Vitae</h3>
             </div>
 
             {/* Contenedor del PDF */}
@@ -44,13 +44,13 @@ const Curriculum = () => {
               />
               {/* Botones debajo alineados a la derecha */}
               <div className="flex justify-end space-x-2 mt-4">
-                <a href="#Github">
-                  <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+                <a href="#Contact">
+                  <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
                     <Lucide icon="ArrowDown" />
                     {language === "en" ? "Go on" : "Sigamos"}
                   </div>
                 </a>
-                <a href="#Portfolio">
+                <a href="#About">
                   <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
                     <Lucide icon="ArrowUp" />
                   </div>

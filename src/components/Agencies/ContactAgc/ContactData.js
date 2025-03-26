@@ -19,7 +19,7 @@ const handlesendEmail = () => {
 
 export const ContactData = [
     {
-        Bg_color: "bg-[#e9d5ff]",
+        Bg_color: "bg-[#ffffff]",
         icon: <FaPhoneAlt/>,
         name: "PHONE",
         contact: "+54 9 351 2737 199",
@@ -28,7 +28,7 @@ export const ContactData = [
         link: handleCall
     },
     {
-        Bg_color: "bg-[#c084fc]",
+        Bg_color: "bg-[#ffffff]",
         icon: <FaEnvelope/>,
         name: "MAIL",
         contact: "juliafunesaragon@gmail.com",
@@ -41,7 +41,7 @@ export const ContactData = [
 
 export const EspContactData = [
     {
-        Bg_color: "bg-[#e9d5ff]",
+        Bg_color: "bg-[#ffffff]",
         icon: <FaPhoneAlt/>,
         name: "CEL.",
         contact: "+54 9 351 2737 199",
@@ -50,7 +50,7 @@ export const EspContactData = [
         link: handleCall
     },
     {
-        Bg_color: "bg-[#c084fc]",
+        Bg_color: "bg-[#ffffff]",
         icon: <FaEnvelope/>,
         name: "MAIL",
         contact: "juliafunesaragon@gmail.com",

@@ -48,6 +48,9 @@ body {
     .btn-red {
         @apply bg-red-500 p-1 hover:bg-slate-300 text-black shadow-white shadow-md;
     }
+    .btn-theme2r {
+        @apply bg-red-800 hover:bg-slate-900 text-white shadow-black hover:shadow-red-800;
+    }
 }
 
 

@@ -18,7 +18,7 @@ const Portfolio = () => {
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-purple-50"
+        className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-slate-100"
         id="Portfolio"
       >
         <div className="container">
@@ -59,7 +59,7 @@ const Portfolio = () => {
                         }`}
                       >
                         <h6 className="mb-[18px] ">
-                          <span className="inline-block sm:mt-5 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">
+                          <span className="inline-block sm:mt-5 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-red-200 font-bold">
                             {project.list}
                           </span>
                         </h6>
@@ -109,7 +109,7 @@ const Portfolio = () => {
                         }`}
                       >
                         <h6 className="mb-[18px]">
-                          <span className="inline-block px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-fuchsia-200 font-bold">
+                          <span className="inline-block px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-red-200 font-bold">
                             {project.list}
                           </span>
                         </h6>
@@ -122,7 +122,7 @@ const Portfolio = () => {
                         <div>
                           <button
                             onClick={() => setSelectedProject(project)}
-                            className="btn btn-theme2"
+                            className="btn btn-theme2r"
                           >
                             {project.btn}
                           </button>
@@ -142,13 +142,13 @@ const Portfolio = () => {
 
   {/* Contenedor de los enlaces en la esquina superior derecha */}
   <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
-    <a href="#Curriculum">
-      <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+    <a href="#About">
+      <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
         <Lucide icon="ArrowDown" className="mr-2" />
         {language === "en" ? "Go on" : "Sigamos"}
       </div>
     </a>
-    <a href="#Skills">
+    <a href="#Services">
       <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
         <Lucide icon="ArrowUp" />
       </div>
