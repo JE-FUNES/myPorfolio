@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ServicesData, EspServicesData } from "./ServicesData";
+import ServicesModal from "./ServicesModal.js";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion"; // Asegúrate de importar desde framer-motion
@@ -8,6 +9,12 @@ import TypingEffect from "react-typing-effect";
 const Services = () => {
   const language = useSelector((state) => state.language);
   const text = language === "en" ? "D E V E L O P E R " : "DESARROLLADOR ";
+  const [selectedService, setSelectedService] = useState(null);
+    
+  
+    const closeComponent = () => {
+      setSelectedService(null);
+    };
 
   // Estados de visibilidad por cada elemento
   const [visible, setVisible] = useState({
@@ -56,7 +63,7 @@ const Services = () => {
     <React.Fragment>
       {/*----- Start Services -----*/}
       <section
-        className="sm:py-10 lg:py-20 bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
+        className="sm:py-10 lg:py-10 bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
         id="Services"
       >
         <div className="container">
@@ -121,13 +128,13 @@ const Services = () => {
               {visible.segundo5 && (
                 <motion.div
                   id="segundo5"
-                  className="flex items-start mt-6 mb-3"
+                  className="flex items-start mt-2 mb-2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                 >
                   <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
-                  <h2 className="text-xl">
+                  <h2 className="text-lg -mt-1">
                     {language === "en" ? "Let's build a " : "Construyamos una "}
                     <span className="font-semibold">
                       {language === "en"
@@ -147,7 +154,7 @@ const Services = () => {
                   transition={{ duration: 1 }}
                 >
                   <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
-                  <h2 className="text-xl font-semibold bg-red-500/50">
+                  <h2 className="text-lg bg-red-500/50 -mt-1">
                     {language === "en"
                       ? "Let code be a solution, not an obstacle."
                       : "Que el código sea una solución, no un obstáculo."}
@@ -176,27 +183,33 @@ const Services = () => {
             {visible.segundo10 && (
               <div
               id="segundo10"
-              className="grid lg:grid-cols-2 md:grid-cols-2 gap-5 w-full mt-8"
+              className="grid lg:grid-cols-2 md:grid-cols-2 gap-2 w-full mt-6"
             >
-              {(language === "en" ? ServicesData : EspServicesData).map((e, index) => (
+              {(language === "en" ? ServicesData : EspServicesData).map((service, index) => (
                 <div
                   key={index}
                   className="hover:shadow-black transition-all duration-300 ease-in"
                 >
                   <div
-                    className={`flex border-2 border-slate-900 p-5 ${e.Bg_color} animate-fadeIn`}
+                    className={`flex border-2 border-slate-900 p-5 bg-cover bg-center bg-no-repeat cursor-pointer hover:text-red-700`}
+                    style={{ 
+                      backgroundImage: `url(${service.imgDetail})`, 
+                      backgroundColor: "rgba(255, 255, 255, 0.8)", // 🔥 Color negro semi-transparente encima de la imagen
+                      backgroundBlendMode: "overlay",
+                    }}
+                    onClick={() => setSelectedService(service)}
                   >
                     <div
-                      className="flex justify-center items-center h-[70px] w-[70px] border-2 text-[32px] border-slate-900"
-                      key={e.key}
+                      className="flex justify-center items-center cursor-pointer h-[70px] w-[70px] border-2 text-[32px] border-slate-900"
+                      key={service.key}
                     >
-                      {e.Logo}
+                      {service.Logo}
                     </div>
                     <div className="flex-1 pl-5">
                       <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg">
-                        {e.Heding}
+                        {service.Heding}
                       </h5>
-                      <p className="text-black text-lg">{e.Detail}</p>
+                      <p className="text-black text-lg">{service.Detail}</p>
                     </div>
                   </div>
                 </div>
@@ -206,7 +219,7 @@ const Services = () => {
           </div>
           {/* Contenedor de los enlaces en la esquina superior derecha */}
           {visible.segundo12 && (
-          <div id="segundo12" className="sm:-top-8 lg:top-6 lg:mt-10 flex justify-end space-x-2 z-10">
+          <div id="segundo12" className="sm:-top-8 lg:-top-0 lg:-mt-16 flex justify-end space-x-2 z-10">
             <a href="#Portfolio">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
                 <Lucide icon="ArrowDown" className="mr-2" />
@@ -223,6 +236,9 @@ const Services = () => {
         </div>
       </section>
       {/*----- End Services -----*/}
+      {selectedService && (
+        <ServicesModal service={selectedService} onClose={closeComponent} />
+      )}
     </React.Fragment>
   );
 };
