@@ -1,58 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Portfolio web developer, Front end developer, Full Stack developer, Web Designer"
-    />
-    <meta name="keywords" content="web developer, desarrollo web, front end developer, frontend developer, diseño web, diseño de páginas web, full stack developer, web designer" />
-    <meta name="author" content="www.jefa-web.com.ar Julia Funes, Desarrollo Web | @jefa-web" />
-    <meta name="copyright" content="Julia Funes" />
-    <title>J.E.F.A. Diseño y Desarrollo Web</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3KPJGTVN7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-G3KPJGTVN7');
-    </script>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P44LTKBM');</script>
-  <!-- End Google Tag Manager -->
-    <meta name="google-site-verification" content="yQCZHDp2ryGdqBEc3kPxRbtmexchsrNt3QDcklV7eNo" />
-    <meta name="theme-color" content="#000000" />
-    
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- SEO -->
+    <title>Diseño y Desarrollo Web | Páginas y Sitios Web que venden.</title>
+    <meta name="description" content="Desarrolladora Frontend. Diseño y desarrollo de sitios web modernos y optimizados para empresas, agencias de marketing y emprendedores.">
+    <meta name="keywords" content="Desarrollo Web, Frontend Developer, React, JavaScript, UX/UI, Tiendas Online, Marketing Digital">
+    <meta name="author" content="Julia Funes">
+
+    <!-- Open Graph (para compartir en redes) -->
+    <meta property="og:title" content="Julia Funes - Desarrollo Web & Diseño UX/UI">
+    <meta property="og:description" content="Desarrollo de sitios web modernos y optimizados para empresas, agencias y emprendedores.">
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg">
+    <meta property="og:url" content="https://www.jefa-web.com.ar">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Julia Funes - Desarrollo Web & Diseño UX/UI">
+    <meta name="twitter:description" content="Desarrollo de sitios web modernos y optimizados para empresas y emprendedores.">
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg">
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="google-site-verification" content="yQCZHDp2ryGdqBEc3kPxRbtmexchsrNt3QDcklV7eNo" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" />
+
+    <!-- Google Analytics -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G3KPJGTVN7"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-G3KPJGTVN7");
+      });
+    </script>
   </head>
+
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P44LTKBM"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P44LTKBM" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+
+    <noscript>
+      <p>Este sitio requiere JavaScript para funcionar correctamente. Activa JavaScript en tu navegador para ver el contenido.</p>
+    </noscript>
+
     <div id="root"></div>
-    
+
+    <!-- Google Tag Manager -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-P44LTKBM");
+      });
+    </script>
   </body>
 </html>
