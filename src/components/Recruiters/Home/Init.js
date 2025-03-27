@@ -15,6 +15,7 @@ const Init = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(true);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  const [textColor, setTextColor] = useState("deeppink");
 
   useEffect(() => {
     const handleResize = () => {
@@ -96,21 +97,19 @@ const Init = () => {
                         <h2 className="font-semibold text-white text-[25px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 sm:ml-5 lg:ml-0">
                           {language === "en" ? "I'm a " : "Soy "}
                         </h2>
-                        <h1 className="font-semibold text-white text-[25px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 ml-2">
+                        <h1 className="font-semibold text-[25px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 ml-2"
+                        style={{color: textColor}}
+                        >
                           <TypeAnimation
                             key={language}
-                            className="text-fuchsia-500"
+                                                      
                             sequence={
                               language === "en"
-                                ? [" Web Developer", 3000, " UX Designer", 3000]
-                                : [
-                                    " Programadora Web",
-                                    3000,
-                                    " Diseñadora Integral",
-                                    3000,
-                                  ]
+                                ? [() => setTextColor("deeppurple"), " Web Developer", 2000, () => setTextColor("red"), " UX Designer", 2000, () => setTextColor("darkcyan"), " Web Designer", 2000, () => setTextColor("deeppurple")]
+                                : [() => setTextColor("deeppurple"), " Diseñadora Web", 2000, () => setTextColor("red"), " Programadora Web", 2000, () => setTextColor("darkcyan"), " Creativa UX", 2000, () => setTextColor("deeppurple")]
                             }
-                            speed={5}
+                            speed={20}
+                            deletionSpeed={100}
                             repeat={Infinity}
                           />
                         </h1>
@@ -217,7 +216,7 @@ const Init = () => {
 
                       {/* Segunda Columna - Botones */}
                       <div className="flex flex-col items-begin space-y-3 my-20 lg:-ml-5 pr-5">
-                        <p className="font-semibold text-purple-900 md:text-lg lg:mb-5">
+                        <p className="font-semibold text-slate-900 md:text-lg lg:mb-5">
                           {language === "en"
                             ? "Choose the best solution for your needs:"
                             : "Elige la mejor solución según tus necesidades:"}
@@ -225,7 +224,7 @@ const Init = () => {
                         {/* Botón Agencias Marketing" */}
                         <div className="flex justify-center">
                           <button
-                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
+                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-red-900 hover:bg-black hover:text-red-500 shadow-lg shadow-black font-bold"
                             onClick={handleAgencies}
                           >
                             <div className="flex items-center justify-center">
@@ -242,12 +241,12 @@ const Init = () => {
                         <p className="text-slate-900 md:text-sm text-center lg:px-12">
                           {language === "en"
                             ? "Custom web solutions for digital marketing, SEO, paid advertising, and content strategy."
-                            : "Soluciones web personalizadas para marketing digital, SEO, publicidad paga y estrategia de contenido."}
+                            : "Soluciones web y de diseño pensadas para responder a los requerimientos de tu cliente."}
                         </p>
                         {/* Botón PARTICULARES" */}
                         <div className="flex justify-center mt-4">
                           <button
-                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg w-auto lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-bold"
+                            className="animate-pulse-delay-3s p-2 uppercase tracking-wider  text-white text-sm lg:text-lg w-auto lg:w-2/3 rounded-[10px] lg:rounded-[30px] bg-cyan-900 hover:bg-black hover:text-cyan-500 shadow-lg shadow-black font-bold"
                             onClick={handleFreelance}
                           >
                             <div className="flex items-center justify-center">
@@ -264,7 +263,7 @@ const Init = () => {
                         <p className="text-slate-900 md:text-sm text-center lg:px-12">
                           {language === "en"
                             ? "Web design, updates, and custom features for your business or personal brand."
-                            : "Diseño web, actualizaciones y funcionalidades personalizadas para tu negocio o marca personal."}
+                            : "Diseño web, actualizaciones y funcionalidades personalizadas para tu negocio o marca."}
                         </p>
                         <div className="flex justify-center mt-4">
                           <button

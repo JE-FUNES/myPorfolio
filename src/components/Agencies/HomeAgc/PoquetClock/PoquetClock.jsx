@@ -100,7 +100,7 @@ const PoquetClock = () => {
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
-            transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
+            transition={{ duration: 2, ease: "easeOut" }} // La animación dura 1s con una salida suave
           >
             <h2 className="font-semibold text-white text-[18px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 sm:ml-2 lg:ml-0">
               {language === "en"

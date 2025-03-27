@@ -11,6 +11,7 @@ import comercio from '../../../assets/Image/comercio.webp';
 //---- Start Services Data -----
 export const ServicesData = [
     {
+        delay: 10,
         Bg_color: "bg-[#f8fafc]",
         key: "webdesign",
         Logo: <FaWordpress />,
@@ -22,6 +23,7 @@ export const ServicesData = [
             "Visually stunning sites aligned with your brand—and your client's—to maximize conversions and credibility... see more",
     },
     {
+        delay: 12,
         Bg_color: "bg-[#fef2f2]",
         key: "development",
         Logo: <FaJsSquare />,
@@ -33,6 +35,7 @@ export const ServicesData = [
             "Features tailored to your client's—and your agency's—needs, ensuring scalability and optimal performance... see more",
     },
     {
+        delay: 14,
         Bg_color: "bg-[#f7fee7]", 
         key: "seo",
         Logo: <FaGoogle />,
@@ -44,6 +47,7 @@ export const ServicesData = [
             "Optimization with meta tags, pixels, Google Tag Manager, and Search Console for measurement and improved performance... see more",
     },
     {
+        delay: 16,
         Bg_color: "bg-[#ecfeff]",
         key: "hosting",
         Logo: <FaArrowDownWideShort />,
@@ -55,6 +59,7 @@ export const ServicesData = [
             "Reliable infrastructure to ensure speed, stability, and uninterrupted availability... see more",
     },
     {
+        delay: 18,
         Bg_color: "bg-[#ecfeff]",
         key: "security",
         Logo: <FaHeadSideCough />,
@@ -66,6 +71,7 @@ export const ServicesData = [
             "Security and trust with SSL encryption and best practices in data protection to avoid risks... see more",
     },
     {
+        delay: 20,
         Bg_color: "bg-[#fffbeb]",
         key: "ecommerce",
         Logo: <FaPaypal />,
@@ -79,6 +85,7 @@ export const ServicesData = [
 
 export const EspServicesData = [
     {
+        delay: 10,
         Bg_color: "bg-[#f8fafc]",
         key: "webdesign",
         Logo: <FaWordpress />,
@@ -90,6 +97,7 @@ export const EspServicesData = [
             "Sitios visualmente impactantes y alineados con tu marca -y la de tu cliente- para maximizar conversiones y credibilidad... ver más",
     },
     {
+        delay: 12,
         Bg_color: "bg-[#fef2f2]",
         key: "development",
         Logo: <FaJsSquare />,
@@ -101,6 +109,7 @@ export const EspServicesData = [
             "Funcionalidades adaptadas a las necesidades de tu cliente -y las de tu agencia-, garantizando escalabilidad y rendimiento óptimo... ver más",
     },
     {
+        delay: 14,
         Bg_color: "bg-[#f7fee7]", 
         key: "seo",
         Logo: <FaGoogle />,
@@ -112,6 +121,7 @@ export const EspServicesData = [
             "Optimización con metatags, píxeles, Google Tag Manager y Search Console para medición y mejor rendimiento... ver más",
     },
     {
+        delay: 16,
         Bg_color: "bg-[#ecfeff]",
         key: "hosting",
         Logo: <FaArrowDownWideShort />,
@@ -123,6 +133,7 @@ export const EspServicesData = [
             "Infraestructura confiable para asegurar velocidad, estabilidad y disponibilidad sin interrupciones... ver más",
     },
     {
+        delay: 18,
         Bg_color: "bg-[#ecfeff]",
         key: "security",
         Logo: <FaHeadSideCough />,
@@ -134,6 +145,7 @@ export const EspServicesData = [
             "Seguridad y confianza con cifrado SSL y buenas prácticas en protección de datos para evitar riesgos... ver más",
     },
     {
+        delay: 20,
         Bg_color: "bg-[#fffbeb]",
         key: "ecommerce",
         Logo: <FaPaypal/>,
