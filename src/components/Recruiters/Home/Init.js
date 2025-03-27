@@ -15,8 +15,17 @@ const Init = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(true);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  const colors = ["deeppink", "red", "darkcyan"];
+  
+  const getRandomColor = (currentColor) => {
+    let newColor;
+    do {
+      newColor = colors[Math.floor(Math.random() * colors.length)];
+    } while (newColor === currentColor); // Evita repetir el mismo color consecutivamente
+    return newColor;
+  };
   const [textColor, setTextColor] = useState("deeppink");
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 820);
@@ -105,12 +114,13 @@ const Init = () => {
                                                       
                             sequence={
                               language === "en"
-                                ? [() => setTextColor("deeppurple"), " Web Developer", 2000, () => setTextColor("red"), " UX Designer", 2000, () => setTextColor("darkcyan"), " Web Designer", 2000, () => setTextColor("deeppurple")]
-                                : [() => setTextColor("deeppurple"), " Diseñadora Web", 2000, () => setTextColor("red"), " Programadora Web", 2000, () => setTextColor("darkcyan"), " Creativa UX", 2000, () => setTextColor("deeppurple")]
+                                ? [() => setTextColor("deeppink"), " Frontend Developer", 2000, , () => setTextColor(getRandomColor(textColor)), " UX Designer", 2000, () => setTextColor(getRandomColor(textColor)), " Web Designer", 2000,]
+                                : [() => setTextColor("deeppink"), " Diseñadora Web", 2000, () => setTextColor(getRandomColor(textColor)), " Programadora Web", 2000, () => setTextColor(getRandomColor(textColor)), " Creativa UX", 2000,]
                             }
                             speed={20}
                             deletionSpeed={100}
                             repeat={Infinity}
+                            
                           />
                         </h1>
                       </div>
@@ -282,9 +292,9 @@ const Init = () => {
                           </button>
                         </div>{" "}
                         {/* Botón RECRUITERS" */}
-                        <p className="text-slate-900 md:text-sm text-center lg:px-12">
+                        <p className="text-slate-900 md:text-sm text-center lg:px-16">
                           {language === "en"
-                            ? "Frontend Developer & Web Designer ready to join your team."
+                            ? "Front-end Developer & Web Designer ready to join your team."
                             : "Desarrollador Frontend & Diseñador Web disponible para tu equipo."}
                         </p>
                       </div>

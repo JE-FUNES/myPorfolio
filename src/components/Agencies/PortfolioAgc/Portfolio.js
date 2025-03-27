@@ -18,7 +18,7 @@ const Portfolio = () => {
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="sm:pt-24 lg:pt-28 pb-5 mt-10 mb-5 bg-slate-100"
+        className="sm:pt-24 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-100"
         id="Portfolio"
       >
         <div className="container">
