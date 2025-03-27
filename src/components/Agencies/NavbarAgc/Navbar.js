@@ -19,9 +19,9 @@ const Navbar = () => {
     <>
       <React.Fragment>
         {/*----- Start Navbar -----*/}
-        <footer className="bg-black border-t border-white border-opacity-10 py-2  w-full fixed bottom-0 z-40">
+        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-4 lg:py-2 sm:h-content w-full fixed bottom-0 z-40">
           <nav className="">
-            <div className="container py-1">
+            <div className="container sm:py-2 lg:py-1">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
@@ -32,7 +32,7 @@ const Navbar = () => {
                           src={logo}
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 max-w-[120px] xl:ml-5 xl:max-w-[170px]"
+                          className="lg:px-2 sm:max-w-[100px] lg:max-w-[120px] sm:ml-2 xl:ml-5 xl:max-w-[170px]"
                         />
                         
                       </div>
@@ -109,12 +109,12 @@ const Navbar = () => {
                 </div>
               </div>
               {/* Mobile screen */}
-              <div className={`lg:hidden ${open ? "" : "hidden"}`}>
+              <div className={`ml-3 lg:hidden ${open ? "" : "hidden"}`}>
                 <div className="mt-4">
                   <LanguagesSwitcher 
                   />
                 </div>
-                <div className="pt-5 ml-5">
+                <div className="py-5 ml-2">
                   <ul>
                     {language === "en"
                       ? NavbarData.map((e, key) => (
@@ -146,10 +146,10 @@ const Navbar = () => {
                     <a
                       href={"https://wa.me/+5493512737199"}
                       target="blank"
-                      className="btn btn-whapp  text-base w-[170px] shadow-md shadow-black"
+                      className="py-0 text-base w-[160px] shadow-md  mt-3 text-green-400"
                       title="Whatsapp"
                     >
-                      <FaWhatsapp className="inline-block w-6 h-6 px-0 my-1 mr-2" />
+                      <FaWhatsapp className="btn btn-whapp inline-block shadow-white w-8 h-8 px-0 my-1 mr-2" />
                       WHATSAPP
                     </a>
                   </ul>

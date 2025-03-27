@@ -84,7 +84,7 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="py-10 mb-12" id="Home">
+      <section className="sm:py-0 lg:py-10 mb-12" id="Home">
         <div
           className="relative flex items-center justify-center h-screen w-full bg-no-repeat bg-center bg-contain"
           style={
@@ -184,9 +184,9 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-20 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-28 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
           <a href="#Services">
-            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />
               {language === "en" ? "Go on" : "Sigamos"}
             </div>

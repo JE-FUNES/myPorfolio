@@ -39,13 +39,14 @@ const Curriculum = () => {
                     ? "/CV_JULIA_FUNES-Frontend_Developer-english.pdf"
                     : "/CV_JULIA_FUNES-Desarrollo_Frontend-spanish.pdf"
                 }
-                className="w-full h-[65vh]"
+                className="sm:w-auto lg:w-full sm:h-[55vh] lg:h-[65vh]"
                 frameBorder="0"
               />
               {/* Botones debajo alineados a la derecha */}
               <div className="flex justify-end space-x-2 mt-4">
                 <a href="#Contact">
-                  <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+                  <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+                    
                     <Lucide icon="ArrowDown" />
                     {language === "en" ? "Go on" : "Sigamos"}
                   </div>

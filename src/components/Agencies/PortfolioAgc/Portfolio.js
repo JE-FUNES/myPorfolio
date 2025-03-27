@@ -18,7 +18,7 @@ const Portfolio = () => {
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="sm:pt-24 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-100"
+        className="sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-100"
         id="Portfolio"
       >
         <div className="container">
@@ -143,7 +143,7 @@ const Portfolio = () => {
   {/* Contenedor de los enlaces en la esquina superior derecha */}
   <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
     <a href="#About">
-      <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+      <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
         <Lucide icon="ArrowDown" className="mr-2" />
         {language === "en" ? "Go on" : "Sigamos"}
       </div>

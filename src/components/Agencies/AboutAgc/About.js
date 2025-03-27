@@ -15,11 +15,11 @@ const About = () => {
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className=" bg-slate-200 bg-bg-effect-3 bg-cover bg-no-repeat pt-10"
+        className=" bg-slate-200 bg-bg-effect-3 bg-cover bg-no-repeat sm:pt-2 lg:pt-10"
         id="About"
       >
-        <div className="container py-20 min-h-screen">
-          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-white p-5 -mt-10">
+        <div className="container sm:py-8 lg:py-20 min-h-screen">
+          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-white sm:p-2 lg:p-5 sm:-mt-1 lg:-mt-10">
             <div
               className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
               style={{ backgroundImage: `url(${imageColor})`, height: "100%" }}

@@ -95,15 +95,15 @@ const Contact = () => {
     <React.Fragment>
       <section id="Contact">
         <div
-          className="sm:pt-20 lg:pb-20 lg:pt-32 w-screen bg-bg-effect-2red bg-no-repeat bg-cover lg:bg-bottom relative"
+          className="sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-32 w-screen sm:bg-red-700 lg:bg-bg-effect-2red bg-no-repeat bg-cover sm:bg-bottom lg:bg-bottom relative"
         >
           {/* 🔹 Capa oscura semitransparente */}
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* 🔹 Contenido (encima del fondo y la capa oscura) */}
-          <div className="container relative z-10 lg:pt-24 lg:pb-24 mt-1 justify-center">
+          <div className="container relative z-10 sm:pt-20 lg:pt-24 lg:pb-24 mt-1 justify-center">
             <motion.div
-              className="flex justify-center"
+              className="flex justify-center sm:-mt-16"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
@@ -129,7 +129,7 @@ const Contact = () => {
                 {/* 🔹 Lista de contactos */}
                 <ul>
                   {(language === "en" ? ContactData : EspContactData).map((e) => (
-                    <li className="relative flex mb-6 border" key={e.key}>
+                    <li className="relative flex sm:mb-3 lg:mb-6 border" key={e.key}>
                       <div className={`inline-flex items-center justify-center text-2xl h-14 w-14 ${e.Bg_color}`}>
                         {e.icon}
                       </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                           {e.name}
                         </h5>
                         <p
-                          className="mx-2 my-3 font-medium md:text-xl sm:text-sm text-white max-w-[250px] cursor-pointer"
+                          className="mx-2 my-3 font-medium md:text-xl sm:text-md text-white max-w-[250px] cursor-pointer"
                           title={e.hoverTitle}
                           onClick={e.link}
                         >
@@ -154,7 +154,7 @@ const Contact = () => {
                 </ul>
 
                 {/* 🔹 Botón de entrevista */}
-                <div className="border px-5 py-11 justify-items-center align-center">
+                <div className="border px-5 sm:py-5 lg:py-11 justify-items-center align-center">
                   <h6
                     className="text-[28px] font-semibold text-purple-50 text-center hover:text-yellow-500 cursor-pointer animate-pulse"
                     onClick={handleCalendar}
@@ -166,7 +166,7 @@ const Contact = () => {
             </motion.div>
 
             {/* 🔹 Botón de volver arriba */}
-            <div className="relative flex justify-end space-x-2 bottom-0">
+            <div className="relative flex justify-end space-x-2 bottom-0 sm:mt-4 sm:mr-2">
               <a href="#Curriculum">
                 <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
                   <Lucide icon="ArrowUp" />

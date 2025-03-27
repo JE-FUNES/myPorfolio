@@ -3,20 +3,19 @@ import { ServicesData, EspServicesData } from "./ServicesData";
 import ServicesModal from "./ServicesModal.js";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import TypingEffect from "react-typing-effect";
 
 const Services = () => {
   const language = useSelector((state) => state.language);
   const text = language === "en" ? "D E V E L O P E R " : "DESARROLLADOR ";
   const [selectedService, setSelectedService] = useState(null);
-
-
+  const [isInView, setIsInView] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const closeComponent = () => {
     setSelectedService(null);
   };
 
-  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const section = document.getElementById("Services");
@@ -36,6 +35,19 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // Consider desktop if width >= 1024px
+    };
+
+    checkScreenSize(); // Check on initial render
+    window.addEventListener("resize", checkScreenSize); // Listen for resize events
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
   return (
     <React.Fragment>
       {/*----- Start Services -----*/}
@@ -46,71 +58,76 @@ const Services = () => {
         <div className="container">
           <div className="lg:pb-20 lg:pt-5 md:pb-10 pb-8">
             <motion.div
-              className="lg:grid lg:grid-cols-10 lg:gap-1 lg:col-span-10 flex flex-nowrap items-center justify-center p-3 bg-black/50"
+              className="flex flex-col items-center justify-center p-3 bg-black/50 lg:grid lg:grid-cols-10 lg:gap-1"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
-              transition={{ duration: 3, ease: "easeOut" }}
+              transition={{ duration: 2, ease: "easeOut" }}
             >
-              {/* Columna izquierda*/}
-              <div className="lg:col-span-1 flex flex-col justify-end items-end">
+              {/* Sección izquierda */}
+              <div className="flex justify-center lg:justify-end lg:col-span-1 mb-2 lg:mb-0">
                 <Lucide
                   icon="UserX"
-                  className="lg:w-12 lg:h-12 border-2 lg:p-1 border-white rounded-full mx-2 text-white animate-spin360"
+                  className="sm:w-8 sm:h-8 lg:w-12 lg:h-12 border-2 p-1 border-white rounded-full text-white animate-spin360"
                 />
               </div>
-              {/* Columna central fija*/}
-              <div className="lg:col-span-4 flex flex-col justify-end items-end mr-5">
-                <h3 className="text-red-500 text-6xl">
+
+              {/* Sección central fija */}
+              <div className="flex flex-col items-center lg:items-end lg:col-span-4 text-center lg:text-right mb-4 lg:mb-0">
+                <h3 className="text-red-500 sm:text-xl lg:text-6xl">
                   {language === "en" ? "T" : "C"}
-                  <span className="text-red-500 text-4xl">
+                  <span className="text-red-500 sm:text-lg lg:text-4xl">
                     {language === "en" ? "ired " : "ansado "}
                   </span>
-                  <span className="text-white text-2xl underline mr-2">
+                  <span className="text-white sm:text-lg lg:text-2xl underline mr-2">
                     {language === "en" ? "of" : "de"}
                   </span>
-                  <span className="text-red-500 text-6xl ">C</span>
-                  <span className="text-red-500 text-4xl">
+                  <span className="text-red-500 sm:text-xl lg:text-6xl">C</span>
+                  <span className="text-red-500 sm:text-lg lg:text-4xl">
                     {language === "en" ? "hanging " : "ambiar de "}
                   </span>
                 </h3>
               </div>
-              {/* Columna media maquina escribir */}
-              <div className="lg:col-span-3 flex flex-col justify-start items-start mt-4">
+
+              {/* Sección TypingEffect */}
+              <div className="flex justify-center lg:justify-start lg:col-span-3 mb-4 lg:mb-0">
                 <TypingEffect
                   text={text}
                   speed={200}
                   eraseDelay={5000}
                   typingDelay={300}
-                  className="text-white text-5xl"
+                  className="text-white sm:text-2xl sm:font-semibold lg:font-normal lg:text-5xl sm:-mt-4 lg:mt-0 lg:pt-3 lg:ml-4"
                 />
               </div>
-              {/* Columna derecha - Texto estático */}
-              <div className="lg:col-span-2 flex flex-col justify-start items-start mt-4">
-                <h3 className="text-white text-2xl">
-                  {language === "en" ? "for every " : "en cada "}
 
-                  <span className="text-white text-2xl underline">
+              {/* Sección derecha - Texto estático */}
+              <div className="flex justify-center lg:justify-start lg:col-span-2">
+                <h3 className="text-white sm:text-lg lg:text-2xl text-center sm:-mt-5 lg:mt-0 lg:text-left">
+                  {language === "en" ? "for every " : "en cada "}
+                  <span className="text-white sm:text-lg lg:text-2xl underline">
                     {language === "en" ? "project" : "proyecto"}
                   </span>
-                  <span className="text-red-500 text-3xl">
-                    {language === "en" ? "?" : "?"}
+                  <span className="text-red-500 sm:text-2xl sm:ml-2 lg:text-3xl">
+                    ?
                   </span>
                 </h3>
               </div>
             </motion.div>
 
             {/* Elementos que aparecen progresivamente */}
-            <div className="w-full mt-4 pl-10 flex flex-col items-start text-white">
+            <div className="w-full mt-4 lg:pl-10 flex flex-col items-start text-white">
               <motion.div
                 id="segundo4"
                 className="flex items-start"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
-                transition={{ delay: 4, duration: 1, ease: "easeOut" }}
+                transition={{ delay: isDesktop ? 3 : 2, duration: 1, ease: "easeOut" }}
               >
-                <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
+                <Lucide
+                  icon="Target"
+                  className="sm:w-4 sm:h-4 mr-2 text-red-500"
+                />
                 <h2 className="text-lg -mt-1">
                   {language === "en" ? "Let's build a " : "Construyamos una "}
                   <span className="font-semibold">
@@ -127,10 +144,13 @@ const Services = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
-                transition={{ delay: 6, duration: 1, ease: "easeOut" }}
+                transition={{ delay: isDesktop ? 4 : 3, duration: 1, ease: "easeOut" }}
               >
-                <Lucide icon="Target" className="w-4 h-4 mr-2 text-red-500" />
-                <h2 className="text-lg bg-red-500/50 mt-1">
+                <Lucide
+                  icon="Target"
+                  className="sm:w-4 sm:h-4 mr-2 text-red-500"
+                />
+                <h2 className="text-lg sm:text-red-500 sm:-mt-1 lg:mt-1">
                   {language === "en"
                     ? "Let code be a solution, not an obstacle."
                     : "Que el código sea una solución, no un obstáculo."}
@@ -143,9 +163,9 @@ const Services = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
-                transition={{ delay: 8, duration: 1, ease: "easeOut" }}
+                transition={{ delay: isDesktop ? 6 : 4, duration: 1, ease: "easeOut" }}
               >
-                <h1 className="text-white text-5xl font-semibold">
+                <h1 className="text-white sm:text-2xl lg:text-5xl font-semibold">
                   {language === "en"
                     ? "I OFFER YOU MY SERVICES"
                     : "TE OFREZCO MIS SERVICIOS"}
@@ -158,17 +178,20 @@ const Services = () => {
             <div
               id="segundo10"
               className="grid lg:grid-cols-2 md:grid-cols-2 gap-2 w-full mt-6"
-            
             >
               {(language === "en" ? ServicesData : EspServicesData).map(
                 (service, index) => (
                   <motion.div
                     key={index}
-                    className="hover:shadow-black transition-all duration-300 ease-in"
+                    className="hover:shadow-black transition-all lg:duration-300 lg:ease-in"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: false }}
-                    transition={{ delay: service.delay, duration: 3, ease: "easeOut" }}
+                    transition={{
+                      delay: isDesktop ? service.delay : 5,
+                      duration: 1,
+                      ease: "easeOut",
+                    }}
                   >
                     <div
                       className={`flex border-2 border-slate-900 p-5 bg-cover bg-center bg-no-repeat cursor-pointer hover:text-red-700`}
@@ -205,7 +228,7 @@ const Services = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
-            transition={{ delay: 12, duration: 1, ease: "easeOut" }}
+            transition={{ delay: isDesktop ? 7 : 1, duration: 1, ease: "easeOut" }}
           >
             <a href="#Portfolio">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
