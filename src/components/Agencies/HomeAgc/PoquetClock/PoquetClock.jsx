@@ -96,7 +96,7 @@ const PoquetClock = () => {
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-10 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/60 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
+            className="absolute sm:top-4 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/60 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
@@ -184,7 +184,7 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-28 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-36 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />

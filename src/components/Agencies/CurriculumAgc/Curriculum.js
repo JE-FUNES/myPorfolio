@@ -31,7 +31,7 @@ const Curriculum = () => {
             </div>
 
             {/* Contenedor del PDF */}
-            <div className="relative w-full mx-auto">
+            <div className="relative w-full mx-auto sm:pl-5 lg:pl-0">
               <iframe
                 title="CurriculumVitae"
                 src={
