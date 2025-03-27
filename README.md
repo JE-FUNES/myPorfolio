@@ -52,13 +52,13 @@ Genera los archivos optimizados en la carpeta build/.
 
 ### 🎨 Capturas de Pantalla
 
-![alt captura1](image-1.png) ![alt captura2](image-3.png)
+![alt captura1](imagesReadme/image-1.png) ![alt captura2](imagesReadme/image-3.png)
 
-![alt captura3](image-4.png) ![alt captura4](image-5.png)
+![alt captura3](imagesReadme/image-4.png) ![alt captura4](imagesReadme/image-5.png)
 
-![alt captura5](image-6.png) ![alt captura6](image-7.png)
+![alt captura5](imagesReadme/image-6.png) ![alt captura6](imagesReadme/image-7.png)
 
-![alt capturasMob](image-8.png)
+![alt capturasMob](imagesReadme/image-8.png)
 
 ## 📬 Contacto
 

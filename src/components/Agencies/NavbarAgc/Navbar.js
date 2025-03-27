@@ -50,6 +50,7 @@ const Navbar = () => {
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
                     <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
+                    <a href={"https://www.jefa-web.com.ar/"}>
                       <li key="section">
                       <p className="text-red-500/80 p-2 text-sm mr-2 border-2 border-red-500/50 bg-slate-800 rounded-full">
                           {language === "en"
@@ -66,6 +67,7 @@ const Navbar = () => {
                             </span>
                         </p>
                       </li>
+                      </a>
                       {language === "en"
                         ? NavbarData.map((e, key) => (
                             <li key={key}>

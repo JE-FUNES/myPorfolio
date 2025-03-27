@@ -16,10 +16,8 @@ import NavbarAgc from "./components/Agencies/NavbarAgc/Navbar";
 import PoquetClock from "./components/Agencies/HomeAgc/PoquetClock/PoquetClock";
 import AboutAgc from "./components/Agencies/AboutAgc/About";
 import ServicesAgc from "./components/Agencies/ServicesAgc/Services";
-import SkillsAgc from "./components/Agencies/SkillsAgc/Skills";
 import PortfolioAgc from "./components/Agencies/PortfolioAgc/Portfolio";
 import ContactAgc from "./components/Agencies/ContactAgc/Contact";
-import FooterAgc from "./components/Agencies/FooterAgc/Footer";
 import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 
 
@@ -36,8 +34,6 @@ import CurriculumFree from "./components/Freelance/CurriculumFree/Curriculum";
 
 import Calculadora from "./components/Calculadora/Calculadora";
 
-//import Cta from './components/Cta/Cta';
-//import ContactList from './components/Contact/ContactList';
 
 const App = () => {
   return (
@@ -93,7 +89,6 @@ const App = () => {
           <AboutAgc />
           <CurriculumAgc />
           <ContactAgc />
-          
           <NavbarAgc />
         </React.Fragment>
       }
