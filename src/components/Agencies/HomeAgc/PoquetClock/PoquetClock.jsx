@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
 import background from "../../../../assets/Image/reloj2.webp";
-import backgroundNoche from "../../../../assets/Image/reloj2-noche.png";
+import backgroundNoche from "../../../../assets/Image/reloj2-noche2.webp";
 import botonRojo from "../../../../assets/Image/boton-rojo.png";
 import botonAzul from "../../../../assets/Image/boton-azul.png";
 import { Lucide } from "../../../../utils/index.js";
 import AnimatedCursor from "react-animated-cursor";
 
 const PoquetClock = () => {
-  const [isLit, setIsLit] = useState(false); // Estado para iluminación
+  const [isLit, setIsLit] = useState(true); // Estado para iluminación
   const language = useSelector((state) => state.language);
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
@@ -84,9 +84,9 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="sm:py-0 lg:py-10 mb-12" id="Home">
+      <section className="sm:py-0 lg:py-0 mb-16 bg-black" id="Home">
         <div
-          className="relative flex items-center justify-center h-screen w-full bg-no-repeat bg-center bg-contain"
+          className="relative flex items-center justify-center h-screen w-screen bg-no-repeat bg-center bg-contain"
           style={
             isLit
               ? { backgroundImage: `url(${backgroundNoche})` }
@@ -96,7 +96,7 @@ const PoquetClock = () => {
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-4 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/60 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
+            className="absolute sm:top-4 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/80 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
@@ -184,7 +184,7 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-36 lg:-top-24 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-36 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />

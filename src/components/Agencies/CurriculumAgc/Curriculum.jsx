@@ -8,20 +8,9 @@ const Curriculum = () => {
   return (
     <React.Fragment>
       {/*----- Start Curriculum -----*/}
-      <section className="pt-0" id="Curriculum">
+      <section className="pt-0 bg-slate-500 bg-bg-cv bg-no-repeat bg-cover bg-bottom bg-blend-multiply" id="Curriculum">
         <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center">
-          {/* Video de fondo */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          >
-            <source src="/videos/videoCode2.mp4" type="video/mp4" />
-            Tu navegador no soporta videos.
-          </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-slate-800/80"></div>
+         
 
           {/* Contenedor principal */}
           <div className="container sm:my-5 lg:my-20 pt-0 pb-10 relative z-10">

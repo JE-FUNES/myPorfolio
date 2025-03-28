@@ -15,13 +15,13 @@ const About = () => {
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className=" bg-slate-200 bg-bg-effect-3 bg-cover bg-no-repeat sm:pt-2 lg:pt-10"
+        className=" bg-slate-500 bg-bg-about bg-no-repeat bg-cover bg-blend-multiply sm:pt-2 lg:pt-10"
         id="About"
       >
         <div className="container sm:py-8 lg:py-20 min-h-screen">
-          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-white sm:p-2 lg:p-5 sm:-mt-1 lg:-mt-10">
+          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-slate-200 sm:p-2 lg:p-5 sm:-mt-1 lg:-mt-10">
             <div
-              className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
+              className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-white bg-no-repeat bg-cover bg-center transition-all duration-300"
               style={{ backgroundImage: `url(${imageColor})`, height: "100%" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundImage = `url(${imageByN})`)
@@ -38,12 +38,116 @@ const About = () => {
               viewport={{ once: false }} // La animación ocurre solo una vez
               transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
             >
-              <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
+              <h4 className="lg:text-4xl font-bold mb-1 normal-case">
+                {language === "en" ? "About me? " : "¿Quién soy? "}
+                <span className="font-base font-normal italic lg:text-lg">
+                  <br />
+                  {language === "en"
+                    ? "... I´m a self-taught person passionate about art, pets and my family. Oh! and a"
+                    : "... Una autodidacta apasionada del arte, de las mascotas y de mi familia. Ah! y una "}
+                </span>
+              </h4>
+              <h3 className="font-semibold text-[26px]  leading-[1.2] pb-4 mb-2 normal-case border-b-2 border-slate-300 text-center">
                 {language === "en"
                   ? "Frontend Web Developer"
                   : "Desarrolladora Web Frontend"}
               </h3>
-              <p className="text-base md:text-xl">
+              
+
+              <br />
+              <p className="text-base md:text-md">
+                {language === "en"
+                  ? "🖐 Hi! My name is "
+                  : "🖐 Hola! Mi nombre es "}
+                <span className="font-semibold text-lg">Julia</span>
+                <span>
+                  {language === "en"
+                    ? ", and it's a pleasure to welcome you to my "
+                    : ", y es un placer recibirte en mi "}
+                </span>
+                <span className="font-semibold">
+                  {language === "en" ? "web portfolio!" : "Portfolio web ! "}
+                </span>
+                <br />
+                <br />
+                <span>
+                {language === "en" 
+                ? "🚀 I specialize in creating " 
+                : "🚀 Soy especialista en crear "}
+                </span>
+                <span className="font-semibold">
+                {language === "en" 
+                ? "engaging, innovative, and highly functional digital experiences." 
+                : "experiencias digitales atractivas, innovadoras y altamente funcionales."}
+                </span>
+                <br />
+                <br />
+                <span>
+                {language === "en" 
+                ? "🎨 From " 
+                : "🎨 Desde el "}
+                </span>
+                <span className="font-semibold">
+                {language === "en" 
+                ? "brand manual design" 
+                : "diseño del manual de marca"}
+                </span>
+                <span>
+                {language === "en" 
+                ? " to " 
+                : " hasta el "}
+                </span>
+                <span className="font-semibold">
+                {language === "en" 
+                ? " developing highly converting landing pages and complex websites" 
+                : "desarrollo de landing pages que convierten y sitios web complejos"}
+                </span>
+                <span>
+                {language === "en" 
+                ? ", I integrate " 
+                : ", integro "}
+                </span>
+                <span className="font-semibold">
+                {language === "en" 
+                ? "creativity and strategy" 
+                : "creatividad y estrategia"}
+                </span>
+                <span>
+                {language === "en" 
+                ? " to elevate each project." 
+                : " para potenciar cada proyecto."}
+                </span>
+                <br />
+                <br />
+                <span>
+                {language === "en" 
+                ? "🥇 With a solid understanding of " 
+                : "🥇 Con sólidos conocimientos en "}
+                </span>
+                <span className="font-semibold">
+                {language === "en" 
+                ? "UX/UI, SEO, and digital marketing" 
+                : "UX/UI, SEO y marketing digital"}
+                </span>
+                <span>
+                {language === "en" 
+                ? ", I can add value at every stage, ensuring impactful results aligned with your clients' goals." 
+                : ", puedo aportar valor en cada etapa, asegurando resultados impactantes y alineados con los objetivos de tus clientes."}
+                </span>
+                
+                <br />
+                <br />
+                {language === "en"
+                  ? "💼 My portfolio includes projects ranging from visual conceptualization to implementation of"
+                  : "💼 Mi portafolio incluye proyectos que abarcan desde la conceptualización visual hasta la implementación de "}
+                <span className="font-semibold">
+                  {language === "en"
+                    ? "responsive and dynamic websites."
+                    : "sitios web responsivos y dinámicos."}
+                </span>
+                <br />
+                <br />
+                <p className="text-base md:text-2xl text-center">
                 <TypeAnimation
                   key={language}
                   className="text-red-800"
@@ -63,111 +167,43 @@ const About = () => {
                         ]
                   }
                   speed={10}
-                  repeat={1}
+                  repeat={Infinity}
                 />
               </p>
-
-              <br />
-              <p className="text-base md:text-md">
-                {" "}
-                {language === "en"
-                  ? "🎨 With a solid background in "
-                  : "🎨 Con una sólida formación en "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en" ? "graphic design" : "diseño gráfico"}
-                </span>{" "}
-                {language === "en"
-                  ? ", I specialize in the creation and development of "
-                  : ", me especializo en la creación y desarrollo de "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en" ? "web sites." : "sitios web."}
-                </span>
-                <br />
-                <br />
-                {language === "en"
-                  ? "⭐ Throughout my career, I've learned new and different skills, allowing me to offer "
-                  : "⭐ A lo largo de mi carrera, he aprendido nuevas y diferentes habilidades, lo que me permite ofrecer "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en"
-                    ? "visually attractive and functional solutions."
-                    : "soluciones visualmente atractivas y funcionales."}
-                </span>
-                <br />
-                <br />
-                {language === "en"
-                  ? "💼 My portfolio includes projects ranging from visual conceptualization to implementation of"
-                  : "💼 Mi portafolio incluye proyectos que abarcan desde la conceptualización visual hasta la implementación de "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en"
-                    ? "responsive and dynamic websites."
-                    : "sitios web responsivos y dinámicos."}
-                </span>
-                <br />
-                <br />
-                {language === "en"
-                  ? "🚀 Although my experience in graphic design is very broad, my current focus is on the "
-                  : "🚀 Aunque mi experiencia en diseño gráfico es muy amplia, mi enfoque actual está en el "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en" ? "web development" : "desarrollo web"}
-                </span>
-                {language === "en"
-                  ? ", for which I use technologies such as "
-                  : ", para el cual utilizo tecnologías como "}
-                <span className="bg-red-100">
-                  JavaScript, React JS, HTML, CSS, Tailwind CSS, MUI material,
-                  Wordpress, Redux, GraphQl, REST API, Node.js, Express, Morgan,
-                  Docker, AWS, Webpack / Vite, Figma, Git, Scrum
-                </span>
-                {language === "en" ? ", among others." : ", entre otras."}
-                <br />
-                <br />
-                {language === "en"
-                  ? "✨ I am characterized by being very organized, adaptable and "
-                  : "✨ Me caracterizo por ser muy organizada, adaptable y "}
-                <span className="bg-red-100 font-semibold">
-                  {language === "en"
-                    ? "committed to excellence"
-                    : "comprometida con la excelencia"}
-                </span>
-                {language === "en"
-                  ? ", always willing to take on new challenges, continue learning and contribute to the success of the projects in which I participate."
-                  : ", siempre dispuesta a asumir nuevos desafíos, continuar aprendiendo y contribuir al éxito de los proyectos en los que participo. "}
-                <br />
-                <br />
+              
                 {language === "en"
                   ? "As of today..."
                   : "Al día de hoy, llevo..."}
               </p>
-              <div className="grid grid-cols-16">
+              <div className="grid grid-cols-2 bg-slate-600">
                 {language === "en"
                   ? NumberData.map((e, key) => {
                       return (
-                        <div className="col-span-6 sm:col-span-4" key={key}>
+                        <div className="col-span-1 sm:col-span-1 border-2 border-white p-2" key={key}>
                           <h5
-                            className="text-[26px] text-red-600 font-semibold"
+                            className="text-[26px] text-red-600 font-semibold ml-2"
                             title={e.Title}
                           >
-                            {e.Number}
+                           {e.Number}
                           </h5>
-                          <span className="text-slate-700/90"> {e.Detail}</span>
+                          <span className="text-white"> {e.Detail}</span>
                         </div>
                       );
                     })
                   : EspNumberData.map((e, key) => {
                       return (
-                        <div className="col-span-6 sm:col-span-4" key={key}>
+                        <div className="col-span-1 sm:col-span-1 border-2 border-white p-2" key={key}>
                           <h5
-                            className="text-[26px] text-red-600 font-semibold"
+                            className="text-[26px] text-red-600 font-semibold ml-2"
                             title={e.Title}
                           >
                             {e.Number}
                           </h5>
-                          <span className="text-slate-700/90"> {e.Detail}</span>
+                          <span className="text-white"> {e.Detail}</span>
                         </div>
                       );
                     })}
               </div>
-             
             </motion.div>
           </div>
           <div className="pt-5 flex justify-end items-center">

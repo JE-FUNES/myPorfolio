@@ -57,10 +57,13 @@ module.exports = {
       backgroundImage: {
         'bg-effect-1': "url('/src/assets/Image/bg-effect-1.webp')",
         'bg-effect-2': "url('/src/assets/Image/bg-effect-2.webp')",
-        'bg-effect-2red': "url('/src/assets/Image/bg-effect-2red.png')",
+        'bg-effect-2red': "url('/src/assets/Image/nuevoContact.webp')",
         'bg-banner': "url('/src/assets/Image/project-banner-1.png')",
         'bg-video': "url('/src/assets/videos/videoCode.mp4')",
         'bg-mkn': "url('/src/assets/Image/mkn-dgt.png')",
+        'bg-projects': "url('/src/assets/Image/diseno-web.webp')",
+        'bg-about': "url('/src/assets/Image/graphictechnologies-video-animatedGIFs.webp')",
+        'bg-cv': "url('/src/assets/Image/gitlab.webp')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',

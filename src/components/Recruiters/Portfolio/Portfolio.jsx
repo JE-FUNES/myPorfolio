@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PortfolioData, EspPortfolioData } from "./PortfolioData";
-import Project from "../Project/Project.js";
+import Project from "../Project/Project.jsx";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import projectBanner from "../../../assets/Image/project-banner-1.png";

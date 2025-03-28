@@ -1,41 +1,105 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PortfolioData, EspPortfolioData } from "./PortfolioData";
 import Project from "../ProjectAgc/Project.jsx";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import projectBanner from "../../../assets/Image/project-banner-1.png";
 import projectBanner2 from "../../../assets/Image/project-banner-2.png";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const language = useSelector((state) => state.language);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const [selectedProject, setSelectedProject] = useState(null);
 
   const closeComponent = () => {
     setSelectedProject(null);
   };
+
+  useEffect(() => {
+      const checkScreenSize = () => {
+        setIsDesktop(window.innerWidth >= 1024); // Consider desktop if width >= 1024px
+      };
+  
+      checkScreenSize(); // Check on initial render
+      window.addEventListener("resize", checkScreenSize); // Listen for resize events
+  
+      return () => {
+        window.removeEventListener("resize", checkScreenSize);
+      };
+    }, []);
+
   return (
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-100"
+        className="sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-500 bg-bg-projects bg-repeat-y bg-contain bg-blend-multiply"
         id="Portfolio"
       >
-        <div className="container">
-          <div className="grid lg:pb-16 md:pb-10 pb-8 mt-10">
-            <div className="lg:col-span-6 text-center">
-              <h3>
-                {language === "en" ? "LATEST PROJECTS" : "ÚLTIMOS PROYECTOS"}
-              </h3>
+        <div className="flex justify-center items-center mt-10">
+          <motion.div
+            id="segundo4"
+            className="flex flex-col items-center justify-center bg-black/70 sm:p-5 lg:p-8 text-white rounded-xl shadow-lg shadow-black"
+            initial={{ opacity: 1, y: 400 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 5, ease: "easeOut" }}
+          >
+            <div>
+
+            <h2 className="text-3xl">
+              {language === "en" ? "Your " : "Tu "}
+              <span className="font-semibold text-4xl">
+                {language === "en" ? "Agency " : "Agencia "}
+              </span>
+              <span className="font-semibold text-5xl text-white/50">+</span>
+              <span className="text-3xl">
+                {language === "en" ? " My " : " Mi "}
+              </span>
+              <span className="font-semibold text-5xl animate-pulse">
+                {language === "en" ? "Creativity " : "Creatividad "}
+              </span>
+              <span className="font-semibold text-5xl text-white/50">=</span>
+                </h2>
             </div>
+            <div className="mt-4">
+
+              <span className="font-semibold text-5xl italic text-red-500">
+                {language === "en"
+                  ? " Amazing and Strategic Websites"
+                  : " Webs Sorprendentes y Estratégicas"}
+              </span>
+                  </div>
+          </motion.div>
+        </div>
+        <div className="container">
+          <div className="grid lg:pb-16 md:pb-10 pb-8 mt-20">
+            <motion.div 
+            className="lg:col-span-6 text-center"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 4, duration: 1, ease: "easeOut" }}
+            >
+              <h3 className="text-64xl text-white">
+                {language === "en"
+                  ? "MY LATEST PROJECTS"
+                  : "MIS ÚLTIMOS PROYECTOS"}
+              </h3>
+            </motion.div>
           </div>
           <div>
             {language === "en"
               ? PortfolioData.map((project, index) => {
                   return (
-                    <div
+                    <motion.div
                       key={index}
-                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16"
+                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 shadow-lg shadow-black"
+                      initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: isDesktop ? project.delay : project.delayM, duration: 1, ease: "easeOut" }}
                     >
                       <div
                         className={`lg:px-10 md:px-5 ${
@@ -53,10 +117,12 @@ const Portfolio = () => {
                           />
                         </div>
                       </div>
+                     
                       <div
-                        className={`flex flex-col justify-center lg:px-10 md:px-5 ${
+                        className={`flex flex-col justify-center lg:px-10 md:px-5  ${
                           index % 2 === 0 ? "" : "order-1"
                         }`}
+                        
                       >
                         <h6 className="mb-[18px] ">
                           <span className="inline-block sm:mt-5 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-red-200 font-bold">
@@ -72,20 +138,25 @@ const Portfolio = () => {
                         <div>
                           <button
                             onClick={() => setSelectedProject(project)}
-                            className="btn btn-theme2"
+                            className="btn btn-theme2r"
                           >
                             {project.btn}
                           </button>
                         </div>
                       </div>
-                    </div>
+                      {/* */}
+                    </motion.div>
                   );
                 })
               : EspPortfolioData.map((project, index) => {
                   return (
-                    <div
+                    <motion.div
                       key={index}
-                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16"
+                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 py-5 shadow-lg shadow-black"
+                      initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: isDesktop ? project.delay : project.delayM, duration: 1, ease: "easeOut" }}
                     >
                       <div
                         className={`lg:px-10 md:px-5 ${
@@ -128,34 +199,28 @@ const Portfolio = () => {
                           </button>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
           </div>
-          <div className="relative w-full h-auto sm:mt-0 lg:-mt-8">
-  {/* Imagen */}
-  <img
-    src={language === "en" ? projectBanner2 : projectBanner}
-    alt="bottomBanner"
-    className="w-full h-auto"
-  />
+          <div className="relative w-full h-auto sm:mt-0 lg:my-8 lg:pb-8">
+           
 
-  {/* Contenedor de los enlaces en la esquina superior derecha */}
-  <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
-    <a href="#About">
-      <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
-        <Lucide icon="ArrowDown" className="mr-2" />
-        {language === "en" ? "Go on" : "Sigamos"}
-      </div>
-    </a>
-    <a href="#Services">
-      <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-        <Lucide icon="ArrowUp" />
-      </div>
-    </a>
-  </div>
-</div>
-
+            {/* Contenedor de los enlaces en la esquina superior derecha */}
+            <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
+              <a href="#About">
+                <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+                  <Lucide icon="ArrowDown" className="mr-2" />
+                  {language === "en" ? "Go on" : "Sigamos"}
+                </div>
+              </a>
+              <a href="#Services">
+                <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                  <Lucide icon="ArrowUp" />
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       {/*----- End Projects -----*/}

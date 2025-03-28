@@ -16,6 +16,8 @@ import boostup from "../../../assets/Image/boostup.png";
 //---- Start Projects Data -----
 export const PortfolioData = [
     {
+        delay: 5,
+        delayM: 1,
         img: interatos,
         key: "project_20",
         list: "WEB DESIGN & DEVELOP",
@@ -36,6 +38,8 @@ export const PortfolioData = [
         Finished: "Not Finished yet"
     },
     {
+        delay: 5,
+        delayM: 1,
         img: boostup,
         key: "project_21",
         list: "COPYWRITING & WEB DESIGN",
@@ -56,6 +60,8 @@ export const PortfolioData = [
         Finished: "Not finished yet."
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_6,
         key: "project_8",
         list: "WEB DESIGN & DEVELOP",
@@ -76,6 +82,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_11,
         key: "project_7",
         list: "WEB DEVELOPMENT",
@@ -96,6 +104,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_1,
         key: "project_6",
         list: "WEB DESIGN & DEVELOP",
@@ -115,6 +125,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_3,
         key: "project_5",
         list: "WEB DESIGN & DEVELOP",
@@ -135,6 +147,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_2,
         key: "project_4",
         list: "WEB DESIGN & DEVELOP",
@@ -155,6 +169,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_4,
         key: "project_3",
         list: "WEB DESIGN & DEVELOP",
@@ -176,6 +192,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_7,
         key: "project_2",
         list: "EFFECT DEVELOPMENT",
@@ -195,6 +213,8 @@ export const PortfolioData = [
         Finished: "Finished"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_8,
         key: "project_1",
         list: "FUNCTIONALITY DEVELOPMENT",
@@ -218,6 +238,8 @@ export const PortfolioData = [
 
 export const EspPortfolioData = [
     {
+        delay: 5,
+        delayM: 1,
         img: interatos,
         key: "project_20",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -238,6 +260,8 @@ export const EspPortfolioData = [
         Finished: "No finalizado aún."
     },
     {
+        delay: 5,
+        delayM: 1,
         img: boostup,
         key: "project_21",
         list: "DISEÑO WEB y COPYWRITING",
@@ -258,6 +282,8 @@ export const EspPortfolioData = [
         Finished: "No finalizado aún."
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_6,
         key: "project_8",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -278,6 +304,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_11,
         key: "project_7",
         list: "DESARROLLO WEB",
@@ -298,6 +326,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_1,
         key: "project_6",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -317,6 +347,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_3,
         key: "project_5",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -337,6 +369,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_2,
         key: "project_4",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -357,6 +391,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_4,
         key: "project_3",
         list: "DISEÑO Y DESARROLLO WEB",
@@ -377,6 +413,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_7,
         key: "project_2",
         list: "DESARROLLO DE EFECTO",
@@ -396,6 +434,8 @@ export const EspPortfolioData = [
         Finished: "Terminado"
     },
     {
+        delay: 1,
+        delayM: 1,
         img: project_8,
         key: "project_1",
         list: "DESARROLLO DE FUNCIONALIDAD",

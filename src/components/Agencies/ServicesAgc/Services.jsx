@@ -52,7 +52,7 @@ const Services = () => {
     <React.Fragment>
       {/*----- Start Services -----*/}
       <section
-        className="sm:py-10 lg:py-10 bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
+        className="sm:py-10 lg:py-8  bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
         id="Services"
       >
         <div className="container">
@@ -61,7 +61,7 @@ const Services = () => {
               className="flex flex-col items-center justify-center p-3 bg-black/50 lg:grid lg:grid-cols-10 lg:gap-1"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 2, ease: "easeOut" }}
             >
               {/* Sección izquierda */}
@@ -93,7 +93,7 @@ const Services = () => {
               <div className="flex justify-center lg:justify-start lg:col-span-3 mb-4 lg:mb-0">
                 <TypingEffect
                   text={text}
-                  speed={200}
+                  speed={100}
                   eraseDelay={5000}
                   typingDelay={300}
                   className="text-white sm:text-2xl sm:font-semibold lg:font-normal lg:text-5xl sm:-mt-4 lg:mt-0 lg:pt-3 lg:ml-4"
@@ -115,22 +115,22 @@ const Services = () => {
             </motion.div>
 
             {/* Elementos que aparecen progresivamente */}
-            <div className="w-full mt-4 lg:pl-10 flex flex-col items-start text-white">
+            <div className="w-full mt-4 lg:mt-6 lg:pl-10 flex flex-col items-start text-white">
               <motion.div
                 id="segundo4"
                 className="flex items-start"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ delay: isDesktop ? 3 : 2, duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                transition={{ delay: isDesktop ? 3 : 1, duration: 1, ease: "easeOut" }}
               >
                 <Lucide
                   icon="Target"
-                  className="sm:w-4 sm:h-4 mr-2 text-red-500"
+                  className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 mr-2 text-red-500"
                 />
-                <h2 className="text-lg -mt-1">
+                <h2 className="text-3xl -mt-2">
                   {language === "en" ? "Let's build a " : "Construyamos una "}
-                  <span className="font-semibold">
+                  <span className="font-semibold text-4xl italic">
                     {language === "en"
                       ? "trustworthy partnership."
                       : "alianza confiable."}
@@ -140,32 +140,42 @@ const Services = () => {
 
               <motion.div
                 id="segundo6"
-                className="flex items-start"
+                className="flex items-start lg:mt-4"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ delay: isDesktop ? 4 : 3, duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                transition={{ delay: isDesktop ? 4 : 2, duration: 1, ease: "easeOut" }}
               >
                 <Lucide
                   icon="Target"
-                  className="sm:w-4 sm:h-4 mr-2 text-red-500"
+                  className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 lg:mt-1 mr-2 text-red-500"
                 />
-                <h2 className="text-lg sm:text-red-500 sm:-mt-1 lg:mt-1">
+                <h2 className="text-3xl sm:text-white sm:-mt-1 lg:-mt-1">
                   {language === "en"
-                    ? "Let code be a solution, not an obstacle."
-                    : "Que el código sea una solución, no un obstáculo."}
+                    ? "Let code be a "
+                    : "Que el código sea una "}
+                    <span className="font-semibold text-4xl italic">
+                    {language === "en"
+                    ? "solution"
+                    : "solución"}
+                    </span>
+                    <span>
+                    {language === "en"
+                    ? ", not an obstacle."
+                    : ", no un obstáculo."}
+                    </span>
                 </h2>
               </motion.div>
 
               <motion.div
                 id="segundo8"
-                className="w-full mt-10 flex flex-col items-center"
+                className="w-full mt-10 lg:mt-16 flex flex-col items-center"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ delay: isDesktop ? 6 : 4, duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                transition={{ delay: isDesktop ? 6 : 3, duration: 1, ease: "easeOut" }}
               >
-                <h1 className="text-white sm:text-2xl lg:text-5xl font-semibold">
+                <h1 className="text-white/70 sm:text-2xl lg:text-5xl font-semibold">
                   {language === "en"
                     ? "I OFFER YOU MY SERVICES"
                     : "TE OFREZCO MIS SERVICIOS"}
@@ -186,15 +196,15 @@ const Services = () => {
                     className="hover:shadow-black transition-all lg:duration-300 lg:ease-in"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{
-                      delay: isDesktop ? service.delay : 5,
+                      delay: isDesktop ? service.delay : service.delayM,
                       duration: 1,
                       ease: "easeOut",
                     }}
                   >
                     <div
-                      className={`flex border-2 border-slate-900 p-5 bg-cover bg-center bg-no-repeat cursor-pointer hover:text-red-700`}
+                      className={`flex border-2 border-slate-900 p-3 bg-cover bg-center bg-no-repeat cursor-pointer hover:text-red-700`}
                       style={{
                         backgroundImage: `url(${service.imgDetail})`,
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -212,8 +222,15 @@ const Services = () => {
                         <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg">
                           {service.Heding}
                         </h5>
-                        <p className="text-black text-lg">{service.Detail}</p>
+                        <p className="text-black text-lg">{service.Detail}
+                        </p>
+                        
                       </div>
+                      <Lucide icon="MoreHorizontal" 
+                              title={language === "en"
+                              ? "see more"
+                              : "ver más"} 
+                              className="top-0 right-0 p-1 border-2 border-slate-500 ronded-full text-black m-1 w-6 h-6" />
                     </div>
                   </motion.div>
                 )
@@ -227,8 +244,8 @@ const Services = () => {
             className="sm:-top-8 lg:-top-0 lg:-mt-16 flex justify-end space-x-2 z-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
-            transition={{ delay: isDesktop ? 7 : 1, duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            transition={{ delay: isDesktop ? 3 : 1, duration: 1, ease: "easeOut" }}
           >
             <a href="#Portfolio">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">

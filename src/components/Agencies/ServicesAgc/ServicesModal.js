@@ -88,7 +88,7 @@ const ServicesModal = ({ service, onClose }) => {
                                           
                                           title="Whatsapp"
                                           >
-                <div className="flex flex-nowrap items-center mt-10 hover:text-green-600 cursor-pointer">
+                <div className="flex flex-nowrap items-center sm:mt-5 lg:mt-10 hover:text-green-600 cursor-pointer">
 
                                           
               <img src={whatsapp} className="mr-0"/>

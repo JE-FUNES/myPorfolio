@@ -93,17 +93,16 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <section id="Contact">
+      <section id="Contact" className="bg-slate-500 bg-bg-effect-2red bg-no-repeat bg-cover  bg-blend-multiply  sm:bg-bottom lg:bg-bottom h-screen">
         <div
-          className="sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-32 w-screen sm:bg-red-700 lg:bg-bg-effect-2red bg-no-repeat bg-cover sm:bg-bottom lg:bg-bottom relative"
+          className="flex sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-20"
         >
-          {/* 🔹 Capa oscura semitransparente */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          
 
           {/* 🔹 Contenido (encima del fondo y la capa oscura) */}
-          <div className="container relative z-10 sm:pt-20 lg:pt-24 lg:pb-24 mt-1 justify-center">
+          <div className="flex container z-10 sm:pt-20 lg:pt-24 lg:pb-24 mt-1 justify-center">
             <motion.div
-              className="flex justify-center sm:-mt-16"
+              className="flex justify-center items-center sm:-mt-16 bg-slate-900/70 p-5 lg:p-10 max-w-[50%] border-white border-2"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
@@ -111,15 +110,15 @@ const Contact = () => {
             >
               <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[50px] lg:pt-0">
                 <div id="seccionTitulo" className="w-full z-40 mb-10">
-                  <h3 className="text-slate-100 flex justify-center">
+                  <h3 className="text-red-500 flex justify-center">
                     {language === "en" ? "CONTACT ME" : "CONTACTAME"}
                   </h3>
-                  <h4 className="text-slate-100 flex justify-center text-lg italic lg:mt-10 sm:mt-5 sm:ml-4 lg:ml-0">
+                  <h4 className="text-slate-100 flex justify-center text-lg italic lg:mt-12 sm:mt-5 sm:ml-4 lg:ml-0">
                     {language === "en"
                       ? "I'm ready to take on new challenges and contribute my skills."
                       : "Lista para sumarme a nuevos desafíos y contribuir con mis habilidades."}
                   </h4>
-                  <h4 className="text-slate-100 flex justify-center font-bold text-lg sm:mt-4 lg:mt-1">
+                  <h4 className="text-slate-100 flex justify-center font-bold text-lg sm:mt-4 lg:mt-8">
                     {language === "en"
                       ? "Shall we schedule an interview?"
                       : "¿Agendamos una entrevista?"}
@@ -165,16 +164,9 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* 🔹 Botón de volver arriba */}
-            <div className="relative flex justify-end space-x-2 bottom-0 sm:mt-4 sm:mr-2">
-              <a href="#Curriculum">
-                <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-                  <Lucide icon="ArrowUp" />
-                </div>
-              </a>
-            </div>
           </div>
         </div>
+           
       </section>
     </React.Fragment>
   );
