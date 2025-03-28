@@ -133,10 +133,10 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className="absolute sm:w-[30%] md:w-[40%] lg:w-[50%] max-w-[480px] sm:mt-6 lg:mt-28 lg:ml-5 aspect-square rounded-full  shadow-lg transition-all duration-300"
+            className="absolute sm:w-[30%] md:w-[40%] lg:w-[50%] max-w-[480px] sm:mt-6 lg:mt-28 lg:ml-5 aspect-square rounded-full transition-all duration-300"
             style={{
               boxShadow: isLit
-                ? "0 0 120px 30px rgba(0, 255, 255, 0.8)" // Sombra intensa cuando se activa
+                ? isLargeScreen ? "0 0 120px 30px rgba(0, 255, 255, 0.8)" : "0 0 50px 12px rgba(0, 255, 255, 0.8)" // Sombra intensa cuando se activa
                 : "0 0 10px 10px rgba(0, 255, 255, 0.5)", // Sombra más tenue cuando está apagado
             }}
           >
@@ -177,14 +177,14 @@ const PoquetClock = () => {
                   />
                 )}
               </button>
-              <h2 className="text-white animate-bounce sm:mt-28 lg:-mt-10 lg:mb-72 sm:-ml-20 lg:-ml-24 text-center ">
+              <h2 className="text-white animate-bounce sm:mt-24 lg:-mt-10 lg:mb-72 sm:-ml-20 lg:-ml-24 text-center ">
                 {language === "en" ? "Press Button" : "Presiona el Botón"}
               </h2>
             </div>
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-36 sm:-mt-10 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+        <div className="relative sm:-top-36 sm:mt-0 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />

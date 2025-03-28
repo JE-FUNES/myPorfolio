@@ -32,7 +32,7 @@ const Navbar = () => {
                           src={logo}
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 sm:max-w-[100px] lg:max-w-[120px] sm:ml-2 xl:ml-5 xl:max-w-[170px]"
+                          className="lg:px-2 sm:max-w-[100px] lg:max-w-[120px] xl:ml-5 xl:max-w-[170px]"
                         />
                         
                       </div>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 </div>
               </div>
               {/* Mobile screen */}
-              <div className={`ml-3 lg:hidden ${open ? "" : "hidden"}`}>
+              <div className={`lg:hidden ${open ? "" : "hidden"}`}>
                 <div className="mt-4">
                   <LanguagesSwitcher 
                   />

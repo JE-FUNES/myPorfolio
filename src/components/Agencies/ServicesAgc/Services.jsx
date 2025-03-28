@@ -128,9 +128,9 @@ const Services = () => {
                   icon="Target"
                   className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 mr-2 text-red-500"
                 />
-                <h2 className="text-3xl -mt-2">
+                <h2 className="sm:text-lg lg:text-3xl -mt-2">
                   {language === "en" ? "Let's build a " : "Construyamos una "}
-                  <span className="font-semibold text-4xl italic">
+                  <span className="font-semibold sm:text-xl lg:text-4xl italic">
                     {language === "en"
                       ? "trustworthy partnership."
                       : "alianza confiable."}
@@ -150,11 +150,11 @@ const Services = () => {
                   icon="Target"
                   className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 lg:mt-1 mr-2 text-red-500"
                 />
-                <h2 className="text-3xl sm:text-white sm:-mt-1 lg:-mt-1">
+                <h2 className="sm:text-lg lg:text-3xl sm:text-white sm:-mt-1 lg:-mt-1">
                   {language === "en"
                     ? "Let code be a "
                     : "Que el código sea una "}
-                    <span className="font-semibold text-4xl italic">
+                    <span className="font-semibold sm:text-xl lg:text-4xl italic">
                     {language === "en"
                     ? "solution"
                     : "solución"}
@@ -169,7 +169,7 @@ const Services = () => {
 
               <motion.div
                 id="segundo8"
-                className="w-full mt-10 lg:mt-16 flex flex-col items-center"
+                className="w-full sm:mt-8 lg:mt-10 lg:mt-16 flex flex-col items-center"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -187,7 +187,7 @@ const Services = () => {
 
             <div
               id="segundo10"
-              className="grid lg:grid-cols-2 md:grid-cols-2 gap-2 w-full mt-6"
+              className="grid lg:grid-cols-2 md:grid-cols-2 gap-2 w-full sm:mt-2 lg:mt-6"
             >
               {(language === "en" ? ServicesData : EspServicesData).map(
                 (service, index) => (
@@ -222,7 +222,7 @@ const Services = () => {
                         <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg">
                           {service.Heding}
                         </h5>
-                        <p className="text-black text-lg">{service.Detail}
+                        <p className="text-black text-lg sm:leading-none lg:leading-1">{service.Detail}
                         </p>
                         
                       </div>
