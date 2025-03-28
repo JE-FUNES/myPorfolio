@@ -19,7 +19,7 @@ const Navbar = () => {
     <>
       <React.Fragment>
         {/*----- Start Navbar -----*/}
-        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-4 lg:py-2 sm:h-content w-full fixed bottom-0 z-40">
+        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-4 lg:py-2 sm:h-content w-full fixed bottom-0 z-10">
           <nav className="">
             <div className="container sm:py-2 lg:py-1">
               <div className="flex items-center justify-between md:block">

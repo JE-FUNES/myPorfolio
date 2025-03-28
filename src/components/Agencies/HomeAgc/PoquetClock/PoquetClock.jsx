@@ -84,9 +84,9 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="sm:py-0 lg:py-0 lg:mb-12 bg-black h-screen" id="Home">
+      <section className="sm:py-0 lg:py-0 lg:mb-12 bg-black" id="Home">
         <div
-          className="relative flex items-center justify-center h-full w-full bg-no-repeat bg-center bg-contain"
+          className="relative flex items-center justify-center min-h-screen w-full bg-no-repeat bg-center bg-contain"
           style={
             isLit
               ? { backgroundImage: `url(${backgroundNoche})` }
@@ -96,7 +96,7 @@ const PoquetClock = () => {
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-4 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/80 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
+            className="absolute sm:top-10 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/80 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
             initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
             whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
             viewport={{ once: false }} // La animación ocurre solo una vez
@@ -154,7 +154,7 @@ const PoquetClock = () => {
               <div className="absolute sm:w-3 lg:w-5 sm:h-3 sm:ml-1 lg:h-5 bg-gray-200 rounded-full border border-gray-700"></div>
             </div>
             {/* Indicación botón */}
-            <div className="absolute w-50 h-10 flex items-center sm:text-md lg:text-xl font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
+            <div className="absolute sm:w-60 lg:w-50 h-10 flex items-center sm:text-md lg:text-xl lg:font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
               {/* Botón para iluminar */}
               <button
                 className="relative sm:bottom-0 sm:-mb-4 lg:bottom-56 sm:left-0 sm:ml-9 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
@@ -184,7 +184,7 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-36 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-10">
+        <div className="relative sm:-top-36 sm:-mt-10 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />
