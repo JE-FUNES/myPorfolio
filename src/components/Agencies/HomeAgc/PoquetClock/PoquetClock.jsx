@@ -84,9 +84,9 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="sm:py-0 lg:py-0 mb-16 bg-black" id="Home">
+      <section className="sm:py-0 lg:py-0 lg:mb-12 bg-black h-screen" id="Home">
         <div
-          className="relative flex items-center justify-center h-screen w-screen bg-no-repeat bg-center bg-contain"
+          className="relative flex items-center justify-center h-full w-full bg-no-repeat bg-center bg-contain"
           style={
             isLit
               ? { backgroundImage: `url(${backgroundNoche})` }
@@ -133,7 +133,7 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className="absolute w-[50%] max-w-[480px] sm:mt-11 lg:mt-28 lg:ml-5 aspect-square rounded-full  shadow-lg transition-all duration-300"
+            className="absolute sm:w-[30%] md:w-[40%] lg:w-[50%] max-w-[480px] sm:mt-6 lg:mt-28 lg:ml-5 aspect-square rounded-full  shadow-lg transition-all duration-300"
             style={{
               boxShadow: isLit
                 ? "0 0 120px 30px rgba(0, 255, 255, 0.8)" // Sombra intensa cuando se activa
@@ -141,23 +141,23 @@ const PoquetClock = () => {
             }}
           >
             {/* Marco */}
-            <div className="absolute w-full h-full rounded-full border-[5px] border-gray-300/50"></div>
+            <div className="absolute w-full h-full rounded-full lg:border-[5px] border-gray-300/50"></div>
 
             {/* Esfera */}
             <div className="absolute flex items-center justify-center w-full h-full">
               {/* Manecillas */}
-              <div className="absolute bottom-1/2 left-1/2 sm:w-[10px] lg:w-[12px] h-[20%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
-              <div className="absolute bottom-1/2 left-1/2 sm:w-[10px] lg:w-[12px] h-[30%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
-              <div className="absolute bottom-1/2 left-1/2 lg:w-[4px] h-[35%] bg-red-500 transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md segundo"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[20%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[30%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[2px] lg:w-[4px] h-[35%] bg-red-500 transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md segundo"></div>
 
               {/* Centro */}
-              <div className="absolute sm:w-3 lg:w-5 sm:h-3 sm:ml-2 lg:ml-0 lg:h-5 bg-gray-200 rounded-full border border-gray-700"></div>
+              <div className="absolute sm:w-3 lg:w-5 sm:h-3 sm:ml-1 lg:h-5 bg-gray-200 rounded-full border border-gray-700"></div>
             </div>
             {/* Indicación botón */}
-            <div className="absolute w-50 h-10 flex items-center text-xl font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
+            <div className="absolute w-50 h-10 flex items-center sm:text-md lg:text-xl font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
               {/* Botón para iluminar */}
               <button
-                className="relative sm:bottom-0 lg:bottom-56 sm:left-3 sm:ml-16 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
+                className="relative sm:bottom-0 sm:-mb-4 lg:bottom-56 sm:left-0 sm:ml-9 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
                 style={
                   isLit
                     ? { backgroundImage: `url(${botonAzul})` }
