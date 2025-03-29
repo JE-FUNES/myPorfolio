@@ -17,7 +17,7 @@ import boostup from "../../../assets/Image/boostup.png";
 export const PortfolioData = [
     {
         delay: 5,
-        delayM: 1,
+        delayM: 3,
         img: interatos,
         key: "project_20",
         list: "WEB DESIGN & DEVELOP",
@@ -239,7 +239,7 @@ export const PortfolioData = [
 export const EspPortfolioData = [
     {
         delay: 5,
-        delayM: 1,
+        delayM: 3,
         img: interatos,
         key: "project_20",
         list: "DISEÑO Y DESARROLLO WEB",

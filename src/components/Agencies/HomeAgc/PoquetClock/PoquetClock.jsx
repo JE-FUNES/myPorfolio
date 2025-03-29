@@ -84,7 +84,7 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="w-screen min-h-screen sm:py-5 lg:py-0 lg:mb-16 bg-black" id="Home">
+      <section className="w-screen min-h-screen mt-0 py-0  sm:-mb-5 lg:mb-16 bg-black" id="Home">
         <div
           className="relative flex items-center justify-center min-h-screen w-full bg-no-repeat bg-center bg-contain"
           style={
@@ -184,7 +184,7 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-36 sm:mt-0 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+        <div className="relative sm:-top-20 sm:mt-0 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
           <a href="#Services">
             <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
               <Lucide icon="ArrowDown" className="mr-2" />

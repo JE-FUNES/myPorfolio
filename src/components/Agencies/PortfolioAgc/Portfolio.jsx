@@ -34,10 +34,10 @@ const Portfolio = () => {
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="max-w-screen sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-500 bg-center bg-bg-projects bg-fixed bg-blend-multiply bg-cover"
+        className="max-w-screen sm:pt-2 lg:pt-8 pb-5 sm:mt-0 lg:mt-10 mb-5 bg-slate-500 bg-center bg-bg-projects bg-fixed bg-blend-multiply bg-cover"
         id="Portfolio"
       >
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center sm:mt-28 lg:mt-10">
           <motion.div
             id="segundo4"
             className="flex flex-col items-center justify-center bg-black/70 sm:p-5 lg:p-8 text-white rounded-xl shadow-lg shadow-black"
@@ -48,24 +48,24 @@ const Portfolio = () => {
           >
             <div>
 
-            <h2 className="text-3xl">
+            <h2 className="sm:text-xl lg:text-3xl sm:text-center">
               {language === "en" ? "Your " : "Tu "}
-              <span className="font-semibold text-4xl">
+              <span className="font-semibold sm:text-2xl lg:text-4xl">
                 {language === "en" ? "Agency " : "Agencia "}
               </span>
-              <span className="font-semibold text-5xl text-white/50">+</span>
-              <span className="text-3xl">
+              <span className="font-semibold sm:text-3xl lg:text-5xl text-white/50">+</span>
+              <span className="sm:text-xl lg:text-3xl">
                 {language === "en" ? " My " : " Mi "}
               </span>
-              <span className="font-semibold text-5xl animate-pulse">
+              <span className="font-semibold sm:text-3xl lg:text-5xl animate-pulse">
                 {language === "en" ? "Creativity " : "Creatividad "}
               </span>
-              <span className="font-semibold text-5xl text-white/50">=</span>
+              <span className="font-semibold sm:_text-3xl lg:text-5xl text-white/50">=</span>
                 </h2>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 text-center">
 
-              <span className="font-semibold text-5xl italic text-red-500">
+              <span className="font-semibold sm:text-3xl lg:text-5xl italic text-red-500">
                 {language === "en"
                   ? " Amazing and Strategic Websites"
                   : " Webs Sorprendentes y Estratégicas"}
@@ -152,7 +152,7 @@ const Portfolio = () => {
                   return (
                     <motion.div
                       key={index}
-                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 py-5 shadow-lg shadow-black"
+                      className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 p-5 shadow-lg shadow-black"
                       initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}

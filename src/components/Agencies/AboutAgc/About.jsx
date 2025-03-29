@@ -19,7 +19,7 @@ const About = () => {
         id="About"
       >
         <div className="container sm:py-8 lg:py-20 min-h-screen">
-          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-slate-200 sm:p-2 lg:p-5 sm:-mt-1 lg:-mt-10">
+          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-slate-200 sm:p-4 lg:p-5 sm:mt-28 lg:-mt-10">
             <div
               className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-white bg-no-repeat bg-cover bg-center transition-all duration-300"
               style={{ backgroundImage: `url(${imageColor})`, height: "100%" }}

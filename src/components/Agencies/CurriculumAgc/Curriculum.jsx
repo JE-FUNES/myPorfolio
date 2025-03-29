@@ -9,13 +9,13 @@ const Curriculum = () => {
     <React.Fragment>
       {/*----- Start Curriculum -----*/}
       <section className="pt-0 bg-slate-500 bg-bg-cv bg-no-repeat bg-cover bg-bottom bg-blend-multiply" id="Curriculum">
-        <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center">
+        <div className="relative w-screen h-screen top-0 overflow-hidden flex flex-col justify-center items-center">
          
 
           {/* Contenedor principal */}
-          <div className="container sm:my-5 lg:my-20 pt-0 pb-10 relative z-10">
+          <div className="container sm:my-0 lg:my-20 pt-0 pb-10 relative z-10">
             {/* Título */}
-            <div className="lg:pb-16 sm:mt-5 lg:-mt-2 md:pb-10 pb-8 text-center">
+            <div className="lg:pb-16 sm:mt-0 lg:-mt-2 md:pb-10 pb-8 text-center">
               <h3 className="font-semibold text-white animate-fadeIn">Currículum Vitae</h3>
             </div>
 
