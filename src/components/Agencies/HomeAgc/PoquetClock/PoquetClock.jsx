@@ -84,7 +84,7 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="sm:py-0 lg:py-0 lg:mb-12 bg-black" id="Home">
+      <section className="w-screen min-h-screen sm:py-5 lg:py-0 lg:mb-16 bg-black" id="Home">
         <div
           className="relative flex items-center justify-center min-h-screen w-full bg-no-repeat bg-center bg-contain"
           style={

@@ -93,7 +93,7 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <section id="Contact" className="bg-slate-500 bg-bg-effect-2red bg-no-repeat bg-cover  bg-blend-multiply  sm:bg-bottom lg:bg-bottom h-screen">
+      <section id="Contact" className="bg-slate-500 bg-bg-effect-2red bg-no-repeat bg-cover  bg-blend-multiply lg:bg-bottom w-screen h-screen">
         <div
           className="flex sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-20"
         >
@@ -102,7 +102,7 @@ const Contact = () => {
           {/* 🔹 Contenido (encima del fondo y la capa oscura) */}
           <div className="flex container z-10 sm:pt-20 lg:pt-24 lg:pb-24 mt-1 justify-center">
             <motion.div
-              className="flex justify-center items-center sm:-mt-16 bg-slate-900/70 p-5 lg:p-10 max-w-[50%] border-white border-2"
+              className="flex justify-center items-center sm:-mt-16 bg-slate-900/70 p-5 lg:p-10 lg:max-w-[50%] border-white border-2"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}

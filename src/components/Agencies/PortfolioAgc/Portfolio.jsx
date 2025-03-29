@@ -34,7 +34,7 @@ const Portfolio = () => {
     <React.Fragment>
       {/*----- Start Projects -----*/}
       <section
-        className="sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-500 bg-bg-projects bg-repeat-y bg-contain bg-blend-multiply"
+        className="max-w-screen sm:pt-2 lg:pt-8 pb-5 mt-10 mb-5 bg-slate-500 bg-center bg-bg-projects bg-fixed bg-blend-multiply bg-cover"
         id="Portfolio"
       >
         <div className="flex justify-center items-center mt-10">

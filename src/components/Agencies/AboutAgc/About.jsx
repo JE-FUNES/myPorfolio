@@ -15,7 +15,7 @@ const About = () => {
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className=" bg-slate-500 bg-bg-about bg-no-repeat bg-cover bg-blend-multiply sm:pt-2 lg:pt-10"
+        className="w-screen bg-slate-500 bg-bg-about bg-no-repeat bg-cover bg-blend-multiply sm:pt-2 lg:pt-10"
         id="About"
       >
         <div className="container sm:py-8 lg:py-20 min-h-screen">

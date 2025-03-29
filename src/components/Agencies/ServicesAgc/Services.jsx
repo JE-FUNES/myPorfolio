@@ -52,7 +52,7 @@ const Services = () => {
     <React.Fragment>
       {/*----- Start Services -----*/}
       <section
-        className="sm:py-10 lg:py-8  bg-bg-mkn bg-center bg-no-repeat bg-cover bg-slate-700/80 min-h-screen"
+        className="sm:py-10 lg:py-8  bg-bg-mkn bg-center bg-no-repeat bg-contain bg-slate-700/80 min-h-screen w-screen"
         id="Services"
       >
         <div className="container">
@@ -169,7 +169,7 @@ const Services = () => {
 
               <motion.div
                 id="segundo8"
-                className="w-full sm:mt-8 lg:mt-10 lg:mt-16 flex flex-col items-center"
+                className="w-full sm:mt-8 lg:mt-16 flex flex-col items-center"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
