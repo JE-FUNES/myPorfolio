@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../../assets/Logs/logo-jefa-transp-rojo-fondo-negro.png";
+import logo2 from "../../../assets/Logs/logo-jefa-celular-transp-rojo-fondo-negro.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
@@ -15,13 +16,24 @@ const Navbar = () => {
     setOpen(false); 
   };
 
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
     <>
       <React.Fragment>
         {/*----- Start Navbar -----*/}
-        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-4 lg:py-2 sm:h-content w-full fixed bottom-0 z-10">
+        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-1 lg:py-2 sm:h-content w-full fixed bottom-0 z-10">
           <nav className="">
-            <div className="container sm:py-2 lg:py-1">
+            <div className="container sm:py-2 sm:ml-0 lg:py-1">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
@@ -29,10 +41,12 @@ const Navbar = () => {
                     <a href={"https://www.jefa-web.com.ar/"}>
                       <div className="flex flex-col items-center">
                         <img
-                          src={logo}
+                          src= {isLargeScreen
+                          ? logo : logo2
+                          }  
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 sm:max-w-[100px] lg:max-w-[120px] xl:ml-5 xl:max-w-[170px]"
+                          className="lg:px-2 sm:max-w-[50px] lg:max-w-[120px] xl:ml-5 xl:max-w-[170px]"
                         />
                         
                       </div>
