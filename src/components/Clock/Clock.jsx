@@ -240,7 +240,7 @@ function Clock() {
                     : "Presiona el Botón"}
               </span>
             </div>
-          <div className="flex flex-nowrap mb-0 items-center justify-center">
+          <div className="flex flex-nowrap mb-0 items-center justify-center sm:mt-10 md:mt-0">
             <span className="text-fuchsia-500 text-2xl">HTML</span>
             <FaPlus className="w-5 h-5 mx-2 text-fuchsia-300" />
             <span className="text-white text-2xl">JAVA SCRIPT</span>

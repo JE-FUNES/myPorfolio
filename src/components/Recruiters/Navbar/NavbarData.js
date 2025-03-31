@@ -16,12 +16,12 @@ export const NavbarData = [
 export const EspNavbarData = [
     //{ name: "Bienvenido", link: "Wellcome" },
     { name: "Inicio", link: "Home" },
-    { name: "Sobre mí", link: "About"},
+    { name: "About", link: "About"},
     //{ name: "Servicios", link: "Services" },
     { name: "Habilidades", link: "Skills" },
     { name: "Proyectos", link: "Portfolio" },
     { name: "Curriculum", link: "Curriculum"},
-    { name: "Ver Código", link: "Github" },
+    { name: "Código", link: "Github" },
     { name: "Contacto", link: "Contact" },
 ]
 //----- End Navbar Data -----

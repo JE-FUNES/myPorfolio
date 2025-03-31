@@ -211,6 +211,7 @@ const Contact = () => {
             {/* End Contact */}
           </div>
           {/* Botones debajo alineados a la derecha */}
+          {isLargeScreen &&
                         <div className="relative flex justify-end space-x-2 bottom-0">
                           
                           <a href="#Github">
@@ -219,6 +220,7 @@ const Contact = () => {
                             </div>
                           </a>
                         </div>
+                        }
         </div>
       </section>
       {/*----- End Contact -----*/}

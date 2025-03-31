@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PortfolioData, EspPortfolioData } from "./PortfolioData";
 import Project from "../Project/Project.jsx";
 import { Lucide } from "../../../utils/index.js";
@@ -10,6 +10,17 @@ const Portfolio = () => {
   const language = useSelector((state) => state.language);
 
   const [selectedProject, setSelectedProject] = useState(null);
+
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
   const closeComponent = () => {
     setSelectedProject(null);
@@ -141,6 +152,7 @@ const Portfolio = () => {
   />
 
   {/* Contenedor de los enlaces en la esquina superior derecha */}
+  {isLargeScreen &&
   <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
     <a href="#Curriculum">
       <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
@@ -154,6 +166,7 @@ const Portfolio = () => {
       </div>
     </a>
   </div>
+  }
 </div>
 
         </div>

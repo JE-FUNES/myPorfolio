@@ -12,7 +12,7 @@ const Skills = () => {
   const language = useSelector((state) => state.language);
 
   const [selectedSkill, setSelectedSkill] = useState(null);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 833);
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +31,7 @@ const Skills = () => {
     <React.Fragment>
       <section className="mt-10 pt-28 pb-10 bg-slate-900" id="Skills">
         <div className="container bg-slate-900">
-          <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-end bg-slate-900">
+          <div className="grid lg:grid-cols-12  grid-cols-1 items-end bg-slate-900">
             <motion.div
               className="lg:col-span-6 lg:pl-9 bg-slate-900"
               initial={{ opacity: 0, y: 100 }}
@@ -99,6 +99,7 @@ const Skills = () => {
               ></div>
             )}
           </div>
+          {isLargeScreen &&
           <div className="flex justify-end items-center lg:-mt-10 mb-5">
             <a href="#Portfolio">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
@@ -112,6 +113,7 @@ const Skills = () => {
               </div>
             </a>
           </div>
+          }
         </div>
         <LogoSlider />
       </section>

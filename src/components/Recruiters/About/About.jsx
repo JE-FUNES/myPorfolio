@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 //import home_banner from "../../../assets/AnimatedGifs/animated-about.gif";
 import imageColor from "../../../assets/Image/arte-about.png";
@@ -11,11 +11,22 @@ import { motion } from "motion/react";
 const About = () => {
   const language = useSelector((state) => state.language);
 
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className=" bg-white bg-bg-effect-3 bg-cover bg-no-repeat pt-20"
+        className=" bg-white bg-bg-effect-3 bg-cover bg-no-repeat sm:pt-10 lg:pt-20"
         id="About"
       >
         <div className="container py-20 min-h-screen">
@@ -38,7 +49,7 @@ const About = () => {
               viewport={{ once: false }} // La animación ocurre solo una vez
               transition={{ duration: 3, ease: "easeOut" }} // La animación dura 1s con una salida suave
             >
-              <h3 className="font-semibold text-[26px] md:text-[40px] leading-[1.2] mb-4 normal-case">
+              <h3 className="font-semibold text-[24px] md:text-[40px] leading-[1.2] mb-4 normal-case">
                 {language === "en"
                   ? "Frontend Web Developer"
                   : "Desarrolladora Web Frontend"}
@@ -167,35 +178,11 @@ const About = () => {
                       );
                     })}
               </div>
-              {/* 
-              {language === "en"
-                ? BtnData.map((e, key) => {
-                    return (
-                      <div className="pt-4" key={key}>
-                        <a href="#Contact" className="btn btn-theme2 mr-4">
-                          {e.btn1}
-                        </a>
-                        <a href="#Portfolio" className="btn btn-dark">
-                          {e.btn2}
-                        </a>
-                      </div>
-                    );
-                  })
-                : EspBtnData.map((e, key) => {
-                    return (
-                      <div className="pt-4" key={key}>
-                        <a href="#Contact" className="btn btn-theme2 mr-4">
-                          {e.btn1}
-                        </a>
-                        <a href="#Portfolio" className="btn btn-dark">
-                          {e.btn2}
-                        </a>
-                      </div>
-                    );
-                  })}
-                  */}
+              
             </motion.div>
           </div>
+          {isLargeScreen &&
+
           <div className="pt-5 flex justify-end items-center">
             <a href="#Skills">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
@@ -209,6 +196,7 @@ const About = () => {
               </div>
             </a>
           </div>
+          }
         </div>
       </section>
       {/*----- End About -----*/}

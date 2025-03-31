@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 
 const Curriculum = () => {
   const language = useSelector((state) => state.language);
+
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsLargeScreen(window.innerWidth >= 820);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
   return (
     <React.Fragment>
@@ -43,6 +54,7 @@ const Curriculum = () => {
                 frameBorder="0"
               />
               {/* Botones debajo alineados a la derecha */}
+              {isLargeScreen && 
               <div className="flex justify-end space-x-2 mt-4">
                 <a href="#Github">
                   <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
@@ -56,6 +68,7 @@ const Curriculum = () => {
                   </div>
                 </a>
               </div>
+              }
             </div>
           </div>
         </div>

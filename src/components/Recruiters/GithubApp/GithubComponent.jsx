@@ -117,10 +117,10 @@ const GitHubComponent = () => {
                           fetchFileContent(file.url);
                           setSelectedFile(file);
                         }}
-                        className={`hover:text-fuchsia-500 ${
+                        className={` ${
                           selectedFile?.path === file.path
-                            ? "bg-purple-500 text-white"
-                            : ""
+                            ? "bg-purple-500 text-white hover:text-black"
+                            : "hover:text-fuchsia-500 hover:font-semibold"
                         } `}
                       >
                         📄 {file.name}
@@ -174,6 +174,7 @@ const GitHubComponent = () => {
               )}
             </div>
           </div>
+          {isLargeScreen && 
           <div className="flex justify-end space-x-2 mt-4">
             <a href="#Contact">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
@@ -187,6 +188,7 @@ const GitHubComponent = () => {
               </div>
             </a>
           </div>
+          }
         </div>
       </section>
     </React.Fragment>

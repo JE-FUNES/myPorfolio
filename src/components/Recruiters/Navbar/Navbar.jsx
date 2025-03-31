@@ -20,21 +20,21 @@ const Navbar = () => {
       <React.Fragment>
         {/*----- Start Navbar -----*/}
         <header>
-          <nav className="fixed top-0 w-full z-40 bg-white">
+          <nav className="fixed top-0 min-w-full z-40 bg-white">
             <div className="container sm:py-3 xl:py-5">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
                   <div className="z-50 relative">
                     <a href={"https://www.jefa-web.com.ar/"}>
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-start justify-start">
                         <img
                           src={logo}
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 sm:max-w-[120px] lg:max-w-[150px] xl:ml-5 xl:max-w-[200px]"
+                          className="lg:pl-2 sm:max-w-[120px] lg:max-w-[150px] xl:max-w-[180px]"
                         />
-                        <p className="text-purple-800/70 pl-4 pt-1 -mb-2 text-xs">
+                        <p className="text-purple-800/70 lg:pl-2 pt-1 -mb-2 text-xs">
                           {language === "en"
                             ? 'You are in "IT Recruiters"'
                             : 'Estás en "Reclutadores IT"'}
@@ -62,7 +62,7 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
-                    <ul className="list-none flex space-x-3 items-end right-0 w-full cursor-pointer">
+                    <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
                       {language === "en"
                         ? NavbarData.map((e, key) => (
                             <li key={key}>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                 to={e.link}
                                 smooth={true}
                                 duration={500}
-                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-9 tracking-[2px] hover:text-pink-500"
+                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-7 tracking-[2px] hover:text-pink-500"
                               >
                                 {e.name}
                               </Link>
@@ -82,13 +82,13 @@ const Navbar = () => {
                                 to={e.link}
                                 smooth={true}
                                 duration={500}
-                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-9 tracking-[2px] hover:text-pink-500"
+                                className="inline-block px-1.5 lg:text-sm xl:text-base font-medium uppercase leading-7 tracking-[2px] hover:text-pink-500"
                               >
                                 {e.name}
                               </Link>
                             </li>
                           ))}
-                      <div className="lg:pl-10 xl:pl-3 lg:mr-4 xl:mr-2">
+                      <div className="lg:pl-6 xl:pl-3 lg:mr-4">
                         <a
                           href={"https://wa.me/+5493512737199"}
                           target="blank"
@@ -98,7 +98,7 @@ const Navbar = () => {
                           <FaWhatsapp className="inline-block w-6 h-6 px-0 my-1" />
                         </a>
                       </div>
-                      <div className="lg:pl-4 xl:px-2">
+                      <div className="lg:pl-2 xl:px-2">
                         <LanguagesSwitcher />
                       </div>
                     </ul>
