@@ -11,7 +11,9 @@ html {
 body {
     font-family: "Jost", sans-serif;
     background-color: #0f172a ;
-    right: 0;
+    width: screen;
+    justify-content: center;
+    justify-items: center;
 }
 
 @layer base {

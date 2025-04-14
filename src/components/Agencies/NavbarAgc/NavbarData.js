@@ -6,7 +6,7 @@ export const NavbarData = [
     { name: "Services", link: "Services" },
     { name: "My Projects", link: "Portfolio" },
     { name: "About Me", link: "About"},
-    { name: "Curriculum", link: "Curriculum"},
+    { name: "CV", link: "Curriculum"},
     { name: "Contact me", link: "Contact" },
 ]
 //----- End Navbar Data -----
@@ -18,7 +18,7 @@ export const EspNavbarData = [
     { name: "Servicios", link: "Services" },
     { name: "Proyectos", link: "Portfolio" },
     { name: "Sobre mí", link: "About"},
-    { name: "Curriculum", link: "Curriculum"},
+    { name: "CV", link: "Curriculum"},
     { name: "Contacto", link: "Contact" },
 ]
 //----- End Navbar Data -----

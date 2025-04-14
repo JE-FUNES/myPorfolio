@@ -84,30 +84,31 @@ const PoquetClock = () => {
           ]}
         />
       )}
-      <section className="w-screen min-h-screen mt-0 py-0  sm:-mb-5 lg:mb-16 bg-black" id="Home">
+      <section
+        className="w-full min-h-screen lg:h-[720px] justify-center items-center mt-0 py-0 sm:-mb-5  bg-black"
+        id="Home"
+      >
         <div
-          className="relative flex items-center justify-center min-h-screen w-full bg-no-repeat bg-center bg-contain"
-          style={
-            isLit
-              ? { backgroundImage: `url(${backgroundNoche})` }
-              : { backgroundImage: `url(${background})` }
-          }
+          className="relative flex items-center justify-center lg:h-[857px] lg:w-full bg-no-repeat bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${isLit ? backgroundNoche : background})`,
+          }}
         >
           {/* Contenedor del título*/}
 
           <motion.div
-            className="absolute sm:top-10 lg:top-0 sm:mt-10 lg:mt-14 sm:left-0 lg:left-28 sm:ml-2 lg:ml-28 bg-black/80 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-[50%]"
-            initial={{ opacity: 0, y: 100 }} // Empieza invisible y desplazado 50px hacia abajo
-            whileInView={{ opacity: 1, y: 0 }} // Cuando entra en vista, aparece con opacidad 1 y sube a su posición normal
-            viewport={{ once: false }} // La animación ocurre solo una vez
-            transition={{ duration: 2, ease: "easeOut" }} // La animación dura 1s con una salida suave
+            className="absolute sm:top-10 lg:top-0 sm:mt-10 lg:mt-10 sm:left-0 lg:left-16 sm:ml-2 lg:ml-16 bg-black/80 sm:p-1 lg:p-5 rounded-lg sm:w-full lg:w-full"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 2, ease: "easeOut" }}
           >
-            <h2 className="font-semibold text-white text-[18px] md:text-4xl lg:text-5xl leading-[1] mb-6 md:mb-9 sm:ml-2 lg:ml-0">
+            <h2 className="font-semibold text-white text-[18px] md:text-4xl lg:text-4xl leading-[1] mb-6 md:mb-9 sm:ml-2 lg:ml-0">
               {language === "en"
                 ? "Let's transform ideas into "
                 : "Transformemos ideas en "}
             </h2>
-            <h1 className="font-semibold text-white text-[25px] sm:text-lg md:text-4xl lg:text-5xl leading-[1] ml-2 uppercase -mt-4">
+            <h1 className="font-semibold text-white text-[25px] sm:text-lg md:text-4xl lg:text-4xl leading-[1] ml-2 uppercase -mt-4">
               <TypeAnimation
                 key={language}
                 className="text-red-500"
@@ -133,31 +134,32 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className="absolute sm:w-[30%] md:w-[40%] lg:w-[50%] max-w-[480px] sm:mt-6 lg:mt-28 lg:ml-5 aspect-square rounded-full transition-all duration-300"
+            className="absolute lg:mt-36 aspect-square w-[70vw] lg:max-w-[32vw] transition-all duration-300 rounded-full"
             style={{
               boxShadow: isLit
-                ? isLargeScreen ? "0 0 120px 30px rgba(0, 255, 255, 0.8)" : "0 0 50px 12px rgba(0, 255, 255, 0.8)" // Sombra intensa cuando se activa
-                : "0 0 10px 10px rgba(0, 255, 255, 0.5)", // Sombra más tenue cuando está apagado
+                ? isLargeScreen
+                  ? "0 0 120px 30px rgba(0, 255, 255, 0.8)"
+                  : "0 0 50px 12px rgba(0, 255, 255, 0.8)"
+                : "0 0 10px 10px rgba(0, 255, 255, 0.5)",
             }}
           >
             {/* Marco */}
             <div className="absolute w-full h-full rounded-full lg:border-[5px] border-gray-300/50"></div>
 
             {/* Esfera */}
-            <div className="absolute flex items-center justify-center w-full h-full">
+            <div className="absolute flex items-center justify-center w-full h-full lg:-mt-2 lg:ml-2">
               {/* Manecillas */}
               <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[20%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
               <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[30%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
               <div className="absolute bottom-1/2 left-1/2 sm:w-[2px] lg:w-[4px] h-[35%] bg-red-500 transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md segundo"></div>
 
               {/* Centro */}
-              <div className="absolute sm:w-3 lg:w-5 sm:h-3 sm:ml-1 lg:h-5 bg-gray-200 rounded-full border border-gray-700"></div>
+              <div className="absolute sm:w-3 lg:w-6 sm:h-3 lg:h-6 bg-cyan-100 rounded-full border border-cyan-400 ml-3"></div>
             </div>
-            {/* Indicación botón */}
-            <div className="absolute sm:w-60 lg:w-50 h-10 flex items-center sm:text-md lg:text-xl lg:font-bold px-2 rounded-lg bottom-0 sm:mb-0 lg:-mb-48 sm:left-0 lg:left-44 ">
-              {/* Botón para iluminar */}
+            {/* botón */}
+            <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 flex flex-col items-center">
               <button
-                className="relative sm:bottom-0 sm:-mb-4 lg:bottom-56 sm:left-0 sm:ml-9 lg:ml-4 rounded-full sm:p-1 lg:px-2 lg:py-2 font-bold shadow-xl shadow-red-500 hover:shadow-white border-black hover:border-white border-2 transition-all duration-200 animate-bounce-slow bg-no-repeat bg-center bg-contain"
+                className="relative items-center flex justify-center text-center w-14 h-14 sm:w-16 sm:h-16 bg-no-repeat bg-center bg-contain rounded-full border-2 border-black hover:border-white shadow-xl hover:shadow-white transition-all duration-200 animate-bounce"
                 style={
                   isLit
                     ? { backgroundImage: `url(${botonAzul})` }
@@ -166,32 +168,28 @@ const PoquetClock = () => {
                 onClick={() => setIsLit(!isLit)}
               >
                 {isLit ? (
-                  <Lucide
-                    icon="Sun"
-                    className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white hover:text-black"
-                  />
+                  <Lucide icon="Sun" className="w-6 h-6 text-white" />
                 ) : (
-                  <Lucide
-                    icon="Moon"
-                    className="lg:w-10 lg:h-10 sm:w-4 sm:h-4 text-white"
-                  />
+                  <Lucide icon="Moon" className="w-6 h-6 text-white" />
                 )}
               </button>
-              <h2 className="text-white animate-bounce sm:mt-24 lg:-mt-10 lg:mb-72 sm:-ml-20 lg:-ml-24 text-center ">
+              <p className="mt-[10px] text-white text-center text-sm">
                 {language === "en" ? "Press Button" : "Presiona el Botón"}
-              </h2>
+              </p>
             </div>
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        <div className="relative sm:-top-20 sm:mt-0 lg:-top-12 lg:-mt-24 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
-          <a href="#Services">
-            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
-              <Lucide icon="ArrowDown" className="mr-2" />
-              {language === "en" ? "Go on" : "Sigamos"}
-            </div>
-          </a>
-        </div>
+        {isLargeScreen && (
+          <div className="relative sm:-top-20 sm:mt-0 lg:-top-8 lg:-mt-20 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+            <a href="#Services">
+              <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+                <Lucide icon="ArrowDown" className="mr-2" />
+                {language === "en" ? "Go on" : "Sigamos"}
+              </div>
+            </a>
+          </div>
+        )}
       </section>
     </React.Fragment>
   );

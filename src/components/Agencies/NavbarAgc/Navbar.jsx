@@ -77,7 +77,7 @@ const Navbar = () => {
                             className="bg-red-500/50 text-slate-100 rounded-full ml-1 px-2 hover:bg-red-900">
                             {language === "en"
                             ? 'Choose again'
-                            : 'Volver a elegir'}
+                            : 'Elegir otro'}
                             </span>
                         </p>
                       </li>
