@@ -85,11 +85,11 @@ const PoquetClock = () => {
         />
       )}
       <section
-        className="w-full min-h-screen lg:h-[720px] justify-center items-center mt-0 py-0 sm:-mb-5  bg-black"
+        className="w-full min-h-screen  justify-center items-center mt-0 pb-10 py-0 sm:-mb-5  bg-black"
         id="Home"
       >
         <div
-          className="relative flex items-center justify-center lg:h-[857px] lg:w-full bg-no-repeat bg-center bg-cover"
+          className="relative flex items-center justify-center lg:h-[857px] xxl:h-[900px] xxxl:h-[990px] xxxxl:h-[1200px] xxxxxl:h-[1800px] lg:w-full bg-no-repeat bg-center bg-cover"
           style={{
             backgroundImage: `url(${isLit ? backgroundNoche : background})`,
           }}
@@ -134,7 +134,7 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className="absolute lg:mt-36 aspect-square w-[70vw] lg:max-w-[32vw] transition-all duration-300 rounded-full"
+            className="absolute lg:ml-6 xxl:ml-4 xxxxl:ml-6 lg:mt-28 xl:mt-30 xxxl:mt-36 xxxxl:mt-48 xxxxxl:top-64 xxxxxl:mt-68 aspect-square w-[65vw] lg:max-w-[34vw] xl:max-w-[33vw] xxl:max-w-[30vw] xxxxxl:max-w-[31vw] transition-all duration-300 rounded-full"
             style={{
               boxShadow: isLit
                 ? isLargeScreen
@@ -147,17 +147,17 @@ const PoquetClock = () => {
             <div className="absolute w-full h-full rounded-full lg:border-[5px] border-gray-300/50"></div>
 
             {/* Esfera */}
-            <div className="absolute flex items-center justify-center w-full h-full lg:-mt-2 lg:ml-2">
+            <div className="absolute flex items-center justify-center w-full h-full lg:-mt-2 lg:ml-2 xxxxl:-mt-3 xxxxxl:-mt-4 xxxxxl:ml-4">
               {/* Manecillas */}
-              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[20%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
-              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[30%] bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
-              <div className="absolute bottom-1/2 left-1/2 sm:w-[2px] lg:w-[4px] h-[35%] bg-red-500 transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md segundo"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[24%] lg:-ml-2 bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[34%] lg:-ml-2 bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
+              <div className="absolute bottom-1/2 left-1/2 sm:w-[2px] lg:w-[4px] h-[39%] lg:-ml-2 bg-red-500 transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md segundo"></div>
 
               {/* Centro */}
-              <div className="absolute sm:w-3 lg:w-6 sm:h-3 lg:h-6 bg-cyan-100 rounded-full border border-cyan-400 ml-3"></div>
+              <div className="absolute sm:w-3 lg:w-6 sm:h-3 lg:h-6 bg-cyan-100 rounded-full border border-cyan-400 sm:ml-3 lg:-ml-3"></div>
             </div>
             {/* botón */}
-            <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+            <div className="absolute bottom-[-60px] -mb-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
               <button
                 className="relative items-center flex justify-center text-center w-14 h-14 sm:w-16 sm:h-16 bg-no-repeat bg-center bg-contain rounded-full border-2 border-black hover:border-white shadow-xl hover:shadow-white transition-all duration-200 animate-bounce"
                 style={
@@ -173,7 +173,7 @@ const PoquetClock = () => {
                   <Lucide icon="Moon" className="w-6 h-6 text-white" />
                 )}
               </button>
-              <p className="mt-[10px] text-white text-center text-sm">
+              <p className="mt-[1px] text-white text-center text-sm">
                 {language === "en" ? "Press Button" : "Presiona el Botón"}
               </p>
             </div>
@@ -181,7 +181,7 @@ const PoquetClock = () => {
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
         {isLargeScreen && (
-          <div className="relative sm:-top-20 sm:mt-0 lg:-top-8 lg:-mt-20 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+          <div className="relative sm:-top-20 sm:mt-0 lg:top-0 lg:-mt-20 xl:-mt-12 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
             <a href="#Services">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />

@@ -22,6 +22,10 @@ module.exports = {
       md: "768px",
       lg: "1230px",
       xl: "1440px",
+      xxl: "1600px",
+      xxxl: "1920px",
+      xxxxl: "2560px",
+      xxxxxl: "3840px",
     },
     extend: {
       textShadow: {
