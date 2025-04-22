@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Clock from "../../Clock/Clock.jsx";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import Init from "./Init.js";
 import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
 
@@ -21,11 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="Wellcome">
-        <Init />
-      </div>
-
-      <React.Fragment>
+            <React.Fragment>
         {/*----- Start Home -----*/}
         {isLargeScreen && (
           <AnimatedCursor
