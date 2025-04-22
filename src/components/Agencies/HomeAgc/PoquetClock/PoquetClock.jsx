@@ -89,7 +89,7 @@ const PoquetClock = () => {
         id="Home"
       >
         <div
-          className="relative flex items-center justify-center lg:h-[857px] xxl:h-[900px] xxxl:h-[990px] xxxxl:h-[1200px] xxxxxl:h-[1800px] lg:w-full bg-no-repeat bg-center bg-cover"
+          className="relative flex items-center justify-center sm:h-[550px] smd:h-[655px] smd:mt-20 smdd:mt-24 lg:mt-0 smdd:h-[740px] lg:h-[857px] xxl:h-[900px] xxxl:h-[990px] xxxxl:h-[1200px] xxxxxl:h-[1800px] lg:w-full bg-no-repeat bg-center bg-cover"
           style={{
             backgroundImage: `url(${isLit ? backgroundNoche : background})`,
           }}
@@ -134,7 +134,7 @@ const PoquetClock = () => {
           </motion.div>
           {/* Contenedor del reloj */}
           <div
-            className="absolute lg:ml-6 xxl:ml-4 xxxxl:ml-6 lg:mt-28 xl:mt-30 xxxl:mt-36 xxxxl:mt-48 xxxxxl:top-64 xxxxxl:mt-68 aspect-square w-[65vw] lg:max-w-[34vw] xl:max-w-[33vw] xxl:max-w-[30vw] xxxxxl:max-w-[31vw] transition-all duration-300 rounded-full"
+            className="absolute sm:ml-2 lg:ml-6 xxl:ml-4 xxxxl:ml-6 sm:mt-20 smd:mt-24 smdd:mt-24 lg:mt-28 xl:mt-30 xxxl:mt-36 xxxxl:mt-48 xxxxxl:top-64 xxxxxl:mt-68 aspect-square w-[82vw] smd:max-w-[82vw] smdd:max-w-[82vw] sm:max-w-[82vw] mds:max-w-[64vw] mdl:max-w-[46vw] lg:max-w-[34vw] xl:max-w-[33vw] xxl:max-w-[30vw] xxxxxl:max-w-[31vw] transition-all duration-300 rounded-full"
             style={{
               boxShadow: isLit
                 ? isLargeScreen
@@ -147,7 +147,7 @@ const PoquetClock = () => {
             <div className="absolute w-full h-full rounded-full lg:border-[5px] border-gray-300/50"></div>
 
             {/* Esfera */}
-            <div className="absolute flex items-center justify-center w-full h-full lg:-mt-2 lg:ml-2 xxxxl:-mt-3 xxxxxl:-mt-4 xxxxxl:ml-4">
+            <div className="absolute flex items-center justify-center w-full h-full sm:-mt-2 smd:mt-0 smdd:-mt-2 lg:-mt-2 lg:ml-2 xxxxl:-mt-3 xxxxxl:-mt-4 xxxxxl:ml-4">
               {/* Manecillas */}
               <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[24%] lg:-ml-2 bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md hora"></div>
               <div className="absolute bottom-1/2 left-1/2 sm:w-[6px] lg:w-[12px] h-[34%] lg:-ml-2 bg-black transform -translate-x-1/2 -translate-y-[10%] origin-bottom rounded-md minuto"></div>
