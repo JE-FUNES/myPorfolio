@@ -69,6 +69,7 @@ module.exports = {
         'bg-banner': "url('/src/assets/Image/project-banner-1.png')",
         'bg-video': "url('/src/assets/videos/videoCode.mp4')",
         'bg-mkn': "url('/src/assets/Image/mkn-dgt.png')",
+        'bg-free': "url('/src/assets/Image/fondo-services-freelance.png')",
         'bg-projects': "url('/src/assets/Image/diseno-web.webp')",
         'bg-about': "url('/src/assets/Image/graphictechnologies-video-animatedGIFs.webp')",
         'bg-cv': "url('/src/assets/Image/gitlab.webp')",

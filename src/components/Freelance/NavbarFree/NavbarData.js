@@ -2,13 +2,12 @@
 export const NavbarData = [
     //{ name: "Wellcome", link: "Wellcome" },
     { name: "Home", link: "Home" },
-    { name: "About Me", link: "About"},
-    //{ name: "Services", link: "Services" },
-    { name: "My Skills", link: "Skills" },
-    { name: "My Projects", link: "Portfolio" },
-    { name: "Curriculum", link: "Curriculum"},
-    { name: "See Code", link: "Github" },
-    { name: "Contact me", link: "Contact" },
+    { name: "Services", link: "Services" },
+    { name: "Projects", link: "Portfolio" },
+    { name: "How I work", link: "Work"},
+    { name: "FAQ", link: "Faq"},
+    { name: "Clients", link: "Clients" },
+    { name: "Contact", link: "Contact" },
 ]
 //----- End Navbar Data -----
 
@@ -16,12 +15,11 @@ export const NavbarData = [
 export const EspNavbarData = [
     //{ name: "Bienvenido", link: "Wellcome" },
     { name: "Inicio", link: "Home" },
-    { name: "Sobre mí", link: "About"},
-    //{ name: "Servicios", link: "Services" },
-    { name: "Habilidades", link: "Skills" },
+    { name: "Servicios", link: "Services" },
     { name: "Proyectos", link: "Portfolio" },
-    { name: "Curriculum", link: "Curriculum"},
-    { name: "Ver Código", link: "Github" },
+    { name: "Cómo trabajo", link: "Work"},
+    { name: "FAQ", link: "Faq"},
+    { name: "Clientes", link: "Clients" },
     { name: "Contacto", link: "Contact" },
 ]
 //----- End Navbar Data -----

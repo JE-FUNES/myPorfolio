@@ -3,8 +3,6 @@ import { PortfolioData, EspPortfolioData } from "./PortfolioData";
 import Project from "../ProjectAgc/Project.jsx";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import projectBanner from "../../../assets/Image/project-banner-1.png";
-import projectBanner2 from "../../../assets/Image/project-banner-2.png";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {

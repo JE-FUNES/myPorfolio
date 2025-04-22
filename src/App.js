@@ -24,13 +24,9 @@ import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 //FREELANCE
 import NavbarFree from "./components/Freelance/NavbarFree/Navbar";
 import HomeFree from "./components/Freelance/HomeFree/Home";
-import AboutFree from "./components/Freelance/AboutFree/About";
 import ServicesFree from "./components/Freelance/ServicesFree/Services";
-import SkillsFree from "./components/Freelance/SkillsFree/Skills";
 import PortfolioFree from "./components/Freelance/PortfolioFree/Portfolio";
 import ContactFree from "./components/Freelance/ContactFree/Contact";
-import FooterFree from "./components/Freelance/FooterFree/Footer";
-import CurriculumFree from "./components/Freelance/CurriculumFree/Curriculum";
 
 import Calculadora from "./components/Calculadora/Calculadora";
 
@@ -68,13 +64,9 @@ const App = () => {
         <React.Fragment>
           <NavbarFree />
           <HomeFree />
-          <AboutFree />
           <ServicesFree />
-          <SkillsFree />
           <PortfolioFree />
-          <CurriculumFree />
           <ContactFree />
-          <FooterFree />
         </React.Fragment>
       }
       />
