@@ -180,8 +180,8 @@ const PoquetClock = () => {
           </div>
         </div>
         {/* Contenedor de los enlaces en la esquina superior derecha */}
-        {isLargeScreen && (
-          <div className="relative sm:-top-20 sm:mt-0 lg:top-0 lg:-mt-20 xl:-mt-12 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+
+          <div className="relative sm:top-0 sm:mt-10 lg:top-0 lg:-mt-20 xl:-mt-12 sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
             <a href="#Services">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />
@@ -189,7 +189,7 @@ const PoquetClock = () => {
               </div>
             </a>
           </div>
-        )}
+        
       </section>
     </React.Fragment>
   );
