@@ -10,6 +10,31 @@ import { Lucide } from "../../../utils/index.js";
 const Contact = () => {
   const language = useSelector((state) => state.language);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://formspree.io/f/xanjonjb", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setSuccess(true);
+          form.reset();
+        } else {
+          alert("Error al enviar el formulario.");
+        }
+      })
+      .catch(() => alert("Hubo un problema al conectar con el servidor."));
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -95,7 +120,7 @@ const Contact = () => {
     <React.Fragment>
       {/*----- Start Contact -----*/}
       <section
-        className={`sm:pt-20 lg:pt-24 lg:pb-10 bg-slate-900 lg:h-full w-screen bg-no-repeat bg-cover lg:bg-bottom ${
+        className={`sm:pt-20 lg:pt-36 lg:pb-10 bg-slate-900 lg:h-full w-screen bg-no-repeat bg-cover lg:bg-bottom ${
           isLargeScreen ? "bg-bg-effect-2" : ""
         }`}
         id="Contact"
@@ -103,17 +128,74 @@ const Contact = () => {
         <h3 className="text-slate-100 flex justify-center">
           {language === "en" ? "CONTACT ME" : "CONTACTO"}
         </h3>
-        <h4 className="text-slate-100 flex justify-center text-lg italic lg:mt-10 sm:mt-5 sm:ml-4 lg:ml-0">
+        <h4 className="text-slate-100 flex justify-center text-lg italic mt-5 sm:ml-4 lg:ml-0">
           {language === "en"
             ? "I'm ready to take on new challenges and contribute my skills."
             : "Lista para sumarme a nuevos desafíos y contribuir con mis habilidades."}
         </h4>
-        <h4 className="text-slate-100 flex justify-center font-bold text-lg sm:mt-4 lg:mt-1">
-          {language === "en"
-            ? "Shall we schedule an interview?"
-            : "¿Agendamos una entrevista?"}
-        </h4>
-        <div className="container lg:pt-24 lg:pb-24  mt-1 justify-center">
+
+        {/* Formulario de contacto */}
+
+<div className="container mt-10 p-5 mx-auto border-2 border-gray-500 w-1/2 text-white font-semibold text-sm">
+  {success ? (
+    <p>
+      {language === "en"
+        ? "Thanks for your message! I'll get back to you soon."
+        : "¡Gracias por tu mensaje! Te responderé pronto."}
+    </p>
+  ) : (
+    <form onSubmit={handleSubmit}>
+      <div className="grid grid-cols-12 gap-4">
+        {/* Columna izquierda */}
+        <div className="col-span-12 md:col-span-6 flex flex-col gap-4">
+          <label className="flex flex-col">
+            {language === "en" ? "Name:" : "Nombre:"}
+            <input
+              type="text"
+              name="name"
+              className="border-2 border-gray-500 bg-transparent p-1 mt-1"
+              required
+            />
+          </label>
+
+          <label className="flex flex-col">
+            Email:
+            <input
+              type="email"
+              name="email"
+              className="border-2 border-gray-500 bg-transparent p-1 mt-1"
+              required
+            />
+          </label>
+        </div>
+
+        {/* Columna derecha */}
+        <div className="col-span-12 md:col-span-6 flex flex-col gap-4">
+          <label className="flex flex-col h-full">
+            {language === "en" ? "Message:" : "Mensaje:"}
+            <textarea
+              name="message"
+              className="border-2 border-gray-500 bg-transparent p-1 mt-1 h-28 resize-none"
+              required
+            />
+          </label>
+
+          <button
+            type="submit"
+            className="bg-white text-black font-bold py-2 px-4 mt-2 self-start"
+          >
+            {language === "en" ? "Send" : "Enviar"}
+          </button>
+        </div>
+      </div>
+    </form>
+  )}
+</div>
+
+{/* Fin formulario */}
+
+
+        <div className="container lg:pt-6 lg:pb-1  mt-0 justify-center ">
           <div className="grid grid-cols-12">
             {/* start Image  */}
 
@@ -211,14 +293,13 @@ const Contact = () => {
             {/* End Contact */}
           </div>
           {/* Botones debajo alineados a la derecha */}
-                        <div className="relative flex justify-end space-x-2 bottom-0">
-                          
-                          <a href="#Github">
-                            <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-                              <Lucide icon="ArrowUp" />
-                            </div>
-                          </a>
-                        </div>
+          <div className="relative flex justify-end space-x-2 bottom-0">
+            <a href="#Github">
+              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                <Lucide icon="ArrowUp" />
+              </div>
+            </a>
+          </div>
         </div>
       </section>
       {/*----- End Contact -----*/}

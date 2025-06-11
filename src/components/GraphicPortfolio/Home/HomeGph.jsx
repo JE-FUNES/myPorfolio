@@ -73,7 +73,7 @@ const HomeGph = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>
 
           {/* Grilla de categorías sobre el video */}
-          <div className="relative z-10 grid grid-cols-3 grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-16">
+          <div className="relative z-10 grid sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-16">
             {categories.map((cat) => (
                 <a href={`${cat.link}`}>
               <div key={cat.key} className="flex flex-col items-center text-white">
