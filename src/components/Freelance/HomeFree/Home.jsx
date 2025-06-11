@@ -5,6 +5,7 @@ import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
 import fondo from "../../../assets/Image/fondo-home-freelance.png";
 import gif from "../../../assets/AnimatedGifs/home-free.gif";
+import InProgress from "../../GraphicPortfolio/Home/InProgress.js";
 
 const Home = () => {
   const language = useSelector((state) => state.language);
@@ -21,6 +22,9 @@ const Home = () => {
 
   return (
     <>
+      <div id="InProgress">
+        <InProgress />
+      </div>
       <React.Fragment>
         {/*----- Start Home -----*/}
         {isLargeScreen && (
@@ -131,6 +135,7 @@ const Home = () => {
                 </p>
               </div>
             </motion.div>
+      
           </div>
         </section>
         {/*----- End Home -----*/}

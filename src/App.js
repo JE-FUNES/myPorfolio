@@ -28,6 +28,18 @@ import ServicesFree from "./components/Freelance/ServicesFree/Services";
 import PortfolioFree from "./components/Freelance/PortfolioFree/Portfolio";
 import ContactFree from "./components/Freelance/ContactFree/Contact";
 
+//GRAPHIC PORTFOLIO
+import HomeGph from "./components/GraphicPortfolio/Home/HomeGph";
+import NavbarGph from "./components/GraphicPortfolio/NavbarGph/Navbar";
+import ContactGph from "./components/GraphicPortfolio/ContactGph/Contact";
+import Illustrations from "./components/GraphicPortfolio/Illustrations/Illustrations";
+import Vectors from "./components/GraphicPortfolio/Vectors/Vectors";
+import Patterns from "./components/GraphicPortfolio/Patterns/Patterns";
+import Backgrounds from "./components/GraphicPortfolio/Backgrounds/Backgrounds";
+import Photos from "./components/GraphicPortfolio/Photos/Photos";
+import Combos from "./components/GraphicPortfolio/Combos/Combos";
+import FreeDownload from "./components/GraphicPortfolio/FreeDownload/FreeDownload";
+
 import Calculadora from "./components/Calculadora/Calculadora";
 
 
@@ -82,6 +94,24 @@ const App = () => {
           <CurriculumAgc />
           <ContactAgc />
           <NavbarAgc />
+        </React.Fragment>
+      }
+      />
+      <Route
+      //PORTFOLIO GRAFICO
+      path="/portfolio_grafico"
+      element={
+        <React.Fragment>
+          <NavbarGph />
+          <HomeGph />
+          <Illustrations />
+          <Vectors />
+          <Patterns />
+          <Backgrounds />
+          <Photos />
+          <Combos />
+          <FreeDownload />
+          <ContactGph />
         </React.Fragment>
       }
       />
