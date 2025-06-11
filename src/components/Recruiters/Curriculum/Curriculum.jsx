@@ -48,7 +48,7 @@ const Curriculum = () => {
                 src={
                   language === "en"
                     ? "/CV_JULIA_FUNES-Frontend_Developer-english.pdf"
-                    : "/CV_JULIA_FUNES-Desarrollo_Frontend-spanish.pdf"
+                    : "/CV_JULIA_FUNES-Desarrollo_Frontend-spanish-2025.pdf"
                 }
                 className="w-full h-[65vh]"
                 frameBorder="0"
