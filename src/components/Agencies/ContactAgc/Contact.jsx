@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ContactData, EspContactData } from "./ContactData";
-//import { submitContactForm } from "../../../redux/actions";
 import { useSelector } from "react-redux";
-//import { useNavigate } from "react-router-dom";
 import contact_bg from "../../../assets/Image/contact-bg.png";
 import { motion } from "motion/react";
 import { Lucide } from "../../../utils/index.js";
@@ -20,59 +18,7 @@ const Contact = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  //const [errors, setErrors] = useState({});
-  //const dispatch = useDispatch();
-
-  //const navigate = useNavigate();
-
-  /*const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    likedPage: 4, // Valor por defecto de 4 estrellas
-    reason: "",
-  }); */
-
-  /* const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "likedPage") {
-      setFormData({
-        ...formData,
-        [name]: Number(value),
-      });
-    } else {
-      if (name === "name" && value.length > 30) {
-        return;
-      }
-      if (name === "reason" && value.length > 200) {
-        return;
-      }
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-    // Validación de errores
-    const newErrors = { ...errors };
-    if (name === "name" && value.trim() === "") {
-      newErrors[name] = "Name is required";
-    } else {
-      delete newErrors[name];
-    }
-    setErrors(newErrors);
-  }; 
-
-  const handleStarClick = (rating) => {
-    setFormData({
-      ...formData,
-      likedPage: rating,
-    });
-  };
-
-  const handleFormSubmit = () => {
-    dispatch(submitContactForm(formData));
-    alert("Form Send!");
-    navigate("/home");
-  }; */
+  
 
   const handleCalendar = () => {
     // Especifica el tamaño y otras opciones del pop-up

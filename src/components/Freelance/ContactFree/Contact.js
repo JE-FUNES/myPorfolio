@@ -91,7 +91,7 @@ console.error("Error de red o servidor", error);
 
         <div className="container mt-10 p-5 mx-auto border-2 border-gray-500 w-1/2 text-white font-semibold text-sm">
           {success ? (
-            <p>
+            <p className="text-cyan-200 font-semibold text-lg text-center">
               {language === "en"
                 ? "Thanks for your message! I'll get back to you soon."
                 : "¡Gracias por tu mensaje! Te responderé pronto."}
