@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Testimonials } from "./TestimonialData";
 import Slider from "react-slick";

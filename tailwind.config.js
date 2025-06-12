@@ -74,6 +74,7 @@ module.exports = {
         'bg-about': "url('/src/assets/Image/graphictechnologies-video-animatedGIFs.webp')",
         'bg-cv': "url('/src/assets/Image/gitlab.webp')",
         'bg-clientes': "url('/src/assets/Image/fondo-clientes.jpg')",
+        'bg-faq': "url('/src/assets/Image/atrair-clientes.jpg')",
       },
       boxShadow: {
         'black': '6px 6px 0px -1px rgba(15, 23, 42, 1)',
