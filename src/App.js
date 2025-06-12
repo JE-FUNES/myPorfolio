@@ -26,6 +26,7 @@ import NavbarFree from "./components/Freelance/NavbarFree/Navbar";
 import HomeFree from "./components/Freelance/HomeFree/Home";
 import ServicesFree from "./components/Freelance/ServicesFree/Services";
 import PortfolioFree from "./components/Freelance/PortfolioFree/Portfolio";
+import Testimonial from "./components/Freelance/Testimonial/Testimonial";
 import ContactFree from "./components/Freelance/ContactFree/Contact";
 
 //GRAPHIC PORTFOLIO
@@ -78,6 +79,7 @@ const App = () => {
           <HomeFree />
           <ServicesFree />
           <PortfolioFree />
+          <Testimonial />
           <ContactFree />
         </React.Fragment>
       }
