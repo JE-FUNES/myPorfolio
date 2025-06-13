@@ -55,7 +55,7 @@ const SkillModal = ({ skill, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-1.5 top-2.5 md:right-5 md:top-5 text-2xl"
+              className="absolute right-1.5 top-1.5 md:right-2 md:top-2 text-2xl"
             >
               <RiCloseFill />
             </button>

@@ -21,13 +21,13 @@ const Navbar = () => {
         {/*----- Start Navbar -----*/}
         <header>
           <nav className="fixed top-0 min-w-full z-40 bg-white">
-            <div className="container sm:py-3 xl:py-5">
+            <div className="container py-3 px-4">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
                   <div className="z-50 relative">
                     <a href={"https://www.jefa-web.com.ar/"}>
-                      <div className="flex flex-col items-start justify-start">
+                      <div className="flex flex-col items-start justify-start ml-2">
                         <img
                           src={logo}
                           alt="Web Developer"

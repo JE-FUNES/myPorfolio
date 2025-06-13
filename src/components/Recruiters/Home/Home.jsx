@@ -107,8 +107,12 @@ const Home = () => {
                 <div className="text-center mt-0">
                   <Clock />
                 </div>
+              </div>
+            </div>
+          </div>
+                {/* Contenedor de los enlaces en la esquina inferior derecha */}
               {isLargeScreen && 
-                <div className="flex justify-end items-center mt-0 sm:mt-2 lg:mt-7 pt-3 sm:mr-5 lg:mr-0 sm:border-t-2 xl:border-t-0 sm:border-purple-500">
+                <div className="absolute  sm:bottom-20 lg:bottom-6  sm:w-screen lg:w-[90%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
                   <a href="#About">
                     <div className="btn btn-yellow font-bold rounded-full flex justify-center items-center animate-pulse cursor-pointer mb-0">
                       <Lucide icon="ArrowDown" className="mr-2" />
@@ -117,9 +121,6 @@ const Home = () => {
                   </a>
                 </div>
               }
-              </div>
-            </div>
-          </div>
         </section>
         {/*----- End Home -----*/}
       </React.Fragment>

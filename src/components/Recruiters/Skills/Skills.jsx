@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import skills1 from "../../../assets/Image/yo-skills-1.png";
-import skills2 from "../../../assets/Image/yo-skills-2.png";
+import skills1 from "../../../assets/Image/yo-skills-11.png";
+import skills2 from "../../../assets/Image/yo-skills-22.png";
 import { SkillsData, EspSkillsData } from "./SkillsData.js";
 import SkillModal from "./SkillModal.js";
 import { Lucide } from "../../../utils/index";
@@ -29,7 +29,7 @@ const Skills = () => {
 
   return (
     <React.Fragment>
-      <section className="mt-10 pt-28 pb-10 bg-slate-900" id="Skills">
+      <section className="sm:min-h-screen xl:h-screen sm:py-16 lg:pt-24 lg:pb-2 bg-slate-900" id="Skills">
         <div className="container bg-slate-900">
           <div className="grid lg:grid-cols-12  grid-cols-1 items-end bg-slate-900">
             <motion.div
@@ -88,7 +88,7 @@ const Skills = () => {
             </motion.div>
             {isLargeScreen && (
               <div
-                className="sm:col-span-4 lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
+                className="sm:col-span-4 lg:col-span-6  w-full h-full text-center top-0 mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
                 style={{ backgroundImage: `url(${skills1})`, height: "100%" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundImage = `url(${skills2})`)
@@ -100,7 +100,7 @@ const Skills = () => {
             )}
           </div>
           {isLargeScreen &&
-          <div className="flex justify-end items-center lg:-mt-10 mb-5">
+          <div className="relative  bottom-6 w-screen  flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
             <a href="#Portfolio">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />

@@ -204,19 +204,19 @@ const About = () => {
               </div>
             </motion.div>
           </div>
-        <div className="relative  bottom-0 sm:py-6 md:py-10 lg:py-16 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
-          <a href="#Curriculum">
-            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
-              <Lucide icon="ArrowDown" className="mr-2" />
-              {language === "en" ? "Go on" : "Sigamos"}
-            </div>
-          </a>
-          <a href="#Portfolio">
-            <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-              <Lucide icon="ArrowUp" />
-            </div>
-          </a>
-        </div>
+          <div className="relative  bottom-0 sm:py-6 md:py-10 lg:py-16 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+            <a href="#Curriculum">
+              <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+                <Lucide icon="ArrowDown" className="mr-2" />
+                {language === "en" ? "Go on" : "Sigamos"}
+              </div>
+            </a>
+            <a href="#Portfolio">
+              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+                <Lucide icon="ArrowUp" />
+              </div>
+            </a>
+          </div>
         </div>
       </section>
       {/*----- End About -----*/}

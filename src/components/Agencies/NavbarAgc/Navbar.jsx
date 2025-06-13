@@ -60,6 +60,7 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
+                  <a href={"https://www.jefa-web.com.ar/"}>
                         <p className="text-white/70 lg:pl-2 pt-1 -mb-2 text-xs">
                           {language === "en"
                             ? 'You are in "MKT Agencies"'
@@ -74,6 +75,7 @@ const Navbar = () => {
                             : 'Volver a elegir'}
                             </span>
                         </p>
+                        </a>
                     <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
                     
                       {language === "en"

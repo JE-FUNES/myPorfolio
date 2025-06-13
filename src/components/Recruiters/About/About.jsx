@@ -12,24 +12,24 @@ const About = () => {
   const language = useSelector((state) => state.language);
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsLargeScreen(window.innerWidth >= 820);
-      };
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className=" bg-white bg-bg-effect-3 bg-cover bg-no-repeat sm:pt-10 lg:pt-20"
+        className=" bg-white bg-bg-effect-3 bg-cover bg-no-repeat sm:py-16 lg:pt-20 min-h-screen"
         id="About"
       >
-        <div className="container py-20 min-h-screen">
+        <div className="container w-screen  h-full lg:mt-20 lg:mb-0">
           <div className="grid lg:grid-cols-12 grid-cols-1 items-center">
             <div
               className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
@@ -178,12 +178,11 @@ const About = () => {
                       );
                     })}
               </div>
-              
             </motion.div>
           </div>
-          {isLargeScreen &&
-
-          <div className="pt-5 flex justify-end items-center">
+        </div>
+        {isLargeScreen && (
+          <div className="relative  bottom-0 w-screen  flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
             <a href="#Skills">
               <div className="btn btn-yellow rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                 <Lucide icon="ArrowDown" className="mr-2" />
@@ -196,8 +195,7 @@ const About = () => {
               </div>
             </a>
           </div>
-          }
-        </div>
+        )}
       </section>
       {/*----- End About -----*/}
     </React.Fragment>
