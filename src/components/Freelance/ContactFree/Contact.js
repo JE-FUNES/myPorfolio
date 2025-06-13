@@ -79,365 +79,176 @@ const Contact = () => {
         <h3 className="text-slate-100 flex justify-center">
           {language === "en" ? "CONTACT ME" : "CONTACTO"}
         </h3>
-        <h4 className="text-slate-100 flex justify-center text-lg italic mt-5 sm:ml-4 lg:ml-0">
-          {language === "en"
-            ? "Tell me, what is the project you have in mind about?"
-            : "Contame, ¿de qué trata el proyecto que tienes en mente?"}
-        </h4>
 
-        {/* Formulario de contacto */}
+        {/* Inicio Formulario*/}
 
-        <div className="container mt-10 p-5 mx-auto border-2 border-gray-500 w-1/2 text-white font-semibold text-sm">
-          {success ? (
-            <p className="text-cyan-200 font-semibold text-lg text-center">
-              {language === "en"
-                ? "Thanks for your message! I'll get back to you soon."
-                : "¡Gracias por tu mensaje! Te responderé pronto."}
-            </p>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-12 gap-4">
-                {/* Columna izquierda */}
-                <div className="col-span-12 md:col-span-6 flex flex-col gap-4">
-                  {/* Nombre */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Name:" : "Nombre:"}
-                    <input
-                      type="text"
-                      name="nombre"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      placeholder={
-                        language === "en" ? "your name" : "tu nombre"
-                      }
-                      required
-                    />
-                  </label>
+        <div className="container mt-5 p-5 mx-auto border-b-2 border-gray-500 w-2/3 text-white font-semibold text-sm">
+  {success ? (
+    <p className="text-cyan-200 font-semibold text-lg text-center">
+      {language === "en"
+        ? "Thanks for your message! I'll get back to you soon."
+        : "¡Gracias por tu mensaje! Te responderé pronto."}
+    </p>
+  ) : (
+    <form onSubmit={handleSubmit}>
+      <h4 className="text-cyan-200 flex justify-center text-xl italic mb-2 text-center">
+        {language === "en"
+          ? "What is the project you have in mind about?"
+          : "¿de qué trata el proyecto que tienes en mente?"}
+      </h4>
+      <h5 className="text-gray-300 flex justify-center mb-6 text-center">
+        {language === "en"
+          ? "THE MORE COMPLETE YOU SEND ME THE FORM, THE MORE PRECISION I CAN HAVE IN THE PROPOSAL."
+          : "MIENTRAS MÁS COMPLETO ME ENVÍES EL FORMULARIO, MÁS PRECISIÓN PODRÉ TENER EN LA PROPUESTA."}
+      </h5>
 
-                  {/* Empresa */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Company:" : "Empresa:"}
-                    <input
-                      type="text"
-                      name="empresa"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      placeholder={
-                        language === "en"
-                          ? "name of the company, business or brand"
-                          : "nombre de la empresa, comercio o marca"
-                      }
-                      required
-                    />
-                  </label>
+      {/* Grid principal */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Columna 1: DATOS DE CONTACTO */}
+        <div className="flex flex-col gap-4">
+          <h6 className="text-cyan-400 text-base mb-1 uppercase tracking-widest">DATOS DE CONTACTO</h6>
 
-                  {/* Email */}
-                  <label className="flex flex-col">
-                    Email:
-                    <input
-                      type="email"
-                      name="email"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      placeholder={
-                        language === "en"
-                          ? "mail where to contact you"
-                          : "mail donde contactarte"
-                      }
-                      required
-                    />
-                  </label>
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>{language === "en" ? "Name:" : "Nombre:"}</p>
+            <input type="text" name="nombre" className="border border-gray-500 bg-transparent p-1 mt-1" required />
+          </label>
 
-                  {/* Teléfono */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Phone:" : "Teléfono:"}
-                    <input
-                      type="text"
-                      name="phone"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      placeholder={
-                        language === "en"
-                          ? "country code + characteristic + number"
-                          : "codigo país + característica + número"
-                      }
-                      required
-                    />
-                  </label>
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>Email:</p>
+            <input type="email" name="email" className="border border-gray-500 bg-transparent p-1 mt-1" required />
+          </label>
 
-                  {/* Tamaño empresa */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Name:" : "Tamaño de la Empresa:"}
-                    <select
-                      name="tamañoEmpresa"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      required
-                    >
-                      <option value="1-3" className="bg-black">
-                        {language === "en" ? "1 - 3 people" : "1 - 3 personas"}
-                      </option>
-                      <option value="4-10" className="bg-black">
-                        {language === "en"
-                          ? "4 - 10 people"
-                          : "4 - 10 personas"}
-                      </option>
-                      <option value="+10" className="bg-black">
-                        {language === "en" ? "+ 10 people" : "+ 10 personas"}
-                      </option>
-                    </select>
-                  </label>
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>{language === "en" ? "Phone:" : "Teléfono:"}</p>
+            <input type="text" name="phone" className="border border-gray-500 bg-transparent p-1 mt-1" required />
+          </label>
 
-                  {/* Rubro */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Sector or Area:" : "Rubro o Área:"}
-                    <select
-                      name="sector"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      required
-                    >
-                      <option value="comercio" className="bg-black">
-                        {language === "en"
-                          ? "Retail / Store"
-                          : "Comercio / Tienda"}
-                      </option>
-                      <option value="gastronomia" className="bg-black">
-                        {language === "en" ? "Food & Beverage" : "Gastronomía"}
-                      </option>
-                      <option value="moda" className="bg-black">
-                        {language === "en"
-                          ? "Fashion & Accessories"
-                          : "Moda y accesorios"}
-                      </option>
-                      <option value="salud" className="bg-black">
-                        {language === "en" ? "Healthcare / Wellness" : "Salud"}
-                      </option>
-                      <option value="educacion" className="bg-black">
-                        {language === "en"
-                          ? "Education / Courses"
-                          : "Educación / Cursos"}
-                      </option>
-                      <option value="tecnologia" className="bg-black">
-                        {language === "en"
-                          ? "Technology / Startups"
-                          : "Tecnología / Startups"}
-                      </option>
-                      <option value="servicios" className="bg-black">
-                        {language === "en"
-                          ? "Professional Services"
-                          : "Servicios profesionales"}
-                      </option>
-                      <option value="belleza" className="bg-black">
-                        {language === "en"
-                          ? "Beauty / Aesthetics"
-                          : "Estética / Belleza"}
-                      </option>
-                      <option value="construccion" className="bg-black">
-                        {language === "en"
-                          ? "Construction / Real Estate"
-                          : "Construcción / Inmobiliaria"}
-                      </option>
-                      <option value="arte" className="bg-black">
-                        {language === "en"
-                          ? "Art / Photography / Music"
-                          : "Arte / Fotografía / Música"}
-                      </option>
-                      <option value="turismo" className="bg-black">
-                        {language === "en"
-                          ? "Tourism / Hospitality"
-                          : "Turismo / Hotelería"}
-                      </option>
-                      <option value="eventos" className="bg-black">
-                        {language === "en"
-                          ? "Events / Rentals / Planning"
-                          : "Eventos / Organización / Alquileres"}
-                      </option>
-                      <option value="ONG" className="bg-black">
-                        {language === "en"
-                          ? "Non-profit / NGO"
-                          : "Organización sin fines de lucro"}
-                      </option>
-                      <option value="otro" className="bg-black">
-                        {language === "en" ? "Other" : "Otro"}
-                      </option>
-                    </select>
-                  </label>
-
-                  {/* País */}
-                  <label className="flex flex-col">
-                    {language === "en" ? "Country:" : "País:"}
-                    <input
-                      type="text"
-                      name="pais"
-                      placeholder={
-                        language === "en"
-                          ? "for example: Miami, U.S.A."
-                          : "Por ejemplo: Argentina"
-                      }
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                    />
-                  </label>
-                </div>
-
-                {/* Columna derecha */}
-                <div className="col-span-12 md:col-span-6 flex flex-col gap-4">
-                  {/* web */}
-                  <label className="flex flex-col">
-                    {language === "en"
-                      ? "Already have a website? Share its URL:"
-                      : "¿Ya tienes una página web? Comparte su URL:"}
-                    <input
-                      type="text"
-                      name="url"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                      placeholder={
-                        language === "en"
-                          ? "https://example.com"
-                          : "https://ejemplo.com"
-                      }
-                    />
-                  </label>
-
-                  {/* Objetivo */}
-                  <label className="flex flex-col">
-                    {language === "en"
-                      ? "What is the main objective of the site or project you need?"
-                      : "¿Cuál es el objetivo principal del sitio o proyecto que necesitas?"}
-                    <select
-                      name="objetivo"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                    >
-                      <option value="informarProd-Serv" className="bg-black">
-                        {language === "en"
-                          ? "Inform / Show products or services"
-                          : "Informar / Mostrar productos o servicios"}
-                      </option>
-                      <option value="Vender" className="bg-black">
-                        {language === "en" ? "Sell online" : "Vender online"}
-                      </option>
-                      <option value="GenerarContactos" className="bg-black">
-                        {language === "en"
-                          ? "Generate contacts or queries"
-                          : "Generar contactos o consultas"}
-                      </option>
-                      <option value="portfolio" className="bg-black">
-                        {language === "en"
-                          ? "Show portfolio / Personal brand"
-                          : "Mostrar portfolio / Marca personal"}
-                      </option>
-                      <option value="other" className="bg-black">
-                        {language === "en"
-                          ? "Other purpose"
-                          : "Otro propoósito"}
-                      </option>
-                    </select>
-                  </label>
-
-                  {/* branding */}
-                  <label className="flex flex-col">
-                    {language === "en"
-                      ? "Do you have a defined branding or visual identity?"
-                      : "¿Cuentas con Branding o Identidad visual definida?"}
-                    <select
-                      name="TieneBrand"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                    >
-                      <option value="si" className="bg-black">
-                        {language === "en"
-                          ? "Yes, I have everything defined"
-                          : "Sí, tengo todo definido"}
-                      </option>
-                      <option value="soloLogo" className="bg-black">
-                        {language === "en"
-                          ? "I have a logo but not a complete visual identity"
-                          : "Tengo logo pero no identidad visual completa"}
-                      </option>
-                      <option value="no" className="bg-black">
-                        {language === "en"
-                          ? "No, I need help with that."
-                          : "No, necesito ayuda con eso"}
-                      </option>
-                    </select>
-                  </label>
-
-                  {/* tiempos */}
-                  <label className="flex flex-col">
-                    {language === "en"
-                      ? "When do you need to have the site, store or project ready?"
-                      : "¿Para cuándo necesitas tener listo el sitio, tienda o proyecto?"}
-                    <select
-                      name="tiermpoTrabajo"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                    >
-                      <option value="soon" className="bg-black">
-                        {language === "en"
-                          ? "As soon as possible"
-                          : "Lo antes posible"}
-                      </option>
-                      <option value="1month" className="bg-black">
-                        {language === "en" ? "1 month" : "1 mes"}
-                      </option>
-                      <option value="2-3months" className="bg-black">
-                        {language === "en" ? "2-3 months" : "2-3 meses"}
-                      </option>
-                      <option value="sinApuro" className="bg-black">
-                        {language === "en"
-                          ? "No rush / Under evaluation"
-                          : "Sin apuro / En evaluación"}
-                      </option>
-                    </select>
-                  </label>
-
-                  {/* precio */}
-                  <label className="flex flex-col">
-                    {language === "en"
-                      ? "What investment range do you have in mind?"
-                      : "¿Cuál es el rango de inversión que tienes en mente?"}
-                    <select
-                      name="price"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1"
-                    >
-                      <option value="USD300" className="bg-black">
-                        {" "}
-                        USD 300
-                      </option>
-                      <option value="USD300-1000" className="bg-black">
-                        USD 300 / 1000
-                      </option>
-                      <option value="+USD1000" className="bg-black">
-                        + USD 1000
-                      </option>
-                      <option value="NoSabe" className="bg-black">
-                        {language === "en"
-                          ? "I'm not sure, I'm hoping for a recommendation."
-                          : "No estoy seguro, espero recomendación"}
-                      </option>
-                    </select>
-                  </label>
-
-                  {/*Mensaje */}
-                  <label className="flex flex-col h-full">
-                    {language === "en" ? "Message:" : "Mensaje:"}
-                    <textarea
-                      name="message"
-                      className="border-2 border-gray-500 bg-transparent p-1 mt-1 h-28 resize-none"
-                      placeholder={
-                        language === "en"
-                          ? "Please expand here with any information that will help me interpret your idea, so I can advise you as you deserve."
-                          : "Amplía aquí con cualquier información que me ayude a interpretar tu idea, y poder asesorarte como te mereces."
-                      }
-                      required
-                    />
-                  </label>
-
-                  <button
-                    type="submit"
-                    className="bg-white text-black font-bold py-2 px-4 mt-2 self-start"
-                  >
-                    {language === "en" ? "Send" : "Enviar"}
-                  </button>
-                </div>
-              </div>
-            </form>
-          )}
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Country:" : "País:"}</p>
+            <input type="text" name="pais" className="border border-gray-500 bg-transparent p-1 mt-1" />
+          </label>
         </div>
 
-        {/* Fin formulario */}
+        {/* Columna 2: DATOS DE LA EMPRESA */}
+        <div className="flex flex-col gap-4">
+          <h6 className="text-cyan-400 text-base mb-1 uppercase tracking-widest">DATOS DE LA EMPRESA</h6>
+
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>{language === "en" ? "Company:" : "Empresa:"}</p>
+            <input type="text" name="empresa" className="border border-gray-500 bg-transparent p-1 mt-1" required />
+          </label>
+
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>{language === "en" ? "Company Size:" : "Tamaño de la empresa:"}</p>
+            <select name="tamañoEmpresa" className="border border-gray-500 bg-transparent p-1 mt-1" required>
+              <option value="">Seleccioná una opción</option>
+              <option value="freelance">Freelance / Individual</option>
+              <option value="pequeña">Pequeña (1 a 10 personas)</option>
+              <option value="mediana">Mediana (10 a 50 personas)</option>
+              <option value="grande">Grande (más de 50 personas)</option>
+            </select>
+          </label>
+
+          <label className="flex flex-col">
+            <p><span className="text-cyan-500 mr-2">*</span>{language === "en" ? "Sector:" : "Rubro:"}</p>
+            <select name="sector" className="border border-gray-500 bg-transparent p-1 mt-1" required>
+              <option value="">Seleccioná un rubro</option>
+              <option value="servicios">Servicios</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="salud">Salud</option>
+              <option value="educacion">Educación</option>
+              <option value="arte">Arte y Cultura</option>
+              <option value="otro">Otro</option>
+            </select>
+          </label>
+
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Website URL:" : "URL de tu web:"}</p>
+            <input type="text" name="url" className="border border-gray-500 bg-transparent p-1 mt-1" />
+          </label>
+
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Do you have branding?" : "¿Tenés identidad visual definida?"}</p>
+            <select name="TieneBrand" className="border border-gray-500 bg-transparent p-1 mt-1">
+              <option value="">Seleccioná una opción</option>
+              <option value="si">Sí, ya tenemos branding</option>
+              <option value="en-proceso">Estamos trabajando en eso</option>
+              <option value="no">No, aún no tenemos</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Columna 3: DATOS PARA EL PROYECTO */}
+        <div className="flex flex-col gap-4">
+          <h6 className="text-cyan-400 text-base mb-1 uppercase tracking-widest">DATOS PARA EL PROYECTO</h6>
+
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Main goal:" : "Objetivo principal del proyecto:"}</p>
+            <select name="objetivo" className="border border-gray-500 bg-transparent p-1 mt-1">
+              <option value="">Seleccioná un objetivo</option>
+              <option value="web">Tener un sitio web institucional</option>
+              <option value="vender">Vender productos o servicios online</option>
+              <option value="marca">Mejorar imagen de marca</option>
+              <option value="automatizar">Automatizar procesos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </label>
+
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Estimated timeline:" : "Tiempo estimado para el proyecto:"}</p>
+            <select name="tiempoTrabajo" className="border border-gray-500 bg-transparent p-1 mt-1">
+              <option value="">Seleccioná una opción</option>
+              <option value="urgente">Lo antes posible</option>
+              <option value="1mes">Dentro de 1 mes</option>
+              <option value="3meses">Entre 1 y 3 meses</option>
+              <option value="mas3meses">Más de 3 meses</option>
+            </select>
+          </label>
+
+          <label className="flex flex-col">
+            <p>{language === "en" ? "Estimated budget:" : "Rango de inversión estimado:"}</p>
+            <select name="price" className="border border-gray-500 bg-transparent p-1 mt-1">
+              <option value="">Seleccioná una opción</option>
+              <option value="menos1000">Menos de USD 1000</option>
+              <option value="1000-3000">USD 1000 a 3000</option>
+              <option value="3000-5000">USD 3000 a 5000</option>
+              <option value="5000+">Más de USD 5000</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      {/* Mensaje y Enviar */}
+      <div className="mt-8 flex flex-col">
+        <label className="flex flex-col">
+          <p>
+            <span className="text-cyan-500 mr-2">*</span>
+            {language === "en" ? "Message:" : "Mensaje:"}
+          </p>
+          <textarea
+            name="message"
+            className="border border-gray-500 bg-transparent p-2 mt-1 h-28 resize-none"
+            placeholder={
+              language === "en"
+                ? "Tell me more about your idea so I can guide you better."
+                : "Contame más sobre tu idea para poder guiarte mejor."
+            }
+            required
+          />
+        </label>
+
+        <button
+          type="submit"
+          className="bg-white text-black font-bold py-2 px-4 mt-4 mx-auto"
+        >
+          {language === "en" ? "Send" : "Enviar"}
+        </button>
+      </div>
+    </form>
+  )}
+</div>
+
+        {/* Fin Formulario*/}
 
         <div className="container lg:pt-6 lg:pb-1  mt-0 justify-center ">
           <div className="grid grid-cols-12">

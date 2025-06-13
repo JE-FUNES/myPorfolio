@@ -158,58 +158,57 @@ const Init = () => {
                       </div>
 
                       <div className="flex flex-col items-start text-left w-full">
-  <div className="flex items-start gap-x-4">
-    <Lucide
-      icon="Pencil"
-      className="text-amber-500 w-10 h-10 font-bold"
-    />
-    <p className="text-base text-slate-100 md:text-lg mt-2">
-      <span className="font-semibold md:text-xl">
-        {language === "en"
-          ? "Strategic web design: "
-          : "Diseño web estratégico: "}
-      </span>
-      {language === "en"
-        ? "Creating attractive, intuitive and conversion-optimized interfaces. UX/UI design focused on user experience."
-        : "Creación de interfaces atractivas, intuitivas y optimizadas. Diseño UX/UI centrado en la experiencia del usuario."}
-    </p>
-  </div>
+                        <div className="flex items-start gap-x-4">
+                          <Lucide
+                            icon="Pencil"
+                            className="text-amber-500 w-10 h-10 font-bold"
+                          />
+                          <p className="text-base text-slate-100 md:text-lg mt-2">
+                            <span className="font-semibold md:text-xl">
+                              {language === "en"
+                                ? "Strategic web design: "
+                                : "Diseño web estratégico: "}
+                            </span>
+                            {language === "en"
+                              ? "Creating attractive, intuitive and conversion-optimized interfaces. UX/UI design focused on user experience."
+                              : "Creación de interfaces atractivas, intuitivas y optimizadas. Diseño UX/UI centrado en la experiencia del usuario."}
+                          </p>
+                        </div>
 
-  <div className="flex items-start gap-x-4 mt-3">
-    <Lucide
-      icon="Globe"
-      className="text-amber-500 w-14 h-14 font-bold"
-    />
-    <p className="text-base text-slate-100 md:text-lg mt-2">
-      <span className="font-semibold md:text-xl">
-        {language === "en"
-          ? "Professional web development: "
-          : "Desarrollo web profesional: "}
-      </span>
-      {language === "en"
-        ? "Dynamic, scalable and responsive websites, optimized for SEO and high performance. Implementation of modern technologies to ensure accessibility and compatibility on all devices."
-        : "Páginas web dinámicas, escalables y responsivas, optimizadas para SEO y alto rendimiento. Implementación de tecnologías modernas para garantizar accesibilidad y compatibilidad en todos los dispositivos."}
-    </p>
-  </div>
+                        <div className="flex items-start gap-x-4 mt-3">
+                          <Lucide
+                            icon="Globe"
+                            className="text-amber-500 w-14 h-14 font-bold"
+                          />
+                          <p className="text-base text-slate-100 md:text-lg mt-2">
+                            <span className="font-semibold md:text-xl">
+                              {language === "en"
+                                ? "Professional web development: "
+                                : "Desarrollo web profesional: "}
+                            </span>
+                            {language === "en"
+                              ? "Dynamic, scalable and responsive websites, optimized for SEO and high performance. Implementation of modern technologies to ensure accessibility and compatibility on all devices."
+                              : "Páginas web dinámicas, escalables y responsivas, optimizadas para SEO y alto rendimiento. Implementación de tecnologías modernas para garantizar accesibilidad y compatibilidad en todos los dispositivos."}
+                          </p>
+                        </div>
 
-  <div className="flex items-start gap-x-4 mt-3">
-    <Lucide
-      icon="Brush"
-      className="text-amber-500 w-8 h-8 font-bold"
-    />
-    <p className="text-base text-slate-100 md:text-lg mt-2">
-      <span className="font-semibold md:text-xl">
-        {language === "en"
-          ? "Professional graphic design: "
-          : "Diseño gráfico profesional: "}
-      </span>
-      {language === "en"
-        ? "Extensive experience. Extensive catalog of images, logos, and icons of his own creation."
-        : "Gran experiencia. Amplio catálogo de imágenes, logos e iconos, de creación propia."}
-    </p>
-  </div>
-</div>
-
+                        <div className="flex items-start gap-x-4 mt-3">
+                          <Lucide
+                            icon="Brush"
+                            className="text-amber-500 w-8 h-8 font-bold"
+                          />
+                          <p className="text-base text-slate-100 md:text-lg mt-2">
+                            <span className="font-semibold md:text-xl">
+                              {language === "en"
+                                ? "Professional graphic design: "
+                                : "Diseño gráfico profesional: "}
+                            </span>
+                            {language === "en"
+                              ? "Extensive experience. Extensive catalog of images, logos, and icons of his own creation."
+                              : "Gran experiencia. Amplio catálogo de imágenes, logos e iconos, de creación propia."}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -273,97 +272,112 @@ const Init = () => {
 
                       {/* Segunda Columna - Botones */}
                       <div className="flex flex-col items-start space-y-4 mt-5 mb-5 lg:-ml-5 pr-5">
-  <p className="font-semibold text-slate-900 md:text-lg lg:mb-2 md:ml-5 lg:ml-10 xl:ml-16">
-    {language === "en"
-      ? "Choose according to your needs:"
-      : "Elige según tus necesidades:"}
-  </p>
+                        <p className="font-semibold text-slate-900 md:text-lg lg:mb-2 md:ml-5 lg:ml-10 xl:ml-16">
+                          {language === "en"
+                            ? "Choose according to your needs:"
+                            : "Elige según tus necesidades:"}
+                        </p>
 
-  {/* Botón AGENCIAS DE MARKETING */}
-  <div className="flex justify-center w-full">
-    <button
-      className="animate-pulse-delay-3s w-full lg:w-6/7 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-red-900 hover:bg-black hover:text-red-500 shadow-lg shadow-black font-semibold"
-      onClick={handleAgencies}
-    >
-      <div className="flex items-center justify-center gap-x-4">
-        <Lucide
-          icon="Chrome"
-          className="text-white/50 w-8 h-8 lg:w-14 lg:h-14 font-bold mr-4"
-        />
-        {language === "en" ? "MARKETING AGENCIES" : "AGENCIAS DE MARKETING"}
-      </div>
-    </button>
-  </div>
-  <p className="text-slate-900 md:text-sm text-center lg:px-12  lg:ml-6">
-    {language === "en"
-      ? "Web solutions designed to satisfy your customers."
-      : "Soluciones pensadas para satisfacer a tus clientes."}
-  </p>
+                        {/* Botón AGENCIAS DE MARKETING */}
+                        <div className="flex justify-center w-full">
+                          <button
+                            className="animate-pulse-delay-3s w-full lg:w-5/6 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-red-900 hover:bg-black hover:text-red-500 shadow-lg shadow-black font-semibold"
+                            onClick={handleAgencies}
+                          >
+                            <div className="flex items-center justify-center gap-x-4">
+                              {language === "en"
+                                ? "MARKETING AGENCIES"
+                                : "AGENCIAS DE MARKETING"}
+                            </div>
+                          </button>
+                        </div>
+                        <div className="flex flex-nowrap lg:w-5/6 ml-4">
+                          <Lucide
+                            icon="Chrome"
+                            className="text-black/50 w-6 h-6 font-bold mr-2"
+                          />
+                          <p className="text-slate-900 md:text-sm text-left ">
+                            {language === "en"
+                              ? "Web solutions designed to satisfy your customers."
+                              : "Soluciones pensadas para satisfacer a tus clientes."}
+                          </p>
+                        </div>
 
-  {/* Botón EMPRESAS & COMERCIOS */}
-  <div className="flex justify-center w-full">
-    <button
-      className="animate-pulse-delay-3s w-full lg:w-6/7 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-cyan-900 hover:bg-black hover:text-cyan-500 shadow-lg shadow-black font-semibold"
-      onClick={handleFreelance}
-    >
-      <div className="flex items-center justify-center gap-x-4">
-        <Lucide
-          icon="User"
-          className="text-white/50 w-8 h-8 lg:w-14 lg:h-14 font-bold mr-5"
-        />
-        {language === "en" ? "COMPANIES & BUSINESSES" : "EMPRESAS & COMERCIOS"}
-      </div>
-    </button>
-  </div>
-  <p className="text-slate-900 md:text-sm text-center lg:px-12  lg:ml-6">
-    {language === "en"
-      ? "Custom web design for your brand."
-      : "Diseño web personalizado para tu marca."}
-  </p>
+                        {/* Botón EMPRESAS & COMERCIOS */}
+                        <div className="flex justify-center w-full">
+                          <button
+                            className="animate-pulse-delay-3s w-full lg:w-5/6 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-cyan-900 hover:bg-black hover:text-cyan-500 shadow-lg shadow-black font-semibold"
+                            onClick={handleFreelance}
+                          >
+                            <div className="flex items-center justify-center gap-x-4">
+                              {language === "en"
+                                ? "COMPANIES & BUSINESSES"
+                                : "EMPRESAS & COMERCIOS"}
+                            </div>
+                          </button>
+                        </div>
+                        <div className="flex flex-nowrap lg:w-5/6 ml-4">
+                          <Lucide
+                            icon="User"
+                            className="text-black/50 w-6 h-6 font-bold mr-2"
+                          />
+                          <p className="text-slate-900 md:text-sm text-left">
+                            {language === "en"
+                              ? "Custom web design for your brand."
+                              : "Diseño web personalizado para tu marca."}
+                          </p>
+                        </div>
 
-  {/* Botón RECLUTADORES IT */}
-  <div className="flex justify-center w-full">
-    <button
-      className="animate-pulse-delay-3s w-full lg:w-6/7 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-semibold"
-      onClick={handleRecruiters}
-    >
-      <div className="flex items-center justify-center gap-x-4">
-        <Lucide
-          icon="Search"
-          className="text-white/50 w-8 h-8 lg:w-12 lg:h-12 font-bold mr-8"
-        />
-        {language === "en" ? "IT RECRUITERS" : "RECLUTADORES IT"}
-      </div>
-    </button>
-  </div>
-  <p className="text-slate-900 md:text-sm text-center lg:px-12  lg:ml-6">
-    {language === "en"
-      ? "Front-end Developer ready to join your team."
-      : "Desarrollador Frontend disponible para tu equipo."}
-  </p>
+                        {/* Botón RECLUTADORES IT */}
+                        <div className="flex justify-center w-full">
+                          <button
+                            className="animate-pulse-delay-3s w-full lg:w-5/6 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-fuchsia-900 hover:bg-black hover:text-fuchsia-500 shadow-lg shadow-black font-semibold"
+                            onClick={handleRecruiters}
+                          >
+                            <div className="flex items-center justify-center gap-x-4">
+                              {language === "en"
+                                ? "IT RECRUITERS"
+                                : "RECLUTADORES IT"}
+                            </div>
+                          </button>
+                        </div>
+                        <div className="flex flex-nowrap lg:w-5/6 ml-4">
+                          <Lucide
+                            icon="Search"
+                            className="text-black/50 w-6 h-6 font-bold mr-2"
+                          />
+                          <p className="text-slate-900 md:text-sm text-left">
+                            {language === "en"
+                              ? "Front-end Developer ready to join your team."
+                              : "Desarrollador Frontend disponible para tu equipo."}
+                          </p>
+                        </div>
 
-  {/* Botón PORTFOLIO GRÁFICO */}
-  <div className="flex justify-center w-full">
-    <button
-      className="animate-pulse-delay-3s w-full lg:w-6/7 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-amber-600 hover:bg-black hover:text-amber-300 shadow-lg shadow-black font-semibold"
-      onClick={handleGraphics}
-    >
-      <div className="flex items-center justify-center gap-x-4">
-        <Lucide
-          icon="Brush"
-          className="text-white/50 w-8 h-8 lg:w-10 lg:h-10 font-bold mr-4"
-        />
-        {language === "en" ? "GRAPHIC PORTFOLIO" : "PORTFOLIO GRÁFICO"}
-      </div>
-    </button>
-  </div>
-  <p className="text-slate-900 md:text-sm text-center lg:px-12 lg:ml-6">
-    {language === "en"
-      ? "Graphic designs by me."
-      : "Diseños gráficos disponibles de creación propia."}
-  </p>
-</div>
-
+                        {/* Botón PORTFOLIO GRÁFICO */}
+                        <div className="flex justify-center w-full">
+                          <button
+                            className="animate-pulse-delay-3s w-full lg:w-5/6 p-4 lg:p-5 uppercase tracking-wider text-white text-sm lg:text-lg rounded-[10px] lg:rounded-[20px] bg-amber-600 hover:bg-black hover:text-amber-300 shadow-lg shadow-black font-semibold"
+                            onClick={handleGraphics}
+                          >
+                            <div className="flex items-center justify-center gap-x-4">
+                              {language === "en"
+                                ? "GRAPHIC PORTFOLIO"
+                                : "PORTFOLIO GRÁFICO"}
+                            </div>
+                          </button>
+                        </div>
+                        <div className="flex flex-nowrap lg:w-5/6 ml-4">
+                          <Lucide
+                            icon="Brush"
+                            className="text-black/50 w-6 h-6 font-bold mr-2"
+                          />
+                          <p className="text-slate-900 md:text-sm text-left">
+                            {language === "en"
+                              ? "Graphic designs by me."
+                              : "Diseños gráficos disponibles de creación propia."}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
