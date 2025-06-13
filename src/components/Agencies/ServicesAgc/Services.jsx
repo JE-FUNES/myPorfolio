@@ -16,7 +16,6 @@ const Services = () => {
     setSelectedService(null);
   };
 
-
   useEffect(() => {
     const section = document.getElementById("Services");
     if (!section) return;
@@ -122,7 +121,11 @@ const Services = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: isDesktop ? 3 : 1, duration: 1, ease: "easeOut" }}
+                transition={{
+                  delay: isDesktop ? 3 : 1,
+                  duration: 1,
+                  ease: "easeOut",
+                }}
               >
                 <Lucide
                   icon="Target"
@@ -144,7 +147,11 @@ const Services = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: isDesktop ? 4 : 2, duration: 1, ease: "easeOut" }}
+                transition={{
+                  delay: isDesktop ? 4 : 2,
+                  duration: 1,
+                  ease: "easeOut",
+                }}
               >
                 <Lucide
                   icon="Target"
@@ -154,16 +161,14 @@ const Services = () => {
                   {language === "en"
                     ? "Let code be a "
                     : "Que el código sea una "}
-                    <span className="font-semibold sm:text-xl lg:text-4xl italic">
+                  <span className="font-semibold sm:text-xl lg:text-4xl italic">
+                    {language === "en" ? "solution" : "solución"}
+                  </span>
+                  <span>
                     {language === "en"
-                    ? "solution"
-                    : "solución"}
-                    </span>
-                    <span>
-                    {language === "en"
-                    ? ", not an obstacle."
-                    : ", no un obstáculo."}
-                    </span>
+                      ? ", not an obstacle."
+                      : ", no un obstáculo."}
+                  </span>
                 </h2>
               </motion.div>
 
@@ -173,7 +178,11 @@ const Services = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: isDesktop ? 6 : 3, duration: 1, ease: "easeOut" }}
+                transition={{
+                  delay: isDesktop ? 6 : 3,
+                  duration: 1,
+                  ease: "easeOut",
+                }}
               >
                 <h1 className="text-white/70 sm:text-2xl lg:text-5xl font-semibold">
                   {language === "en"
@@ -222,31 +231,25 @@ const Services = () => {
                         <h5 className="mb-3 font-semibold lg:text-2xl md:text-xl text-lg">
                           {service.Heding}
                         </h5>
-                        <p className="text-black text-lg sm:leading-none lg:leading-1">{service.Detail}
+                        <p className="text-black text-lg sm:leading-none lg:leading-1">
+                          {service.Detail}
                         </p>
-                        
                       </div>
-                      <Lucide icon="MoreHorizontal" 
-                              title={language === "en"
-                              ? "see more"
-                              : "ver más"} 
-                              className="top-0 right-0 p-1 border-2 border-slate-500 ronded-full text-black m-1 w-6 h-6" />
+                      <Lucide
+                        icon="MoreHorizontal"
+                        title={language === "en" ? "see more" : "ver más"}
+                        className="top-0 right-0 p-1 border-2 border-slate-500 ronded-full text-black m-1 w-6 h-6"
+                      />
                     </div>
                   </motion.div>
                 )
               )}
             </div>
           </div>
-          {/* Contenedor de los enlaces */}
 
-          <motion.div
-            id="segundo12"
-            className="sm:-top-8 lg:-top-0 lg:-mt-16 flex justify-end space-x-2 z-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: isDesktop ? 3 : 1, duration: 1, ease: "easeOut" }}
-          >
+        </div>
+          {/* Contenedor de los enlaces */}
+          <div className="relative  bottom-0 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
             <a href="#Portfolio">
               <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
                 <Lucide icon="ArrowDown" className="mr-2" />
@@ -258,8 +261,7 @@ const Services = () => {
                 <Lucide icon="ArrowUp" />
               </div>
             </a>
-          </motion.div>
-        </div>
+          </div>
       </section>
       {/*----- End Services -----*/}
       {selectedService && (

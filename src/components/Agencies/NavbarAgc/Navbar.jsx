@@ -31,24 +31,21 @@ const Navbar = () => {
     <>
       <React.Fragment>
         {/*----- Start Navbar -----*/}
-        <footer className="bg-black border-t border-white border-opacity-10 sm:pb-1 lg:py-2 sm:h-content w-full fixed bottom-0 z-10">
-          <nav className="">
-            <div className="container sm:py-2 sm:ml-0 lg:py-1">
+        <footer>
+          <nav className="fixed bottom-0 min-w-full z-40 bg-black">
+            <div className="container py-2 xl:py-3 px-4">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
                   <div className="z-50 relative">
                     <a href={"https://www.jefa-web.com.ar/"}>
-                      <div className="flex flex-col items-center">
-                        <img
-                          src= {isLargeScreen
-                          ? logo : logo2
-                          }  
+                      <div className="flex flex-col items-start justify-start">
+                      <img
+                          src={logo}
                           alt="Web Developer"
                           title="Web Developer"
-                          className="lg:px-2 sm:max-w-[50px] lg:max-w-[120px] xl:ml-5 xl:max-w-[170px]"
+                          className="lg:pl-2 sm:max-w-[120px] lg:max-w-[150px] xl:max-w-[180px]"
                         />
-                        
                       </div>
                     </a>
                   </div>
@@ -63,25 +60,22 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
-                    <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
-                    <a href={"https://www.jefa-web.com.ar/"}>
-                      <li key="section">
-                      <p className="text-red-500/80 p-2 text-sm mr-2 border-2 border-red-500/50 bg-slate-800 rounded-full">
+                        <p className="text-white/70 lg:pl-2 pt-1 -mb-2 text-xs">
                           {language === "en"
-                            ? 'You are in "Mkt Agencies"'
-                            : 'Estás en "Agencias de Mkt"'}
+                            ? 'You are in "MKT Agencies"'
+                            : 'Estás en "Agencias MKT"'}
                             <span title=
                             {language === "en"
                               ? 'go to Presentation'
                               : 'Ir a la Presentación'}
-                            className="bg-red-500/50 text-slate-100 rounded-full ml-1 px-2 hover:bg-red-900">
+                            className="bg-purple-900/50 text-white rounded-full ml-1 px-2 hover:bg-purple-900">
                             {language === "en"
                             ? 'Choose again'
-                            : 'Elegir otro'}
+                            : 'Volver a elegir'}
                             </span>
                         </p>
-                      </li>
-                      </a>
+                    <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
+                    
                       {language === "en"
                         ? NavbarData.map((e, key) => (
                             <li key={key}>
@@ -107,7 +101,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                           ))}
-                      <div className="lg:pl-10 xl:pl-3 lg:mr-4 xl:mr-2">
+                      <div className="lg:pl-6 xl:pl-3 lg:mr-4">
                         <a
                           href={"https://wa.me/+5493512737199"}
                           target="blank"
@@ -117,7 +111,7 @@ const Navbar = () => {
                           <FaWhatsapp className="inline-block w-6 h-6 px-0 my-1" />
                         </a>
                       </div>
-                      <div className="lg:pl-4 xl:px-2">
+                      <div className="lg:pl-2 xl:px-2">
                         <LanguagesSwitcher />
                       </div>
                     </ul>
@@ -130,7 +124,7 @@ const Navbar = () => {
                   <LanguagesSwitcher 
                   />
                 </div>
-                <div className="py-5 ml-2">
+                <div className="pt-5 ml-5">
                   <ul>
                     {language === "en"
                       ? NavbarData.map((e, key) => (

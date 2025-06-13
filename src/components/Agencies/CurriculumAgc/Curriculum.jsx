@@ -32,7 +32,7 @@ const Curriculum = () => {
                 frameBorder="0"
               />
               {/* Botones debajo alineados a la derecha */}
-              <div className="flex justify-end space-x-2 mt-4">
+              <div className="relative  bottom-0 sm:py-6 md:py-10 lg:py-16 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
                 <a href="#Contact">
                   <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
                     

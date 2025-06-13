@@ -46,16 +46,16 @@ const Contact = () => {
           
 
           {/* 🔹 Contenido (encima del fondo y la capa oscura) */}
-          <div className="flex container z-10 sm:pt-20 lg:pt-24 lg:pb-24 mt-1 justify-center">
+          <div className="flex container z-10 sm:pt-20 mdl:pt-12 lg:pt-24 lg:pb-24 mt-1 justify-center">
             <motion.div
-              className="flex justify-center items-center sm:-mt-16 bg-slate-900/70 p-5 lg:p-10 lg:max-w-[50%] border-white border-2"
+              className="flex justify-center items-center sm:-mt-16 smd:mt-0 bg-slate-900/70 p-5 lg:p-10 lg:max-w-[50%] border-white border-2"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 2, ease: "easeOut" }}
             >
-              <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[50px] lg:pt-0">
-                <div id="seccionTitulo" className="w-full z-40 mb-10">
+              <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[5px] lg:pt-0">
+                <div id="seccionTitulo" className="w-full z-40 sm:mb-5 smd:mb-10">
                   <h3 className="text-red-500 flex justify-center">
                     {language === "en" ? "CONTACT ME" : "CONTACTAME"}
                   </h3>

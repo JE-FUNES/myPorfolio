@@ -15,11 +15,14 @@ const About = () => {
     <React.Fragment>
       {/*----- Start About -----*/}
       <section
-        className="w-screen bg-slate-500 bg-bg-about bg-no-repeat bg-cover bg-blend-multiply sm:pt-2 lg:pt-10"
+        className="w-screen bg-slate-500 bg-bg-about bg-no-repeat bg-cover bg-blend-multiply pt-2"
         id="About"
       >
-        <div className="container sm:py-8 lg:py-20 min-h-screen">
-          <div className="grid lg:grid-cols-12 grid-cols-1 items-center bg-slate-200 sm:p-4 lg:p-5 sm:mt-28 lg:-mt-10">
+        <div className="container h-full min-h-screen">
+          <div
+            id="contenedor"
+            className="grid lg:grid-cols-12 grid-cols-1 items-center bg-slate-200 sm:p-4 lg:p-5 mt-5"
+          >
             <div
               className="lg:col-span-6  w-full h-full text-center mb-12 lg:mb-0 bg-white bg-no-repeat bg-cover bg-center transition-all duration-300"
               style={{ backgroundImage: `url(${imageColor})`, height: "100%" }}
@@ -52,7 +55,6 @@ const About = () => {
                   ? "Frontend Web Developer"
                   : "Desarrolladora Web Frontend"}
               </h3>
-              
 
               <br />
               <p className="text-base md:text-md">
@@ -71,70 +73,60 @@ const About = () => {
                 <br />
                 <br />
                 <span>
-                {language === "en" 
-                ? "🚀 I specialize in creating " 
-                : "🚀 Soy especialista en crear "}
+                  {language === "en"
+                    ? "🚀 I specialize in creating "
+                    : "🚀 Soy especialista en crear "}
                 </span>
                 <span className="font-semibold">
-                {language === "en" 
-                ? "engaging, innovative, and highly functional digital experiences." 
-                : "experiencias digitales atractivas, innovadoras y altamente funcionales."}
+                  {language === "en"
+                    ? "engaging, innovative, and highly functional digital experiences."
+                    : "experiencias digitales atractivas, innovadoras y altamente funcionales."}
+                </span>
+                <br />
+                <br />
+                <span>{language === "en" ? "🎨 From " : "🎨 Desde el "}</span>
+                <span className="font-semibold">
+                  {language === "en"
+                    ? "brand manual design"
+                    : "diseño del manual de marca"}
+                </span>
+                <span>{language === "en" ? " to " : " hasta el "}</span>
+                <span className="font-semibold">
+                  {language === "en"
+                    ? " developing highly converting landing pages and complex websites"
+                    : "desarrollo de landing pages que convierten y sitios web complejos"}
+                </span>
+                <span>
+                  {language === "en" ? ", I integrate " : ", integro "}
+                </span>
+                <span className="font-semibold">
+                  {language === "en"
+                    ? "creativity and strategy"
+                    : "creatividad y estrategia"}
+                </span>
+                <span>
+                  {language === "en"
+                    ? " to elevate each project."
+                    : " para potenciar cada proyecto."}
                 </span>
                 <br />
                 <br />
                 <span>
-                {language === "en" 
-                ? "🎨 From " 
-                : "🎨 Desde el "}
+                  {language === "en"
+                    ? "🥇 With a solid understanding of "
+                    : "🥇 Con sólidos conocimientos en "}
                 </span>
                 <span className="font-semibold">
-                {language === "en" 
-                ? "brand manual design" 
-                : "diseño del manual de marca"}
+                  {language === "en"
+                    ? "UX/UI, SEO, and digital marketing"
+                    : "UX/UI, SEO y marketing digital"}
                 </span>
                 <span>
-                {language === "en" 
-                ? " to " 
-                : " hasta el "}
+                  {language === "en"
+                    ? ", I can add value at every stage, ensuring impactful results aligned with your clients' goals."
+                    : ", puedo aportar valor en cada etapa, asegurando resultados impactantes y alineados con los objetivos de tus clientes."}
                 </span>
-                <span className="font-semibold">
-                {language === "en" 
-                ? " developing highly converting landing pages and complex websites" 
-                : "desarrollo de landing pages que convierten y sitios web complejos"}
-                </span>
-                <span>
-                {language === "en" 
-                ? ", I integrate " 
-                : ", integro "}
-                </span>
-                <span className="font-semibold">
-                {language === "en" 
-                ? "creativity and strategy" 
-                : "creatividad y estrategia"}
-                </span>
-                <span>
-                {language === "en" 
-                ? " to elevate each project." 
-                : " para potenciar cada proyecto."}
-                </span>
-                <br />
-                <br />
-                <span>
-                {language === "en" 
-                ? "🥇 With a solid understanding of " 
-                : "🥇 Con sólidos conocimientos en "}
-                </span>
-                <span className="font-semibold">
-                {language === "en" 
-                ? "UX/UI, SEO, and digital marketing" 
-                : "UX/UI, SEO y marketing digital"}
-                </span>
-                <span>
-                {language === "en" 
-                ? ", I can add value at every stage, ensuring impactful results aligned with your clients' goals." 
-                : ", puedo aportar valor en cada etapa, asegurando resultados impactantes y alineados con los objetivos de tus clientes."}
-                </span>
-                
+
                 <br />
                 <br />
                 {language === "en"
@@ -148,29 +140,29 @@ const About = () => {
                 <br />
                 <br />
                 <p className="text-base md:text-2xl text-center">
-                <TypeAnimation
-                  key={language}
-                  className="text-red-800"
-                  sequence={
-                    language === "en"
-                      ? [
-                          "I don't just develop websites,",
-                          1000,
-                          "I create digital experiences!",
-                          5000,
-                        ]
-                      : [
-                          "No solo desarrollo sitios web, ",
-                          1000,
-                          "¡Creo experiencias digitales!",
-                          5000,
-                        ]
-                  }
-                  speed={10}
-                  repeat={Infinity}
-                />
-              </p>
-              
+                  <TypeAnimation
+                    key={language}
+                    className="text-red-800"
+                    sequence={
+                      language === "en"
+                        ? [
+                            "I don't just develop websites,",
+                            1000,
+                            "I create digital experiences!",
+                            5000,
+                          ]
+                        : [
+                            "No solo desarrollo sitios web, ",
+                            1000,
+                            "¡Creo experiencias digitales!",
+                            5000,
+                          ]
+                    }
+                    speed={10}
+                    repeat={Infinity}
+                  />
+                </p>
+
                 {language === "en"
                   ? "As of today..."
                   : "Al día de hoy, llevo..."}
@@ -179,12 +171,15 @@ const About = () => {
                 {language === "en"
                   ? NumberData.map((e, key) => {
                       return (
-                        <div className="col-span-1 sm:col-span-1 border-2 border-white p-2" key={key}>
+                        <div
+                          className="col-span-1 sm:col-span-1 border-2 border-white p-2"
+                          key={key}
+                        >
                           <h5
                             className="text-[26px] text-red-600 font-semibold ml-2"
                             title={e.Title}
                           >
-                           {e.Number}
+                            {e.Number}
                           </h5>
                           <span className="text-white"> {e.Detail}</span>
                         </div>
@@ -192,7 +187,10 @@ const About = () => {
                     })
                   : EspNumberData.map((e, key) => {
                       return (
-                        <div className="col-span-1 sm:col-span-1 border-2 border-white p-2" key={key}>
+                        <div
+                          className="col-span-1 sm:col-span-1 border-2 border-white p-2"
+                          key={key}
+                        >
                           <h5
                             className="text-[26px] text-red-600 font-semibold ml-2"
                             title={e.Title}
@@ -206,19 +204,19 @@ const About = () => {
               </div>
             </motion.div>
           </div>
-          <div className="pt-5 flex justify-end items-center">
-            <a href="#Curriculum">
-              <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
-                <Lucide icon="ArrowDown" className="mr-2" />
-                {language === "en" ? "Go on" : "Sigamos"}
-              </div>
-            </a>
-            <a href="#Portfolio">
-              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-                <Lucide icon="ArrowUp" />
-              </div>
-            </a>
-          </div>
+        <div className="relative  bottom-0 sm:py-6 md:py-10 lg:py-16 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+          <a href="#Curriculum">
+            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer">
+              <Lucide icon="ArrowDown" className="mr-2" />
+              {language === "en" ? "Go on" : "Sigamos"}
+            </div>
+          </a>
+          <a href="#Portfolio">
+            <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+              <Lucide icon="ArrowUp" />
+            </div>
+          </a>
+        </div>
         </div>
       </section>
       {/*----- End About -----*/}
