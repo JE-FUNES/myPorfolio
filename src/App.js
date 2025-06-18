@@ -24,7 +24,8 @@ import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 //FREELANCE
 import NavbarFree from "./components/Freelance/NavbarFree/Navbar";
 import HomeFree from "./components/Freelance/HomeFree/Home";
-import ServicesFree from "./components/Freelance/ServicesFree/Services";
+import ProblemFree from "./components/Freelance/ProblemFree/Problem";
+import SolutionsFree from "./components/Freelance/SolutionsFree/Services";
 import PortfolioFree from "./components/Freelance/PortfolioFree/Portfolio";
 import Testimonial from "./components/Freelance/Testimonial/Testimonial";
 import Faq from "./components/Freelance/Faq/Faq";
@@ -76,9 +77,9 @@ const App = () => {
       path="/paginas_y_sitios_web_para_empresas_y_profesionales"
       element={
         <React.Fragment>
-          <NavbarFree />
           <HomeFree />
-          <ServicesFree />
+          <ProblemFree />
+          <SolutionsFree />
           <PortfolioFree />
           <Testimonial />
           <Faq />

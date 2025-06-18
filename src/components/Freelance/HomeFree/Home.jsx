@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
 import fondo from "../../../assets/Image/fondo-services-freelance.png";
-import tv from "../../../assets/Image/tv-antiguo.png";
+import tv from "../../../assets/videos/tv-old-static.gif";
 import gif from "../../../assets/AnimatedGifs/home-free.gif";
 import InProgress from "../../GraphicPortfolio/Home/InProgress.js";
 
@@ -28,117 +28,85 @@ const Home = () => {
       </div>
       <React.Fragment>
         {/*----- Start Home -----*/}
-        {isLargeScreen && (
-          <AnimatedCursor
-            innerSize={20}
-            outerSize={15}
-            color="0, 255, 255"
-            outerAlpha={0.5}
-            innerScale={0.7}
-            outerScale={5}
-            clickables={[
-              "a",
-              'input[type="text"]',
-              'input[type="email"]',
-              'input[type="number"]',
-              'input[type="submit"]',
-              'input[type="image"]',
-              "label[for]",
-              "select",
-              "textarea",
-              "button",
-              ".link",
-            ]}
-          />
-        )}
+        
         <section
-          className="relative overflow-hidden h-screen bg-cyan-900 bg-cover bg-center bg-no-repeat"
+          className="relative overflow-hidden h-screen bg-black"
           id="Home"
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
-          <div className="absolute inset-0 flex justify-center items-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute mt-10 w-full lg:max-w-[900px] h-auto object-cover"
-            >
-              <source src="/videos/interferencia.mp4" type="video/mp4" />
-              Tu navegador no soporta videos.
-            </video>
+          <div className="absolute inset-0 flex justify-center items-center sm:-mt-36 smd:-mt-60 lg:mt-0">
             {/* Imagen GIF centrada */}
             <img
               src={tv}
-              alt="Animación central"
-              className="w-full lg:max-w-[1200px] h-auto object-contain mt-10 z-10"
+              alt="tvAntiguo"
+              className="w-full sm:max-w-[360px] smd:max-w-[430px] smdd:max-w-[480px] lg:max-w-[1200px] h-auto object-contain sm:mt-2 lg:mt-3 z-1"
             />
 
             {/* Texto animado encima del gif */}
             <motion.div
-  className="absolute text-white text-center px-4 flex flex-col items-center justify-center -ml-48 -mt-10"
-  initial={{ opacity: 0, y: 100 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 2, ease: "easeOut" }}
->
-  <div className="mt-2">
-    <h2 className="fontCaveat font-semibold italic text-white text-[27px] sm:text-lg md:text-xl lg:text-5xl leading-[1] mb-6">
-      {language === "en"
-        ? "It's time to renew."
-        : "Es tiempo de renovar."}
-    </h2>
-  </div>
+              className="absolute text-white text-center px-4 flex flex-col items-center justify-center sm:-ml-16 smd:-ml-20 lg:-ml-48 sm:mt-28 smd:-mt-1 lg:-mt-10 z-10"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+              <div className="sm:mt-2 smd:mt-0 lg:mt-2">
+                <h2 className="fontCaveat font-semibold italic text-white sm:text-2xl lg:text-5xl leading-[1] sm:mb-2 lg:mb-6">
+                  {language === "en"
+                    ? "Is your "
+                    : "¿Tu "}
+                    <span className="text-red-500 animate-pulse sm:text-3xl lg:text-6xl">
+                    {language === "en"
+                    ? "website"
+                    : "web"}
+                    </span>
+                    {language === "en"
+                    ? " becoming a thing of the past?"
+                    : " está quedando en el pasado?"}
+                </h2>
+              </div>
 
-  <div className="mt-2">
-    <h2 className="font-semibold text-cyan-500 text-[20px] sm:text-lg md:text-xl lg:text-4xl">
-      {language === "en"
-        ? "Your "
-        : "¡Tu "}
-        <span className="text-cyan-300 font-bold text-[24px] sm:text-xl md:text-2xl lg:text-5xl">
-        {language === "en"
-        ? "business"
-        : "empresa"}
-        </span>
-        {language === "en"
-        ? " deserves"
-        : " merece"}
-    </h2>
-  </div>
-  <div className="mt-1">
-    <h2 className="font-semibold text-cyan-500 text-[20px] sm:text-lg md:text-xl lg:text-4xl mb-6">
-         <span className="text-cyan-300 font-bold text-[24px] sm:text-xl md:text-2xl lg:text-5xl">
-        {language === "en"
-        ? "more"
-        : "más"}
-        </span>
-        {language === "en"
-          ? " than a "
-          : " que una "}
-          <span className="text-cyan-300 font-bold text-[24px] sm:text-xl md:text-2xl lg:text-5xl">
-        {language === "en"
-        ? "website"
-        : "web"}
-        </span>
-        !
-    </h2>
-  </div>
+              <div className="sm:mt-2 smd:mt-0 lg:mt-8">
+                <h2 className="font-semibold text-black text-[20px] sm:text-lg md:text-xl lg:text-4xl">
+                  {language === "en" ? "Update it." : "Actualízala."}
+                </h2>
+              </div>
+              <div className="lg:mt-1">
+                <h2 className="text-black font-bold text-[24px] sm:text-xl md:text-2xl lg:text-5xl">
+                  {language === "en" ? " Modernize it." : " Modernízala."}
+                </h2>
+              </div>
 
-  <div className="mt-6">
-    <p className="uppercase font-extrabold text-white md:text-xl lg:text-4xl animate-bounce">
-      {language === "en" ? "presence," : "presencia,"}
-      <span className="block">
-        {language === "en"
-          ? " impact, and results."
-          : " impacto y resultados."}
-      </span>
-    </p>
-  </div>
-</motion.div>
+              <div className="sm:mt-20 smd:mt-4 lg:mt-20 sm:ml-14 smd:ml-0 lg:ml-0">
+                <p className="font-extrabold text-white sm:text-lg md:text-xl smd:text-sm lg:text-4xl animate-bounce">
+                  {language === "en"
+                    ? "Let it start to produce "
+                    : "¡Que empiece a dar "}
+                  <span className="block uppercase">
+                    {language === "en" ? "real results!" : "resultados reales!"}
+                  </span>
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              className="absolute text-white text-center px-4 flex flex-col justify-center sm:-ml-16 smd:-ml-20 lg:-ml-48 sm:mt-28 smd:-mt-1 lg:bottom-52 z-10"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{delay:5, duration: 2, ease: "easeOut" }}
+            >
+              <div className="sm:mt-20 smd:mt-4 lg:mt-20 sm:ml-14 smd:ml-0 lg:ml-0">
+                <a href="#Problem">
 
+                <Lucide icon="ArrowDown" className="text-white w-10 h-10" title={language === "en" ? "let's continue" : "continuemos"} />           
+                </a>
+              </div>
+              </motion.div>
           </div>
+
           {/* Opciones debajo al pie */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[80%] flex flex-col lg:flex-row justify-between items-center text-white fontCaveat text-2xl sm:text-3xl md:text-4xl font-semibold text-center gap-5">
+{/* 
+          <div className="absolute sm:bottom-12 smd:bottom-60 smdd:bottom-72 lg:bottom-10 left-1/2 -translate-x-1/2 w-[80%] flex flex-col lg:flex-row justify-between items-center text-white fontCaveat text-2xl sm:text-2xl md:text-4xl font-semibold text-center gap-5">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -170,6 +138,8 @@ const Home = () => {
                 : "Conecta con tu audiencia ✔"}
             </motion.div>
           </div>
+*/}
+
         </section>
         {/*----- End Home -----*/}
       </React.Fragment>
