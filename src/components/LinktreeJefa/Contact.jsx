@@ -77,9 +77,9 @@ const Contact = () => {
                   </label>
 
                   <label className="text-left">
-                    Email o Whatsapp:
+                    Email:
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       className="border-2 border-white bg-transparent p-1 mt-1 w-full"
                       required
