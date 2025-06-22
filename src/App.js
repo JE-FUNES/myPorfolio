@@ -22,7 +22,7 @@ import ContactAgc from "./components/Agencies/ContactAgc/Contact";
 import CurriculumAgc from "./components/Agencies/CurriculumAgc/Curriculum";
 
 
-//FREELANCE
+//COMPANIES
 import NavbarFree from "./components/Freelance/NavbarFree/Navbar";
 import HomeFree from "./components/Freelance/HomeFree/Home";
 import ProblemFree from "./components/Freelance/ProblemFree/Problem";
@@ -32,17 +32,19 @@ import Testimonial from "./components/Freelance/Testimonial/Testimonial";
 import Faq from "./components/Freelance/Faq/Faq";
 import ContactFree from "./components/Freelance/ContactFree/Contact";
 
-//GRAPHIC PORTFOLIO
-import HomeGph from "./components/GraphicPortfolio/Home/HomeGph";
-import NavbarGph from "./components/GraphicPortfolio/NavbarGph/Navbar";
-import ContactGph from "./components/GraphicPortfolio/ContactGph/Contact";
-import Graphic from "./components/GraphicPortfolio/GraphicResources/Graphic";
-import Vectors from "./components/GraphicPortfolio/Vectors/Vectors";
-import Patterns from "./components/GraphicPortfolio/Patterns/Patterns";
-import Backgrounds from "./components/GraphicPortfolio/Backgrounds/Backgrounds";
-import Photos from "./components/GraphicPortfolio/Photos/Photos";
-import Combos from "./components/GraphicPortfolio/Combos/Combos";
-import FreeDownload from "./components/GraphicPortfolio/FreeDownload/FreeDownload";
+//COURSES AND RESOURCES
+import HomeGph from "./components/CoursesAndResources/Home/HomeGph";
+import NavbarGph from "./components/CoursesAndResources/NavbarGph/Navbar";
+import ContactGph from "./components/CoursesAndResources/ContactGph/Contact";
+import Graphic from "./components/CoursesAndResources/GraphicResources/Graphic";
+import Ebooks from "./components/CoursesAndResources/Ebooks/Ebooks";
+import Courses from "./components/CoursesAndResources/Courses/Courses";
+import Tools from "./components/CoursesAndResources/Tools/Tools";
+import Patterns from "./components/CoursesAndResources/Patterns/Patterns";
+import Backgrounds from "./components/CoursesAndResources/Backgrounds/Backgrounds";
+import Photos from "./components/CoursesAndResources/Photos/Photos";
+import Combos from "./components/CoursesAndResources/Combos/Combos";
+import FreeDownload from "./components/CoursesAndResources/FreeDownload/FreeDownload";
 
 import Calculadora from "./components/Calculadora/Calculadora";
 
@@ -118,7 +120,9 @@ const App = () => {
           <NavbarGph />
           <HomeGph />
           <Graphic />
-          <Vectors />
+          <Ebooks />
+          <Courses />
+          <Tools />
           <Patterns />
           <Backgrounds />
           <Photos />

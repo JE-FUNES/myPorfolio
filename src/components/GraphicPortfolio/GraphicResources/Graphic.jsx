@@ -3,6 +3,7 @@ import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
+import {GraphicData} from "./GraphicData.js"
 
 const Graphic = () => {
   const language = useSelector((state) => state.language);
@@ -17,14 +18,6 @@ const Graphic = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const items = [
-    { key: "illustrations", es: "ILUSTRACIONES", en: "ILLUSTRATIONS" },
-    { key: "patterns", es: "PATRONES", en: "PATTERNS" },
-    { key: "vectors", es: "VECTORES", en: "VECTORS" },
-    { key: "backgrounds", es: "FONDOS", en: "BACKGROUNDS" },
-    { key: "photos", es: "FOTOGRAFÍAS", en: "PHOTOGRAPHS" },
-    { key: "combos", es: "COMBOS", en: "COMBOS" },
-  ];
 
   return (
     <React.Fragment>
@@ -77,7 +70,7 @@ const Graphic = () => {
 
           {/* Grilla de items */}
           <div className="relative z-10 grid sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-10">
-            {items.map((item) => (
+            {GraphicData.map((item) => (
               <div key={item.key} className="flex flex-col items-center text-purple-800">
                 <div className="w-60 h-60 bg-transparent rounded-md mb-2 flex items-center justify-center border-purple-800 border-spacing-2 border-2  p-2">
                   {/* Imagen temporal de reemplazo */}
