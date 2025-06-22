@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-//import home_banner from "../../../assets/AnimatedGifs/animated-about.gif";
 import imageColor from "../../../assets/Image/arte-about.png";
 import imageByN from "../../../assets/Image/arte-about2.png";
-import { NumberData, EspNumberData, BtnData, EspBtnData } from "./AboutData";
+import { NumberData, EspNumberData } from "./AboutData.js";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import { motion } from "motion/react";

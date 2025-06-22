@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ContactData, EspContactData } from "./ContactData";
 import { useSelector } from "react-redux";
-import contact_bg from "../../../assets/Image/contact-bg.png";
 import { motion } from "motion/react";
-import { Lucide } from "../../../utils/index.js";
 
 const Contact = () => {
   const language = useSelector((state) => state.language);
@@ -17,8 +15,6 @@ const Contact = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  
 
   const handleCalendar = () => {
     // Especifica el tamaño y otras opciones del pop-up
@@ -39,12 +35,11 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <section id="Contact" className="bg-slate-500 bg-bg-effect-2red bg-no-repeat bg-cover  bg-blend-multiply lg:bg-bottom w-screen h-screen">
-        <div
-          className="flex sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-20"
-        >
-          
-
+      <section
+        id="Contact"
+        className="bg-slate-500 bg-bg-effect-2red bg-no-repeat bg-cover  bg-blend-multiply lg:bg-bottom w-screen h-screen"
+      >
+        <div className="flex sm:bottom-8 sm:pb-40 lg:pb-20 lg:pt-20">
           {/* 🔹 Contenido (encima del fondo y la capa oscura) */}
           <div className="flex container z-10 sm:pt-20 mdl:pt-12 lg:pt-24 lg:pb-24 mt-1 justify-center">
             <motion.div
@@ -55,7 +50,10 @@ const Contact = () => {
               transition={{ duration: 2, ease: "easeOut" }}
             >
               <div className="lg:max-w-[410px] w-full lg:ml-5 pt-[5px] lg:pt-0">
-                <div id="seccionTitulo" className="w-full z-40 sm:mb-5 smd:mb-10">
+                <div
+                  id="seccionTitulo"
+                  className="w-full z-40 sm:mb-5 smd:mb-10"
+                >
                   <h3 className="text-red-500 flex justify-center">
                     {language === "en" ? "CONTACT ME" : "CONTACTAME"}
                   </h3>
@@ -73,29 +71,36 @@ const Contact = () => {
 
                 {/* 🔹 Lista de contactos */}
                 <ul>
-                  {(language === "en" ? ContactData : EspContactData).map((e) => (
-                    <li className="relative flex sm:mb-3 lg:mb-6 border" key={e.key}>
-                      <div className={`inline-flex items-center justify-center text-2xl h-14 w-14 ${e.Bg_color}`}>
-                        {e.icon}
-                      </div>
-                      <div className="flex-1 pl-4">
-                        <h5
-                          className="mx-2 my-3 sm:text-xs md:text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
-                          title={e.hoverTitle}
-                          onClick={e.link}
+                  {(language === "en" ? ContactData : EspContactData).map(
+                    (e) => (
+                      <li
+                        className="relative flex sm:mb-3 lg:mb-6 border"
+                        key={e.key}
+                      >
+                        <div
+                          className={`inline-flex items-center justify-center text-2xl h-14 w-14 ${e.Bg_color}`}
                         >
-                          {e.name}
-                        </h5>
-                        <p
-                          className="mx-2 my-3 font-medium md:text-xl sm:text-md text-white max-w-[250px] cursor-pointer"
-                          title={e.hoverTitle}
-                          onClick={e.link}
-                        >
-                          {e.contact}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
+                          {e.icon}
+                        </div>
+                        <div className="flex-1 pl-4">
+                          <h5
+                            className="mx-2 my-3 sm:text-xs md:text-sm font-normal uppercase tracking-wider text-slate-300 cursor-pointer"
+                            title={e.hoverTitle}
+                            onClick={e.link}
+                          >
+                            {e.name}
+                          </h5>
+                          <p
+                            className="mx-2 my-3 font-medium md:text-xl sm:text-md text-white max-w-[250px] cursor-pointer"
+                            title={e.hoverTitle}
+                            onClick={e.link}
+                          >
+                            {e.contact}
+                          </p>
+                        </div>
+                      </li>
+                    )
+                  )}
                 </ul>
 
                 {/* 🔹 Botón de entrevista */}
@@ -104,15 +109,15 @@ const Contact = () => {
                     className="text-[28px] font-semibold text-purple-50 text-center hover:text-yellow-500 cursor-pointer animate-pulse"
                     onClick={handleCalendar}
                   >
-                    {language === "en" ? "SCHEDULE AN INTERVIEW" : "AGENDA UNA ENTREVISTA"}
+                    {language === "en"
+                      ? "SCHEDULE AN INTERVIEW"
+                      : "AGENDA UNA ENTREVISTA"}
                   </h6>
                 </div>
               </div>
             </motion.div>
-
           </div>
         </div>
-           
       </section>
     </React.Fragment>
   );

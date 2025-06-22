@@ -1,54 +1,58 @@
 import React from "react";
+import { Links, Redes } from "./LinksData.js";
+import Logo from "../../assets/Logs/nuevo-logo-2025-fondo-negro-icono.png";
 
-const links = [
-  {
-    label: "Portfolio + CV",
-    url: "https://jefa-web.com.ar/#Portfolio",
-  },
-  {
-    label: "Diseño Web para Agencias",
-    url: "https://jefa-web.com.ar/#Agencias",
-  },
-  {
-    label: "Web para Empresas y Comercios",
-    url: "https://jefa-web.com.ar/#Empresas",
-  },
-  {
-    label: "Recursos para Mujeres que Emprenden",
-    url: "https://jefa-web.com.ar/#Recursos",
-  },
-  {
-    label: "Cursos y Productos Recomendados",
-    url: "https://hotmart.com/es?aff_link",
-  },
-];
-
-export default function LinktreeJefa() {
+const LinktreeJefa = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-pink-100 to-white px-6 py-12 text-center">
-      <img
-        src="/tu-logo-o-avatar.png"
-        alt="Jefa Web Logo"
-        className="w-24 h-24 rounded-full shadow-md mb-4"
-      />
-      <h1 className="text-2xl font-bold text-gray-800 mb-1">Julia Funes</h1>
-      <p className="text-sm text-gray-500 mb-6">
-        Diseño Web + Recursos Digitales para Mujeres que Aprenden y Emprenden
-      </p>
+    <React.Fragment>
+      <div className="w-screen">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-purple-950 px-6 py-12 text-center">
+          <div className="w-24 h-24 rounded-full p-3 bg-black/20 shadow-lg flex items-center justify-center">
+            <img src={Logo} alt="Jefa Web Logo" className="" />
+          </div>
+          <h1 className="text-2xl font-bold text-gray-100 mb-1 mt-4">
+            J.E.F.A. Web
+          </h1>
+          <p className="text-md text-pink-500 mt-2 mb-6">
+            Diseño Web + Recursos Digitales
+            <br />
+            para Mujeres que Aprenden y Emprenden
+          </p>
 
-      <div className="w-full max-w-md flex flex-col gap-4">
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white border border-gray-300 hover:border-pink-500 text-gray-700 hover:text-pink-600 font-medium py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition"
-          >
-            {link.label}
-          </a>
-        ))}
+          <div className="flex flex-row gap-4 mb-4">
+            {Redes.map((Red, index) => (
+              <a
+                key={index}
+                href={Red.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-${Red.background} border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium text-2xl p-2 rounded-full shadow-sm hover:shadow-md transition`}
+              >
+                {Red.img}
+              </a>
+            ))}
+          </div>
+
+          <div className="w-full max-w-md flex flex-col gap-4">
+            {Links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-${link.background} border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition`}
+              >
+                <h4 className="font-bold text-lg">{link.title}</h4>
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
-}
+};
+
+export default LinktreeJefa;

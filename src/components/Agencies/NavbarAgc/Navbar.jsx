@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../../assets/Logs/nuevo-logo-2025-fondo-negro-completo.png";
-import logo2 from "../../../assets/Logs/logo-jefa-celular-transp-rojo-fondo-negro.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
@@ -13,19 +12,19 @@ const Navbar = () => {
   const language = useSelector((state) => state.language);
 
   const closeMenu = () => {
-    setOpen(false); 
+    setOpen(false);
   };
 
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsLargeScreen(window.innerWidth >= 820);
-      };
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -40,7 +39,7 @@ const Navbar = () => {
                   <div className="z-50 relative">
                     <a href={"/"}>
                       <div className="flex flex-col items-start justify-start">
-                      <img
+                        <img
                           src={logo}
                           alt="Web Developer"
                           title="Web Developer"
@@ -60,24 +59,26 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
-                  <a href={"/"}>
-                        <p className="text-white/70 lg:pl-2 pt-1 -mb-2 text-xs">
+                    <a href={"/"}>
+                      <p className="text-white/70 lg:pl-2 pt-1 -mb-2 text-xs">
+                        {language === "en"
+                          ? 'You are in "MKT Agencies"'
+                          : 'Estás en "Agencias MKT"'}
+                        <span
+                          title={
+                            language === "en"
+                              ? "go to Presentation"
+                              : "Ir a la Presentación"
+                          }
+                          className="bg-purple-900/50 text-white rounded-full ml-1 px-2 hover:bg-purple-900"
+                        >
                           {language === "en"
-                            ? 'You are in "MKT Agencies"'
-                            : 'Estás en "Agencias MKT"'}
-                            <span title=
-                            {language === "en"
-                              ? 'go to Presentation'
-                              : 'Ir a la Presentación'}
-                            className="bg-purple-900/50 text-white rounded-full ml-1 px-2 hover:bg-purple-900">
-                            {language === "en"
-                            ? 'Choose again'
-                            : 'Volver a elegir'}
-                            </span>
-                        </p>
-                        </a>
+                            ? "Choose again"
+                            : "Volver a elegir"}
+                        </span>
+                      </p>
+                    </a>
                     <ul className="list-none flex space-x-1 items-end right-0 w-full cursor-pointer">
-                    
                       {language === "en"
                         ? NavbarData.map((e, key) => (
                             <li key={key}>
@@ -123,8 +124,7 @@ const Navbar = () => {
               {/* Mobile screen */}
               <div className={`lg:hidden ${open ? "" : "hidden"}`}>
                 <div className="mt-4">
-                  <LanguagesSwitcher 
-                  />
+                  <LanguagesSwitcher />
                 </div>
                 <div className="pt-5 ml-5">
                   <ul>

@@ -1,6 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Init from "../src/components/Recruiters/Home/Init"
+import Init from "../src/components/Recruiters/Home/Init";
+
+//Linktree Jefa
+import LinktreeJefa from "./components/LinktreeJefa/Linktree";
 //RECRUITERS
 import Navbar from "./components/Recruiters/Navbar/Navbar";
 import Home from "./components/Recruiters/Home/Home";
@@ -57,6 +60,13 @@ const App = () => {
         path="/"
         element={
             <Init />
+        }
+      />
+      <Route
+      //General Init
+        path="/enlaces"
+        element={
+            <LinktreeJefa />
         }
       />
       

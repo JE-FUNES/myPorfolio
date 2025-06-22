@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
-import fondo from "../../../assets/Image/fondo-services-freelance.png";
 import monitor from "../../../assets/videos/monitor.gif";
-import gif from "../../../assets/AnimatedGifs/home-free.gif";
 
 const Problem = () => {
   const language = useSelector((state) => state.language);
@@ -24,7 +21,7 @@ const Problem = () => {
     <>
       <React.Fragment>
         {/*----- Start Home -----*/}
-        
+
         <section
           className="relative overflow-hidden h-screen bg-white"
           id="Problem"
@@ -51,9 +48,7 @@ const Problem = () => {
                   <span className="text-red-500 animate-pulse sm:text-3xl lg:text-6xl">
                     {language === "en" ? "Does this sound" : "Te suena"}
                   </span>
-                  {language === "en"
-                    ? " familiar?"
-                    : " familiar?"}
+                  {language === "en" ? " familiar?" : " familiar?"}
                 </h2>
               </div>
             </motion.div>
@@ -133,15 +128,21 @@ const Problem = () => {
             >
               <div className="">
                 <a href="#Services">
-                <h2 className="fontCaveat font-semibold italic text-white sm:text-2xl lg:text-4xl leading-[1] sm:mb-2 lg:mb-4">
-                  {language === "en" ? "If any of these problems sound familiar, you're not alone." : "Si alguno de estos problemas te suena familiar, no estás solo."}
-                  </h2> 
+                  <h2 className="fontCaveat font-semibold italic text-white sm:text-2xl lg:text-4xl leading-[1] sm:mb-2 lg:mb-4">
+                    {language === "en"
+                      ? "If any of these problems sound familiar, you're not alone."
+                      : "Si alguno de estos problemas te suena familiar, no estás solo."}
+                  </h2>
                   <h2 className="font-semibold italic text-white sm:text-2xl lg:text-3xl leading-[1] sm:mb-2 lg:mb-6">
-                  {language === "en" ? "The good news: " : "La buena noticia: "}
-                  <span className="text-red-500">
-                  {language === "en" ? "You are in the right place to solve them." : "estás en el lugar indicado para resolverlos."}
-                  </span>
-                  </h2> 
+                    {language === "en"
+                      ? "The good news: "
+                      : "La buena noticia: "}
+                    <span className="text-red-500">
+                      {language === "en"
+                        ? "You are in the right place to solve them."
+                        : "estás en el lugar indicado para resolverlos."}
+                    </span>
+                  </h2>
                 </a>
               </div>
             </motion.div>

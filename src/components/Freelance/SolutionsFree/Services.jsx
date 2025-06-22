@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ServicesData, EspServicesData } from "./ServicesData";
 import ServicesModal from "./ServicesModal.js";
-import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import TypingEffect from "react-typing-effect";
 
 const Services = () => {
   const language = useSelector((state) => state.language);
@@ -145,10 +143,12 @@ const Services = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-<a href="#Contact">
-
-            <button className="btn-red px-4 text-white hover:text-black text-lg">¡Hagámoslo juntos! Contactame</button>
-</a>
+            <a href="#Contact">
+              <button className="btn-red px-4 text-white hover:text-black text-lg">
+                {language === "en" ? "Let´s do it together! Contact me" : "¡Hagámoslo juntos! Contactame"}
+                
+              </button>
+            </a>
           </div>
         </div>
       </section>

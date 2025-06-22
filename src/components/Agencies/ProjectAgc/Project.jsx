@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { ProjectData, ProjectImg } from './ProjectData'
 import { RiCloseFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -55,9 +54,8 @@ const Project = ({ project, onClose }) => {
             </button>
             <div className="grid grid-cols-12">
               <div className="col-span-12 md:col-span-7 mb-10 md:mb-0">
-                
-                  {project.videoUrl ? (
-                    <div className="col-span-1 my-1 w-full sm:ml-1 lg:ml-10">
+                {project.videoUrl ? (
+                  <div className="col-span-1 my-1 w-full sm:ml-1 lg:ml-10">
                     <iframe
                       className="w-[95%] h-auto aspect-video"
                       src={project.videoUrl}
@@ -68,18 +66,15 @@ const Project = ({ project, onClose }) => {
                       allowFullScreen
                     ></iframe>
                   </div>
-                  
-                  
-                  ) : (
-                    <div className="col-span-2 my-1">
-                      <img
-                        className="border w-[100%]"
-                        src={project.imgDetail}
-                        alt=""
-                      />
-                    </div>
-                  )}
-                
+                ) : (
+                  <div className="col-span-2 my-1">
+                    <img
+                      className="border w-[100%]"
+                      src={project.imgDetail}
+                      alt=""
+                    />
+                  </div>
+                )}
               </div>
               <div className="col-span-12 md:col-span-5 mb-10 md:mb-0 md:pl-10 lg:pl-14">
                 <h4 className="font-semibold text-[25px] mb-4 pb-4 border-b">

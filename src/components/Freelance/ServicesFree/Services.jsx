@@ -217,7 +217,6 @@ const Services = () => {
                     <div
                       className={`flex border-2 border-white/70 p-3 bg-cover bg-center bg-no-repeat cursor-pointer text-white hover:text-fuchsia-700`}
                       style={{
-                        
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
                         backgroundBlendMode: "overlay",
                       }}

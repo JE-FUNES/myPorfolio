@@ -246,22 +246,21 @@ const Services = () => {
               )}
             </div>
           </div>
-
         </div>
-          {/* Contenedor de los enlaces */}
-          <div className="relative  bottom-0 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
-            <a href="#Portfolio">
-              <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
-                <Lucide icon="ArrowDown" className="mr-2" />
-                {language === "en" ? "Go on" : "Sigamos"}
-              </div>
-            </a>
-            <a href="#Home">
-              <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
-                <Lucide icon="ArrowUp" />
-              </div>
-            </a>
-          </div>
+        {/* Contenedor de los enlaces */}
+        <div className="relative  bottom-0 sm:w-screen lg:w-[99%] flex justify-end sm:right-2 lg:right-20 lg:mr-10 space-x-2 z-1">
+          <a href="#Portfolio">
+            <div className="btn btn-red rounded-full font-bold flex justify-center items-center animate-pulse cursor-pointer px-4 py-2">
+              <Lucide icon="ArrowDown" className="mr-2" />
+              {language === "en" ? "Go on" : "Sigamos"}
+            </div>
+          </a>
+          <a href="#Home">
+            <div className="btn-white rounded-full font-bold flex justify-center items-center cursor-pointer ml-2">
+              <Lucide icon="ArrowUp" />
+            </div>
+          </a>
+        </div>
       </section>
       {/*----- End Services -----*/}
       {selectedService && (

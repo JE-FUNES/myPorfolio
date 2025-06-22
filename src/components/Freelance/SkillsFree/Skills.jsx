@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import skills1 from "../../../assets/Image/yo-skills-1.png";
 import skills2 from "../../../assets/Image/yo-skills-2.png";
-import { SkillsData, EspSkillsData } from "./SkillsData";
+import { SkillsData, EspSkillsData } from "./SkillsData.js";
 import SkillModal from "./SkillModal.js";
 import { Lucide } from "../../../utils/index";
 import { useSelector } from "react-redux";
-import LogoSlider from "../LogoSliderFree/LogoSlider";
+import LogoSlider from "../LogoSliderFree/LogoSlider.jsx";
 import { motion } from "motion/react";
 
 const Skills = () => {

@@ -16,17 +16,17 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-      const checkScreenSize = () => {
-        setIsDesktop(window.innerWidth >= 1024); // Consider desktop if width >= 1024px
-      };
-  
-      checkScreenSize(); // Check on initial render
-      window.addEventListener("resize", checkScreenSize); // Listen for resize events
-  
-      return () => {
-        window.removeEventListener("resize", checkScreenSize);
-      };
-    }, []);
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // Consider desktop if width >= 1024px
+    };
+
+    checkScreenSize(); // Check on initial render
+    window.addEventListener("resize", checkScreenSize); // Listen for resize events
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   return (
     <React.Fragment>
@@ -45,40 +45,42 @@ const Portfolio = () => {
             transition={{ duration: 5, ease: "easeOut" }}
           >
             <div>
-
-            <h2 className="sm:text-xl lg:text-3xl sm:text-center">
-              {language === "en" ? "Your " : "Tu "}
-              <span className="font-semibold sm:text-2xl lg:text-4xl">
-                {language === "en" ? "Agency " : "Agencia "}
-              </span>
-              <span className="font-semibold sm:text-3xl lg:text-5xl text-white/50">+</span>
-              <span className="sm:text-xl lg:text-3xl">
-                {language === "en" ? " My " : " Mi "}
-              </span>
-              <span className="font-semibold sm:text-3xl lg:text-5xl animate-pulse">
-                {language === "en" ? "Creativity " : "Creatividad "}
-              </span>
-              <span className="font-semibold sm:_text-3xl lg:text-5xl text-white/50">=</span>
-                </h2>
+              <h2 className="sm:text-xl lg:text-3xl sm:text-center">
+                {language === "en" ? "Your " : "Tu "}
+                <span className="font-semibold sm:text-2xl lg:text-4xl">
+                  {language === "en" ? "Agency " : "Agencia "}
+                </span>
+                <span className="font-semibold sm:text-3xl lg:text-5xl text-white/50">
+                  +
+                </span>
+                <span className="sm:text-xl lg:text-3xl">
+                  {language === "en" ? " My " : " Mi "}
+                </span>
+                <span className="font-semibold sm:text-3xl lg:text-5xl animate-pulse">
+                  {language === "en" ? "Creativity " : "Creatividad "}
+                </span>
+                <span className="font-semibold sm:_text-3xl lg:text-5xl text-white/50">
+                  =
+                </span>
+              </h2>
             </div>
             <div className="mt-4 text-center">
-
               <span className="font-semibold sm:text-3xl lg:text-5xl italic text-red-500">
                 {language === "en"
                   ? " Amazing and Strategic Websites"
                   : " Webs Sorprendentes y Estratégicas"}
               </span>
-                  </div>
+            </div>
           </motion.div>
         </div>
         <div className="container">
           <div className="grid lg:pb-16 md:pb-10 pb-8 mt-20">
-            <motion.div 
-            className="lg:col-span-6 text-center"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 4, duration: 1, ease: "easeOut" }}
+            <motion.div
+              className="lg:col-span-6 text-center"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 4, duration: 1, ease: "easeOut" }}
             >
               <h3 className="text-64xl text-white">
                 {language === "en"
@@ -95,9 +97,13 @@ const Portfolio = () => {
                       key={index}
                       className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 shadow-lg shadow-black"
                       initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: isDesktop ? project.delay : project.delayM, duration: 1, ease: "easeOut" }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: isDesktop ? project.delay : project.delayM,
+                        duration: 1,
+                        ease: "easeOut",
+                      }}
                     >
                       <div
                         className={`lg:px-10 md:px-5 ${
@@ -115,12 +121,11 @@ const Portfolio = () => {
                           />
                         </div>
                       </div>
-                     
+
                       <div
                         className={`flex flex-col justify-center lg:px-10 md:px-5  ${
                           index % 2 === 0 ? "" : "order-1"
                         }`}
-                        
                       >
                         <h6 className="mb-[18px] ">
                           <span className="inline-block sm:mt-5 lg:mt-0 px-5 py-2 uppercase tracking-wider text-xs rounded-[30px] bg-red-200 font-bold">
@@ -152,9 +157,13 @@ const Portfolio = () => {
                       key={index}
                       className="grid lg:grid-cols-2 grid-cols-1 justify-items-center content-center mb-16 bg-slate-100 p-5 shadow-lg shadow-black"
                       initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: isDesktop ? project.delay : project.delayM, duration: 1, ease: "easeOut" }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: isDesktop ? project.delay : project.delayM,
+                        duration: 1,
+                        ease: "easeOut",
+                      }}
                     >
                       <div
                         className={`lg:px-10 md:px-5 ${
@@ -202,8 +211,6 @@ const Portfolio = () => {
                 })}
           </div>
           <div className="relative w-full h-auto sm:mt-0 lg:my-8 lg:pb-8">
-           
-
             {/* Contenedor de los enlaces en la esquina superior derecha */}
             <div className="absolute sm:-top-8 lg:top-3 right-3 flex space-x-2 z-10">
               <a href="#About">

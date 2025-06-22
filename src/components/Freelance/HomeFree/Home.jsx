@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Lucide } from "../../../utils/index.js";
 import { useSelector } from "react-redux";
-import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
-import fondo from "../../../assets/Image/fondo-services-freelance.png";
 import tv from "../../../assets/videos/tv-old-static.gif";
-import gif from "../../../assets/AnimatedGifs/home-free.gif";
 import InProgress from "../../CoursesAndResources/Home/InProgress.js";
 
 const Home = () => {
@@ -28,7 +25,7 @@ const Home = () => {
       </div>
       <React.Fragment>
         {/*----- Start Home -----*/}
-        
+
         <section
           className="relative overflow-hidden h-screen bg-black"
           id="Home"
@@ -52,15 +49,11 @@ const Home = () => {
             >
               <div className="sm:mt-2 smd:mt-0 lg:mt-2">
                 <h2 className="fontCaveat font-semibold italic text-white sm:text-2xl lg:text-5xl leading-[1] sm:mb-2 lg:mb-6">
+                  {language === "en" ? "Is your " : "¿Tu "}
+                  <span className="text-red-500 animate-pulse sm:text-3xl lg:text-6xl">
+                    {language === "en" ? "website" : "web"}
+                  </span>
                   {language === "en"
-                    ? "Is your "
-                    : "¿Tu "}
-                    <span className="text-red-500 animate-pulse sm:text-3xl lg:text-6xl">
-                    {language === "en"
-                    ? "website"
-                    : "web"}
-                    </span>
-                    {language === "en"
                     ? " becoming a thing of the past?"
                     : " está quedando en el pasado?"}
                 </h2>
@@ -93,19 +86,22 @@ const Home = () => {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{delay:5, duration: 2, ease: "easeOut" }}
+              transition={{ delay: 5, duration: 2, ease: "easeOut" }}
             >
               <div className="sm:mt-20 smd:mt-4 lg:mt-20 sm:ml-14 smd:ml-0 lg:ml-0">
                 <a href="#Problem">
-
-                <Lucide icon="ArrowDown" className="text-white w-10 h-10" title={language === "en" ? "let's continue" : "continuemos"} />           
+                  <Lucide
+                    icon="ArrowDown"
+                    className="text-white w-10 h-10"
+                    title={language === "en" ? "let's continue" : "continuemos"}
+                  />
                 </a>
               </div>
-              </motion.div>
+            </motion.div>
           </div>
 
           {/* Opciones debajo al pie */}
-{/* 
+          {/* 
           <div className="absolute sm:bottom-12 smd:bottom-60 smdd:bottom-72 lg:bottom-10 left-1/2 -translate-x-1/2 w-[80%] flex flex-col lg:flex-row justify-between items-center text-white fontCaveat text-2xl sm:text-2xl md:text-4xl font-semibold text-center gap-5">
             <motion.div
               initial={{ opacity: 0 }}
@@ -139,7 +135,6 @@ const Home = () => {
             </motion.div>
           </div>
 */}
-
         </section>
         {/*----- End Home -----*/}
       </React.Fragment>
