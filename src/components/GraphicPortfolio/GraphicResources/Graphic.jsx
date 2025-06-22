@@ -22,8 +22,8 @@ const Graphic = () => {
     { key: "patterns", es: "PATRONES", en: "PATTERNS" },
     { key: "vectors", es: "VECTORES", en: "VECTORS" },
     { key: "backgrounds", es: "FONDOS", en: "BACKGROUNDS" },
-    { key: "combos", es: "COMBOS", en: "COMBOS" },
     { key: "photos", es: "FOTOGRAFÍAS", en: "PHOTOGRAPHS" },
+    { key: "combos", es: "COMBOS", en: "COMBOS" },
   ];
 
   return (
@@ -65,9 +65,9 @@ const Graphic = () => {
             <source src="/videos/video_graficos.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>
-        <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center pt-60">
-          <div className="mt-48">
+          <div className="absolute top-0 left-0 w-full h-full bg-amber-200/30"></div>
+        <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center pt-20">
+          <div className="mt-20">
 
             
         <h3 className="text-purple-800 flex justify-center ">
@@ -76,13 +76,13 @@ const Graphic = () => {
           </div>
 
           {/* Grilla de items */}
-          <div className="relative z-10 grid grid-cols-4 grid-rows-3 gap-12 p-6 max-w-5xl lg:pt-10 lg:mt-10">
+          <div className="relative z-10 grid sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-10">
             {items.map((item) => (
               <div key={item.key} className="flex flex-col items-center text-purple-800">
                 <div className="w-60 h-60 bg-transparent rounded-md mb-2 flex items-center justify-center border-purple-800 border-spacing-2 border-2  p-2">
                   {/* Imagen temporal de reemplazo */}
                   <img
-                    src={`/images/items/${item.key}.png`}
+                    src={`/images/categories/${item.key}.png`}
                     alt={language === "es" ? item.es : item.en}
                     className="object-cover w-full h-full rounded-md hover:invert"
                   />

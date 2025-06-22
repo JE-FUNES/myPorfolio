@@ -68,7 +68,7 @@ const HomeGph = () => {
             <source src="/videos/tools.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-amber-900/40"></div>
 
           <div className="flex justify-center mt-24 z-10">
             <h3 className="text-white lg:pt-6 uppercase">Cursos y Recursos Digitales</h3>
