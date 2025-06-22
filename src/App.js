@@ -36,7 +36,7 @@ import ContactFree from "./components/Freelance/ContactFree/Contact";
 import HomeGph from "./components/GraphicPortfolio/Home/HomeGph";
 import NavbarGph from "./components/GraphicPortfolio/NavbarGph/Navbar";
 import ContactGph from "./components/GraphicPortfolio/ContactGph/Contact";
-import Illustrations from "./components/GraphicPortfolio/Illustrations/Illustrations";
+import Graphic from "./components/GraphicPortfolio/GraphicResources/Graphic";
 import Vectors from "./components/GraphicPortfolio/Vectors/Vectors";
 import Patterns from "./components/GraphicPortfolio/Patterns/Patterns";
 import Backgrounds from "./components/GraphicPortfolio/Backgrounds/Backgrounds";
@@ -111,13 +111,13 @@ const App = () => {
       }
       />
       <Route
-      //PORTFOLIO GRAFICO
+      //CURSOS Y RECURSOS
       path="/cursos_y_recursos"
       element={
         <React.Fragment>
           <NavbarGph />
           <HomeGph />
-          <Illustrations />
+          <Graphic />
           <Vectors />
           <Patterns />
           <Backgrounds />

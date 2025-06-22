@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import AnimatedCursor from "react-animated-cursor";
 import { motion } from "motion/react";
 
-const Illustrations = () => {
+const Graphic = () => {
   const language = useSelector((state) => state.language);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 820);
 
@@ -22,8 +22,6 @@ const Illustrations = () => {
     { key: "patterns", es: "PATRONES", en: "PATTERNS" },
     { key: "vectors", es: "VECTORES", en: "VECTORS" },
     { key: "backgrounds", es: "FONDOS", en: "BACKGROUNDS" },
-    { key: "combos", es: "COMBOS", en: "COMBOS" },
-    { key: "photos", es: "FOTOGRAFÍAS", en: "PHOTOGRAPHS" },
     { key: "combos", es: "COMBOS", en: "COMBOS" },
     { key: "photos", es: "FOTOGRAFÍAS", en: "PHOTOGRAPHS" },
   ];
@@ -54,13 +52,26 @@ const Illustrations = () => {
           ]}
         />
       )}
-      <section className="pt-0" id="Illustrations">
-        <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center bg-orange-100 pt-60">
+      <section className="pt-0" id="Graphic">
+      <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center">
+          {/* Video de fondo */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src="/videos/video_graficos.mp4" type="video/mp4" />
+            Tu navegador no soporta videos.
+          </video>
+          <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>
+        <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center items-center pt-60">
           <div className="mt-48">
 
             
         <h3 className="text-purple-800 flex justify-center ">
-          {language === "en" ? "ILLUSTRATIONS" : "ILUSTRACIONES"}
+          {language === "en" ? "GRAPHIC RESOURCES" : "RECURSOS GRÁFICOS"}
         </h3>
           </div>
 
@@ -83,10 +94,11 @@ const Illustrations = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
       {/*----- End Home -----*/}
     </React.Fragment>
   );
 };
 
-export default Illustrations;
+export default Graphic;
