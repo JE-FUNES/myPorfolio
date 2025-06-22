@@ -53,7 +53,7 @@ const App = () => {
   return (
     <Routes>
       <Route
-      //INIT
+      //General Init
         path="/"
         element={
             <Init />
