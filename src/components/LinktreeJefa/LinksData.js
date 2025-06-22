@@ -1,8 +1,7 @@
 import {
   FaWhatsapp,
   FaInstagram,
-  FaLinkedinIn,
-  FaGithub,
+  FaFacebook,
 } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 
@@ -37,19 +36,21 @@ export const Redes = [
     {
         key: "whatsapp",
         img: <FaWhatsapp />,
-        background: "green-500",
-        url: "https://wa.me/+5493512737199"
+        url: "https://wa.me/+5493512737199",
     },
     {
         key: "instagram",
         img: <FaInstagram />,
-        background: "fuchsia-500",
-        url: "https://instagram.com/jefa.web"
+        url: "https://www.instagram.com/jefa.web",
+    },
+    {
+        key: "facebook",
+        img: <FaFacebook />,
+        url: "https://www.facebook.com/jefa.web",
     },
     {
         key: "linkedin",
         img: <FaLinkedin />,
-        background: "cyan-500",
-        url: "https://linkedin.com/in/je-funes"
+        url: "https://www.linkedin.com/in/je-funes",
     },
 ]

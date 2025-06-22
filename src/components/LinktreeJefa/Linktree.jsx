@@ -6,7 +6,7 @@ const LinktreeJefa = () => {
   return (
     <React.Fragment>
       <div className="w-screen">
-        <div className="min-h-screen flex flex-col items-center justify-center bg-purple-950 px-6 py-12 text-center">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-purple-950 px-6 py-6 text-center">
           <div className="w-24 h-24 rounded-full p-3 bg-black/20 shadow-lg flex items-center justify-center">
             <img src={Logo} alt="Jefa Web Logo" className="" />
           </div>
@@ -26,7 +26,7 @@ const LinktreeJefa = () => {
                 href={Red.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`bg-${Red.background} border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium text-2xl p-2 rounded-full shadow-sm hover:shadow-md transition`}
+                className="border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium text-2xl p-2 rounded-full shadow-sm hover:shadow-md transition"
               >
                 {Red.img}
               </a>
@@ -47,8 +47,13 @@ const LinktreeJefa = () => {
               </a>
             ))}
           </div>
-
-          
+          <p className="text-sm text-pink-300 mt-6">
+            Si deseas un MENÚ DE ENLACES como éste  
+            <br />
+            <a href="https://jefa-web.com.ar/contactame" className="underline">
+            CONTACTAME
+            </a>
+          </p>
         </div>
       </div>
     </React.Fragment>

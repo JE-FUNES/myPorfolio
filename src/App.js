@@ -4,6 +4,7 @@ import Init from "../src/components/Recruiters/Home/Init";
 
 //Linktree Jefa
 import LinktreeJefa from "./components/LinktreeJefa/Linktree";
+import ContactLinktree from "./components/LinktreeJefa/Contact";
 //RECRUITERS
 import Navbar from "./components/Recruiters/Navbar/Navbar";
 import Home from "./components/Recruiters/Home/Home";
@@ -63,10 +64,18 @@ const App = () => {
         }
       />
       <Route
-      //General Init
+      //Linktree enlaces
         path="/enlaces"
         element={
             <LinktreeJefa />
+        }
+      />
+
+      <Route
+      //Linktree contacto
+        path="/contactame"
+        element={
+            <ContactLinktree />
         }
       />
       
