@@ -19,12 +19,10 @@ const HomeGph = () => {
   }, []);
 
   const categories = [
-    { key: "illustrations", es: "ILUSTRACIONES", en: "ILLUSTRATIONS", link: "#Illustrations" },
-    { key: "patterns", es: "PATRONES", en: "PATTERNS", link: "#Patterns" },
-    { key: "vectors", es: "VECTORES", en: "VECTORS", link: "#Vectors" },
-    { key: "backgrounds", es: "FONDOS", en: "BACKGROUNDS", link: "#Backgrounds" },
-    { key: "combos", es: "COMBOS", en: "COMBOS", link: "#Combos" },
-    { key: "photos", es: "FOTOGRAFÍAS", en: "PHOTOGRAPHS", link: "#Photos" },
+    { key: "Graphic", es: "Recursos Gráficos", en: "Graphic Resources", link: "#Graphic" },
+    { key: "Ebooks", es: "Libros Digitales", en: "Ebooks", link: "#Ebooks" },
+    { key: "Courses", es: "Cursos", en: "Courses", link: "#Courses" },
+    { key: "Tools", es: "Herramientas Útiles", en: "Usefull Tools", link: "#Tools" },
   ];
 
   return (
@@ -72,8 +70,12 @@ const HomeGph = () => {
           </video>
           <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>
 
+          <div className="flex justify-center mt-24 z-10">
+            <h1 className="text-white font-bold text-2xl lg:pt-6 uppercase">Cursos y Recursos Digitales</h1>
+          </div>
+
           {/* Grilla de categorías sobre el video */}
-          <div className="relative z-10 grid sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-16">
+          <div className="relative z-10 grid sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-6 p-6 max-w-5xl lg:pt-6">
             {categories.map((cat) => (
                 <a href={`${cat.link}`}>
               <div key={cat.key} className="flex flex-col items-center text-white">
