@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import fondo from "../../../assets/Image/fondo-services-freelance.png";
 import tv from "../../../assets/videos/tv-old-static.gif";
 import gif from "../../../assets/AnimatedGifs/home-free.gif";
-import InProgress from "../../GraphicPortfolio/Home/InProgress.js";
+import InProgress from "../../CoursesAndResources/Home/InProgress.js";
 
 const Home = () => {
   const language = useSelector((state) => state.language);
