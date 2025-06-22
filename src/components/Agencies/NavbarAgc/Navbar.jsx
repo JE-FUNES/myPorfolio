@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../../assets/Logs/logo-jefa-transp-rojo-fondo-negro.png";
+import logo from "../../../assets/Logs/nuevo-logo-2025-fondo-negro-completo.png";
 import logo2 from "../../../assets/Logs/logo-jefa-celular-transp-rojo-fondo-negro.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
                   <div className="z-50 relative">
-                    <a href={"https://www.jefa-web.com.ar/"}>
+                    <a href={"/"}>
                       <div className="flex flex-col items-start justify-start">
                       <img
                           src={logo}
@@ -60,7 +60,7 @@ const Navbar = () => {
                   </div>
                   {/* Desktop screen */}
                   <div className="hidden lg:block">
-                  <a href={"https://www.jefa-web.com.ar/"}>
+                  <a href={"/"}>
                         <p className="text-white/70 lg:pl-2 pt-1 -mb-2 text-xs">
                           {language === "en"
                             ? 'You are in "MKT Agencies"'

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../../assets/Logs/creative.png";
+import logo from "../../../assets/Logs/nuevo-logo-2025-fondo-negro-completo.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
@@ -36,8 +36,8 @@ const Navbar = () => {
                         />
                         <p className="text-orange-100 pl-6 pt-1 -mb-2 text-xs">
                           {language === "en"
-                            ? 'You are in "Designs"'
-                            : 'Estás en "Diseños"'}
+                            ? 'You are in "Resources"'
+                            : 'Estás en "Recursos"'}
                             <span title=
                             {language === "en"
                               ? 'go to Presentation'

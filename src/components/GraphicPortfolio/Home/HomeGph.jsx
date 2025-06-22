@@ -67,7 +67,7 @@ const HomeGph = () => {
             playsInline
             className="absolute top-0 left-0 w-full h-full object-cover"
           >
-            <source src="/videos/video_graficos.mp4" type="video/mp4" />
+            <source src="/videos/tools.mp4" type="video/mp4" />
             Tu navegador no soporta videos.
           </video>
           <div className="absolute top-0 left-0 w-full h-full bg-amber-900/20"></div>

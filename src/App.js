@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Init from "../src/components/Recruiters/Home/Init"
 //RECRUITERS
 import Navbar from "./components/Recruiters/Navbar/Navbar";
 import Home from "./components/Recruiters/Home/Home";
@@ -49,10 +50,17 @@ import Calculadora from "./components/Calculadora/Calculadora";
 const App = () => {
   return (
     <Routes>
+      <Route
+      //INIT
+        path="/"
+        element={
+            <Init />
+        }
+      />
       
       <Route
       //RECRUITERS
-        path="/"
+        path="/portfolio-frontend-developer"
         element={
           <React.Fragment>
             <Navbar />
@@ -104,7 +112,7 @@ const App = () => {
       />
       <Route
       //PORTFOLIO GRAFICO
-      path="/portfolio_grafico"
+      path="/cursos_y_recursos"
       element={
         <React.Fragment>
           <NavbarGph />

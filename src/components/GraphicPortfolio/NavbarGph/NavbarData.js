@@ -2,12 +2,10 @@
 export const NavbarData = [
     //{ name: "Wellcome", link: "Wellcome" },
     { name: "Home", link: "Home" },
-    { name: "Illustrations", link: "Illustrations" },
-    { name: "Vectors", link: "Vectors" },
-    { name: "Patterns", link: "Patterns"},
-    { name: "Backgrounds", link: "Backgrounds"},
-    { name: "Photos", link: "Photos" },
-    { name: "Combos", link: "Combos" },
+    { name: "Images & Vectors", link: "Graphic" },
+    { name: "Ebooks", link: "Ebooks" },
+    { name: "Courses", link: "Courses"},
+    { name: "Useful Tools", link: "Tools"},
 ]
 //----- End Navbar Data -----
 
@@ -15,11 +13,9 @@ export const NavbarData = [
 export const EspNavbarData = [
     //{ name: "Bienvenido", link: "Wellcome" },
     { name: "Inicio", link: "Home" },
-    { name: "Ilustraciones", link: "Illustrations" },
-    { name: "Vectores", link: "Vectors" },
-    { name: "Patrones", link: "Patterns"},
-    { name: "Fondos", link: "Backgrounds"},
-    { name: "Fotografías", link: "Photos" },
-    { name: "Combos", link: "Combos" },
+    { name: "Imágenes y Vectores", link: "Graphic" },
+    { name: "Libros Digitales", link: "Ebooks" },
+    { name: "Cursos", link: "Courses"},
+    { name: "Herramientas Útiles", link: "Tools"},
 ]
 //----- End Navbar Data -----

@@ -6,6 +6,7 @@ import LanguagesSwitcher from "../../Switchers/Languages.jsx";
 import { Lucide } from "../../../utils/index.js";
 import image from "../../../assets/Image/init-imagen.png";
 import foto from "../../../assets/Image/init-foto.png";
+import logo from "../../../assets/Logs/nuevo-logo-2025-fondo-negro-icono.png";
 import AnimatedCursor from "react-animated-cursor";
 import {
   FaWhatsapp,
@@ -51,18 +52,17 @@ const Init = () => {
 
   const handleRecruiters = () => {
     handleOnClose();
+    navigate("/portfolio-frontend-developer");
   };
 
   const handleFreelance = () => {
     handleOnClose();
-
-    navigate("/paginas_y_sitios_web_para_empresas_y_profesionales");
+navigate("/paginas_y_sitios_web_para_empresas_y_profesionales");
   };
 
   const handleGraphics = () => {
     handleOnClose();
-
-    navigate("/portfolio_grafico");
+navigate("/cursos_y_recursos");
   };
 
   return (
@@ -102,11 +102,12 @@ const Init = () => {
                 <div className="w-full md:w-1/2 flex items-stretch">
                   <div className="w-full flex items-center px-3 lg:px-20 bg-black pb-5">
                     <div className="text-start mb-1 z-50">
+                    <img src={logo} className="lg:w-[200px] my-5 lg:ml-10" />
                       <h6 className="mt-5 text-white font-bold text-xl lg:text-2xl">
                         {language === "en"
-                          ? "👋 Hi!, My name is "
-                          : "👋 Hola!, Mi nombre es "}
-                        <span className="text-purple-500 font-bold text-2xl">
+                          ? "Hi!, My name is "
+                          : "Hola!, Mi nombre es "}
+                        <span className=" font-bold text-2xl">
                           Julia
                         </span>
                       </h6>
@@ -158,54 +159,54 @@ const Init = () => {
                       </div>
 
                       <div className="flex flex-col items-start text-left w-full">
-                        <div className="flex items-start gap-x-4">
-                          <Lucide
-                            icon="Pencil"
-                            className="text-amber-500 w-10 h-10 font-bold"
-                          />
-                          <p className="text-base text-slate-100 md:text-lg mt-2">
-                            <span className="font-semibold md:text-xl">
-                              {language === "en"
-                                ? "Strategic web design: "
-                                : "Diseño web estratégico: "}
-                            </span>
+                      <div className="flex items-start gap-x-4">
+                          
+                          <p className="text-base text-slate-100 md:text-lg mt-2 font-semibold italic">
+                            
                             {language === "en"
-                              ? "Creating attractive, intuitive and conversion-optimized interfaces. UX/UI design focused on user experience."
-                              : "Creación de interfaces atractivas, intuitivas y optimizadas. Diseño UX/UI centrado en la experiencia del usuario."}
+                              ? "Whether you're looking to sell more, optimize your online presence, or learn something new..."
+                              : "Ya sea que busques vender más, optimizar tu presencia online o aprender algo nuevo..."}
+                              <br />
+                              <span className="fontCaveat not-italic lg:text-3xl text-amber-500">
+                              {language === "en"
+                              ? "You've come to the right place!"
+                              : "¡ Estás en el Lugar Correcto !"}
+                              </span>
                           </p>
                         </div>
-
-                        <div className="flex items-start gap-x-4 mt-3">
+                        <div className="flex items-start gap-x-4 mt-5">
                           <Lucide
-                            icon="Globe"
+                            icon="Code"
                             className="text-amber-500 w-14 h-14 font-bold"
                           />
                           <p className="text-base text-slate-100 md:text-lg mt-2">
-                            <span className="font-semibold md:text-xl">
+                            <span className="font-semibold md:text-lg">
                               {language === "en"
-                                ? "Professional web development: "
-                                : "Desarrollo web profesional: "}
+                                ? "Strategic web design and development: "
+                                : "Diseño y desarrollo web estratégico: "}
                             </span>
                             {language === "en"
-                              ? "Dynamic, scalable and responsive websites, optimized for SEO and high performance. Implementation of modern technologies to ensure accessibility and compatibility on all devices."
-                              : "Páginas web dinámicas, escalables y responsivas, optimizadas para SEO y alto rendimiento. Implementación de tecnologías modernas para garantizar accesibilidad y compatibilidad en todos los dispositivos."}
+                              ? "Creating attractive, intuitive and conversion-optimized interfaces. UX/UI design focused on user experience. Dynamic, scalable and responsive websites, optimized for SEO and high performance."
+                              : "Creación de interfaces atractivas, intuitivas y optimizadas. Diseño UX/UI centrado en la experiencia del usuario. Páginas web dinámicas, escalables y responsivas, optimizadas para SEO y alto rendimiento."}
                           </p>
                         </div>
 
+                        
+
                         <div className="flex items-start gap-x-4 mt-3">
                           <Lucide
-                            icon="Brush"
-                            className="text-amber-500 w-8 h-8 font-bold"
+                            icon="BookOpen"
+                            className="text-amber-500 w-7 h-7 font-bold mt-3"
                           />
                           <p className="text-base text-slate-100 md:text-lg mt-2">
-                            <span className="font-semibold md:text-xl">
+                            <span className="font-semibold md:text-lg">
                               {language === "en"
                                 ? "Professional graphic design: "
-                                : "Diseño gráfico profesional: "}
+                                : "Cursos y recursos digitales: "}
                             </span>
                             {language === "en"
                               ? "Extensive experience. Extensive catalog of images, logos, and icons of his own creation."
-                              : "Gran experiencia. Amplio catálogo de imágenes, logos e iconos, de creación propia."}
+                              : "Desde descarga de herramientas y documentos gratuitos hasta ebooks y seminarios online."}
                           </p>
                         </div>
                       </div>
@@ -219,7 +220,8 @@ const Init = () => {
                   <div className="w-full px-0 pt-0 pb-2">
                     {/* Botón whatsapp y Switch de idiomas alineado a la derecha */}
                     <div className="flex justify-end my-4 mr-3">
-                      <LanguagesSwitcher />
+                      
+                        <LanguagesSwitcher />
                       <a
                         href={"https://wa.me/+5493512737199"}
                         target="blank"
@@ -361,8 +363,8 @@ const Init = () => {
                           >
                             <div className="flex items-center justify-center gap-x-4">
                               {language === "en"
-                                ? "GRAPHIC PORTFOLIO"
-                                : "PORTFOLIO GRÁFICO"}
+                                ? "COURSES & RESOURCES"
+                                : "CURSOS & RECURSOS"}
                             </div>
                           </button>
                         </div>
@@ -373,8 +375,8 @@ const Init = () => {
                           />
                           <p className="text-slate-900 md:text-sm text-left">
                             {language === "en"
-                              ? "Graphic designs by me."
-                              : "Diseños gráficos disponibles de creación propia."}
+                              ? "Ideal for women who learn and undertake."
+                              : "Ideal para mujeres que aprenden y emprenden."}
                           </p>
                         </div>
                       </div>

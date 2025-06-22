@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../../assets/Image/logo-jefa.png";
+import logo from "../../../assets/Logs/nuevo-logo-2025-fondo-blanco-completo.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavbarData, EspNavbarData } from "./NavbarData";
 import { Link } from "react-scroll";
@@ -20,13 +20,13 @@ const Navbar = () => {
       <React.Fragment>
         {/*----- Start Navbar -----*/}
         <header>
-          <nav className="fixed top-0 min-w-full z-40 bg-white">
+          <nav className="fixed top-0 right-0 w-screen z-40 bg-white px-4">
             <div className="container py-3 px-4">
               <div className="flex items-center justify-between md:block">
                 <div className="flex justify-between items-center w-full">
                   {/* Logo */}
                   <div className="z-50 relative">
-                    <a href={"https://www.jefa-web.com.ar/"}>
+                    <a href={"/"}>
                       <div className="flex flex-col items-start justify-start ml-2">
                         <img
                           src={logo}

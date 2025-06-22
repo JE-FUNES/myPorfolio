@@ -21,11 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="Wellcome">
-        <Init />
-      </div>
-
-      <React.Fragment>
+            <React.Fragment>
         {/*----- Start Home -----*/}
         {isLargeScreen && (
           <AnimatedCursor
