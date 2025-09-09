@@ -11,11 +11,14 @@ const LinktreeBadAngel = () => {
           <div className="w-48 h-full bg-black/20 shadow-lg flex items-center justify-center">
             <img src={Logo} alt="Bad Angel" className="" />
           </div>
-          <p className="text-2xl font-thin text-gray-300 -mt-12">BAD ANGEL</p>
-          <h1 className="font-semibold text-gray-100 my-6 text-xl whitespace-nowrap text-[clamp(0.8rem,4vw,1.5rem)]">
-  DONDE LO DIVINO Y LO PERVERSO CONVERGEN
-</h1>
-
+          <p className="text-2xl font-thin text-gray-300 -mt-12 mb-10">BAD ANGEL</p>
+          <h1 className="text-xl font-medium text-gray-100 my-10">
+            DONDE 
+            <p>
+              LO DIVINO Y LO PERVERSO 
+              </p>
+            CONVERGEN
+          </h1>
 
           {/* Botones */}
           <div className="w-full max-w-md flex flex-col gap-4 mt-10">
