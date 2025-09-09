@@ -12,7 +12,7 @@ const LinktreeBadAngel = () => {
             <img src={Logo} alt="Bad Angel" className="" />
           </div>
           <p className="text-2xl font-thin text-gray-300 -mt-12">BAD ANGEL</p>
-          <h1 className="font-semibold text-gray-100 my-6 text-xl sm:text-2xl md:text-3xl whitespace-nowrap text-[clamp(0.8rem,4vw,1.5rem)]">
+          <h1 className="font-semibold text-gray-100 my-6 text-xl whitespace-nowrap text-[clamp(0.8rem,4vw,1.5rem)]">
   DONDE LO DIVINO Y LO PERVERSO CONVERGEN
 </h1>
 
