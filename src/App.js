@@ -2,6 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Init from "../src/components/Recruiters/Home/Init";
 
+//Linktree BadAngel
+import LinktreeBadAngel from "./components/LinktreeBadAngel/LinktreeBa";
+
 //Linktree Jefa
 import LinktreeJefa from "./components/LinktreeJefa/Linktree";
 import ContactLinktree from "./components/LinktreeJefa/Contact";
@@ -68,6 +71,13 @@ const App = () => {
         path="/enlaces"
         element={
             <LinktreeJefa />
+        }
+      />
+      <Route
+      //Linktree BadAngel
+        path="/badangel"
+        element={
+            <LinktreeBadAngel />
         }
       />
 
