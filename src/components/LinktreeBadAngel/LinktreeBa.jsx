@@ -11,7 +11,7 @@ const LinktreeBadAngel = () => {
           <div className="w-48 h-full bg-black/20 shadow-lg flex items-center justify-center">
             <img src={Logo} alt="Bad Angel" className="" />
           </div>
-          <p className="text-2xl font-thin text-gray-300 -mt-12 mb-10">BAD ANGEL</p>
+          <p className="text-2xl font-thin text-gray-300 -mt-12 mb-10">BADD ANGEL</p>
           <h1 className="text-xl font-medium text-gray-100 mt-5 mb-9">
             DONDE 
             <p>

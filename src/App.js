@@ -75,7 +75,7 @@ const App = () => {
       />
       <Route
       //Linktree BadAngel
-        path="/badangel"
+        path="/baddangel"
         element={
             <LinktreeBadAngel />
         }
