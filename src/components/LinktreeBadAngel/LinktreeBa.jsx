@@ -18,7 +18,7 @@ const LinktreeBadAngel = () => {
 
 
           {/* Botones */}
-          <div className="w-full max-w-md flex flex-col gap-4 mt-6">
+          <div className="w-full max-w-md flex flex-col gap-4 mt-10">
             {Links.map((link, index) => (
               <a
                 key={index}
