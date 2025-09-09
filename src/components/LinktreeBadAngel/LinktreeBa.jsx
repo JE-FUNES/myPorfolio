@@ -12,7 +12,7 @@ const LinktreeBadAngel = () => {
             <img src={Logo} alt="Bad Angel" className="" />
           </div>
           <p className="text-2xl font-thin text-gray-300 -mt-12 mb-10">BAD ANGEL</p>
-          <h1 className="text-xl font-medium text-gray-100 mt-6 mb-10">
+          <h1 className="text-xl font-medium text-gray-100 mt-5 mb-9">
             DONDE 
             <p>
               LO DIVINO Y LO PERVERSO 
