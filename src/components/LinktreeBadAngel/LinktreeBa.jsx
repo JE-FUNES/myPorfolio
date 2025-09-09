@@ -1,5 +1,5 @@
 import React from "react";
-import { Links, Redes } from "./LinksData.js";
+import { Links } from "./LinksData.js";
 import Logo from "../../assets/badangel/archivos_badangel/6.png";
 
 const LinktreeBadAngel = () => {
@@ -7,32 +7,16 @@ const LinktreeBadAngel = () => {
     <React.Fragment>
       <div className="w-screen">
         <div className="min-h-screen flex flex-col items-center justify-center bg-black px-6 py-6 text-center">
-          <div className="w-24 h-24 rounded-full p-3 bg-black/20 shadow-lg flex items-center justify-center">
-            <img src={Logo} alt="Jefa Web Logo" className="" />
+          {/* Logo principal */}
+          <div className="w-48 h-full bg-black/20 shadow-lg flex items-center justify-center">
+            <img src={Logo} alt="Bad Angel" className="" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-100 mb-1 mt-4">
-            BAD ANGEL
+          <p className="text-2xl font-thin text-gray-300 -mt-12">BAD ANGEL</p>
+          <h1 className="text-xl font-semibold text-gray-100 my-6">
+            DONDE LO DIVINO Y LO PERVERSO CONVERGEN
           </h1>
-          <p className="text-md text-pink-500 mt-2 mb-6">
-            Donde lo DIVINO y lo
-            <br />
-            PERVERSO convergen.
-          </p>
 
-          <div className="flex flex-row gap-4 mb-4">
-            {Redes.map((Red, index) => (
-              <a
-                key={index}
-                href={Red.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium text-2xl p-2 rounded-full shadow-sm hover:shadow-md transition"
-              >
-                {Red.img}
-              </a>
-            ))}
-          </div>
-
+          {/* Botones */}
           <div className="w-full max-w-md flex flex-col gap-4">
             {Links.map((link, index) => (
               <a
@@ -40,14 +24,15 @@ const LinktreeBadAngel = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`bg-${link.background} border border-gray-300 hover:border-pink-500 text-white hover:text-pink-600 font-medium py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition`}
+                className={`bg-${link.background} border border-gray-300 hover:border-red-500 text-white hover:text-red-500 font-medium py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition`}
               >
-                <h4 className="font-bold text-lg">{link.title}</h4>
-                {link.label}
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-2xl">{link.img}</span>
+                  <h4 className="font-bold text-lg">{link.title}</h4>
+                </div>
               </a>
             ))}
           </div>
-          
         </div>
       </div>
     </React.Fragment>
