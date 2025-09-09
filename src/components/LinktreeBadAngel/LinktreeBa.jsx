@@ -1,12 +1,12 @@
 import React from "react";
 import { Links, Redes } from "./LinksData.js";
-import Logo from "../../assets/Logs/nuevo-logo-2025-fondo-negro-icono.png";
+import Logo from "../../assets/badangel/archivos_badangel/6.png";
 
 const LinktreeBadAngel = () => {
   return (
     <React.Fragment>
       <div className="w-screen">
-        <div className="min-h-screen flex flex-col items-center justify-center bg-purple-950 px-6 py-6 text-center">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-black px-6 py-6 text-center">
           <div className="w-24 h-24 rounded-full p-3 bg-black/20 shadow-lg flex items-center justify-center">
             <img src={Logo} alt="Jefa Web Logo" className="" />
           </div>
@@ -47,13 +47,7 @@ const LinktreeBadAngel = () => {
               </a>
             ))}
           </div>
-          <p className="text-sm text-pink-300 mt-6">
-            Si deseas un MENÚ DE ENLACES como éste  
-            <br />
-            <a href="https://jefa-web.com.ar/contactame" className="underline">
-            CONTACTAME
-            </a>
-          </p>
+          
         </div>
       </div>
     </React.Fragment>
