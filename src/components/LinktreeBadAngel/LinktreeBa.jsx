@@ -16,7 +16,7 @@ const LinktreeBadAngel = () => {
           <p className="text-md text-pink-500 mt-2 mb-6">
             Donde lo DIVINO y lo
             <br />
-            PERVERSO convergen
+            PERVERSO convergen.
           </p>
 
           <div className="flex flex-row gap-4 mb-4">
