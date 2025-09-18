@@ -15,7 +15,7 @@ export const Links = [
     title: "Tienda",
     img: <FaCartPlus />,
     background: "black",
-    url: "https://www.jefa-web.com.ar/baddangel-store",
+    url: "https://badd-angel-store.vercel.app/",
   },
   {
     title: "Contacto",

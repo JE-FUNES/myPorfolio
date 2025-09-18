@@ -82,13 +82,13 @@ const App = () => {
         }
       />
       <Route
-      //Linktree BadAngel
+      //BaddAngel-store
         path="/baddangel-store"
         element={
             <EnConstruccion />
         }
       />
-
+   
       <Route
       //Linktree contacto
         path="/contactame"
